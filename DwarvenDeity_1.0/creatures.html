@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dwarven Deity:RAW Editor</title>
+    <meta name="keywords" content="Dwarf Fortress, DF, RAW Editor,
+     Editor, raw file, modding, online, mods, RAW generator">
+    <meta name="description"
+        content="An editor for Dwarf Fortress raw files. Generating raw files is our current specialty">
+    <meta name="author" content="Phanny">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <button onclick='checkVisibleCheckboxes()'>Check All</button>
+        <button onclick='uncheckVisibleCheckboxes()'>Uncheck All</button>
+    </div>
+    <div id="creatureTokenDatabase">
+        <div>
+            <button onclick='toggleElementGroup("essentialTokens")'>Essentials</button>
+        </div>
+        <div id="essentialTokens" style="display:none">
+            <table>
+                <tr class="fixedText">
+                    <td><input type="checkbox" id="creatureCheckbox" class="cb"></td>
+                    <td id="creatureToken">
+                        <label for="creature">[CREATURE:</label>
+                        <input type="text" id="creature" onchange="fixedAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                    </td>
+                </tr>
+                <tr class="fixedText">
+                    <td><input type="checkbox" id="descriptionCheckbox" class="cb"></td>
+                    <td id="descriptionToken">
+                        <label for="description">[DESCRIPTION:</label>
+                        <input type="text" id="description" onchange="fixedAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                    </td>
+                </tr>
+                <tr class="fixedText">
+                    <td><input type="checkbox" id="nameCheckbox" class="cb"></td>
+                    <td id="nameToken">
+                        <label for="name">[NAME:</label>
+                        <input type="text" id="name" onchange="fixedAutoChecker(this)">
+                        <input type="text" onchange="fixedAutoChecker(this)">
+                        <input type="text" onchange="fixedAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                    </td>
+                </tr>
+                <tr class="fixedText">
+                    <td><input type="checkbox" id="casteNameCheckbox" class="cb"></td>
+                    <td id="casteNameToken">
+                        <label for="casteName">[CASTE_NAME:</label>
+                        <input type="text" id="casteName" onchange="fixedAutoChecker(this)">
+                        <input type="text" onchange="fixedAutoChecker(this)">
+                        <input type="text" onchange="fixedAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                    </td>
+                </tr>
+                <tr class="fixedText">
+                    <td><input type="checkbox" id="creatureTileCheckbox" class="cb"></td>
+                    <td id="creatureTileToken">
+                        <label for="creatureTile">[CREATURE_TILE:</label>
+                        <input type="text" id="creatureTile" onchange="fixedAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                    </td>
+                </tr>
+                <tr class="fixedText">
+                    <td><input type="checkbox" id="colorCheckbox" class="cb"></td>
+                    <td id="colorToken">
+                        <label for="colorTile">[COLOR:</label>
+                        <input type="text" id="colorTile" onchange="fixedAutoChecker(this)">
+                        <input type="text" id="colorTile" onchange="fixedAutoChecker(this)">
+                        <input type="text" id="colorTile" onchange="fixedAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                    </td>
+                </tr>
+                <tr class="fixedText">
+                    <td><input type="checkbox" id="creatureSoldierTileCheckbox" class="cb"></td>
+                    <td id="creatureSoldierTileToken">
+                        <label for="creatureSoldierTile">[CREATURE_SOLDIER_TILE:</label>
+                        <input type="text" id="creatureSoldierTile" onchange="fixedAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                    </td>
+                </tr>
+                <tr class="flexibleList">
+                    <td>
+                        <div>
+                            <button onclick='addFixedToken("creatureClassTokenGroup", "[CREATURE_CLASS:", 
+                            1, 0, true, "creatureClassList")'>Add: Creature Class</button>
+                            <button
+                                onclick='removeTokenFromGroup("creatureClassTokenGroup", "[CREATURE_CLASS:")'>Remove:
+                                Creature Class</button>
+                        </div>
+                    </td>
+                    <td id="creatureClassTokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="creatureClass">[CREATURE_CLASS:</label>
+                            <input list="creatureClassList" id="creatureClass" onchange="flexibleAutoChecker(this)">
+                        </div>
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="creatureClassList">
+                            <option>GENERAL_POISON</option>
+                            <option>MAMMAL</option>
+                            <option>EDIBLE_GROUND_BUG</option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr class="fixedClosed">
+                    <td><input type="checkbox" id="intelligentCheckbox" class="cb"></td>
+                    <td id="intelligentToken">
+                        <label>[INTELLIGENT]</label>
+                    </td>
+                </tr>
+                <tr class="fixedClosed">
+                    <td><input type="checkbox" id="strangeMoodsCheckbox" class="cb"></td>
+                    <td id="strangeMoodsToken">
+                        <label>[STRANGE_MOODS]</label>
+                    </td>
+                </tr>
+                <tr class="fixedClosed">
+                    <td><input type="checkbox" id="trancesCheckbox" class="cb"></td>
+                    <td id="trancesToken">
+                        <label>[TRANCES]</label>
+                    </td>
+                </tr>
+                <tr class="fixedClosed">
+                    <td><input type="checkbox" id="benignCheckbox" class="cb"></td>
+                    <td id="benignToken">
+                        <label>[BENIGN]</label>
+                    </td>
+                </tr>
+                <tr class="fixedClosed">
+                    <td><input type="checkbox" id="canOpenDoorsCheckbox" class="cb"></td>
+                    <td id="canOpenDoorsToken">
+                        <label>[CANOPENDOORS]</label>
+                    </td>
+                </tr>
+                <tr class="fixedText">
+                    <td><input type="checkbox" id="prefstringCheckbox" class="cb"></td>
+                    <td id="prefstringToken">
+                        <label for="prefstring">[PREFSTRING:</label>
+                        <input type="text" id="prefstring" onchange="fixedAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("anatomyTokens")'>Anatomy</button>
+        </div>
+        <div id="anatomyTokens" style="display:none">
+            <table>
+                <tr class="flexibleListinput">
+                    <td>
+                        <div>
+                            <button onclick='addFlexibleToken("bodyDetailPlanTokenGroup", "[BODY_DETAIL_PLAN:", 1, 0, true, 
+                                "bodyDetailPlanList", "bodyDetailPlanInput")'>Add:
+                                Body Detail Plan</button>
+                            <input list="bodyDetailPlanInputList" id="bodyDetailPlanInput">
+                            <button
+                                onclick='removeTokenFromGroup("bodyDetailPlanTokenGroup", "[BODY_DETAIL_PLAN:")'>Remove:
+                                Body Detail Plan</button>
+                        </div>
+                    </td>
+                    <td id="bodyDetailPlanTokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="bodyDetailPlan">[BODY_DETAIL_PLAN:</label>
+                            <input list="bodyDetailPlanList" id="bodyDetailPlan" onchange="flexibleAutoChecker(this)">
+                        </div>
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="bodyDetailPlanInputList">
+                            <option>1</option>
+                            <option>6</option>
+                            <option>5</option>
+                            <option>4</option>
+                            <option>3</option>
+                            <option>2</option>
+                        </datalist>
+                        <datalist id="bodyDetailPlanList">
+                            <option>STANDARD_MATERIALS</option>
+                            <option>CHITIN_MATERIALS</option>
+                            <option>STANDARD_TISSUES</option>
+                            <option>CHITIN_TISSUES</option>
+                            <option>FACIAL_HAIR_TISSUES</option>
+                            <option>HEAD_HAIR_TISSUE_LAYERS</option>
+                            <option>FACIAL_HAIR_TISSUE_LAYERS</option>
+                            <option>BODY_HAIR_TISSUE_LAYERS</option>
+                            <option>BODY_SPINE_TISSUE_LAYERS</option>
+                            <option>BODY_FEATHER_TISSUE_LAYERS</option>
+                            <option>BODY_FEATHER_TISSUE_LAYERS_NO_HEAD</option>
+                            <option>VERTEBRATE_TISSUE_LAYERS</option>
+                            <option>EXOSKELETON_TISSUE_LAYERS</option>
+                            <option>MOLLUSC_TISSUE_LAYERS</option>
+                            <option>STANDARD_HEAD_POSITIONS</option>
+                            <option>HUMANOID_HEAD_POSITIONS</option>
+                            <option>HUMANOID_RIBCAGE_POSITIONS</option>
+                            <option>SHELL_POSITIONS</option>
+                            <option>HUMANOID_RELSIZES</option>
+                            <option>EGG_MATERIALS</option>
+                            <option>LEATHERY_EGG_MATERIALS</option>
+                            // different list for tissues, in the future
+                            <option>SKIN</option>
+                            <option>FAT</option>
+                            <option>MUSCLE</option>
+                            <option>BONE</option>
+                            <option>CARTILAGE</option>
+                            <option>HAIR</option>
+                            <option>TOOTH</option>
+                            <option>EYE</option>
+                            <option>NERVE</option>
+                            <option>BRAIN</option>
+                            <option>LUNG</option>
+                            <option>HEART</option>
+                            <option>LIVER</option>
+                            <option>GUT</option>
+                            <option>STOMACH</option>
+                            <option>GIZZARD</option>
+                            <option>PANCREAS</option>
+                            <option>SPLEEN</option>
+                            <option>KIDNEY</option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr class="fixedListInput">
+                    <td>
+                        <div>
+                            <input type="checkbox" id="bodyCheckbox" class="cb">
+                            <button onclick='addList("bodyToken", "bodyList")'>+</button>
+                            <button onclick='removeField("bodyToken", 1)'>-</button>
+                        </div>
+                    </td>
+                    <td id="bodyToken">
+                        <label for="body">[BODY:</label>
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                        <input list="bodyList" id="body" onchange="flexibleAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="bodyList">
+                            <option>BASIC_1PARTBODY</option>
+                            <option>BASIC_1PARTBODY_THOUGHT</option>
+                            <option>BASIC_1PARTBODY_FLYING_HEAD_FLAG_THOUGHT</option>
+                            <option>BASIC_2PARTBODY</option>
+                            <option>BASIC_3PARTARMS</option>
+                            <option>BASIC_3PARTLEGS</option>
+                            <option>BASIC_FRONTLEGS</option>
+                            <option>BASIC_REARLEGS</option>
+                            <option>ARMS_STANCE</option>
+                            <option>7HEADNECKS</option>
+                            <option>BASIC_HEAD</option>
+                            <option>BASIC_HEAD_NECK</option>
+                            <option>BODY_HEAD</option>
+                            <option>BODY_WITH_HEAD_FLAG</option>
+                            <option>HUMANOID</option>
+                            <option>HUMANOID_HOOF</option>
+                            <option>HUMANOID_NECK</option>
+                            <option>HUMANOID_NECK_HOOF</option>
+                            <option>HUMANOID_LEGLESS_NECK</option>
+                            <option>HUMANOID_FLIER</option>
+                            <option>HUMANOID_NECK_FLIER</option>
+                            <option>2WINGS</option>
+                            <option>HUMANOID_ARMLESS</option>
+                            <option>HUMANOID_LEGLESS</option>
+                            <option>HUMANOID_4ARMS</option>
+                            <option>HUMANOID_6ARMS</option>
+                            <option>HUMANOID_LEGLESS_4ARMS</option>
+                            <option>HUMANOID_LEGLESS_6ARMS</option>
+                            <option>HUMANOID_NECK_4ARMS</option>
+                            <option>4ARMS_STANCE</option>
+                            <option>HUMANOID_2HEAD</option>
+                            <option>HUMANOID_NECK_2HEAD</option>
+                            <option>HUMANOID_SIMPLE</option>
+                            <option>QUADRUPED</option>
+                            <option>QUADRUPED_NECK_FRONT_GRASP</option>
+                            <option>QUADRUPED_NECK</option>
+                            <option>QUADRUPED_NECK_HOOF</option>
+                            <option>INSECT</option>
+                            <option>INSECT_4LEGS_2ARMS</option>
+                            <option>SPIDER</option>
+                            <option>CRAB_BODY</option>
+                            <option>TWO_NO_CLAW_TENTACLES</option>
+                            <option>TENTACLE_MOUTH</option>
+                            <option>TENTACLE_TEETH</option>
+                            <option>8_SIMPLE_HEAD_ARMS</option>
+                            <option>2_HEAD_CLUBBED_TENTACLES</option>
+                            <option>FOUR_TENTACLES</option>
+                            <option>SIX_TENTACLES</option>
+                            <option>WAGON</option>
+                            <option>TAIL</option>
+                            <option>SHELL</option>
+                            <option>TAIL_STANCE</option>
+                            <option>TAIL_STINGER</option>
+                            <option>UPPERBODY_PINCERS</option>
+                            <option>2EYES</option>
+                            <option>3EYES</option>
+                            <option>4EYES</option>
+                            <option>2EYESTALKS</option>
+                            <option>2TUSKS</option>
+                            <option>NOSE</option>
+                            <option>SNOUT_NOSMELL</option>
+                            <option>TRUNK</option>
+                            <option>2EARS</option>
+                            <option>2LUNGS</option>
+                            <option>MOUTH</option>
+                            <option>PROBOSCIS</option>
+                            <option>BEAK</option>
+                            <option>HEART</option>
+                            <option>GUTS</option>
+                            <option>GIZZARD</option>
+                            <option>ORGANS</option>
+                            <option>HUMANOID_JOINTS</option>
+                            <option>THROAT</option>
+                            <option>NECK</option>
+                            <option>SPINE</option>
+                            <option>BRAIN</option>
+                            <option>SKULL</option>
+                            <option>CASQUE</option>
+                            <option>HEAD_HORN</option>
+                            <option>2HEAD_HORN</option>
+                            <option>2HEAD_HORN_NUMBERED</option>
+                            <option>2HEAD_ANTLER</option>
+                            <option>1EYE</option>
+                            <option>BODY_EYE</option>
+                            <option>BODY_EYELID</option>
+                            <option>5FINGERS</option>
+                            <option>4FINGERS</option>
+                            <option>3FINGERS</option>
+                            <option>2FINGERS</option>
+                            <option>5TOES</option>
+                            <option>4TOES</option>
+                            <option>3TOES</option>
+                            <option>2TOES</option>
+                            <option>5TOES_FQ_REG</option>
+                            <option>4TOES_FQ_REG</option>
+                            <option>3TOES_FQ_REG</option>
+                            <option>5TOES_RQ_REG</option>
+                            <option>4TOES_RQ_REG</option>
+                            <option>3TOES_RQ_REG</option>
+                            <option>5TOES_RQ_ANON</option>
+                            <option>5TOES_FQ_FINGERS</option>
+                            <option>4TOES_FQ_FINGERS</option>
+                            <option>SIDE_FINS</option>
+                            <option>DORSAL_FIN</option>
+                            <option>SIDE_FLIPPERS</option>
+                            <option>FRONT_BODY_FLIPPERS</option>
+                            <option>REAR_BODY_FLIPPERS</option>
+                            <option>1HUMP</option>
+                            <option>2HUMPS</option>
+                            <option>CHEEKS</option>
+                            <option>EYELIDS</option>
+                            <option>TONGUE</option>
+                            <option>FORKED_TONGUE</option>
+                            <option>LIPS</option>
+                            <option>FACIAL_FEATURES</option>
+                            <option>ONE_EYELID</option>
+                            <option>RIBCAGE</option>
+                            <option>GENERIC_TEETH_WITH_LARGE_EYE_TEETH</option>
+                            <option>GENERIC_TEETH_WITH_FANGS</option>
+                            <option>RODENT_TEETH</option>
+                            <option>GENERIC_TEETH</option>
+                            <option>TEETH</option>
+                            <option>HAND_FOOT_CENTAUR_NECK</option>
+                            <option>LARGE_MANDIBLES</option>
+                            <option>BILL</option>
+                            <option>HUMANOID_ARMLESS_NECK</option>
+                            <option>TUSK</option>
+                        </datalist>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("syndromeTokens")'>Syndrome Relation</button>
+        </div>
+        <div id="syndromeTokens" style="display:none">
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("secretionTokens")'>Secretion</button>
+        </div>
+        <div id="secretionTokens" style="display:none">
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("interactionTokens")'>Interactions</button>
+        </div>
+        <div id="interactionTokens" style="display:none">
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("physicalMentalAttributeTokens")'>Physical + Mental Attribute</button>
+        </div>
+        <div id="physicalMentalAttributeTokens" style="display:none">
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("appearanceTokens")'>Appearance</button>
+        </div>
+        <div id="appearanceTokens" style="display:none">
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <button onclick='addFixedToken("appearanceTokenGroup", "[BODY_APPEARANCE_MODIFIER:", 
+                            1, 7, true, "bodyAppearanceModifierList")'>Add: Body Appearance Modifier</button>
+                            <button
+                                onclick='removeTokenFromGroup("appearanceTokenGroup", "[BODY_APPEARANCE_MODIFIER:")'>Remove:
+                                Body Appearance Modifier</button>
+                        </div>
+                        <div>
+                            <button onclick='addFixedToken("appearanceTokenGroup", "[APP_MOD_IMPORTANCE:", 
+                            0, 1, false)'>Add: Appearance Modifier Importance</button>
+                            <button
+                                onclick='removeTokenFromGroup("appearanceTokenGroup", "[APP_MOD_IMPORTANCE:")'>Remove:
+                                Appearance Modifier Importance</button>
+                        </div>
+                    </td>
+                    <td id="appearanceTokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="bodyAppearanceModifier">[BODY_APPEARANCE_MODIFIER:</label>
+                            <input list="bodyAppearanceModifierList" id="bodyAppearanceModifier"
+                                onchange="flexibleAutoChecker(this)">
+                            <input type="text" onchange="flexibleAutoChecker(this)">
+                            <input type="text" onchange="flexibleAutoChecker(this)">
+                            <input type="text" onchange="flexibleAutoChecker(this)">
+                            <input type="text" onchange="flexibleAutoChecker(this)">
+                            <input type="text" onchange="flexibleAutoChecker(this)">
+                            <input type="text" onchange="flexibleAutoChecker(this)">
+                            <input type="text" onchange="flexibleAutoChecker(this)">
+                        </div>
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="appModImportance">[APP_MOD_IMPORTANCE:</label>
+                            <input type="text" id="appModImportance" onchange="flexibleAutoChecker(this)">
+                        </div>
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="bodyAppearanceModifierList">
+                            <option>HEIGHT</option>
+                            <option>BROADNESS</option>
+                            <option>LENGTH</option>
+                        </datalist>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("combatTokens")'>Combat</button>
+        </div>
+        <div id="combatTokens" style="display:none">
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <button onclick='addFlexibleToken("combatTokenGroup", "[ATTACK:", 4, 0, true, 
+                                "attackList", "attackListInput")'>Add:
+                                Attack</button>
+                            <input type="text" id="attackListInput">
+                            <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK:")'>Remove:
+                                Attack</button>
+                        </div>
+                        <div>
+                            <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_SKILL:", 
+                            1, 0, true)'>Add: Attack Skill</button>
+                            <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_SKILL:")'>Remove:
+                                Attack Skill</button>
+                        </div>
+                    </td>
+                    <td id="combatTokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="attack">[ATTACK:</label>
+                            <input list="attackList" id="attack" onchange="flexibleAutoChecker(this)">
+                            <input list="attackList" id="attack" onchange="flexibleAutoChecker(this)">
+                            <input list="attackList" id="attack" onchange="flexibleAutoChecker(this)">
+                            <input list="attackList" id="attack" onchange="flexibleAutoChecker(this)">
+                        </div>
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="attackSkill">[ATTACK_SKILL:</label>
+                            <input list="attackSkillList" id="attackSkill" onchange="flexibleAutoChecker(this)">
+                        </div>
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="attackList">
+                            <option>BODYPART</option>
+                            <option>CHILD_TISSUE_LAYER_GROUP</option>
+                            <option>CHILD_BODYPART_GROUP</option>
+                            <option>BY_TYPE</option>
+                            <option>GRASP</option>
+                            <option>STANCE</option>
+                            <option>BY_CATEGORY</option>
+                            <option>FINGER</option>
+                            <option>NAIL</option>
+                            <option>HEAD</option>
+                            <option>TOOTH</option>
+                        </datalist>
+                        <datalist id="attackSkillList">
+                            <option>GRASP_STRIKE</option>
+                            <option>STANCE_STRIKE</option>
+                            <option>BITE</option>
+                        </datalist>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("ageTokens")'>Age</button>
+        </div>
+        <div id="ageTokens" style="display:none">
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("additionalAttributeTokens")'>Additional Attributes</button>
+        </div>
+        <div id="additionalAttributeTokens" style="display:none">
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("professionTokens")'>Professions</button>
+        </div>
+        <div id="professionTokens" style="display:none">
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("personalityMannerismTokens")'>Personality + Mannerisms</button>
+        </div>
+        <div id="personalityMannerismTokens" style="display:none">
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("individualCasteFemaleTokens")'>Individual Caste 1</button>
+        </div>
+        <div id="individualCasteFemaleTokens" style="display:none">
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("individualCasteMaleTokens")'>Individual Caste 2</button>
+        </div>
+        <div id="individualCasteMaleTokens" style="display:none">
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("multipleCasteTokens")'>Multiple Caste</button>
+        </div>
+        <div id="multipleCasteTokens" style="display:none">
+        </div>
+    </div>
+    <div>
+        <button onclick='emptyFieldNumber = 0; creatureTokenCompile();'>Create</button>
+    </div>
+    <div>
+        <textarea id="output"></textarea>
+    </div>
+    <script>
+        function creatureTokenCompile() {
+            var raw = [];
+            // Essentials
+            parseSpecificToken(raw, "creatureCheckbox", "creatureToken")
+            parseSpecificToken(raw, "descriptionCheckbox", "descriptionToken")
+            parseSpecificToken(raw, "nameCheckbox", "nameToken")
+            parseSpecificToken(raw, "casteNameCheckbox", "casteNameToken")
+            parseSpecificToken(raw, "creatureTileCheckbox", "creatureTileToken")
+            parseSpecificToken(raw, "colorCheckbox", "colorToken")
+            parseSpecificToken(raw, "creatureSoldierTileCheckbox", "creatureSoldierTileToken")
+            parseTokenGroup(raw, "creatureClassTokenGroup")
+            parseSpecificToken(raw, "intelligentCheckbox", "intelligentToken")
+            parseSpecificToken(raw, "strangeMoodsCheckbox", "strangeMoodsToken")
+            parseSpecificToken(raw, "trancesCheckbox", "trancesToken")
+            parseSpecificToken(raw, "benignCheckbox", "benignToken")
+            parseSpecificToken(raw, "canOpenDoorsCheckbox", "canOpenDoorsToken")
+            parseSpecificToken(raw, "prefstringCheckbox", "prefstringToken")
+            // Anatomy
+            parseTokenGroup(raw, "bodyDetailPlanTokenGroup")
+            parseSpecificToken(raw, "bodyCheckbox", "bodyToken")
+            // Appearance
+            parseTokenGroup(raw, "appearanceTokenGroup")
+            parseTokenGroup(raw, "combatTokenGroup")
+            document.getElementById("output").innerHTML = raw.join("\n");
+        }
+    </script>
+</body>
+
+</html>
