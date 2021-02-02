@@ -14,9 +14,10 @@ function flexibleAutoChecker(thisElement) {
     }
 }
 
-function isChecked(checkboxId) {
-    const cb = document.getElementById(checkboxId).checked;
-    return cb;
+function copyToClipboard(elementId) {
+    document.getElementById(elementId).select();
+    document.execCommand("copy");
+    document.getSelection().removeAllRanges();
 }
 
 function checkVisibleCheckboxes() {
@@ -43,6 +44,11 @@ function uncheckVisibleCheckboxes() {
             checkbox.checked = false;
         }
     }
+}
+
+function isChecked(checkboxId) {
+    const cb = document.getElementById(checkboxId).checked;
+    return cb;
 }
 
 function emptyFieldAlert() {
@@ -168,13 +174,11 @@ function addList(parentId, datalistId) {
     document.getElementById(parentId).appendChild(list);
 }
 
-
 function addTextField(parentId) {
     let textField = document.createElement("input");
     textField.setAttribute("type", text);
     document.getElementById(parentId).appendChild(textField);
 }
-
 
 function removeField(parentId, minFieldNumber) {
     let parent = document.getElementById(parentId);
@@ -237,10 +241,6 @@ function parseToken(rawArray, divi) {
     }
 }
 
-function changeInputNumber() {
-    let parent = getElementById(parentId);
-
-}
 
 // function parseTokenGroup(rawArray, checkboxId, tokenGroupId) {
 //     if (isChecked(checkboxId)) {

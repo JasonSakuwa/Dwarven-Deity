@@ -413,6 +413,159 @@
                         </datalist>
                     </td>
                 </tr>
+                <tr class="multiGroup">
+                    <td>
+                        <div>
+                            <button onclick='addFixedToken("tissueTokenGroup", "[USE_TISSUE_TEMPLATE:", 
+                            2, 0, true)'>Add: Use Tissue Template</button>
+                            <button onclick='removeTokenFromGroup("tissueTokenGroup", "[USE_TISSUE_TEMPLATE:")'>Remove:
+                                Use Tissue Template</button>
+                        </div>
+                        <div>
+                            <button onclick='addFlexibleToken("tissueLayerTokenGroup", "[TISSUE_LAYER:", 4, 0, true, 
+                                "tissueLayerList", "tissueLayerListInput")'>Add:
+                                Tissue Layer</button>
+                            <input list="" id="tissueLayerListInput">
+                            <button onclick='removeTokenFromGroup("tissueTokenGroup", "[TISSUE_LAYER:")'>Remove:
+                                Tissue Layer</button>
+                        </div>
+                    </td>
+                    <td id="tissueTokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="useTissueTemplate">[USE_TISSUE_TEMPLATE:</label>
+                            <input list="useTissueTemplateList" id="useTissueTemplate"
+                                onchange="flexibleAutoChecker(this)">
+                            <input list="useTissueTemplateList" onchange="flexibleAutoChecker(this)">
+                        </div>
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="tissueLayer">[TISSUE_LAYER:</label>
+                            <input list="tissueLayerList" id="tissueLayer" onchange="flexibleAutoChecker(this)">
+                            <input list="tissueLayerList" onchange="flexibleAutoChecker(this)">
+                            <input list="tissueLayerList" onchange="flexibleAutoChecker(this)">
+                            <input list="tissueLayerList" onchange="flexibleAutoChecker(this)">
+                        </div>
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="useTissueTemplateList">
+                            <option>SKIN</option>
+                            <option>FAT</option>
+                            <option>MUSCLE</option>
+                            <option>BONE</option>
+                            <option>SHELL</option>
+                            <option>HORN</option>
+                            <option>HOOF</option>
+                            <option>CARTILAGE</option>
+                            <option>HAIR</option>
+                            <option>FEATHER</option>
+                            <option>SCALE</option>
+                            <option>NAIL</option>
+                            <option>CLAW</option>
+                            <option>TALON</option>
+                            <option>TOOTH</option>
+                            <option>IVORY</option>
+                            <option>EYE</option>
+                            <option>NERVE</option>
+                            <option>BRAIN</option>
+                            <option>LUNG</option>
+                            <option>HEART</option>
+                            <option>LIVER</option>
+                            <option>GUT</option>
+                            <option>STOMACH</option>
+                            <option>GIZZARD</option>
+                            <option>PANCREAS</option>
+                            <option>SPLEEN</option>
+                            <option>KIDNEY</option>
+                            <option>FLAME</option>
+                            <option>CHITIN</option>
+                            <option>SPINE</option>
+                            <option>SPONGE</option>
+                            <option>SKIN_TEMPLATE</option>
+                            <option>FAT_TEMPLATE</option>
+                            <option>MUSCLE_TEMPLATE</option>
+                            <option>BONE_TEMPLATE</option>
+                            <option>SHELL_TEMPLATE</option>
+                            <option>HORN_TEMPLATE</option>
+                            <option>HOOF_TEMPLATE</option>
+                            <option>CARTILAGE_TEMPLATE</option>
+                            <option>HAIR_TEMPLATE</option>
+                            <option>CHEEK_WHISKERS_TEMPLATE</option>
+                            <option>CHIN_WHISKERS_TEMPLATE</option>
+                            <option>MOUSTACHE_TEMPLATE</option>
+                            <option>SIDEBURNS_TEMPLATE</option>
+                            <option>EYEBROW_TEMPLATE</option>
+                            <option>EYELASH_TEMPLATE</option>
+                            <option>FEATHER_TEMPLATE</option>
+                            <option>SCALE_TEMPLATE</option>
+                            <option>NAIL_TEMPLATE</option>
+                            <option>CLAW_TEMPLATE</option>
+                            <option>TALON_TEMPLATE</option>
+                            <option>TOOTH_TEMPLATE</option>
+                            <option>IVORY_TEMPLATE</option>
+                            <option>EYE_TEMPLATE</option>
+                            <option>NERVE_TEMPLATE</option>
+                            <option>BRAIN_TEMPLATE</option>
+                            <option>LUNG_TEMPLATE</option>
+                            <option>HEART_TEMPLATE</option>
+                            <option>LIVER_TEMPLATE</option>
+                            <option>GUT_TEMPLATE</option>
+                            <option>STOMACH_TEMPLATE</option>
+                            <option>GIZZARD_TEMPLATE</option>
+                            <option>PANCREAS_TEMPLATE</option>
+                            <option>SPLEEN_TEMPLATE</option>
+                            <option>KIDNEY_TEMPLATE</option>
+                            <option>FLAME_TEMPLATE</option>
+                            <option>CHITIN_TEMPLATE</option>
+                            <option>SPINE_TEMPLATE</option>
+                            <option>SPONGE_TEMPLATE</option>
+                            <option>SKIN_TEMPLATE</option>
+                            <option>FAT_TEMPLATE</option>
+                            <option>MUSCLE_TEMPLATE</option>
+                            <option>BONE_TEMPLATE</option>
+                            <option>SHELL_TEMPLATE</option>
+                            <option>HORN_TEMPLATE</option>
+                            <option>HOOF_TEMPLATE</option>
+                            <option>CARTILAGE_TEMPLATE</option>
+                            <option>HAIR_TEMPLATE</option>
+                            <option>CHEEK_WHISKERS_TEMPLATE</option>
+                            <option>CHIN_WHISKERS_TEMPLATE</option>
+                            <option>MOUSTACHE_TEMPLATE</option>
+                            <option>SIDEBURNS_TEMPLATE</option>
+                            <option>EYEBROW_TEMPLATE</option>
+                            <option>EYELASH_TEMPLATE</option>
+                            <option>FEATHER_TEMPLATE</option>
+                            <option>SCALE_TEMPLATE</option>
+                            <option>NAIL_TEMPLATE</option>
+                            <option>CLAW_TEMPLATE</option>
+                            <option>TALON_TEMPLATE</option>
+                            <option>TOOTH_TEMPLATE</option>
+                            <option>IVORY_TEMPLATE</option>
+                            <option>EYE_TEMPLATE</option>
+                            <option>NERVE_TEMPLATE</option>
+                            <option>BRAIN_TEMPLATE</option>
+                            <option>LUNG_TEMPLATE</option>
+                            <option>HEART_TEMPLATE</option>
+                            <option>LIVER_TEMPLATE</option>
+                            <option>GUT_TEMPLATE</option>
+                            <option>STOMACH_TEMPLATE</option>
+                            <option>GIZZARD_TEMPLATE</option>
+                            <option>PANCREAS_TEMPLATE</option>
+                            <option>SPLEEN_TEMPLATE</option>
+                            <option>KIDNEY_TEMPLATE</option>
+                            <option>FLAME_TEMPLATE</option>
+                            <option>CHITIN_TEMPLATE</option>
+                            <option>SPINE_TEMPLATE</option>
+                            <option>SPONGE_TEMPLATE</option>
+                        </datalist>
+                        <datalist id="tissueLayerList">
+                            <option>BY_TYPE</option>
+                            <option>BY_CATEGORY</option>
+                            <option>BY_TOKEN</option>
+                        </datalist>
+                    </td>
+                </tr>
             </table>
         </div>
         <div>
@@ -440,7 +593,7 @@
         </div>
         <div id="appearanceTokens" style="display:none">
             <table>
-                <tr>
+                <tr id="multiGroup">
                     <td>
                         <div>
                             <button onclick='addFixedToken("appearanceTokenGroup", "[BODY_APPEARANCE_MODIFIER:", 
@@ -587,6 +740,7 @@
     </div>
     <div>
         <button onclick='emptyFieldNumber = 0; creatureTokenCompile();'>Create</button>
+        <button onclick='copyToClipboard("output")'>Copy to Clipboard</button>
     </div>
     <div>
         <textarea id="output"></textarea>
@@ -615,7 +769,7 @@
             // Appearance
             parseTokenGroup(raw, "appearanceTokenGroup")
             parseTokenGroup(raw, "combatTokenGroup")
-            document.getElementById("output").innerHTML = raw.join("\n");
+            document.getElementById("output").value = raw.join("\n");
         }
     </script>
 </body>
