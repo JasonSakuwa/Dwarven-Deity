@@ -417,15 +417,15 @@
                     <td>
                         <div>
                             <button onclick='addFixedToken("tissueTokenGroup", "[USE_TISSUE_TEMPLATE:", 
-                            2, 0, true)'>Add: Use Tissue Template</button>
+                            2, 0, true, "useTissueTemplateList")'>Add: Use Tissue Template</button>
                             <button onclick='removeTokenFromGroup("tissueTokenGroup", "[USE_TISSUE_TEMPLATE:")'>Remove:
                                 Use Tissue Template</button>
                         </div>
                         <div>
-                            <button onclick='addFlexibleToken("tissueLayerTokenGroup", "[TISSUE_LAYER:", 4, 0, true, 
+                            <button onclick='addFlexibleToken("tissueTokenGroup", "[TISSUE_LAYER:", 4, 0, true, 
                                 "tissueLayerList", "tissueLayerListInput")'>Add:
                                 Tissue Layer</button>
-                            <input list="" id="tissueLayerListInput">
+                            <input list="tissueLayerInputList" id="tissueLayerListInput">
                             <button onclick='removeTokenFromGroup("tissueTokenGroup", "[TISSUE_LAYER:")'>Remove:
                                 Tissue Layer</button>
                         </div>
@@ -450,6 +450,7 @@
                     <td>
                         <p>]</p>
                         <datalist id="useTissueTemplateList">
+                            // Tissues
                             <option>SKIN</option>
                             <option>FAT</option>
                             <option>MUSCLE</option>
@@ -482,6 +483,7 @@
                             <option>CHITIN</option>
                             <option>SPINE</option>
                             <option>SPONGE</option>
+                            // Tissue templates
                             <option>SKIN_TEMPLATE</option>
                             <option>FAT_TEMPLATE</option>
                             <option>MUSCLE_TEMPLATE</option>
@@ -560,9 +562,221 @@
                             <option>SPONGE_TEMPLATE</option>
                         </datalist>
                         <datalist id="tissueLayerList">
-                            <option>BY_TYPE</option>
+                            // Selector options
                             <option>BY_CATEGORY</option>
+                            <option>BY_TYPE</option>
                             <option>BY_TOKEN</option>
+                            // Categories
+                            <option>BODY</option>
+                            <option>BODY_UPPER</option>
+                            <option>BODY_LOWER</option>
+                            <option>HEAD</option>
+                            <option>ARM_UPPER</option>
+                            <option>ARM_LOWER</option>
+                            <option>HAND</option>
+                            <option>PINCER</option>
+                            <option>FOOT_FRONT</option>
+                            <option>FOOT_REAR</option>
+                            <option>LEG_FRONT</option>
+                            <option>LEG_REAR</option>
+                            <option>LEG_UPPER</option>
+                            <option>LEG_LOWER</option>
+                            <option>FOOT</option>
+                            <option>FLIPPER</option>
+                            <option>WING</option>
+                            <option>TAIL</option>
+                            <option>STINGER</option>
+                            <option>PROBOSCIS</option>
+                            <option>NOSE</option>
+                            <option>SHELL</option>
+                            <option>ANTENNA</option>
+                            <option>HORN</option>
+                            <option>MANDIBLE</option>
+                            <option>FINGER</option>
+                            <option>TOE</option>
+                            <option>EYE</option>
+                            <option>NOSE</option>
+                            <option>CHEEK</option>
+                            <option>LUNG</option>
+                            <option>HEART</option>
+                            <option>GUTS</option>
+                            <option>THROAT</option>
+                            <option>SPINE</option>
+                            <option>NECK</option>
+                            <option>SPINE</option>
+                            <option>BRAIN</option>
+                            <option>SKULL</option>
+                            <option>MOUTH</option>
+                            <option>TOOTH</option>
+                            <option>RIB_TRUE</option>
+                            <option>RIB_FALSE</option>
+                            <option>RIB_FLOATING</option>
+                            <option>LIP</option>
+                            <option>TONGUE</option>
+                            <option>EYELID</option>
+                            <option>BEAK</option>
+                            // Types
+                            <option>UPPERBODY</option>
+                            <option>LOWERBODY</option>
+                            <option>HEAD</option>
+                            <option>GRASP</option>
+                            <option>STANCE</option>
+                            // Tokens
+                            <option>UB</option>
+                            <option>LB</option>
+                            <option>HD</option>
+                            <option>RUA</option>
+                            <option>LUA</option>
+                            <option>RLA</option>
+                            <option>LLA</option>
+                            <option>RH</option>
+                            <option>LH</option>
+                            <option>R_UB_PINCER</option>
+                            <option>L_UB_PINCER</option>
+                            <option>RA1</option>
+                            <option>LA1</option>
+                            <option>RF1</option>
+                            <option>LF1</option>
+                            <option>RA2</option>
+                            <option>LA2</option>
+                            <option>RF2</option>
+                            <option>LF2</option>
+                            <option>RA3</option>
+                            <option>LA3</option>
+                            <option>RF3</option>
+                            <option>LF3</option>
+                            <option>RA4</option>
+                            <option>LA4</option>
+                            <option>RF4</option>
+                            <option>LF4</option>
+                            <option>RA5</option>
+                            <option>LA5</option>
+                            <option>RF5</option>
+                            <option>LF5</option>
+                            <option>RA</option>
+                            <option>LA</option>
+                            <option>RL</option>
+                            <option>LL</option>
+                            <option>RF</option>
+                            <option>LF</option>
+                            <option>RUL</option>
+                            <option>LUL</option>
+                            <option>RLL</option>
+                            <option>LLL</option>
+                            <option>RFFLIP</option>
+                            <option>LFFLIP</option>
+                            <option>RRFLIP</option>
+                            <option>LRFLIP</option>
+                            <option>RWING</option>
+                            <option>LWING</option>
+                            <option>TAIL</option>
+                            <option>TAIL_1</option>
+                            <option>TAIL_2</option>
+                            <option>TAIL_3</option>
+                            <option>TAIL_STINGER</option>
+                            <option>LOWER_BODY_STINGER</option>
+                            <option>PROBOSCIS</option>
+                            <option>TRUNK</option>
+                            <option>SHELL</option>
+                            <option>R_ANT</option>
+                            <option>L_ANT</option>
+                            <option>HEAD_HORN</option>
+                            <option>HEAD_HORN_1</option>
+                            <option>HEAD_HORN_2</option>
+                            <option>HEAD_HORN_3</option>
+                            <option>HEAD_HORN_4</option>
+                            <option>R_MAND</option>
+                            <option>L_MAND</option>
+                            <option>FINGER1</option>
+                            <option>FINGER2</option>
+                            <option>FINGER3</option>
+                            <option>FINGER4</option>
+                            <option>FINGER5</option>
+                            <option>TOE1</option>
+                            <option>TOE2</option>
+                            <option>TOE3</option>
+                            <option>TOE4</option>
+                            <option>TOE5</option>
+                            <option>EYE</option>
+                            <option>REYE</option>
+                            <option>LEYE</option>
+                            <option>BEAK</option>
+                            <option>NOSE</option>
+                            <option>L_CHEEK</option>
+                            <option>R_CHEEK</option>
+                            <option>RLUNG</option>
+                            <option>LLUNG</option>
+                            <option>HEART</option>
+                            <option>GUTS</option>
+                            <option>THROAT</option>
+                            <option>UPPERSPINE</option>
+                            <option>LOWERSPINE</option>
+                            <option>NK</option>
+                            <option>NECK</option>
+                            <option>BRAIN</option>
+                            <option>SKULL</option>
+                            <option>MOUTH</option>
+                            <option>TOOTH</option>
+                            <option>L_TRUE_RIB</option>
+                            <option>R_TRUE_RIB</option>
+                            <option>L_FALSE_RIB</option>
+                            <option>R_FALSE_RIB</option>
+                            <option>L_FLOATING_RIB</option>
+                            <option>R_FLOATING_RIB</option>
+                            <option>L_LIP</option>
+                            <option>U_LIP</option>
+                            <option>TONGUE</option>
+                            <option>EYELID</option>
+                            <option>L_EYELID</option>
+                            <option>R_EYELID</option>
+                            <option>BILL</option>
+                            <option>HEAD_ANTLER_1</option>
+                            <option>HEAD_ANTLER_2</option>
+                            // Tissues
+                            <option>SKIN</option>
+                            <option>FAT</option>
+                            <option>MUSCLE</option>
+                            <option>BONE</option>
+                            <option>SHELL</option>
+                            <option>HORN</option>
+                            <option>HOOF</option>
+                            <option>CARTILAGE</option>
+                            <option>HAIR</option>
+                            <option>FEATHER</option>
+                            <option>SCALE</option>
+                            <option>NAIL</option>
+                            <option>CLAW</option>
+                            <option>TALON</option>
+                            <option>TOOTH</option>
+                            <option>IVORY</option>
+                            <option>EYE</option>
+                            <option>NERVE</option>
+                            <option>BRAIN</option>
+                            <option>LUNG</option>
+                            <option>HEART</option>
+                            <option>LIVER</option>
+                            <option>GUT</option>
+                            <option>STOMACH</option>
+                            <option>GIZZARD</option>
+                            <option>PANCREAS</option>
+                            <option>SPLEEN</option>
+                            <option>KIDNEY</option>
+                            <option>FLAME</option>
+                            <option>CHITIN</option>
+                            <option>SPINE</option>
+                            <option>SPONGE</option>
+                            // Tissue locations
+                            <option>FRONT</option>
+                            <option>RIGHT</option>
+                            <option>LEFT</option>
+                            <option>TOP</option>
+                            <option>BOTTOM</option>
+                            <option>AROUND</option>
+                            <option>CLEANS</option>
+                        </datalist>
+                        <datalist id="tissueLayerInputList">
+                            <option>4</option>
+                            <option>6</option>
                         </datalist>
                     </td>
                 </tr>
@@ -766,6 +980,7 @@
             // Anatomy
             parseTokenGroup(raw, "bodyDetailPlanTokenGroup")
             parseSpecificToken(raw, "bodyCheckbox", "bodyToken")
+            parseTokenGroup(raw, "tissueTokenGroup")
             // Appearance
             parseTokenGroup(raw, "appearanceTokenGroup")
             parseTokenGroup(raw, "combatTokenGroup")
