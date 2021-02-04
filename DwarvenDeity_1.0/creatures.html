@@ -21,7 +21,7 @@
     </div>
     <div id="creatureTokenDatabase">
         <div>
-            <button onclick='toggleElementGroup("essentialTokens")'>Essentials</button>
+            <button onclick='toggleElementGroup("essentialTokens")' class="displayButton">Essentials</button>
         </div>
         <div id="essentialTokens" style="display:none">
             <table>
@@ -170,7 +170,7 @@
             </table>
         </div>
         <div>
-            <button onclick='toggleElementGroup("anatomyTokens")'>Anatomy</button>
+            <button onclick='toggleElementGroup("anatomyTokens")' class="displayButton">Anatomy</button>
         </div>
         <div id="anatomyTokens" style="display:none">
             <table>
@@ -413,38 +413,23 @@
                         </datalist>
                     </td>
                 </tr>
-                <tr class="multiGroup">
+                <tr class="flexibleList">
                     <td>
                         <div>
-                            <button onclick='addFixedToken("tissueTokenGroup", "[USE_TISSUE_TEMPLATE:", 
+                            <button onclick='addFixedToken("useTissueTemplateTokenGroup", "[USE_TISSUE_TEMPLATE:", 
                             2, 0, true, "useTissueTemplateList")'>Add: Use Tissue Template</button>
-                            <button onclick='removeTokenFromGroup("tissueTokenGroup", "[USE_TISSUE_TEMPLATE:")'>Remove:
+                            <button
+                                onclick='removeTokenFromGroup("useTissueTemplateTokenGroup", "[USE_TISSUE_TEMPLATE:")'>Remove:
                                 Use Tissue Template</button>
                         </div>
-                        <div>
-                            <button onclick='addFlexibleToken("tissueTokenGroup", "[TISSUE_LAYER:", 4, 0, true, 
-                                "tissueLayerList", "tissueLayerListInput")'>Add:
-                                Tissue Layer</button>
-                            <input list="tissueLayerInputList" id="tissueLayerListInput">
-                            <button onclick='removeTokenFromGroup("tissueTokenGroup", "[TISSUE_LAYER:")'>Remove:
-                                Tissue Layer</button>
-                        </div>
                     </td>
-                    <td id="tissueTokenGroup">
+                    <td id="useTissueTemplateTokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
                             <label for="useTissueTemplate">[USE_TISSUE_TEMPLATE:</label>
                             <input list="useTissueTemplateList" id="useTissueTemplate"
                                 onchange="flexibleAutoChecker(this)">
                             <input list="useTissueTemplateList" onchange="flexibleAutoChecker(this)">
-                        </div>
-                        <div>
-                            <input type="checkbox" class="cb">
-                            <label for="tissueLayer">[TISSUE_LAYER:</label>
-                            <input list="tissueLayerList" id="tissueLayer" onchange="flexibleAutoChecker(this)">
-                            <input list="tissueLayerList" onchange="flexibleAutoChecker(this)">
-                            <input list="tissueLayerList" onchange="flexibleAutoChecker(this)">
-                            <input list="tissueLayerList" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
                     <td>
@@ -560,6 +545,202 @@
                             <option>CHITIN_TEMPLATE</option>
                             <option>SPINE_TEMPLATE</option>
                             <option>SPONGE_TEMPLATE</option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr class="flexibleList">
+                    <td>
+                        <div>
+                            <button onclick='addFixedToken("useMaterialTemplateTokenGroup", "[USE_MATERIAL_TEMPLATE:", 
+                            2, 0, true, "useMaterialTemplateList")'>Add: Use Material Template</button>
+                            <button
+                                onclick='removeTokenFromGroup("useMaterialTemplateTokenGroup", "[USE_MATERIAL_TEMPLATE:")'>Remove:
+                                Use Material Template</button>
+                        </div>
+                    </td>
+                    <td id="useMaterialTemplateTokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="useMaterialTemplate">[USE_MATERIAL_TEMPLATE:</label>
+                            <input list="useMaterialTemplateList" id="useMaterialTemplate"
+                                onchange="flexibleAutoChecker(this)">
+                            <input list="useMaterialTemplateList" onchange="flexibleAutoChecker(this)">
+                        </div>
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="useMaterialTemplateList">
+                            // Materials
+                            <option>STONE</option>
+                            <option>METAL</option>
+                            <option>WOOD</option>
+                            <option>SKIN</option>
+                            <option>FAT</option>
+                            <option>MUSCLE</option>
+                            <option>SINEW</option>
+                            <option>BONE</option>
+                            <option>CARTILAGE</option>
+                            <option>HAIR</option>
+                            <option>FEATHER</option>
+                            <option>SCALE</option>
+                            <option>NAIL</option>
+                            <option>TOOTH</option>
+                            <option>EYE</option>
+                            <option>NERVE</option>
+                            <option>BRAIN</option>
+                            <option>LUNG</option>
+                            <option>HEART</option>
+                            <option>LIVER</option>
+                            <option>GUT</option>
+                            <option>STOMACH</option>
+                            <option>GIZZARD</option>
+                            <option>PANCREAS</option>
+                            <option>SPLEEN</option>
+                            <option>KIDNEY</option>
+                            <option>LEATHER</option>
+                            <option>PARCHMENT</option>
+                            <option>HORN</option>
+                            <option>HOOF</option>
+                            <option>PEARL</option>
+                            <option>SILK</option>
+                            <option>BLOOD</option>
+                            <option>ICHOR</option>
+                            <option>GOO</option>
+                            <option>SLIME</option>
+                            <option>PUS</option>
+                            <option>SHELL</option>
+                            <option>SOAP</option>
+                            <option>TALLOW</option>
+                            <option>CHITIN</option>
+                            <option>MILK</option>
+                            <option>CREATURE_CHEESE</option>
+                            <option>STRUCTURAL_PLANT</option>
+                            <option>SEED</option>
+                            <option>LEAF</option>
+                            <option>FRUIT</option>
+                            <option>BUD</option>
+                            <option>MUSHROOM</option>
+                            <option>FLOWER</option>
+                            <option>THREAD_PLANT</option>
+                            <option>PLANT_ALCOHOL</option>
+                            <option>PLANT_POWDER</option>
+                            <option>PLANT_EXTRACT</option>
+                            <option>CREATURE_EXTRACT</option>
+                            <option>FLAME</option>
+                            <option>SOIL</option>
+                            <option>EGGSHELL</option>
+                            <option>EGG_WHITE</option>
+                            <option>EGG_YOLK</option>
+                            <option>PLANT_OIL</option>
+                            <option>PLANT_SOAP</option>
+                            <option>WAX</option>
+                            <option>CREATURE_ALCOHOL</option>
+                            <option>LEATHERY_EGGSHELL</option>
+                            <option>INK</option>
+                            <option>SPONGE</option>
+                            <option>TEARS</option>
+                            <option>SPIT</option>
+                            <option>SWEAT</option>
+                            // Material templates
+                            <option>STONE_TEMPLATE</option>
+                            <option>METAL_TEMPLATE</option>
+                            <option>WOOD_TEMPLATE</option>
+                            <option>SKIN_TEMPLATE</option>
+                            <option>FAT_TEMPLATE</option>
+                            <option>MUSCLE_TEMPLATE</option>
+                            <option>SINEW_TEMPLATE</option>
+                            <option>BONE_TEMPLATE</option>
+                            <option>CARTILAGE_TEMPLATE</option>
+                            <option>HAIR_TEMPLATE</option>
+                            <option>FEATHER_TEMPLATE</option>
+                            <option>SCALE_TEMPLATE</option>
+                            <option>NAIL_TEMPLATE</option>
+                            <option>TOOTH_TEMPLATE</option>
+                            <option>EYE_TEMPLATE</option>
+                            <option>NERVE_TEMPLATE</option>
+                            <option>BRAIN_TEMPLATE</option>
+                            <option>LUNG_TEMPLATE</option>
+                            <option>HEART_TEMPLATE</option>
+                            <option>LIVER_TEMPLATE</option>
+                            <option>GUT_TEMPLATE</option>
+                            <option>STOMACH_TEMPLATE</option>
+                            <option>GIZZARD_TEMPLATE</option>
+                            <option>PANCREAS_TEMPLATE</option>
+                            <option>SPLEEN_TEMPLATE</option>
+                            <option>KIDNEY_TEMPLATE</option>
+                            <option>LEATHER_TEMPLATE</option>
+                            <option>PARCHMENT_TEMPLATE</option>
+                            <option>HORN_TEMPLATE</option>
+                            <option>HOOF_TEMPLATE</option>
+                            <option>PEARL_TEMPLATE</option>
+                            <option>SILK_TEMPLATE</option>
+                            <option>BLOOD_TEMPLATE</option>
+                            <option>ICHOR_TEMPLATE</option>
+                            <option>GOO_TEMPLATE</option>
+                            <option>SLIME_TEMPLATE</option>
+                            <option>PUS_TEMPLATE</option>
+                            <option>SHELL_TEMPLATE</option>
+                            <option>SOAP_TEMPLATE</option>
+                            <option>TALLOW_TEMPLATE</option>
+                            <option>CHITIN_TEMPLATE</option>
+                            <option>MILK_TEMPLATE</option>
+                            <option>CREATURE_CHEESE_TEMPLATE</option>
+                            <option>STRUCTURAL_PLANT_TEMPLATE</option>
+                            <option>SEED_TEMPLATE</option>
+                            <option>LEAF_TEMPLATE</option>
+                            <option>FRUIT_TEMPLATE</option>
+                            <option>BUD_TEMPLATE</option>
+                            <option>MUSHROOM_TEMPLATE</option>
+                            <option>FLOWER_TEMPLATE</option>
+                            <option>THREAD_PLANT_TEMPLATE</option>
+                            <option>PLANT_ALCOHOL_TEMPLATE</option>
+                            <option>PLANT_POWDER_TEMPLATE</option>
+                            <option>PLANT_EXTRACT_TEMPLATE</option>
+                            <option>CREATURE_EXTRACT_TEMPLATE</option>
+                            <option>FLAME_TEMPLATE</option>
+                            <option>SOIL_TEMPLATE</option>
+                            <option>EGGSHELL_TEMPLATE</option>
+                            <option>EGG_WHITE_TEMPLATE</option>
+                            <option>EGG_YOLK_TEMPLATE</option>
+                            <option>PLANT_OIL_TEMPLATE</option>
+                            <option>PLANT_SOAP_TEMPLATE</option>
+                            <option>WAX_TEMPLATE</option>
+                            <option>CREATURE_ALCOHOL_TEMPLATE</option>
+                            <option>LEATHERY_EGGSHELL_TEMPLATE</option>
+                            <option>INK_TEMPLATE</option>
+                            <option>SPONGE_TEMPLATE</option>
+                            <option>TEARS_TEMPLATE</option>
+                            <option>SPIT_TEMPLATE</option>
+                            <option>SWEAT_TEMPLATE</option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr class="flexibleListinput">
+                    <td>
+                        <div>
+                            <button onclick='addFlexibleToken("tissueLayerTokenGroup", "[TISSUE_LAYER:", 4, 0, true, 
+                                "tissueLayerList", "tissueLayerListInput")'>Add:
+                                Tissue Layer</button>
+                            <input list="tissueLayerInputList" id="tissueLayerListInput">
+                            <button onclick='removeTokenFromGroup("tissueLayerTokenGroup", "[TISSUE_LAYER:")'>Remove:
+                                Tissue Layer</button>
+                        </div>
+                    </td>
+                    <td id="tissueLayerTokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="tissueLayer">[TISSUE_LAYER:</label>
+                            <input list="tissueLayerList" id="tissueLayer" onchange="flexibleAutoChecker(this)">
+                            <input list="tissueLayerList" onchange="flexibleAutoChecker(this)">
+                            <input list="tissueLayerList" onchange="flexibleAutoChecker(this)">
+                            <input list="tissueLayerList" onchange="flexibleAutoChecker(this)">
+                        </div>
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="tissueLayerInputList">
+                            <option>4</option>
+                            <option>6</option>
                         </datalist>
                         <datalist id="tissueLayerList">
                             // Selector options
@@ -774,36 +955,259 @@
                             <option>AROUND</option>
                             <option>CLEANS</option>
                         </datalist>
-                        <datalist id="tissueLayerInputList">
-                            <option>4</option>
-                            <option>6</option>
+                    </td>
+                </tr>
+                <tr class="fixedListInput">
+                    <td>
+                        <div>
+                            <input type="checkbox" id="selectTissueLayerCheckbox" class="cb">
+                            <button onclick='addList("selectTissueLayerToken", "selectTissueLayerList")'>+</button>
+                            <button onclick='removeField("selectTissueLayerToken", 3)'>-</button>
+                        </div>
+                    </td>
+                    <td id="selectTissueLayerToken">
+                        <label for="selectTissueLayer">[SELECT_TISSUE_LAYER:</label>
+                        <input list="selectTissueLayerList" id="selectTissueLayer" onchange="fixedAutoChecker(this)">
+                        <input list="selectTissueLayerList" id="selectTissueLayer" onchange="fixedAutoChecker(this)">
+                        <input list="selectTissueLayerList" id="selectTissueLayer" onchange="fixedAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="selectTissueLayerList">
+                            // Tissues
+                            <option>SKIN</option>
+                            <option>FAT</option>
+                            <option>MUSCLE</option>
+                            <option>BONE</option>
+                            <option>SHELL</option>
+                            <option>HORN</option>
+                            <option>HOOF</option>
+                            <option>CARTILAGE</option>
+                            <option>HAIR</option>
+                            <option>FEATHER</option>
+                            <option>SCALE</option>
+                            <option>NAIL</option>
+                            <option>CLAW</option>
+                            <option>TALON</option>
+                            <option>TOOTH</option>
+                            <option>IVORY</option>
+                            <option>EYE</option>
+                            <option>NERVE</option>
+                            <option>BRAIN</option>
+                            <option>LUNG</option>
+                            <option>HEART</option>
+                            <option>LIVER</option>
+                            <option>GUT</option>
+                            <option>STOMACH</option>
+                            <option>GIZZARD</option>
+                            <option>PANCREAS</option>
+                            <option>SPLEEN</option>
+                            <option>KIDNEY</option>
+                            <option>FLAME</option>
+                            <option>CHITIN</option>
+                            <option>SPINE</option>
+                            <option>SPONGE</option>
+                            // Selector options
+                            <option>BY_CATEGORY</option>
+                            <option>BY_TYPE</option>
+                            <option>BY_TOKEN</option>
+                            // Categories
+                            <option>BODY</option>
+                            <option>BODY_UPPER</option>
+                            <option>BODY_LOWER</option>
+                            <option>HEAD</option>
+                            <option>ARM_UPPER</option>
+                            <option>ARM_LOWER</option>
+                            <option>HAND</option>
+                            <option>PINCER</option>
+                            <option>FOOT_FRONT</option>
+                            <option>FOOT_REAR</option>
+                            <option>LEG_FRONT</option>
+                            <option>LEG_REAR</option>
+                            <option>LEG_UPPER</option>
+                            <option>LEG_LOWER</option>
+                            <option>FOOT</option>
+                            <option>FLIPPER</option>
+                            <option>WING</option>
+                            <option>TAIL</option>
+                            <option>STINGER</option>
+                            <option>PROBOSCIS</option>
+                            <option>NOSE</option>
+                            <option>SHELL</option>
+                            <option>ANTENNA</option>
+                            <option>HORN</option>
+                            <option>MANDIBLE</option>
+                            <option>FINGER</option>
+                            <option>TOE</option>
+                            <option>EYE</option>
+                            <option>NOSE</option>
+                            <option>CHEEK</option>
+                            <option>LUNG</option>
+                            <option>HEART</option>
+                            <option>GUTS</option>
+                            <option>THROAT</option>
+                            <option>SPINE</option>
+                            <option>NECK</option>
+                            <option>SPINE</option>
+                            <option>BRAIN</option>
+                            <option>SKULL</option>
+                            <option>MOUTH</option>
+                            <option>TOOTH</option>
+                            <option>RIB_TRUE</option>
+                            <option>RIB_FALSE</option>
+                            <option>RIB_FLOATING</option>
+                            <option>LIP</option>
+                            <option>TONGUE</option>
+                            <option>EYELID</option>
+                            <option>BEAK</option>
+                            // Types
+                            <option>UPPERBODY</option>
+                            <option>LOWERBODY</option>
+                            <option>HEAD</option>
+                            <option>GRASP</option>
+                            <option>STANCE</option>
+                            // Tokens
+                            <option>UB</option>
+                            <option>LB</option>
+                            <option>HD</option>
+                            <option>RUA</option>
+                            <option>LUA</option>
+                            <option>RLA</option>
+                            <option>LLA</option>
+                            <option>RH</option>
+                            <option>LH</option>
+                            <option>R_UB_PINCER</option>
+                            <option>L_UB_PINCER</option>
+                            <option>RA1</option>
+                            <option>LA1</option>
+                            <option>RF1</option>
+                            <option>LF1</option>
+                            <option>RA2</option>
+                            <option>LA2</option>
+                            <option>RF2</option>
+                            <option>LF2</option>
+                            <option>RA3</option>
+                            <option>LA3</option>
+                            <option>RF3</option>
+                            <option>LF3</option>
+                            <option>RA4</option>
+                            <option>LA4</option>
+                            <option>RF4</option>
+                            <option>LF4</option>
+                            <option>RA5</option>
+                            <option>LA5</option>
+                            <option>RF5</option>
+                            <option>LF5</option>
+                            <option>RA</option>
+                            <option>LA</option>
+                            <option>RL</option>
+                            <option>LL</option>
+                            <option>RF</option>
+                            <option>LF</option>
+                            <option>RUL</option>
+                            <option>LUL</option>
+                            <option>RLL</option>
+                            <option>LLL</option>
+                            <option>RFFLIP</option>
+                            <option>LFFLIP</option>
+                            <option>RRFLIP</option>
+                            <option>LRFLIP</option>
+                            <option>RWING</option>
+                            <option>LWING</option>
+                            <option>TAIL</option>
+                            <option>TAIL_1</option>
+                            <option>TAIL_2</option>
+                            <option>TAIL_3</option>
+                            <option>TAIL_STINGER</option>
+                            <option>LOWER_BODY_STINGER</option>
+                            <option>PROBOSCIS</option>
+                            <option>TRUNK</option>
+                            <option>SHELL</option>
+                            <option>R_ANT</option>
+                            <option>L_ANT</option>
+                            <option>HEAD_HORN</option>
+                            <option>HEAD_HORN_1</option>
+                            <option>HEAD_HORN_2</option>
+                            <option>HEAD_HORN_3</option>
+                            <option>HEAD_HORN_4</option>
+                            <option>R_MAND</option>
+                            <option>L_MAND</option>
+                            <option>FINGER1</option>
+                            <option>FINGER2</option>
+                            <option>FINGER3</option>
+                            <option>FINGER4</option>
+                            <option>FINGER5</option>
+                            <option>TOE1</option>
+                            <option>TOE2</option>
+                            <option>TOE3</option>
+                            <option>TOE4</option>
+                            <option>TOE5</option>
+                            <option>EYE</option>
+                            <option>REYE</option>
+                            <option>LEYE</option>
+                            <option>BEAK</option>
+                            <option>NOSE</option>
+                            <option>L_CHEEK</option>
+                            <option>R_CHEEK</option>
+                            <option>RLUNG</option>
+                            <option>LLUNG</option>
+                            <option>HEART</option>
+                            <option>GUTS</option>
+                            <option>THROAT</option>
+                            <option>UPPERSPINE</option>
+                            <option>LOWERSPINE</option>
+                            <option>NK</option>
+                            <option>NECK</option>
+                            <option>BRAIN</option>
+                            <option>SKULL</option>
+                            <option>MOUTH</option>
+                            <option>TOOTH</option>
+                            <option>L_TRUE_RIB</option>
+                            <option>R_TRUE_RIB</option>
+                            <option>L_FALSE_RIB</option>
+                            <option>R_FALSE_RIB</option>
+                            <option>L_FLOATING_RIB</option>
+                            <option>R_FLOATING_RIB</option>
+                            <option>L_LIP</option>
+                            <option>U_LIP</option>
+                            <option>TONGUE</option>
+                            <option>EYELID</option>
+                            <option>L_EYELID</option>
+                            <option>R_EYELID</option>
+                            <option>BILL</option>
+                            <option>HEAD_ANTLER_1</option>
+                            <option>HEAD_ANTLER_2</option>
+                            // Tissue locations
+                            <option>FRONT</option>
+                            <option>RIGHT</option>
+                            <option>LEFT</option>
+                            <option>TOP</option>
+                            <option>BOTTOM</option>
+                            <option>AROUND</option>
+                            <option>CLEANS</option>
                         </datalist>
                     </td>
                 </tr>
             </table>
         </div>
         <div>
-            <button onclick='toggleElementGroup("syndromeTokens")'>Syndrome Relation</button>
+            <button onclick='toggleElementGroup("syndromeTokens")' class="displayButton">Syndrome Relation</button>
         </div>
         <div id="syndromeTokens" style="display:none">
         </div>
         <div>
-            <button onclick='toggleElementGroup("secretionTokens")'>Secretion</button>
-        </div>
-        <div id="secretionTokens" style="display:none">
-        </div>
-        <div>
-            <button onclick='toggleElementGroup("interactionTokens")'>Interactions</button>
+            <button onclick='toggleElementGroup("interactionTokens")' class="displayButton">Interactions</button>
         </div>
         <div id="interactionTokens" style="display:none">
         </div>
         <div>
-            <button onclick='toggleElementGroup("physicalMentalAttributeTokens")'>Physical + Mental Attribute</button>
+            <button onclick='toggleElementGroup("physicalMentalAttributeTokens")' class="displayButton">Physical +
+                Mental Attribute</button>
         </div>
         <div id="physicalMentalAttributeTokens" style="display:none">
         </div>
         <div>
-            <button onclick='toggleElementGroup("appearanceTokens")'>Appearance</button>
+            <button onclick='toggleElementGroup("appearanceTokens")' class="displayButton">Appearance</button>
         </div>
         <div id="appearanceTokens" style="display:none">
             <table>
@@ -850,13 +1254,22 @@
                             <option>HEIGHT</option>
                             <option>BROADNESS</option>
                             <option>LENGTH</option>
+                            <option>0</option>
+                            <option>25</option>
+                            <option>50</option>
+                            <option>75</option>
+                            <option>100</option>
+                            <option>125</option>
+                            <option>150</option>
+                            <option>175</option>
+                            <option>200</option>
                         </datalist>
                     </td>
                 </tr>
             </table>
         </div>
         <div>
-            <button onclick='toggleElementGroup("combatTokens")'>Combat</button>
+            <button onclick='toggleElementGroup("combatTokens")' class="displayButton">Combat</button>
         </div>
         <div id="combatTokens" style="display:none">
             <table>
@@ -917,37 +1330,41 @@
             </table>
         </div>
         <div>
-            <button onclick='toggleElementGroup("ageTokens")'>Age</button>
+            <button onclick='toggleElementGroup("ageTokens")' class="displayButton">Age</button>
         </div>
         <div id="ageTokens" style="display:none">
         </div>
         <div>
-            <button onclick='toggleElementGroup("additionalAttributeTokens")'>Additional Attributes</button>
+            <button onclick='toggleElementGroup("additionalAttributeTokens")' class="displayButton">Additional
+                Attributes</button>
         </div>
         <div id="additionalAttributeTokens" style="display:none">
         </div>
         <div>
-            <button onclick='toggleElementGroup("professionTokens")'>Professions</button>
+            <button onclick='toggleElementGroup("professionTokens")' class="displayButton">Professions</button>
         </div>
         <div id="professionTokens" style="display:none">
         </div>
         <div>
-            <button onclick='toggleElementGroup("personalityMannerismTokens")'>Personality + Mannerisms</button>
+            <button onclick='toggleElementGroup("personalityMannerismTokens")' class="displayButton">Personality +
+                Mannerisms</button>
         </div>
         <div id="personalityMannerismTokens" style="display:none">
         </div>
         <div>
-            <button onclick='toggleElementGroup("individualCasteFemaleTokens")'>Individual Caste 1</button>
+            <button onclick='toggleElementGroup("individualCasteFemaleTokens")' class="displayButton">Individual Caste
+                1</button>
         </div>
         <div id="individualCasteFemaleTokens" style="display:none">
         </div>
         <div>
-            <button onclick='toggleElementGroup("individualCasteMaleTokens")'>Individual Caste 2</button>
+            <button onclick='toggleElementGroup("individualCasteMaleTokens")' class="displayButton">Individual Caste
+                2</button>
         </div>
         <div id="individualCasteMaleTokens" style="display:none">
         </div>
         <div>
-            <button onclick='toggleElementGroup("multipleCasteTokens")'>Multiple Caste</button>
+            <button onclick='toggleElementGroup("multipleCasteTokens")' class="displayButton">Multiple Caste</button>
         </div>
         <div id="multipleCasteTokens" style="display:none">
         </div>
@@ -980,7 +1397,10 @@
             // Anatomy
             parseTokenGroup(raw, "bodyDetailPlanTokenGroup")
             parseSpecificToken(raw, "bodyCheckbox", "bodyToken")
-            parseTokenGroup(raw, "tissueTokenGroup")
+            parseTokenGroup(raw, "useTissueTemplateTokenGroup")
+            parseTokenGroup(raw, "useMaterialTemplateTokenGroup")
+            parseTokenGroup(raw, "tissueLayerTokenGroup")
+            parseSpecificToken(raw, "selectTissueLayerCheckbox", "selectTissueLayerToken")
             // Appearance
             parseTokenGroup(raw, "appearanceTokenGroup")
             parseTokenGroup(raw, "combatTokenGroup")
