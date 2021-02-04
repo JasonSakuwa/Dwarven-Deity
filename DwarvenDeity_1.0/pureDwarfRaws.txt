@@ -1,3 +1,50 @@
+<tr class="flexibleListinput">
+                    <td>
+                        <div>
+                            <button onclick='addFlexibleToken("TokenGroup", "[:", 1, 0, true, 
+                                "List", "ListInput")'>Add: </button>
+                            <input list="InputList" id=ListInput">
+                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                        </div>
+                    </td>
+                    <td id="TokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="">[TISSUE_LAYER:</label>
+                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
+                        </div>
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="InputList">
+                        </datalist>
+                        <datalist id="List">
+                        </datalist>
+                    </td>
+                </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // fundamental tokens
 // fixedText
 [CREATURE:DWARF]
