@@ -1,4 +1,4 @@
-<tr class="flexibleListinput">
+<tr class="flexibleListInput">
                     <td>
                         <div>
                             <button onclick='addFlexibleToken("TokenGroup", "[:", 1, 0, true, 
@@ -10,7 +10,7 @@
                     <td id="TokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[TISSUE_LAYER:</label>
+                            <label for="">[:</label>
                             <input list="List" id="" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
@@ -21,31 +21,394 @@
                         <datalist id="List">
                         </datalist>
                     </td>
-                </tr>
+                </tr>  <!--  -->
+
+<tr class="flexibleList">
+                    <td>
+                        <div>
+                            <button onclick='addFixedToken("TokenGroup", "[:", 
+                            2, 0, true, "List")'>Add: </button>
+                            <button
+                                onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                        </div>
+                    </td>
+                    <td id="TokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="">[:</label>
+                            <input list="List" id=""
+                                onchange="flexibleAutoChecker(this)">
+                            <input list="List" onchange="flexibleAutoChecker(this)">
+                        </div>
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="List">
+                        </datalist>
+                    </td>
+                </tr>  <!--  -->
+
+<tr class="flexibleText">
+                    <td>
+                        <div>
+                            <button onclick='addFixedToken("TokenGroup", "[:", 
+                            0, 1, false)'>Add: </button>
+                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                        </div>
+                    </td>
+                    <td id="TokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="">[:</label>
+                            <input type="text" id="" onchange="flexibleAutoChecker(this)">
+                        </div>
+                    </td>
+                    <td>
+                        <p>]</p>
+                    </td>
+                </tr>  <!--  -->
+
+<tr class="fixedListInput">
+                    <td>
+                        <div>
+                            <input type="checkbox" id="Checkbox" class="cb">
+                            <button onclick='addList("Token", "List")'>+</button>
+                            <button onclick='removeField("Token", 2)'>-</button>
+                        </div>
+                    </td>
+                    <td id="Token">
+                        <label for="">[:</label>
+                        <input list="List" id="" onchange="flexibleAutoChecker(this)">
+                        <input list="List" id="" onchange="flexibleAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="List">
+                        </datalist>
+                    </td>
+                </tr>  <!--  -->
+
+<tr class="fixedList">
+                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
+                    <td id="Token">
+                        <label for="">[:</label>
+                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="List">
+                        </datalist>
+                    </td>
+                </tr>  <!--  -->
+
+<tr class="fixedText">
+                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
+                    <td id="Token">
+                        <label for="">[:</label>
+                        <input type="text" id="" onchange="fixedAutoChecker(this)">
+                    </td>
+                    <td>
+                        <p>]</p>
+                    </td>
+                </tr>  <!--  -->
+
+<tr class="fixedClosed">
+                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
+                    <td id="Token">
+                        <label>[]</label>
+                    </td>
+                </tr>  <!--  -->
 
 
+flexibleListInput button
+<div>
+                            <button onclick='addFlexibleToken("TokenGroup", "[:", 1, 0, true, 
+                                "List", "ListInput")'>Add: </button>
+                            <input list="InputList" id=ListInput">
+                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                        </div>  <!--  -->
+
+<div>
+                            <input type="checkbox" class="cb">
+                            <label for="">[:</label>
+                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
+                        </div>  <!--  -->
+
+<datalist id="InputList">
+                        </datalist>
+                        <datalist id="List">
+                        </datalist>  <!--  -->
 
 
+flexiblelist button
+<div>
+                            <button onclick='addFixedToken("TokenGroup", "[:", 
+                            2, 0, true, "List")'>Add: </button>
+                            <button
+                                onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                        </div>  <!--  -->
+
+<div>
+                            <input type="checkbox" class="cb">
+                            <label for="">[:</label>
+                            <input list="List" id=""
+                                onchange="flexibleAutoChecker(this)">
+                            <input list="List" onchange="flexibleAutoChecker(this)">
+                        </div>  <!--  -->
+
+<datalist id="List">
+                        </datalist>  <!--  -->
 
 
+flexibleText button
+<div>
+                            <button onclick='addFixedToken("TokenGroup", "[:", 
+                            0, 1, false)'>Add: </button>
+                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                        </div>  <!--  -->
+
+<div>
+                            <input type="checkbox" class="cb">
+                            <label for="">[:</label>
+                            <input type="text" id="" onchange="flexibleAutoChecker(this)">
+                        </div>  <!--  -->
 
 
+flexibleClosed button
+<div>
+                            <button onclick='addFixedClosedToken("TokenGroup", "[]")'>Add: </button>
+                            <button onclick='removeTokenFromGroup("TokenGroup", "[]")'>Remove: </button>
+                        </div> <!--  -->
+
+<div>
+                            <input type="checkbox" class="cb">
+                            <label>[]</label>
+                        </div> <!--  -->
 
 
+// Selector options
+                            <option>BY_CATEGORY</option>
+                            <option>BY_TYPE</option>
+                            <option>BY_TOKEN</option>
 
+// Categories
+                            <option>BODY</option>
+                            <option>BODY_UPPER</option>
+                            <option>BODY_LOWER</option>
+                            <option>HEAD</option>
+                            <option>ARM_UPPER</option>
+                            <option>ARM_LOWER</option>
+                            <option>HAND</option>
+                            <option>PINCER</option>
+                            <option>FOOT_FRONT</option>
+                            <option>FOOT_REAR</option>
+                            <option>LEG_FRONT</option>
+                            <option>LEG_REAR</option>
+                            <option>LEG_UPPER</option>
+                            <option>LEG_LOWER</option>
+                            <option>FOOT</option>
+                            <option>FLIPPER</option>
+                            <option>WING</option>
+                            <option>TAIL</option>
+                            <option>STINGER</option>
+                            <option>PROBOSCIS</option>
+                            <option>NOSE</option>
+                            <option>SHELL</option>
+                            <option>ANTENNA</option>
+                            <option>HORN</option>
+                            <option>MANDIBLE</option>
+                            <option>FINGER</option>
+                            <option>TOE</option>
+                            <option>EYE</option>
+                            <option>NOSE</option>
+                            <option>CHEEK</option>
+                            <option>LUNG</option>
+                            <option>HEART</option>
+                            <option>GUTS</option>
+                            <option>THROAT</option>
+                            <option>SPINE</option>
+                            <option>NECK</option>
+                            <option>SPINE</option>
+                            <option>BRAIN</option>
+                            <option>SKULL</option>
+                            <option>MOUTH</option>
+                            <option>TOOTH</option>
+                            <option>RIB_TRUE</option>
+                            <option>RIB_FALSE</option>
+                            <option>RIB_FLOATING</option>
+                            <option>LIP</option>
+                            <option>TONGUE</option>
+                            <option>EYELID</option>
+                            <option>BEAK</option>
 
+// Types
+                            <option>UPPERBODY</option>
+                            <option>LOWERBODY</option>
+                            <option>HEAD</option>
+                            <option>GRASP</option>
+                            <option>STANCE</option>
 
+// Tokens
+                            <option>UB</option>
+                            <option>LB</option>
+                            <option>HD</option>
+                            <option>RUA</option>
+                            <option>LUA</option>
+                            <option>RLA</option>
+                            <option>LLA</option>
+                            <option>RH</option>
+                            <option>LH</option>
+                            <option>R_UB_PINCER</option>
+                            <option>L_UB_PINCER</option>
+                            <option>RA1</option>
+                            <option>LA1</option>
+                            <option>RF1</option>
+                            <option>LF1</option>
+                            <option>RA2</option>
+                            <option>LA2</option>
+                            <option>RF2</option>
+                            <option>LF2</option>
+                            <option>RA3</option>
+                            <option>LA3</option>
+                            <option>RF3</option>
+                            <option>LF3</option>
+                            <option>RA4</option>
+                            <option>LA4</option>
+                            <option>RF4</option>
+                            <option>LF4</option>
+                            <option>RA5</option>
+                            <option>LA5</option>
+                            <option>RF5</option>
+                            <option>LF5</option>
+                            <option>RA</option>
+                            <option>LA</option>
+                            <option>RL</option>
+                            <option>LL</option>
+                            <option>RF</option>
+                            <option>LF</option>
+                            <option>RUL</option>
+                            <option>LUL</option>
+                            <option>RLL</option>
+                            <option>LLL</option>
+                            <option>RFFLIP</option>
+                            <option>LFFLIP</option>
+                            <option>RRFLIP</option>
+                            <option>LRFLIP</option>
+                            <option>RWING</option>
+                            <option>LWING</option>
+                            <option>TAIL</option>
+                            <option>TAIL_1</option>
+                            <option>TAIL_2</option>
+                            <option>TAIL_3</option>
+                            <option>TAIL_STINGER</option>
+                            <option>LOWER_BODY_STINGER</option>
+                            <option>PROBOSCIS</option>
+                            <option>TRUNK</option>
+                            <option>SHELL</option>
+                            <option>R_ANT</option>
+                            <option>L_ANT</option>
+                            <option>HEAD_HORN</option>
+                            <option>HEAD_HORN_1</option>
+                            <option>HEAD_HORN_2</option>
+                            <option>HEAD_HORN_3</option>
+                            <option>HEAD_HORN_4</option>
+                            <option>R_MAND</option>
+                            <option>L_MAND</option>
+                            <option>FINGER1</option>
+                            <option>FINGER2</option>
+                            <option>FINGER3</option>
+                            <option>FINGER4</option>
+                            <option>FINGER5</option>
+                            <option>TOE1</option>
+                            <option>TOE2</option>
+                            <option>TOE3</option>
+                            <option>TOE4</option>
+                            <option>TOE5</option>
+                            <option>EYE</option>
+                            <option>REYE</option>
+                            <option>LEYE</option>
+                            <option>BEAK</option>
+                            <option>NOSE</option>
+                            <option>L_CHEEK</option>
+                            <option>R_CHEEK</option>
+                            <option>RLUNG</option>
+                            <option>LLUNG</option>
+                            <option>HEART</option>
+                            <option>GUTS</option>
+                            <option>THROAT</option>
+                            <option>UPPERSPINE</option>
+                            <option>LOWERSPINE</option>
+                            <option>NK</option>
+                            <option>NECK</option>
+                            <option>BRAIN</option>
+                            <option>SKULL</option>
+                            <option>MOUTH</option>
+                            <option>TOOTH</option>
+                            <option>L_TRUE_RIB</option>
+                            <option>R_TRUE_RIB</option>
+                            <option>L_FALSE_RIB</option>
+                            <option>R_FALSE_RIB</option>
+                            <option>L_FLOATING_RIB</option>
+                            <option>R_FLOATING_RIB</option>
+                            <option>L_LIP</option>
+                            <option>U_LIP</option>
+                            <option>TONGUE</option>
+                            <option>EYELID</option>
+                            <option>L_EYELID</option>
+                            <option>R_EYELID</option>
+                            <option>BILL</option>
+                            <option>HEAD_ANTLER_1</option>
+                            <option>HEAD_ANTLER_2</option>
 
+// Tissues
+                            <option>SKIN</option>
+                            <option>FAT</option>
+                            <option>MUSCLE</option>
+                            <option>BONE</option>
+                            <option>SHELL</option>
+                            <option>HORN</option>
+                            <option>HOOF</option>
+                            <option>CARTILAGE</option>
+                            <option>HAIR</option>
+                            <option>FEATHER</option>
+                            <option>SCALE</option>
+                            <option>NAIL</option>
+                            <option>CLAW</option>
+                            <option>TALON</option>
+                            <option>TOOTH</option>
+                            <option>IVORY</option>
+                            <option>EYE</option>
+                            <option>NERVE</option>
+                            <option>BRAIN</option>
+                            <option>LUNG</option>
+                            <option>HEART</option>
+                            <option>LIVER</option>
+                            <option>GUT</option>
+                            <option>STOMACH</option>
+                            <option>GIZZARD</option>
+                            <option>PANCREAS</option>
+                            <option>SPLEEN</option>
+                            <option>KIDNEY</option>
+                            <option>FLAME</option>
+                            <option>CHITIN</option>
+                            <option>SPINE</option>
+                            <option>SPONGE</option>
 
-
-
-
+// Tissue locations
+                            <option>FRONT</option>
+                            <option>RIGHT</option>
+                            <option>LEFT</option>
+                            <option>TOP</option>
+                            <option>BOTTOM</option>
+                            <option>AROUND</option>
+                            <option>CLEANS</option>
 
 
 
 
 
 // fundamental tokens
+
 // fixedText
 [CREATURE:DWARF]
 // fixedText
@@ -73,6 +436,11 @@
 // flexibleText
 [PREFSTRING:beards]
 
+// Selector options
+                            <option>BY_CATEGORY</option>
+                            <option>BY_TYPE</option>
+                            <option>BY_TOKEN</option>
+
 // anatomy tokens
 // flexibleList
 [BODY_DETAIL_PLAN:STANDARD_MATERIALS]
@@ -91,6 +459,7 @@
 [USE_TISSUE_TEMPLATE:EYELASH:EYELASH_TEMPLATE]
 [USE_TISSUE_TEMPLATE:NAIL:NAIL_TEMPLATE]
 // flexibleList
+useMaterialTemplate
 [USE_MATERIAL_TEMPLATE:NAIL:NAIL_TEMPLATE]
 [USE_MATERIAL_TEMPLATE:SINEW:SINEW_TEMPLATE]
 [USE_MATERIAL_TEMPLATE:BLOOD:BLOOD_TEMPLATE]
@@ -99,66 +468,92 @@
 [USE_MATERIAL_TEMPLATE:TEARS:TEARS_TEMPLATE]
 [USE_MATERIAL_TEMPLATE:SPIT:SPIT_TEMPLATE]
 // flexibleListInput
+tissueLayer
 [TISSUE_LAYER:BY_CATEGORY:HEAD:EYEBROW:ABOVE:BY_CATEGORY:EYE]
 [TISSUE_LAYER:BY_CATEGORY:EYELID:EYELASH:FRONT]
 [TISSUE_LAYER:BY_CATEGORY:FINGER:NAIL:FRONT]
 [TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
+
 // fixedListInput
+tendons
 [TENDONS:LOCAL_CREATURE_MAT:SINEW:200]
 // fixedListInput
+ligaments
 [LIGAMENTS:LOCAL_CREATURE_MAT:SINEW:200]
 // fixedListInput
+blood
 [BLOOD:LOCAL_CREATURE_MAT:BLOOD:LIQUID]
 // fixedListInput
+pus
 [PUS:LOCAL_CREATURE_MAT:PUS:LIQUID]
 // flexibleListInput
+secretion
 [SECRETION:LOCAL_CREATURE_MAT:SWEAT:LIQUID:BY_CATEGORY:ALL:SKIN:EXERTION]
 [SECRETION:LOCAL_CREATURE_MAT:TEARS:LIQUID:BY_CATEGORY:EYE:ALL:EXTREME_EMOTION]
  // fixedListInput
+ selectTissueLayer
 [SELECT_TISSUE_LAYER:HEART:BY_CATEGORY:HEART] 
 // flexibleListinput
+plusTissueLayer
 [PLUS_TISSUE_LAYER:SKIN:BY_CATEGORY:THROAT]  // plusTissueLayerTokenGroup
 // fixedClosedToken
+tlMajorArteries
 [TL_MAJOR_ARTERIES] 
 // flexibleListinput
+relsize
 [RELSIZE:BY_CATEGORY:LIVER:300]
 // fixedClosedToken
+hasNerves
 [HAS_NERVES]
 
 // sydome relation tokens
 
 //flexibleList
+creatureClass
 [CREATURE_CLASS:GENERAL_POISON]
 [CREATURE_CLASS:MAMMAL]
 // fixedClosedToken
+getsWoundInfections
 [GETS_WOUND_INFECTIONS]
 // fixedClosedToken
+getsInfectionsFromRot
 [GETS_INFECTIONS_FROM_ROT]
 // flexibleList
+syndromeDilutionFactor
 [SYNDROME_DILUTION_FACTOR:INEBRIATION:150]
 // fixedClosedToken
+spouseConversionTarget
 [SPOUSE_CONVERSION_TARGET]
 
 // interaction tokens
 
 // flexibleList
+canDoInteraction
 [CAN_DO_INTERACTION:PET_ANIMAL]
 // flexibleText
+cdi:advName
 [CDI:ADV_NAME:Pet animal]
 //flexibleList
+cdi:usageHint
 [CDI:USAGE_HINT:GREETING]
 // flexibleListInput
+cdi:bpRequired
 [CDI:BP_REQUIRED:BY_TYPE:GRASP]
 // flexibleText
+cdi:verb
 [CDI:VERB:pet:pets:pets]
 // flexibleList
+cdi:target
 [CDI:TARGET:A:SELF_ONLY]
 [CDI:TARGET:B:TOUCHABLE]
 // flexibleList
+cdi:targetRange
 [CDI:TARGET_RANGE:B:1]
 // flexibleList
+cdi:maxTargetNumber
 [CDI:MAX_TARGET_NUMBER:B:1]
 // flexibleList
+cdi:waitPeriod
 [CDI:WAIT_PERIOD:20]
     [CAN_DO_INTERACTION:MATERIAL_EMISSION]
     [CDI:ADV_NAME:Spit]
@@ -175,14 +570,17 @@
 // physical + mental attribute tokens
 
 // flexibleList
+bodySize
 [BODY_SIZE:0:0:3000]
 [BODY_SIZE:1:168:15000]
 [BODY_SIZE:12:0:60000]
 // flexibleList
+physAttRange
 [PHYS_ATT_RANGE:STRENGTH:450:950:1150:1250:1350:1550:2250]
 [PHYS_ATT_RANGE:AGILITY:150:600:800:900:1000:1100:1500]
 [PHYS_ATT_RANGE:TOUGHNESS:450:950:1150:1250:1350:1550:2250]
 // flexibleList
+mentAttRange
 [MENT_ATT_RANGE:ANALYTICAL_ABILITY:450:950:1150:1250:1350:1550:2250]
 [MENT_ATT_RANGE:FOCUS:700:1200:1400:1500:1600:1800:2500]
 [MENT_ATT_RANGE:CREATIVITY:450:950:1150:1250:1350:1550:2250]
@@ -190,6 +588,7 @@
 [MENT_ATT_RANGE:MEMORY:450:950:1150:1250:1350:1550:2250]
 [MENT_ATT_RANGE:SPATIAL_SENSE:700:1200:1400:1500:1600:1800:2500]
 // flexibleList
+applyCreatureVariation
 [APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900]
 [APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:5951:5419:4898:1463:6944:8233]
 [APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:5951:5419:4898:1463:6944:8233]
@@ -198,15 +597,22 @@
 // appearance tokens
 
 // flexibleList
+bodyAppearanceModifier
 [BODY_APPEARANCE_MODIFIER:HEIGHT:75:95:98:100:102:105:125]
+// flexibleList
+appModImportance
 [APP_MOD_IMPORTANCE:500]
     [BODY_APPEARANCE_MODIFIER:BROADNESS:75:95:98:100:102:105:125]
     [APP_MOD_IMPORTANCE:500]
+
 // flexibleList
+setBpGroup
 [SET_BP_GROUP:BY_CATEGORY:EYE]
 // flexibleList
+bpAppearanceModifier
 [BP_APPEARANCE_MODIFIER:CLOSE_SET:0:70:90:100:110:130:200]
 // flexibleList
+appModNoun
 [APP_MOD_NOUN:eyes:PLURAL]
 
     [BP_APPEARANCE_MODIFIER:DEEP_SET:0:70:90:100:110:130:200]
@@ -217,6 +623,7 @@
     [APP_MOD_NOUN:eyes:PLURAL]
 
 // flexibleList
+appModDescRange
 [APP_MOD_DESC_RANGE:30:60:90:110:150:190]
 
     [SET_BP_GROUP:BY_CATEGORY:LIP]
@@ -270,18 +677,25 @@
 // combat tokens
 
 // flexibleList
+attack
 [ATTACK:PUNCH:BODYPART:BY_TYPE:GRASP]
 // flexibleList
+attackSkill
 [ATTACK_SKILL:GRASP_STRIKE]
 // flexibleText
+attackVerb
 [ATTACK_VERB:punch:punches]
 // flexibleList
+attackContactPerc
 [ATTACK_CONTACT_PERC:100]
 // flexibleList
+attackPrepareAndRecover
 [ATTACK_PREPARE_AND_RECOVER:3:3]
 // flexibleClosedToken
+attackFlagWith
 [ATTACK_FLAG_WITH]
-// flexibleListInput
+// flexibleList
+attackPriority
 [ATTACK_PRIORITY:MAIN]
 
     [ATTACK:KICK:BODYPART:BY_TYPE:STANCE]
@@ -293,6 +707,7 @@
     [ATTACK_PRIORITY:SECOND]
 
 // flexibleClosedToken
+attackFlagBadMultiattack
 [ATTACK_FLAG_BAD_MULTIATTACK]
 
     [ATTACK:SCRATCH:CHILD_TISSUE_LAYER_GROUP:BY_TYPE:GRASP:BY_CATEGORY:FINGER:NAIL]
@@ -301,8 +716,10 @@
     [ATTACK_CONTACT_PERC:100]
 
 // flexibleList
+attackPenetrationPerc
 [ATTACK_PENETRATION_PERC:100]
 // flexibleClosedToken
+attackFlagEdge
 [ATTACK_FLAG_EDGE]
 
     [ATTACK_PREPARE_AND_RECOVER:3:3]
@@ -317,48 +734,67 @@
     [ATTACK_PRIORITY:SECOND]
 
 // flexibleClosedToken
+attackFlagCanlatch
 [ATTACK_FLAG_CANLATCH]
 
 // age Tokens
 
 // fixedList
+maxage
 [MAXAGE:150:170]
 // fixedList
+baby
 [BABY:1]
 // fixedText
+generalBabyName
 [GENERAL_BABY_NAME:dwarven baby:dwarven babies]
 // fixedText
+babyName
 [BABYNAME:dwarven baby:dwarven babies]
 // fixedList
+child
 [CHILD:12]
 // fixedText
+generalChildName
 [GENERAL_CHILD_NAME:dwarven child:dwarven children]
 // fixedText
+childName
 [CHILDNAME:dwarven child:dwarven children]
 
 // additional attribute tokens
 
 // fixedClosedToken
+equips
 [EQUIPS]
 // fixedClosedToken
+caveAdapt
 [CAVE_ADAPT]
+// fixedClosedToken
+diurnal
 [DIURNAL]
 // fixedList
+smellTrigger
 [SMELL_TRIGGER:90]
 // fixedList
+lowLightVision
 [LOW_LIGHT_VISION:10000]
 // fixedList
+homeotherm
 [HOMEOTHERM:10067]
 // fixedClosedToken
+alcoholDependent
 [ALCOHOL_DEPENDENT]
 // fixedList
+speech
 [SPEECH:dwarf.txt]
 // fixedClosedToken
+swimsLearned
 [SWIMS_LEARNED]
 
 // profession tokens
 
 // flexibleList
+professionName
 [PROFESSION_NAME:CRAFTSMAN:craftsdwarf:craftsdwarves]
 [PROFESSION_NAME:FISHERMAN:fisherdwarf:fisherdwarves]
 [PROFESSION_NAME:HAMMERMAN:hammerdwarf:hammerdwarves]
@@ -375,89 +811,125 @@
 // personality + mannerism tokens
 
 // flexibleList
+personality
 [PERSONALITY:IMMODERATION:0:55:100]
 [PERSONALITY:STRESS_VULNERABILITY:0:45:100]
 [PERSONALITY:BASHFUL:0:45:100]
 [PERSONALITY:SINGLEMINDED:0:55:100]
 [PERSONALITY:GREED:0:55:100]
 // fixedList
+mannerismFingers
 [MANNERISM_FINGERS:finger:fingers]
 // fixedList
+mannerismNose
 [MANNERISM_NOSE:nose]
 // fixedList
+mannerismEar
 [MANNERISM_EAR:ear]
 // fixedList
+mannerismHead
 [MANNERISM_HEAD:head]
 // fixedList
+mannerismEyes
 [MANNERISM_EYES:eyes]
 // fixedList
+mannerismMouth
 [MANNERISM_MOUTH:mouth]
 // fixedList
+mannerismHair
 [MANNERISM_HAIR:hair]
 // fixedList
+mannerismKnuckles
 [MANNERISM_KNUCKLES:knuckles]
 // fixedList
+mannerismLips
 [MANNERISM_LIPS:lips]
 // fixedList
+mannerismCheek
 [MANNERISM_CHEEK:cheek]
 // fixedList
+mannerismNails
 [MANNERISM_NAILS:nails]
 // fixedList
+mannerismFeet
 [MANNERISM_FEET:feet]
 // fixedList
+mannerismArms
 [MANNERISM_ARMS:arms]
 // fixedList
+mannerismHands
 [MANNERISM_HANDS:hands]
 // fixedList
+mannerismTongue
 [MANNERISM_TONGUE:tongue]
 // fixedList
+mannerismLeg
 [MANNERISM_LEG:leg]
 // fixedClosedToken
+mannerismLaugh
 [MANNERISM_LAUGH]
 // fixedClosedToken
+mannerismSmile
 [MANNERISM_SMILE]
 // fixedClosedToken
+mannerismWalk
 [MANNERISM_WALK]
 // fixedClosedToken
+mannerismSit
 [MANNERISM_SIT]
 // fixedClosedToken
+mannerismBreath
 [MANNERISM_BREATH]
 // fixedClosedToken
+mannerismPosture
 [MANNERISM_POSTURE]
 // fixedClosedToken
+mannerismStretch
 [MANNERISM_STRETCH]
 // fixedClosedToken
+mannerismEyelids
 [MANNERISM_EYELIDS]
 
 // individual caste 1
 
 // fixedList
+caste
 [CASTE:FEMALE]
 // fixedClosedToken
+female
 [FEMALE]
 // fixedClosedToken
+multipleLitterRare
 [MULTIPLE_LITTER_RARE]
 
 // individual caste 2
 
 // fixedList
+caste
 [CASTE:MALE]
 // fixedClosedToken
+male
 [MALE]
 //  flexibleList
+setBpGroup
 [SET_BP_GROUP:BY_TYPE:LOWERBODY]
 // flexibleList
+bpAddType
 [BP_ADD_TYPE:GELDABLE]
 // flexibleList
+bodyDetailPlan
 [BODY_DETAIL_PLAN:FACIAL_HAIR_TISSUE_LAYERS]
 
 // multiple caste tokens
 
 // flexibleList
+selectCaste
 [SELECT_CASTE:ALL]
 // flexibleList
+setTlGroup
 [SET_TL_GROUP:BY_CATEGORY:HEAD:HAIR]
 // flexibleList
+plusTlGroup
 [PLUS_TL_GROUP:BY_CATEGORY:HEAD:CHEEK_WHISKERS]
 
     [PLUS_TL_GROUP:BY_CATEGORY:HEAD:CHIN_WHISKERS]
@@ -467,15 +939,17 @@
     [PLUS_TL_GROUP:BY_CATEGORY:EYELID:EYELASH]
 
 // flexibleListInput
+tlColorModifier
 [TL_COLOR_MODIFIER:AMBER:1:AUBURN:1:BLACK:1:BROWN:1:BUFF:1:BURNT_SIENNA:1:BURNT_UMBER:1:CHARCOAL:1:CHESTNUT:1:CHOCOLATE:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_CHESTNUT:1:DARK_TAN:1:ECRU:1:FLAX:1:GOLD:1:GOLDEN_YELLOW:1:GOLDENROD:1:LIGHT_BROWN:1:MAHOGANY:1:OCHRE:1:PALE_BROWN:1:PALE_CHESTNUT:1:PUMPKIN:1:RAW_UMBER:1:RUSSET:1:SAFFRON:1:SEPIA:1:TAN:1:TAUPE_DARK:1:TAUPE_GRAY:1:TAUPE_MEDIUM:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 // flexibleList
+tlcmNoun
 [TLCM_NOUN:hair:SINGULAR]
-// flexiblelistInput
-[TL_COLOR_MODIFIER:GRAY:1]
 
+    [TL_COLOR_MODIFIER:GRAY:1]
     [TLCM_NOUN:hair:SINGULAR]
 
 // flexibleList
+tlcmTiming
 [TLCM_TIMING:ROOT:80:0:130:0]
 
     [TL_COLOR_MODIFIER:WHITE:1]
@@ -484,10 +958,13 @@
     [SET_TL_GROUP:BY_CATEGORY:HEAD:EYEBROW]
 
 // flexibleList
+tissueLayerAppearanceModifier
 [TISSUE_LAYER_APPEARANCE_MODIFIER:LENGTH:50:80:90:100:110:120:150]   LENGTH, DENSE, HIGH_POSITION, CURLY, GREASY, WRINKLY
 // flexibleList
+appModNoun
 [APP_MOD_NOUN:eyebrows:PLURAL]
 // flexibleList
+appModDescRange
 [APP_MOD_DESC_RANGE:55:70:90:110:130:145]
 
     [TISSUE_LAYER_APPEARANCE_MODIFIER:DENSE:50:80:90:100:110:120:150]
@@ -504,6 +981,7 @@
     [APP_MOD_NOUN:hair:SINGULAR]
 
 // flexibleList
+appModRate
 [APP_MOD_RATE:1:DAILY:0:1000:0:0:NO_END]
 
     [APP_MOD_DESC_RANGE:10:25:75:125:200:300]
@@ -521,8 +999,10 @@
     [PLUS_TL_GROUP:BY_CATEGORY:HEAD:SIDEBURNS]
 
 // flexibleList
+tissueStyleUnit
 [TISSUE_STYLE_UNIT:HAIR:STANDARD_HAIR_SHAPINGS] HAIR, BEARD, MOUSTACHE, SIDEBURNS.
 // flexibleList
+tsuNoun
 [TSU_NOUN:hair:SINGULAR]
 
     [SET_TL_GROUP:BY_CATEGORY:HEAD:CHEEK_WHISKERS]

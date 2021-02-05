@@ -147,18 +147,32 @@ function addFlexibleToken(parentId, labelHTML, defaultListNumber, defaultTextNum
     parent.appendChild(divi);
 }
 
+function addFixedClosedToken(parentId, labelHTML) {
+    debugger;
+    let parent = document.getElementById(parentId);
+    let divi = document.createElement("div");
+    let cb = document.createElement("input");
+    let label = document.createElement("label");
+    cb.setAttribute("type", "checkbox");
+    cb.setAttribute("class", "cb");
+    label.innerHTML = labelHTML;
+    divi.appendChild(cb);
+    divi.appendChild(label);
+    parent.appendChild(divi);
+}
+
 function removeTokenFromGroup(parentId, labelHTML) {
     let parent = document.getElementById(parentId);
     let children = parent.children;
-    for (let i = children.length - 1; i > 0; i--) {
+    let len = children.length;
+    for (let i = len - 1; i > 0; i--) {
         if (removeElement) {
             break;
         }
-        if (children[i].tagName == "DIV") {
+        if (children[i].tagName === "DIV") {
             let subChildren = children[i].children;
-            var subChild;
             for (subChild of subChildren) {
-                if (subChild.innerHTML == labelHTML) {
+                if (subChild.innerHTML === labelHTML) {
                     var removeElement = children[i];
                     break;
                 }
@@ -224,7 +238,6 @@ function parseToken(rawArray, divi) {
     const children = divi.children;
     if (children[0].checked) {
         let tokenString = "";
-        let child;
         for (child of children) {
             if (child.tagName == "LABEL") {
                 tokenString = child.innerHTML;
