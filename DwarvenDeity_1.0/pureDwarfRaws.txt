@@ -893,7 +893,7 @@ mannerismEyelids
 // individual caste 1
 
 // fixedList
-caste
+caste1
 [CASTE:FEMALE]
 // fixedClosedToken
 female
@@ -901,23 +901,33 @@ female
 // fixedClosedToken
 multipleLitterRare
 [MULTIPLE_LITTER_RARE]
+//  flexibleList
+setBpGroup1
+[SET_BP_GROUP:BY_TYPE:LOWERBODY]
+// flexibleList
+bpAddType1
+[BP_ADD_TYPE:GELDABLE]
+// flexibleList
+bodyDetailPlan1
+[BODY_DETAIL_PLAN:FACIAL_HAIR_TISSUE_LAYERS]
+
 
 // individual caste 2
 
 // fixedList
-caste
+caste2
 [CASTE:MALE]
 // fixedClosedToken
 male
 [MALE]
 //  flexibleList
-setBpGroup
+setBpGroup2
 [SET_BP_GROUP:BY_TYPE:LOWERBODY]
 // flexibleList
-bpAddType
+bpAddType2
 [BP_ADD_TYPE:GELDABLE]
 // flexibleList
-bodyDetailPlan
+bodyDetailPlan2
 [BODY_DETAIL_PLAN:FACIAL_HAIR_TISSUE_LAYERS]
 
 // multiple caste tokens
