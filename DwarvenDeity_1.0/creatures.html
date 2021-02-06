@@ -2617,9 +2617,55 @@
             </table>
         </div>
         <div>
-            <button onclick='toggleElementGroup("multipleCasteTokens")' class="displayButton">Multiple Caste</button>
+            <button onclick='toggleElementGroup("multipleCasteTokens")' class="displayButton">Multiple Castes</button>
         </div>
         <div id="multipleCasteTokens" style="display:none">
+            <table>
+                <tr class="multiGroup">
+                    <td>
+                        <div>
+                            <button onclick='addFixedToken("TokenGroup", "[:", 
+                            2, 0, true, "List")'>Add: </button>
+                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                        </div> <!-- caste3 -->
+                        <div>
+                            <button onclick='addFixedClosedToken("TokenGroup", "[]")'>Add: </button>
+                            <button onclick='removeTokenFromGroup("TokenGroup", "[]")'>Remove: </button>
+                        </div>
+                        <!--female2  -->
+                        <div>
+                            <button onclick='addFixedClosedToken("TokenGroup", "[]")'>Add: </button>
+                            <button onclick='removeTokenFromGroup("TokenGroup", "[]")'>Remove: </button>
+                        </div> <!-- male2 -->
+                    </td>
+                    <td id="multipleCasteTokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="">[:</label>
+                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
+                            <input list="List" onchange="flexibleAutoChecker(this)">
+                        </div> <!-- caste3 -->
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label>[]</label>
+                        </div> <!-- feamle2 -->
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label>[]</label>
+                        </div> <!-- male2 -->
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="List">
+                        </datalist> <!-- caste3 -->
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button onclick='toggleElementGroup("multipleCasteTokens")' class="displayButton">Multiple Caste</button>
+        </div>
+        <div id="multipleCasteSelectTokens" style="display:none">
             <table>
             </table>
         </div>
