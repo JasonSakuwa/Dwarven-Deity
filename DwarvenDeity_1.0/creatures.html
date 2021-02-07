@@ -2663,10 +2663,39 @@
             </table>
         </div>
         <div>
-            <button onclick='toggleElementGroup("multipleCasteTokens")' class="displayButton">Multiple Caste</button>
+            <button onclick='toggleElementGroup("multipleCasteSelectTokens")' class="displayButton">Multiple
+                Caste Select</button>
         </div>
         <div id="multipleCasteSelectTokens" style="display:none">
             <table>
+                <tr class="multiGroup">
+                    <td>
+                        <div>
+                            <button onclick='toggleElementGroup("casteSelection")' class="displayButton">Caste
+                                Selection</button>
+                        </div>
+                        <div id="casteSelection" style="display:none">
+                            <div>
+                                <button onclick='addFixedToken("TokenGroup", "[:", 
+                                2, 0, true, "List")'>Add: </button>
+                                <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            </div> <!-- selectCaste -->
+                        </div>
+                    </td>
+                    <td id="multipleCasteTokenGroup">
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="">[:</label>
+                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
+                            <input list="List" onchange="flexibleAutoChecker(this)">
+                        </div> <!-- selectCaste -->
+                    </td>
+                    <td>
+                        <p>]</p>
+                        <datalist id="List">
+                        </datalist> <!-- selectCaste -->
+                    </td>
+                </tr>
             </table>
         </div>
     </div>
@@ -2715,7 +2744,8 @@
             // PersonalityMannerisms
             // IndividualCaste1
             // IndividualCaste2
-            // MultipleCastes
+            // MultipleCaste
+            // MultipleCasteSelect
             document.getElementById("output").value = raw.join("\n");
         }
     </script>
