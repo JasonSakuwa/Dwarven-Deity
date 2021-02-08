@@ -1761,14 +1761,14 @@
                             <button
                                 onclick='removeTokenFromGroup("bodyAppearanceTokenGroup", "[BODY_APPEARANCE_MODIFIER:")'>Remove:
                                 Body Appearance Modifier</button>
-                        </div>
+                        </div> <!-- bodyAppearanceModifier -->
                         <div>
                             <button onclick='addFixedToken("bodyAppearanceTokenGroup", "[APP_MOD_IMPORTANCE:", 
                             1, 0, true, "appModImportanceList")'>Add: Appearance Modifier Importance</button>
                             <button
                                 onclick='removeTokenFromGroup("bodyAppearanceTokenGroup", "[APP_MOD_IMPORTANCE:")'>Remove:
                                 Appearance Modifier Importance</button>
-                        </div>
+                        </div> <!-- appModImportance -->
                     </td>
                     <td id="bodyAppearanceTokenGroup">
                         <div>
@@ -1783,13 +1783,13 @@
                             <input list="bodyAppearanceModifierList" onchange="flexibleAutoChecker(this)">
                             <input list="bodyAppearanceModifierList" onchange="flexibleAutoChecker(this)">
                             <input list="bodyAppearanceModifierList" onchange="flexibleAutoChecker(this)">
-                        </div>
+                        </div> <!-- bodyAppearanceModifier -->
                         <div>
                             <input type="checkbox" class="cb">
                             <label for="appModImportance">[APP_MOD_IMPORTANCE:</label>
                             <input list="appModImportanceList" id="appModImportance"
                                 onchange="flexibleAutoChecker(this)">
-                        </div>
+                        </div> <!-- appModImportance -->
                     </td>
                     <td>
                         <p>]</p>
@@ -1806,83 +1806,99 @@
                             <option>150</option>
                             <option>175</option>
                             <option>200</option>
-                        </datalist>
+                        </datalist> <!-- bodyAppearanceModifier -->
                         <datalist id="appModImportanceList">
-                        </datalist>
+                        </datalist> <!-- appModImportance -->
                     </td>
                 </tr>
                 <tr id="multiGroup">
                     <td>
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("appearanceBpTokenGroup", "[SET_BP_GROUP:", 
+                            2, 0, true, "setBpGroupList")'>Add: Set Body Part Group</button>
+                            <button onclick='removeTokenFromGroup("appearanceBpTokenGroup", "[SET_BP_GROUP:")'>Remove:
+                                Set Body Part Group</button>
                         </div> <!-- setBpGroup -->
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("appearanceBpTokenGroup", "[BP_APPEARANCE_MODIFIER:", 
+                            8, 0, true, "bpAppearanceModifierList")'>Add: Body Part Appearance Modifier</button>
+                            <button
+                                onclick='removeTokenFromGroup("appearanceBpTokenGroup", "[BP_APPEARANCE_MODIFIER:")'>Remove:
+                                Body Part Appearance Modifier</button>
                         </div> <!-- bpAppearanceModifier -->
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("appearanceBpTokenGroup", "[APP_MOD_IMPORTANCE:", 
+                            1, 0, true, "appModImportanceList")'>Add: Appearance Modifier Importance</button>
+                            <button
+                                onclick='removeTokenFromGroup("appearanceBpTokenGroup", "[APP_MOD_IMPORTANCE:")'>Remove:
+                                Appearance Modifier Importance</button>
+                        </div> <!-- appModImportance -->
+                        <div>
+                            <button onclick='addFixedToken("appearanceBpTokenGroup", "[APP_MOD_NOUN:", 
+                            2, 0, true, "appModNounList")'>Add: Appearance Modifier Noun</button>
+                            <button onclick='removeTokenFromGroup("appearanceBpTokenGroup", "[APP_MOD_NOUN:")'>Remove:
+                                Appearance Modifier Noun</button>
                         </div> <!-- appModNoun -->
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("appearanceBpTokenGroup", "[APP_MOD_DESC_RANGE:", 
+                            6, 0, true, "appModDescRangeList")'>Add: Appearance Modifier Description Range</button>
+                            <button
+                                onclick='removeTokenFromGroup("appearanceBpTokenGroup", "[APP_MOD_DESC_RANGE:")'>Remove:
+                                Appearance Modifier Description Range</button>
                         </div> <!-- appModDescRange -->
                     </td>
                     <td id="appearanceBpTokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="useTissueTemplateList" onchange="flexibleAutoChecker(this)">
+                            <label for="setBpGroup">[SET_BP_GROUP:</label>
+                            <input list="setBpGroupList" id="setBpGroup" onchange="flexibleAutoChecker(this)">
+                            <input list="setBpGroupList" onchange="flexibleAutoChecker(this)">
                         </div> <!-- setBpGroup -->
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="useTissueTemplateList" onchange="flexibleAutoChecker(this)">
+                            <label for="bpAppearanceModifier">[BP_APPEARANCE_MODIFIER:</label>
+                            <input list="bpAppearanceModifierList" id="bpAppearanceModifier"
+                                onchange="flexibleAutoChecker(this)">
+                            <input list="bpAppearanceModifierList" onchange="flexibleAutoChecker(this)">
+                            <input list="bpAppearanceModifierList" onchange="flexibleAutoChecker(this)">
+                            <input list="bpAppearanceModifierList" onchange="flexibleAutoChecker(this)">
+                            <input list="bpAppearanceModifierList" onchange="flexibleAutoChecker(this)">
+                            <input list="bpAppearanceModifierList" onchange="flexibleAutoChecker(this)">
+                            <input list="bpAppearanceModifierList" onchange="flexibleAutoChecker(this)">
+                            <input list="bpAppearanceModifierList" onchange="flexibleAutoChecker(this)">
                         </div> <!-- bpAppearanceModifier -->
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="useTissueTemplateList" onchange="flexibleAutoChecker(this)">
+                            <label for="appModImportance">[APP_MOD_IMPORTANCE:</label>
+                            <input list="appModImportanceList" id="appModImportance"
+                                onchange="flexibleAutoChecker(this)">
+                        </div> <!-- appModImportance -->
+                        <div>
+                            <input type="checkbox" class="cb">
+                            <label for="appModNoun">[APP_MOD_NOUN:</label>
+                            <input list="appModNounList" id="appModNoun" onchange="flexibleAutoChecker(this)">
+                            <input list="appModNounList" onchange="flexibleAutoChecker(this)">
                         </div> <!-- appModNoun -->
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="useTissueTemplateList" onchange="flexibleAutoChecker(this)">
+                            <label for="appModDescRange">[APP_MOD_DESC_RANGE:</label>
+                            <input list="appModDescRangeList" id="appModDescRange" onchange="flexibleAutoChecker(this)">
+                            <input list="appModDescRangeList" onchange="flexibleAutoChecker(this)">
+                            <input list="appModDescRangeList" onchange="flexibleAutoChecker(this)">
+                            <input list="appModDescRangeList" onchange="flexibleAutoChecker(this)">
+                            <input list="appModDescRangeList" onchange="flexibleAutoChecker(this)">
+                            <input list="appModDescRangeList" onchange="flexibleAutoChecker(this)">
                         </div> <!-- appModDescRange -->
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="setBpGroupList">
                         </datalist> <!-- setBpGroup -->
-                        <datalist id="List">
-                            <option>HEIGHT</option>
-                            <option>BROADNESS</option>
-                            <option>LENGTH</option>
-                            <option>0</option>
-                            <option>25</option>
-                            <option>50</option>
-                            <option>75</option>
-                            <option>100</option>
-                            <option>125</option>
-                            <option>150</option>
-                            <option>175</option>
-                            <option>200</option>
-                        </datalist>
-                        <datalist id="List">
+                        <datalist id="bpAppearanceModifierList">
                         </datalist> <!-- bpAppearanceModifier -->
-                        <datalist id="List">
+                        <datalist id="appModNounList">
                         </datalist> <!-- appModNoun -->
-                        <datalist id="List">
+                        <datalist id="appModDescRangeList">
                         </datalist> <!-- appModDescRange -->
                     </td>
                 </tr>
@@ -1910,19 +1926,23 @@
                                 Attack Skill</button>
                         </div> <!-- attackSkill -->
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            0, 1, false)'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_VERB:", 
+                            0, 2, false)'>Add: Attack Verb</button>
+                            <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_VERB:")'>Remove: Attack
+                                Verb</button>
                         </div> <!-- attackVerb -->
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_CONTACT_PERC:", 
+                            1, 0, true, "attackContactPercList")'>Add: Attack Contact Percent</button>
+                            <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_CONTACT_PERC:")'>Remove:
+                            </button>
                         </div> <!-- attackContactPerc -->
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_PREPARE_AND_RECOVER:", 
+                            2, 0, true, "attackPrepareAndRecoverList")'>Add: Attack Prepare and Recover</button>
+                            <button
+                                onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_PREPARE_AND_RECOVER:")'>Remove:
+                                Attack Prepare and Recover</button>
                         </div> <!-- attackPrepareAndRecover -->
                         <div>
                             <button onclick='addFixedClosedToken("combatTokenGroup", "[ATTACK_FLAG_WITH]")'>Add:
@@ -1931,26 +1951,37 @@
                                 Attack Flag With</button>
                         </div> <!-- attackFlagWith -->
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_PRIORITY:", 
+                            1, 0, true, "attackPriorityList")'>Add: Attack Priority</button>
+                            <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_PRIORITY:")'>Remove:
+                                Attack Priority</button>
                         </div> <!-- attackPriority -->
                         <div>
-                            <button onclick='addFixedClosedToken("TokenGroup", "[]")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[]")'>Remove: </button>
+                            <button
+                                onclick='addFixedClosedToken("combatTokenGroup", "[ATTACK_FLAG_BAD_MULTIATTACK]")'>Add:
+                                Attack Flag Bad Multiattack</button>
+                            <button
+                                onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_FLAG_BAD_MULTIATTACK]")'>Remove:
+                                Attack Flag Bad Multiattack</button>
                         </div> <!-- attackFlagBadMultiattack -->
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_PENETRATION_PERC:", 
+                            1, 0, true, "attackPenetrationPercList")'>Add: Attack Penetration Percent</button>
+                            <button
+                                onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_PENETRATION_PERC:")'>Remove:
+                                Attack Penetration Percent</button>
                         </div> <!-- attackPenetrationPerc -->
                         <div>
-                            <button onclick='addFixedClosedToken("TokenGroup", "[]")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[]")'>Remove: </button>
+                            <button onclick='addFixedClosedToken("combatTokenGroup", "[ATTACK_FLAG_EDGE]")'>Add: Attack
+                                Flag Edge</button>
+                            <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_FLAG_EDGE]")'>Remove:
+                                Attack Flag Edge</button>
                         </div> <!-- attackFlagEdge -->
                         <div>
-                            <button onclick='addFixedClosedToken("TokenGroup", "[]")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[]")'>Remove: </button>
+                            <button onclick='addFixedClosedToken("combatTokenGroup", "[ATTACK_FLAG_CANLATCH]")'>Add:
+                                Attack Flag Canlatch</button>
+                            <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_FLAG_CANLATCH]")'>Remove:
+                                Attack Flag Canlatch</button>
                         </div> <!-- attackFlagCanlatch -->
                     </td>
                     <td id="combatTokenGroup">
@@ -1969,20 +2000,22 @@
                         </div> <!-- attackSkill -->
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input type="text" id="" onchange="flexibleAutoChecker(this)">
+                            <label for="attackVerb">[ATTACK_VERB:</label>
+                            <input type="text" id="attackVerb" onchange="flexibleAutoChecker(this)">
+                            <input type="text" onchange="flexibleAutoChecker(this)">
                         </div> <!-- attackVerb -->
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="useTissueTemplateList" onchange="flexibleAutoChecker(this)">
+                            <label for="attackContactPerc">[ATTACK_CONTACT_PERC:</label>
+                            <input list="attackContactPercList" id="attackContactPerc"
+                                onchange="flexibleAutoChecker(this)">
                         </div> <!-- attackContactPerc -->
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="useTissueTemplateList" onchange="flexibleAutoChecker(this)">
+                            <label for="attackPrepareAndRecover">[ATTACK_PREPARE_AND_RECOVER:</label>
+                            <input list="attackPrepareAndRecoverList" id="attackPrepareAndRecover"
+                                onchange="flexibleAutoChecker(this)">
+                            <input list="attackPrepareAndRecoverList" onchange="flexibleAutoChecker(this)">
                         </div> <!-- attackPrepareAndRecover -->
                         <div>
                             <input type="checkbox" class="cb">
@@ -1990,27 +2023,27 @@
                         </div> <!-- attackFlagWith -->
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="List" onchange="flexibleAutoChecker(this)">
+                            <label for="attackPriority">[ATTACK_PRIORITY:</label>
+                            <input list="attackPriorityList" id="attackPriority" onchange="flexibleAutoChecker(this)">
+                            <input list="attackPriorityList" onchange="flexibleAutoChecker(this)">
                         </div> <!-- attackPriority -->
                         <div>
                             <input type="checkbox" class="cb">
-                            <label>[]</label>
+                            <label>[ATTACK_FLAG_BAD_MULTIATTACK]</label>
                         </div> <!-- attackFlagBadMultiattack -->
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="List" onchange="flexibleAutoChecker(this)">
+                            <label for="attackPenetrationPerc">[ATTACK_PENETRATION_PERC:</label>
+                            <input list="attackPenetrationPercList" id="attackPenetrationPerc"
+                                onchange="flexibleAutoChecker(this)">
                         </div> <!-- attackPenetrationPerc -->
                         <div>
                             <input type="checkbox" class="cb">
-                            <label>[]</label>
+                            <label>[ATTACK_FLAG_EDGE]</label>
                         </div> <!-- attackFlagEdge -->
                         <div>
                             <input type="checkbox" class="cb">
-                            <label>[]</label>
+                            <label>[ATTACK_FLAG_CANLATCH]</label>
                         </div> <!-- attackFlagCanlatch -->
                     </td>
                     <td>
@@ -2033,13 +2066,13 @@
                             <option>STANCE_STRIKE</option>
                             <option>BITE</option>
                         </datalist> <!-- attackSkill -->
-                        <datalist id="List">
+                        <datalist id="attackContactPercList">
                         </datalist> <!-- attackContactPerc -->
-                        <datalist id="List">
+                        <datalist id="attackPrepareAndRecoverList">
                         </datalist> <!-- attackPrepareAndRecover -->
-                        <datalist id="List">
+                        <datalist id="attackPriorityList">
                         </datalist> <!-- attackPriority -->
-                        <datalist id="List">
+                        <datalist id="attackPenetrationPercList">
                         </datalist> <!-- attackPenetrationPerc -->
                     </td>
                 </tr>
@@ -2051,76 +2084,81 @@
         <div id="ageTokens" style="display:none">
             <table>
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="maxageCheckbox" class="cb"></td>
+                    <td id="maxageToken">
+                        <label for="maxage">[MAXAGE:</label>
+                        <input list="maxageList" id="maxage" onchange="fixedAutoChecker(this)">
+                        <input list="maxageList" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="maxageList">
                         </datalist>
                     </td>
                 </tr> <!-- maxage -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="babyCheckbox" class="cb"></td>
+                    <td id="babyToken">
+                        <label for="baby">[BABY:</label>
+                        <input list="babyList" id="baby" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="babyList">
                         </datalist>
                     </td>
                 </tr> <!-- baby -->
                 <tr class="fixedText">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input type="text" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="generalBabyNameCheckbox" class="cb"></td>
+                    <td id="generalBabyNameToken">
+                        <label for="generalBabyName">[GENERAL_BABY_NAME:</label>
+                        <input type="text" id="generalBabyName" onchange="fixedAutoChecker(this)">
+                        <input type="text" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
                     </td>
                 </tr> <!-- generalBabyName -->
                 <tr class="fixedText">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input type="text" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="babyNameCheckbox" class="cb"></td>
+                    <td id="babyNameToken">
+                        <label for="babyName">[BABYNAME:</label>
+                        <input type="text" id="babyName" onchange="fixedAutoChecker(this)">
+                        <input type="text" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
                     </td>
                 </tr> <!-- babyName -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="childCheckbox" class="cb"></td>
+                    <td id="childToken">
+                        <label for="child">[CHILD:</label>
+                        <input list="childList" id="child" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="childList">
                         </datalist>
                     </td>
                 </tr> <!-- child -->
                 <tr class="fixedText">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input type="text" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="generalChildNameCheckbox" class="cb"></td>
+                    <td id="generalChildNameToken">
+                        <label for="generalChildName">[GENERAL_CHILD_NAME:</label>
+                        <input type="text" id="generalChildName" onchange="fixedAutoChecker(this)">
+                        <input type="text" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
                     </td>
                 </tr> <!-- generalChildName -->
                 <tr class="fixedText">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input type="text" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="childNameCheckbox" class="cb"></td>
+                    <td id="childNameToken">
+                        <label for="childName">[CHILDNAME:</label>
+                        <input type="text" id="childName" onchange="fixedAutoChecker(this)">
+                        <input type="text" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
@@ -2135,82 +2173,82 @@
         <div id="additionalAttributeTokens" style="display:none">
             <table>
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="equipsCheckbox" class="cb"></td>
+                    <td id="equipsToken">
+                        <label>[EQUIPS]</label>
                     </td>
                 </tr> <!-- equips -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="caveAdaptCheckbox" class="cb"></td>
+                    <td id="caveAdaptToken">
+                        <label>[CAVE_ADAPT]</label>
                     </td>
                 </tr> <!-- caveAdapt -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="diurnalCheckbox" class="cb"></td>
+                    <td id="diurnalToken">
+                        <label>[DIURNAL]</label>
                     </td>
                 </tr> <!-- diurnal -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="smellTriggerCheckbox" class="cb"></td>
+                    <td id="smellTriggerToken">
+                        <label for="smellTrigger">[SMELL_TRIGGER:</label>
+                        <input list="smellTriggerList" id="smellTrigger" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="smellTriggerList">
                         </datalist>
                     </td>
                 </tr> <!-- smellTrigger -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="lowLightVision Checkbox" class="cb"></td>
+                    <td id="lowLightVision Token">
+                        <label for="lowLightVision ">[LOW_LIGHT_VISION:</label>
+                        <input list="lowLightVision List" id="lowLightVision " onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="lowLightVision List">
                         </datalist>
                     </td>
                 </tr> <!-- lowLightVision -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="homeothermCheckbox" class="cb"></td>
+                    <td id="homeothermToken">
+                        <label for="homeotherm">[HOMEOTHERM:</label>
+                        <input list="homeothermList" id="homeotherm" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="homeothermList">
                         </datalist>
                     </td>
                 </tr> <!-- homeotherm -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="alcoholDependentCheckbox" class="cb"></td>
+                    <td id="alcoholDependentToken">
+                        <label>[ALCOHOL_DEPENDENT]</label>
                     </td>
-                    alcoholDependent
                 </tr> <!-- alcoholDependent -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="speechCheckbox" class="cb"></td>
+                    <td id="speechToken">
+                        <label for="speech">[SPEECH:</label>
+                        <input list="speechList" id="speech" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="speechList">
+                            <option>dwarf.txt</option>
                         </datalist>
                     </td>
                 </tr> <!-- speech -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="swimsLearnedCheckbox" class="cb"></td>
+                    <td id="swimsLearnedToken">
+                        <label>[SWIMS_LEARNED]</label>
                     </td>
                 </tr> <!-- swimsLearned -->
             </table>
@@ -2223,22 +2261,25 @@
                 <tr class="flexibleList">
                     <td>
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("professionNameTokenGroup", "[PROFESSION_NAME:", 
+                            3, 0, true, "professionNameList")'>Add: Profession Name</button>
+                            <button
+                                onclick='removeTokenFromGroup("professionNameTokenGroup", "[PROFESSION_NAME:")'>Remove:
+                                Profession Name</button>
                         </div>
                     </td>
-                    <td id="TokenGroup">
+                    <td id="professionNameTokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="List" onchange="flexibleAutoChecker(this)">
+                            <label for="professionName">[PROFESSION_NAME:</label>
+                            <input list="professionNameList" id="professionName" onchange="flexibleAutoChecker(this)">
+                            <input list="professionNameList" onchange="flexibleAutoChecker(this)">
+                            <input list="professionNameList" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="professionNameList">
                         </datalist>
                     </td>
                 </tr> <!-- professionName -->
@@ -2253,263 +2294,266 @@
                 <tr class="flexibleList">
                     <td>
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("personalityTokenGroup", "[PERSONALITY:", 
+                            4, 0, true, "personalityList")'>Add: Personality</button>
+                            <button onclick='removeTokenFromGroup("personalityTokenGroup", "[PERSONALITY:")'>Remove:
+                                Personality</button>
                         </div>
                     </td>
-                    <td id="TokenGroup">
+                    <td id="personalityTokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="List" onchange="flexibleAutoChecker(this)">
+                            <label for="personality">[PERSONALITY:</label>
+                            <input list="personalityList" id="personality" onchange="flexibleAutoChecker(this)">
+                            <input list="personalityList" onchange="flexibleAutoChecker(this)">
+                            <input list="personalityList" onchange="flexibleAutoChecker(this)">
+                            <input list="personalityList" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="personalityList">
                         </datalist>
                     </td>
                 </tr> <!-- personality -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismFingersCheckbox" class="cb"></td>
+                    <td id="mannerismFingersToken">
+                        <label for="mannerismFingers">[MANNERISM_FINGERS:</label>
+                        <input list="mannerismFingersList" id="mannerismFingers" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismFingersList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismFingers -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismNoseCheckbox" class="cb"></td>
+                    <td id="mannerismNoseToken">
+                        <label for="mannerismNose">[MANNERISM_NOSE:</label>
+                        <input list="mannerismNoseList" id="mannerismNose" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismNoseList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismNose -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismEarCheckbox" class="cb"></td>
+                    <td id="mannerismEarToken">
+                        <label for="mannerismEar">[MANNERISM_EAR:</label>
+                        <input list="mannerismEarList" id="mannerismEar" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismEarList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismEar -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismHeadCheckbox" class="cb"></td>
+                    <td id="mannerismHeadToken">
+                        <label for="mannerismHead">[MANNERISM_HEAD:</label>
+                        <input list="mannerismHeadList" id="mannerismHead" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismHeadList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismHead -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismEyesCheckbox" class="cb"></td>
+                    <td id="mannerismEyesToken">
+                        <label for="mannerismEyes">[MANNERISM_EYES:</label>
+                        <input list="mannerismEyesList" id="mannerismEyes" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismEyesList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismEyes -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismMouthCheckbox" class="cb"></td>
+                    <td id="mannerismMouthToken">
+                        <label for="mannerismMouth">[MANNERISM_MOUTH:</label>
+                        <input list="mannerismMouthList" id="mannerismMouth" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismMouthList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismMouth -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismHairCheckbox" class="cb"></td>
+                    <td id="mannerismHairToken">
+                        <label for="mannerismHair">[MANNERISM_HAIR:</label>
+                        <input list="mannerismHairList" id="mannerismHair" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismHairList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismHair -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismKnucklesCheckbox" class="cb"></td>
+                    <td id="mannerismKnucklesToken">
+                        <label for="mannerismKnuckles">[MANNERISM_KNUCKLES:</label>
+                        <input list="mannerismKnucklesList" id="mannerismKnuckles" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismKnucklesList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismKnuckles -->
                 <tr class="fixedList">
                     <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td id="mannerismLipsToken">
+                        <label for="mannerismLips">[MANNERISM_LIPS:</label>
+                        <input list="mannerismLipsList" id="mannerismLips" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismLipsList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismLips -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismCheekCheckbox" class="cb"></td>
+                    <td id="mannerismCheekToken">
+                        <label for="mannerismCheek">[MANNERISM_CHEEK:</label>
+                        <input list="mannerismCheekList" id="mannerismCheek" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismCheekList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismCheek -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismNailsCheckbox" class="cb"></td>
+                    <td id="mannerismNailsToken">
+                        <label for="mannerismNails">[MANNERISM_NAILS:</label>
+                        <input list="mannerismNailsList" id="mannerismNails" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismNailsList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismNails -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismFeetCheckbox" class="cb"></td>
+                    <td id="mannerismFeetToken">
+                        <label for="mannerismFeet">[MANNERISM_FEET:</label>
+                        <input list="mannerismFeetList" id="mannerismFeet" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismFeetList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismFeet -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismArmsCheckbox" class="cb"></td>
+                    <td id="mannerismArmsToken">
+                        <label for="mannerismArms">[MANNERISM_ARMS:</label>
+                        <input list="mannerismArmsList" id="mannerismArms" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismArmsList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismArms -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismHandsCheckbox" class="cb"></td>
+                    <td id="mannerismHandsToken">
+                        <label for="mannerismHands">[MANNERISM_HANDS:</label>
+                        <input list="mannerismHandsList" id="mannerismHands" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismHandsList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismHands -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismTongueCheckbox" class="cb"></td>
+                    <td id="mannerismTongueToken">
+                        <label for="mannerismTongue">[MANNERISM_TONGUE:</label>
+                        <input list="mannerismTongueList" id="mannerismTongue" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismTongueList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismTongue -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="mannerismLegCheckbox" class="cb"></td>
+                    <td id="mannerismLegToken">
+                        <label for="mannerismLeg">[MANNERISM_LEG:</label>
+                        <input list="mannerismLegList" id="mannerismLeg" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="mannerismLegList">
                         </datalist>
                     </td>
                 </tr> <!-- mannerismLeg -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="mannerismLaughCheckbox" class="cb"></td>
+                    <td id="mannerismLaughToken">
+                        <label>[MANNERISM_LAUGH]</label>
                     </td>
                 </tr> <!-- mannerismLaugh -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="mannerismSmileCheckbox" class="cb"></td>
+                    <td id="mannerismSmileToken">
+                        <label>[MANNERISM_SMILE]</label>
                     </td>
                 </tr> <!-- mannerismSmile -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="mannerismWalkCheckbox" class="cb"></td>
+                    <td id="mannerismWalkToken">
+                        <label>[MANNERISM_WALK]</label>
                     </td>
                 </tr> <!-- mannerismWalk -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="mannerismSitCheckbox" class="cb"></td>
+                    <td id="mannerismSitToken">
+                        <label>[MANNERISM_SIT]</label>
                     </td>
                 </tr> <!-- mannerismSit -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="mannerismBreathCheckbox" class="cb"></td>
+                    <td id="mannerismBreathToken">
+                        <label>[MANNERISM_BREATH]</label>
                     </td>
                 </tr> <!-- mannerismBreath -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="mannerismPostureCheckbox" class="cb"></td>
+                    <td id="mannerismPostureToken">
+                        <label>[MANNERISM_POSTURE]</label>
                     </td>
                 </tr> <!-- mannerismPosture -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="mannerismStretchCheckbox" class="cb"></td>
+                    <td id="mannerismStretchToken">
+                        <label>[MANNERISM_STRETCH]</label>
                     </td>
                 </tr> <!-- mannerismStretch -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="mannerismEyelidsCheckbox" class="cb"></td>
+                    <td id="mannerismEyelidsToken">
+                        <label>[MANNERISM_EYELIDS]</label>
                     </td>
                 </tr> <!-- mannerismEyelids -->
             </table>
@@ -2521,92 +2565,96 @@
         <div id="individualCasteFemaleTokens" style="display:none">
             <table>
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="caste1Checkbox" class="cb"></td>
+                    <td id="caste1Token">
+                        <label for="caste1">[CASTE:</label>
+                        <input list="caste1List" id="caste1" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="caste1List">
                         </datalist>
                     </td>
                 </tr> <!-- caste1 -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="femaleCheckbox" class="cb"></td>
+                    <td id="femaleToken">
+                        <label>[FEMALE]</label>
                     </td>
                 </tr> <!-- female -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="multipleLitterRareCheckbox" class="cb"></td>
+                    <td id="multipleLitterRareToken">
+                        <label>[MULTIPLE_LITTER_RARE]</label>
                     </td>
                 </tr> <!-- multipleLitterRare -->
                 <tr class="flexibleList">
                     <td>
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("setBpGroup1TokenGroup", "[SET_BP_GROUP:", 
+                            2, 0, true, "setBpGroup1List")'>Add: Set Body Part Group</button>
+                            <button onclick='removeTokenFromGroup("setBpGroup1TokenGroup", "[SET_BP_GROUP:")'>Remove:
+                                Set Body Part Group</button>
                         </div>
                     </td>
-                    <td id="TokenGroup">
+                    <td id="setBpGroup1TokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="List" onchange="flexibleAutoChecker(this)">
+                            <label for=setBpGroup1"">[SET_BP_GROUP:</label>
+                            <input list="setBpGroup1List" id="setBpGroup1" onchange="flexibleAutoChecker(this)">
+                            <input list="setBpGroup1List" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="setBpGroup1List">
                         </datalist>
                     </td>
                 </tr> <!-- setBpGroup1 -->
                 <tr class="flexibleList">
                     <td>
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("bpAddType1TokenGroup", "[BP_ADD_TYPE:", 
+                            1, 0, true, "bpAddType1List")'>Add: Body Part Add Type</button>
+                            <button onclick='removeTokenFromGroup("bpAddType1TokenGroup", "[BP_ADD_TYPE:")'>Remove: Body
+                                Part Add Type</button>
                         </div>
                     </td>
-                    <td id="TokenGroup">
+                    <td id="bpAddType1TokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="List" onchange="flexibleAutoChecker(this)">
+                            <label for="bpAddType1">[BP_ADD_TYPE:</label>
+                            <input list="bpAddType1List" id="bpAddType1" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="bpAddType1List">
+                            <option>GELDABLE</option>
                         </datalist>
                     </td>
                 </tr> <!-- bpAddType1 -->
                 <tr class="flexibleList">
                     <td>
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("bodyDetailPlan1TokenGroup", "[BODY_DETAIL_PLAN:", 
+                            1, 0, true, "bodyDetailPlan1List")'>Add: Body Detail Plan</button>
+                            <button
+                                onclick='removeTokenFromGroup("bodyDetailPlan1TokenGroup", "[BODY_DETAIL_PLAN:")'>Remove:
+                                Body Detail Plan</button>
                         </div>
                     </td>
-                    <td id="TokenGroup">
+                    <td id="bodyDetailPlan1TokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="List" onchange="flexibleAutoChecker(this)">
+                            <label for="bodyDetailPlan1">[BODY_DETAIL_PLAN:</label>
+                            <input list="bodyDetailPlan1List" id="bodyDetailPlan1" onchange="flexibleAutoChecker(this)">
+                            <input list="bodyDetailPlan1List" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="bodyDetailPlan1List">
                         </datalist>
                     </td>
                 </tr> <!-- bodyDetailPlan1 -->
@@ -2619,86 +2667,90 @@
         <div id="individualCasteMaleTokens" style="display:none">
             <table>
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label for="">[:</label>
-                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                    <td><input type="checkbox" id="caste2Checkbox" class="cb"></td>
+                    <td id="caste2Token">
+                        <label for="caste2">[CASTE:</label>
+                        <input list="caste2List" id="caste2" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="caste2List">
+                            <option>MALE</option>
                         </datalist>
                     </td>
                 </tr> <!-- caste2 -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="Checkbox" class="cb"></td>
-                    <td id="Token">
-                        <label>[]</label>
+                    <td><input type="checkbox" id="maleCheckbox" class="cb"></td>
+                    <td id="maleToken">
+                        <label>[MALE]</label>
                     </td>
                 </tr> <!-- male -->
                 <tr class="flexibleList">
                     <td>
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("setBpGroup2TokenGroup", "[SET_BP_GROUP:", 
+                            2, 0, true, "setBpGroup2List")'>Add: Set Body Part Group</button>
+                            <button onclick='removeTokenFromGroup("setBpGroup2TokenGroup", "[SET_BP_GROUP:")'>Remove:
+                                Set Body Part Group</button>
                         </div>
                     </td>
-                    <td id="TokenGroup">
+                    <td id="setBpGroup2TokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="List" onchange="flexibleAutoChecker(this)">
+                            <label for="setBpGroup2">[SET_BP_GROUP:</label>
+                            <input list="setBpGroup2List" id="setBpGroup2" onchange="flexibleAutoChecker(this)">
+                            <input list="setBpGroup2List" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="setBpGroup2List">
                         </datalist>
                     </td>
                 </tr> <!-- setBpGroup2 -->
                 <tr class="flexibleList">
                     <td>
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("bpAddType2TokenGroup", "[BP_ADD_TYPE:", 
+                            1, 0, true, "bpAddType2List")'>Add: Body Part Add Type</button>
+                            <button onclick='removeTokenFromGroup("bpAddType2TokenGroup", "[BP_ADD_TYPE:")'>Remove: Body
+                                Part Add Type</button>
                         </div>
                     </td>
-                    <td id="TokenGroup">
+                    <td id="bpAddType2TokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="List" onchange="flexibleAutoChecker(this)">
+                            <label for="bpAddType2">[BP_ADD_TYPE:</label>
+                            <input list="bpAddType2List" id="bpAddType2" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="bpAddType2List">
+                            <option>GELDABLE</option>
                         </datalist>
                     </td>
                 </tr> <!-- bpAddType2 -->
                 <tr class="flexibleList">
                     <td>
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("bodyDetailPlan2TokenGroup", "[BODY_DETAIL_PLAN:", 
+                            1, 0, true, "bodyDetailPlan2List")'>Add: Body Detail Plan</button>
+                            <button
+                                onclick='removeTokenFromGroup("bodyDetailPlan2TokenGroup", "[BODY_DETAIL_PLAN:")'>Remove:
+                                Body Detail Plan</button>
                         </div>
                     </td>
-                    <td id="TokenGroup">
+                    <td id="bodyDetailPlan2TokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="List" onchange="flexibleAutoChecker(this)">
+                            <label for="bodyDetailPlan2">[BODY_DETAIL_PLAN:</label>
+                            <input list="bodyDetailPlan2List" id="bodyDetailPlan2" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="bodyDetailPlan2List">
                         </datalist>
                     </td>
                 </tr> <!-- bodyDetailPlan2 -->
@@ -2712,39 +2764,53 @@
                 <tr class="multiGroup">
                     <td>
                         <div>
-                            <button onclick='addFixedToken("TokenGroup", "[:", 
-                            2, 0, true, "List")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
+                            <button onclick='addFixedToken("multipleCasteTokenGroup", "[CASTE:", 
+                            1, 0, true, "caste3List")'>Add: Caste</button>
+                            <button onclick='removeTokenFromGroup("multipleCasteTokenGroup", "[CASTE:")'>Remove:
+                                Caste</button>
                         </div> <!-- caste3 -->
                         <div>
-                            <button onclick='addFixedClosedToken("TokenGroup", "[]")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[]")'>Remove: </button>
+                            <button onclick='addFixedClosedToken("multipleCasteTokenGroup", "[FEMALE]")'>Add:
+                                Female</button>
+                            <button onclick='removeTokenFromGroup("multipleCasteTokenGroup", "[FEMALE]")'>Remove:
+                                Female</button>
                         </div>
                         <!--female2  -->
                         <div>
-                            <button onclick='addFixedClosedToken("TokenGroup", "[]")'>Add: </button>
-                            <button onclick='removeTokenFromGroup("TokenGroup", "[]")'>Remove: </button>
+                            <button onclick='addFixedClosedToken("multipleCasteTokenGroup", "[MALE]")'>Add:
+                                Male</button>
+                            <button onclick='removeTokenFromGroup("multipleCasteTokenGroup", "[MALE]")'>Remove:
+                                Male</button>
                         </div> <!-- male2 -->
+                        <div>
+                            <button
+                                onclick='addFixedClosedToken("multipleCasteTokenGroup", "[MULTIPLE_LITTER_RARE]")'>Add:
+                                Multiple Litter Rare</button>
+                            <button
+                                onclick='removeTokenFromGroup("multipleCasteTokenGroup", "[MULTIPLE_LITTER_RARE]")'>Remove:
+                                Multiple Litter Rare</button>
+                        </div> <!-- attackFlagCanlatch -->
                     </td>
                     <td id="multipleCasteTokenGroup">
                         <div>
                             <input type="checkbox" class="cb">
-                            <label for="">[:</label>
-                            <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                            <input list="List" onchange="flexibleAutoChecker(this)">
+                            <label for="caste3">[CASTE:</label>
+                            <input list="caste3List" id="caste3" onchange="flexibleAutoChecker(this)">
                         </div> <!-- caste3 -->
-                        <div>
-                            <input type="checkbox" class="cb">
-                            <label>[]</label>
-                        </div> <!-- feamle2 -->
-                        <div>
-                            <input type="checkbox" class="cb">
-                            <label>[]</label>
-                        </div> <!-- male2 -->
                     </td>
                     <td>
                         <p>]</p>
-                        <datalist id="List">
+                        <datalist id="caste3List">
+                            <option>FEMALE1</option>
+                            <option>MALE1</option>
+                            <option>FEMALE2</option>
+                            <option>MALE2</option>
+                            <option>FEMALE3</option>
+                            <option>MALE3</option>
+                            <option>FEMALE4</option>
+                            <option>MALE4</option>
+                            <option>FEMALE5</option>
+                            <option>MALE5</option>
                         </datalist> <!-- caste3 -->
                     </td>
                 </tr>
