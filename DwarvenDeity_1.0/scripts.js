@@ -66,6 +66,7 @@ function toggleElementGroup(elementGroupId) {
 }
 
 function addFixedToken(parentId, labelHTML, listNumber, textNumber, listFirst, datalistId) {
+    debugger;
     let parent = document.getElementById(parentId);
     let divi = document.createElement("div");
     let cb = document.createElement("input");

@@ -126,7 +126,7 @@ flexibleListInput button
 <div>
                             <button onclick='addFlexibleToken("TokenGroup", "[:", 1, 0, true, 
                                 "List", "ListInput")'>Add: </button>
-                            <input list="InputList" id=ListInput">
+                            <input list="InputList" id="ListInput">
                             <button onclick='removeTokenFromGroup("TokenGroup", "[:")'>Remove: </button>
                         </div>  <!--  -->
 
