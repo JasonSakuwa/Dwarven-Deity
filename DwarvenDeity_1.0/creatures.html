@@ -112,32 +112,6 @@
                         <p>]</p>
                     </td>
                 </tr> <!-- creatureSoldierTile -->
-                <tr class="flexibleList">
-                    <td>
-                        <div>
-                            <button onclick='addFixedToken("creatureClassTokenGroup", "[CREATURE_CLASS:", 
-                            1, 0, true, "creatureClassList")'>Add: Creature Class</button>
-                            <button
-                                onclick='removeTokenFromGroup("creatureClassTokenGroup", "[CREATURE_CLASS:")'>Remove:
-                                Creature Class</button>
-                        </div>
-                    </td>
-                    <td id="creatureClassTokenGroup">
-                        <div>
-                            <input type="checkbox" class="cb">
-                            <label for="creatureClass">[CREATURE_CLASS:</label>
-                            <input list="creatureClassList" id="creatureClass" onchange="flexibleAutoChecker(this)">
-                        </div>
-                    </td>
-                    <td>
-                        <p>]</p>
-                        <datalist id="creatureClassList">
-                            <option>GENERAL_POISON</option>
-                            <option>MAMMAL</option>
-                            <option>EDIBLE_GROUND_BUG</option>
-                        </datalist>
-                    </td>
-                </tr> <!-- creatureClass -->
                 <tr class="fixedClosed">
                     <td><input type="checkbox" id="intelligentCheckbox" class="cb"></td>
                     <td id="intelligentToken">
@@ -1053,6 +1027,12 @@
                             <input type="checkbox" class="cb">
                             <label for="secretion">[SECRETION:</label>
                             <input list="secretionList" id="secretion" onchange="flexibleAutoChecker(this)">
+                            <input list="secretionList" onchange="flexibleAutoChecker(this)">
+                            <input list="secretionList" onchange="flexibleAutoChecker(this)">
+                            <input list="secretionList" onchange="flexibleAutoChecker(this)">
+                            <input list="secretionList" onchange="flexibleAutoChecker(this)">
+                            <input list="secretionList" onchange="flexibleAutoChecker(this)">
+                            <input list="secretionList" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
                     <td>
@@ -1386,6 +1366,9 @@
                     <td>
                         <p>]</p>
                         <datalist id="creatureClassList">
+                            <option>GENERAL_POISON</option>
+                            <option>MAMMAL</option>
+                            <option>EDIBLE_GROUND_BUG</option>
                         </datalist>
                     </td>
                 </tr> <!-- creatureClass -->
@@ -2638,7 +2621,7 @@
                     <td>
                         <div>
                             <button onclick='addFixedToken("bodyDetailPlan1TokenGroup", "[BODY_DETAIL_PLAN:", 
-                            1, 0, true, "bodyDetailPlan1List")'>Add: Body Detail Plan</button>
+                            2, 0, true, "bodyDetailPlan1List")'>Add: Body Detail Plan</button>
                             <button
                                 onclick='removeTokenFromGroup("bodyDetailPlan1TokenGroup", "[BODY_DETAIL_PLAN:")'>Remove:
                                 Body Detail Plan</button>
@@ -2735,7 +2718,7 @@
                     <td>
                         <div>
                             <button onclick='addFixedToken("bodyDetailPlan2TokenGroup", "[BODY_DETAIL_PLAN:", 
-                            1, 0, true, "bodyDetailPlan2List")'>Add: Body Detail Plan</button>
+                            2, 0, true, "bodyDetailPlan2List")'>Add: Body Detail Plan</button>
                             <button
                                 onclick='removeTokenFromGroup("bodyDetailPlan2TokenGroup", "[BODY_DETAIL_PLAN:")'>Remove:
                                 Body Detail Plan</button>
@@ -2746,6 +2729,7 @@
                             <input type="checkbox" class="cb">
                             <label for="bodyDetailPlan2">[BODY_DETAIL_PLAN:</label>
                             <input list="bodyDetailPlan2List" id="bodyDetailPlan2" onchange="flexibleAutoChecker(this)">
+                            <input list="bodyDetailPlan2List" onchange="flexibleAutoChecker(this)">
                         </div>
                     </td>
                     <td>
