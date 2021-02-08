@@ -1,8 +1,9 @@
 function fixedAutoChecker(thisElement) {
+    debugger;
     if (thisElement.value) {
-        thisElement.parentNode.parentNode.children[0].children[0].checked = true;
+        thisElement.parentNode.parentNode.children[0].children[0].children[0].checked = true;
     } else {
-        thisElement.parentNode.parentNode.children[0].children[0].checked = false;
+        thisElement.parentNode.parentNode.children[0].children[0].children[0].checked = false;
     }
 }
 
@@ -82,22 +83,26 @@ function addFixedToken(parentId, labelHTML, listNumber, textNumber, listFirst, d
         while (listNumber--) {
             let field = document.createElement("input");
             field.setAttribute("list", datalistId);
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
             divi.appendChild(field);
         }
         while (textNumber--) {
             let field = document.createElement("input");
             field.setAttribute("type", "text");
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
             divi.appendChild(field);
         }
     } else {
         while (textNumber--) {
             let field = document.createElement("input");
             field.setAttribute("type", "text");
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
             divi.appendChild(field);
         }
         while (listNumber--) {
             let field = document.createElement("input");
             field.setAttribute("list", datalistId);
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
             divi.appendChild(field);
         }
     }
@@ -126,22 +131,26 @@ function addFlexibleToken(parentId, labelHTML, defaultListNumber, defaultTextNum
         while (listNumber--) {
             let field = document.createElement("input");
             field.setAttribute("list", datalistId);
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
             divi.appendChild(field);
         }
         while (textNumber--) {
             let field = document.createElement("input");
             field.setAttribute("type", "text");
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
             divi.appendChild(field);
         }
     } else {
         while (textNumber--) {
             let field = document.createElement("input");
             field.setAttribute("type", "text");
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
             divi.appendChild(field);
         }
         while (listNumber--) {
             let field = document.createElement("input");
             field.setAttribute("list", datalistId);
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
             divi.appendChild(field);
         }
     }
@@ -186,6 +195,7 @@ function removeTokenFromGroup(parentId, labelHTML) {
 function addList(parentId, datalistId) {
     let list = document.createElement("input");
     list.setAttribute("list", datalistId);
+    list.addEventListener("change", function () { fixedAutoChecker(this) })
     document.getElementById(parentId).appendChild(list);
 }
 

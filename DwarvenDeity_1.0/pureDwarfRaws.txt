@@ -80,8 +80,8 @@ http://www.bay12forums.com/smf/index.php?topic=106466.0
                     </td>
                     <td id="Token">
                         <label for="">[:</label>
-                        <input list="List" id="" onchange="flexibleAutoChecker(this)">
-                        <input list="List" id="" onchange="flexibleAutoChecker(this)">
+                        <input list="List" id="" onchange="fixedAutoChecker(this)">
+                        <input list="List" id="" onchange="fixedAutoChecker(this)">
                     </td>
                     <td>
                         <p>]</p>
