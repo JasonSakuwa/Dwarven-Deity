@@ -188,6 +188,13 @@ flexibleClosed button
                         </div> <!--  -->
 
 
+<td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+
+
 // Selector options
                             <option>BY_CATEGORY</option>
                             <option>BY_TYPE</option>
@@ -437,7 +444,6 @@ flexibleClosed button
     [CANOPENDOORS]
     // flexibleText
     [PREFSTRING:beards]
-
 
 // anatomy tokens
     // flexibleList

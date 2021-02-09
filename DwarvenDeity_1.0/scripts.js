@@ -1,9 +1,16 @@
 function fixedAutoChecker(thisElement) {
-    debugger;
-    if (thisElement.value) {
-        thisElement.parentNode.parentNode.children[0].children[0].checked = true;
+    if (thisElement.parentNode.parentNode.children[0].children[0].tagName === "INPUT") {
+        if (thisElement.value) {
+            thisElement.parentNode.parentNode.children[0].children[0].checked = true;
+        } else {
+            thisElement.parentNode.parentNode.children[0].children[0].checked = false;
+        }
     } else {
-        thisElement.parentNode.parentNode.children[0].children[0].checked = false;
+        if (thisElement.value) {
+            thisElement.parentNode.parentNode.children[0].children[0].children[0].checked = true;
+        } else {
+            thisElement.parentNode.parentNode.children[0].children[0].children[0].checked = false;
+        }
     }
 }
 

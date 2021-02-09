@@ -26,7 +26,14 @@
         <div id="fundamentalTokens" style="display:none">
             <table>
                 <tr class="fixedText">
-                    <td><input type="checkbox" id="creatureCheckbox" class="cb"></td>
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="creatureCheckbox" class="cb">
+                    </td>
                     <td id="creatureToken">
                         <label for="creature">[CREATURE:</label>
                         <input type="text" id="creature" onchange="fixedAutoChecker(this)">
@@ -36,7 +43,14 @@
                     </td>
                 </tr> <!-- creature -->
                 <tr class="fixedText">
-                    <td><input type="checkbox" id="descriptionCheckbox" class="cb"></td>
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="descriptionCheckbox" class="cb">
+                    </td>
                     <td id="descriptionToken">
                         <label for="description">[DESCRIPTION:</label>
                         <input type="text" id="description" onchange="fixedAutoChecker(this)">
@@ -46,7 +60,14 @@
                     </td>
                 </tr> <!-- description -->
                 <tr class="fixedText">
-                    <td><input type="checkbox" id="nameCheckbox" class="cb"></td>
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="nameCheckbox" class="cb">
+                    </td>
                     <td id="nameToken">
                         <label for="name">[NAME:</label>
                         <input type="text" id="name" onchange="fixedAutoChecker(this)">
@@ -58,7 +79,14 @@
                     </td>
                 </tr> <!-- name -->
                 <tr class="fixedText">
-                    <td><input type="checkbox" id="casteNameCheckbox" class="cb"></td>
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="casteNameCheckbox" class="cb">
+                    </td>
                     <td id="casteNameToken">
                         <label for="casteName">[CASTE_NAME:</label>
                         <input type="text" id="casteName" onchange="fixedAutoChecker(this)">
@@ -70,7 +98,14 @@
                     </td>
                 </tr> <!-- casteName -->
                 <tr class="fixedText">
-                    <td><input type="checkbox" id="creatureTileCheckbox" class="cb"></td>
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="creatureTileCheckbox" class="cb">
+                    </td>
                     <td id="creatureTileToken">
                         <label for="creatureTile">[CREATURE_TILE:</label>
                         <input type="text" id="creatureTile" onchange="fixedAutoChecker(this)">
@@ -80,7 +115,14 @@
                     </td>
                 </tr> <!-- creatureTile -->
                 <tr class="fixedList">
-                    <td><input type="checkbox" id="colorCheckbox" class="cb"></td>
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="colorCheckbox" class="cb">
+                    </td>
                     <td id="colorToken">
                         <label for="colorTile">[COLOR:</label>
                         <input list="colorList" id="colorTile" onchange="fixedAutoChecker(this)">
@@ -103,7 +145,14 @@
                     </td>
                 </tr> <!-- color -->
                 <tr class="fixedText">
-                    <td><input type="checkbox" id="creatureSoldierTileCheckbox" class="cb"></td>
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="creatureSoldierTileCheckbox" class="cb">
+                    </td>
                     <td id="creatureSoldierTileToken">
                         <label for="creatureSoldierTile">[CREATURE_SOLDIER_TILE:</label>
                         <input type="text" id="creatureSoldierTile" onchange="fixedAutoChecker(this)">
@@ -113,36 +162,74 @@
                     </td>
                 </tr> <!-- creatureSoldierTile -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="intelligentCheckbox" class="cb"></td>
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="intelligentCheckbox" class="cb">
+                    </td>
                     <td id="intelligentToken">
                         <label>[INTELLIGENT]</label>
                     </td>
                 </tr> <!-- intelligent -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="strangeMoodsCheckbox" class="cb"></td>
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="strangeMoodsCheckbox" class="cb">
+                    </td>
                     <td id="strangeMoodsToken">
                         <label>[STRANGE_MOODS]</label>
                     </td>
                 </tr> <!-- strangeMoods -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="trancesCheckbox" class="cb"></td>
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="trancesCheckbox" class="cb">
+                    </td>
                     <td id="trancesToken">
                         <label>[TRANCES]</label>
                     </td>
                 </tr> <!-- trances -->
                 <tr class="fixedClosed">
-                    <td><input type="checkbox" id="benignCheckbox" class="cb"></td>
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="benignCheckbox" class="cb">
+                    </td>
                     <td id="benignToken">
                         <label>[BENIGN]</label>
                     </td>
                 </tr> <!-- benign -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="canOpenDoorsCheckbox" class="cb"></td>
                     <td id="canOpenDoorsToken">
                         <label>[CANOPENDOORS]</label>
                     </td>
                 </tr> <!-- canOpenDoors -->
                 <tr class="flexibleText">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("prefstringTokenGroup", "[PREFSTRING:", 
@@ -170,6 +257,11 @@
         <div id="anatomyTokens" style="display:none">
             <table>
                 <tr class="flexibleListinput">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFlexibleToken("bodyDetailPlanTokenGroup", "[BODY_DETAIL_PLAN:", 1, 0, true, 
@@ -244,6 +336,11 @@
                     </td>
                 </tr> <!-- bodyDetailPlan -->
                 <tr class="fixedListInput">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <input type="checkbox" id="bodyCheckbox" class="cb">
@@ -390,6 +487,11 @@
                 </tr> <!-- body -->
                 <tr class="flexibleList">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <button onclick='addFixedToken("useTissueTemplateTokenGroup", "[USE_TISSUE_TEMPLATE:", 
                             2, 0, true, "useTissueTemplateList")'>Add: Use Tissue Template</button>
@@ -524,6 +626,11 @@
                     </td>
                 </tr> <!-- useTissueTemplate -->
                 <tr class="flexibleList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("useMaterialTemplateTokenGroup", "[USE_MATERIAL_TEMPLATE:", 
@@ -691,6 +798,11 @@
                     </td>
                 </tr> <!-- useMaterialTemplate -->
                 <tr class="flexibleListinput">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFlexibleToken("tissueLayerTokenGroup", "[TISSUE_LAYER:", 4, 0, true, 
@@ -934,6 +1046,11 @@
                 </tr> <!-- tissueLayer -->
                 <tr class="fixedListInput">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <input type="checkbox" id="tendonsCheckbox" class="cb">
                             <button onclick='addList("tendonsToken", "tendonsList")'>+</button>
@@ -953,6 +1070,11 @@
                     </td>
                 </tr> <!-- tendons -->
                 <tr class="fixedListInput">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <input type="checkbox" id="ligamentsCheckbox" class="cb">
@@ -974,6 +1096,11 @@
                 </tr> <!-- ligaments -->
                 <tr class="fixedListInput">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <input type="checkbox" id="bloodCheckbox" class="cb">
                             <button onclick='addList("bloodToken", "bloodList")'>+</button>
@@ -994,6 +1121,11 @@
                 </tr> <!-- blood -->
                 <tr class="fixedListInput">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <input type="checkbox" id="pusCheckbox" class="cb">
                             <button onclick='addList("pusToken", "pusList")'>+</button>
@@ -1013,6 +1145,11 @@
                     </td>
                 </tr> <!-- pus -->
                 <tr class="flexibleListInput">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFlexibleToken("secretionTokenGroup", "[SECRETION:", 7, 0, true, 
@@ -1044,6 +1181,11 @@
                     </td>
                 </tr> <!-- secretion -->
                 <tr class="fixedListInput">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <input type="checkbox" id="selectTissueLayerCheckbox" class="cb">
@@ -1276,6 +1418,11 @@
                 </tr> <!-- selectTissueLayer -->
                 <tr class="flexibleListInput">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <button onclick='addFlexibleToken("plusTissueLayerTokenGroup", "[PLUS_TISSUE_LAYER:", 3, 0, true, 
                                 "plusTissueLayerList", "plusTissueLayerListInput")'>Add: Plus Tissue Layer</button>
@@ -1303,12 +1450,22 @@
                     </td>
                 </tr> <!-- plusTissueLayer -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="tlMajorArteriesCheckbox" class="cb"></td>
                     <td id="tlMajorArteriesToken">
                         <label>[TL_MAJOR_ARTERIES]</label>
                     </td>
                 </tr> <!-- tlMajorArteries -->
                 <tr class="flexibleList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("relsizeTokenGroup", "[RELSIZE:", 
@@ -1334,6 +1491,11 @@
                     </td>
                 </tr> <!-- relsize -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="hasNervesCheckbox" class="cb"></td>
                     <td id="hasNervesToken">
                         <label>[HAS_NERVES]</label>
