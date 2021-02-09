@@ -1,9 +1,9 @@
 function fixedAutoChecker(thisElement) {
     debugger;
     if (thisElement.value) {
-        thisElement.parentNode.parentNode.children[0].children[0].children[0].checked = true;
+        thisElement.parentNode.parentNode.children[0].children[0].checked = true;
     } else {
-        thisElement.parentNode.parentNode.children[0].children[0].children[0].checked = false;
+        thisElement.parentNode.parentNode.children[0].children[0].checked = false;
     }
 }
 
@@ -12,6 +12,17 @@ function flexibleAutoChecker(thisElement) {
         thisElement.parentNode.children[0].checked = true;
     } else {
         thisElement.parentNode.children[0].checked = false;
+    }
+}
+
+function emptyFieldAlert() {
+    debugger;
+    if (emptyFieldNumber) {
+        if (emptyFieldNumber > 1) {
+            window.alert("Oops, it looks like " + emptyFieldNumber + " inputs are empty.");
+        } else {
+            window.alert("Oops, it looks like 1 input is empty.");
+        }
     }
 }
 
@@ -50,10 +61,6 @@ function uncheckVisibleCheckboxes() {
 function isChecked(checkboxId) {
     const cb = document.getElementById(checkboxId).checked;
     return cb;
-}
-
-function emptyFieldAlert() {
-    window.alert(emptyFieldNumber + " fields are empty.");
 }
 
 function toggleElementGroup(elementGroupId) {
@@ -219,7 +226,6 @@ function parseSpecificToken(rawArray, checkboxId, parentId) {
         let parent = document.getElementById(parentId);
         const children = parent.children;
         let tokenString = "";
-        var child;
         for (child of children) {
             if (child.tagName == "LABEL") {
                 tokenString = child.innerHTML;
@@ -239,7 +245,6 @@ function parseSpecificToken(rawArray, checkboxId, parentId) {
 function parseTokenGroup(rawArray, parentId) {
     let parent = document.getElementById(parentId);
     let children = parent.children;
-    var child;
     for (child of children) {
         parseToken(rawArray, child)
     }
