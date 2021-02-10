@@ -171,7 +171,7 @@
                         <input type="checkbox" id="intelligentCheckbox" class="cb">
                     </td>
                     <td id="intelligentToken">
-                        <label>[INTELLIGENT]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[INTELLIGENT]</label>
                     </td>
                 </tr> <!-- intelligent -->
                 <tr class="fixedClosed">
@@ -184,7 +184,7 @@
                         <input type="checkbox" id="strangeMoodsCheckbox" class="cb">
                     </td>
                     <td id="strangeMoodsToken">
-                        <label>[STRANGE_MOODS]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[STRANGE_MOODS]</label>
                     </td>
                 </tr> <!-- strangeMoods -->
                 <tr class="fixedClosed">
@@ -197,7 +197,7 @@
                         <input type="checkbox" id="trancesCheckbox" class="cb">
                     </td>
                     <td id="trancesToken">
-                        <label>[TRANCES]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[TRANCES]</label>
                     </td>
                 </tr> <!-- trances -->
                 <tr class="fixedClosed">
@@ -210,7 +210,7 @@
                         <input type="checkbox" id="benignCheckbox" class="cb">
                     </td>
                     <td id="benignToken">
-                        <label>[BENIGN]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[BENIGN]</label>
                     </td>
                 </tr> <!-- benign -->
                 <tr class="fixedClosed">
@@ -221,7 +221,7 @@
                     </td>
                     <td><input type="checkbox" id="canOpenDoorsCheckbox" class="cb"></td>
                     <td id="canOpenDoorsToken">
-                        <label>[CANOPENDOORS]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[CANOPENDOORS]</label>
                     </td>
                 </tr> <!-- canOpenDoors -->
                 <tr class="flexibleText">
@@ -1457,7 +1457,7 @@
                     </td>
                     <td><input type="checkbox" id="tlMajorArteriesCheckbox" class="cb"></td>
                     <td id="tlMajorArteriesToken">
-                        <label>[TL_MAJOR_ARTERIES]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[TL_MAJOR_ARTERIES]</label>
                     </td>
                 </tr> <!-- tlMajorArteries -->
                 <tr class="flexibleList">
@@ -1498,17 +1498,22 @@
                     </td>
                     <td><input type="checkbox" id="hasNervesCheckbox" class="cb"></td>
                     <td id="hasNervesToken">
-                        <label>[HAS_NERVES]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[HAS_NERVES]</label>
                     </td>
                 </tr> <!-- hasNerves -->
             </table>
         </div>
         <div>
-            <button onclick='toggleElementGroup("syndromeTokens")' class="displayButton">Syndrome Relation</button>
+            <button onclick='toggleElementGroup("syndromeTokens");' class="displayButton">Syndrome Relation</button>
         </div>
         <div id="syndromeTokens" style="display:none">
             <table>
                 <tr class="flexibleList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("creatureClassTokenGroup", "[CREATURE_CLASS:", 
@@ -1535,18 +1540,33 @@
                     </td>
                 </tr> <!-- creatureClass -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="getsWoundInfectionsCheckbox" class="cb"></td>
                     <td id="getsWoundInfectionsToken">
-                        <label>[GETS_WOUND_INFECTIONS]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[GETS_WOUND_INFECTIONS]</label>
                     </td>
                 </tr> <!-- getsWoundInfections -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="getsInfectionsFromRotCheckbox" class="cb"></td>
                     <td id="getsInfectionsFromRotToken">
-                        <label>[GETS_INFECTIONS_FROM_ROT]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[GETS_INFECTIONS_FROM_ROT]</label>
                     </td>
                 </tr> <!--  getsInfectionsFromRot -->
                 <tr class="flexibleList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("syndromeDilutionFactorTokenGroup", "[SYNDROME_DILUTION_FACTOR:", 
@@ -1572,9 +1592,14 @@
                     </td>
                 </tr> <!-- syndromeDilutionFactor -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="spouseConversionTargetCheckbox" class="cb"></td>
                     <td id="spouseConversionTargetToken">
-                        <label>[SPOUSE_CONVERSION_TARGET]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[SPOUSE_CONVERSION_TARGET]</label>
                     </td>
                 </tr> <!-- spouseConversionTarget -->
             </table>
@@ -1584,8 +1609,11 @@
         </div>
         <div id="interactionTokens" style="display:none">
             <table>
-                <tr>
+                <tr class="multiGroup">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFlexibleToken("interactionTokenGroup", "[CAN_DO_INTERACTION:", 1, 0, true, 
                                 "canDoInteractionList", "canDoInteractionListInput")'>Add: Can Do Interaction</button>
@@ -1594,18 +1622,27 @@
                                 onclick='removeTokenFromGroup("interactionTokenGroup", "[CAN_DO_INTERACTION:")'>Remove:
                                 Can Do Interaction</button>
                         </div> <!-- canDoInteraction -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("interactionTokenGroup", "[CDI:ADV_NAME:", 
                             0, 1, false)'>Add: Adventure Name</button>
                             <button onclick='removeTokenFromGroup("interactionTokenGroup", "[CDI:ADV_NAME:")'>Remove:
                                 Adventure Name</button>
                         </div> <!-- cdi:advName -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("interactionTokenGroup", "[CDI:USAGE_HINT:", 
                             1, 0, true, "cdi:usageHintList")'>Add: Usage Hint</button>
                             <button onclick='removeTokenFromGroup("interactionTokenGroup", "[CDI:USAGE_HINT:")'>Remove:
                                 Usage Hint</button>
                         </div> <!-- cdi:usageHint -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFlexibleToken("interactionTokenGroup", "[CDI:BP_REQUIRED:", 2, 0, true, 
                                 "cdi:bpRequiredList", "cdi:bpRequiredListInput")'>Add: Body Part Required</button>
@@ -1613,18 +1650,27 @@
                             <button onclick='removeTokenFromGroup("interactionTokenGroup", "[CDI:BP_REQUIRED:")'>Remove:
                                 Body Part Required</button>
                         </div> <!-- cdi:bpRequired -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("interactionTokenGroup", "[CDI:VERB:", 
                             0, 3, false)'>Add: Verb</button>
                             <button onclick='removeTokenFromGroup("interactionTokenGroup", "[CDI:VERB:")'>Remove:
                                 Verb</button>
                         </div> <!-- cdi:verb -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("interactionTokenGroup", "[CDI:TARGET:", 
                             2, 0, true, "cdi:targetList")'>Add: Target</button>
                             <button onclick='removeTokenFromGroup("interactionTokenGroup", "[CDI:TARGET:")'>Remove:
                                 Target</button>
                         </div> <!-- cdi:target -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("interactionTokenGroup", "[CDI:TARGET_RANGE:", 
                             2, 0, true, "cdi:targetRangeList")'>Add: Target Range</button>
@@ -1632,6 +1678,9 @@
                                 onclick='removeTokenFromGroup("interactionTokenGroup", "[CDI:TARGET_RANGE:")'>Remove:
                                 Target Range</button>
                         </div> <!-- cdi:targetRange -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("interactionTokenGroup", "[CDI:MAX_TARGET_NUMBER:", 
                             2, 0, true, "cdi:maxTargetNumberList")'>Add: Max Target Number</button>
@@ -1639,6 +1688,9 @@
                                 onclick='removeTokenFromGroup("interactionTokenGroup", "[CDI:MAX_TARGET_NUMBER:")'>Remove:
                                 Max Target Number</button>
                         </div> <!-- cdi:maxTargetNumber -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("interactionTokenGroup", "[CDI:WAIT_PERIOD:", 
                             1, 0, true, "cdi:waitPeriodList")'>Add: Wait Period</button>
@@ -1730,6 +1782,11 @@
             <table>
                 <tr class="flexibleList">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <button onclick='addFixedToken("bodySizeTokenGroup", "[BODY_SIZE:", 
                             3, 0, true, "bodySizeList")'>Add: Body Size</button>
@@ -1768,6 +1825,11 @@
                 </tr> <!-- bodySize -->
                 <tr class="flexibleList">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <button onclick='addFixedToken("physAttRangeTokenGroup", "[PHYS_ATT_RANGE:", 
                             8, 0, true, "physAttRangeList")'>Add: Physical Attribute Range</button>
@@ -1797,6 +1859,11 @@
                 </tr> <!-- physAttRange -->
                 <tr class="flexibleList">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <button onclick='addFixedToken("mentAttRangeTokenGroup", "[MENT_ATT_RANGE:", 
                             8, 0, true, "mentAttRangeList")'>Add: Mental Attribute Range</button>
@@ -1825,6 +1892,11 @@
                     </td>
                 </tr> <!-- mentAttRange -->
                 <tr class="flexibleList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("applyCreatureVariationTokenGroup", "[APPLY_CREATURE_VARIATION:", 
@@ -1898,8 +1970,11 @@
         </div>
         <div id="appearanceTokens" style="display:none">
             <table>
-                <tr id="multiGroup">
+                <tr class="multiGroup">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("bodyAppearanceTokenGroup", "[BODY_APPEARANCE_MODIFIER:", 
                             8, 0, true, "bodyAppearanceModifierList")'>Add: Body Appearance Modifier</button>
@@ -1907,6 +1982,9 @@
                                 onclick='removeTokenFromGroup("bodyAppearanceTokenGroup", "[BODY_APPEARANCE_MODIFIER:")'>Remove:
                                 Body Appearance Modifier</button>
                         </div> <!-- bodyAppearanceModifier -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("bodyAppearanceTokenGroup", "[APP_MOD_IMPORTANCE:", 
                             1, 0, true, "appModImportanceList")'>Add: Appearance Modifier Importance</button>
@@ -1956,14 +2034,20 @@
                         </datalist> <!-- appModImportance -->
                     </td>
                 </tr>
-                <tr id="multiGroup">
+                <tr class="multiGroup">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("appearanceBpTokenGroup", "[SET_BP_GROUP:", 
                             2, 0, true, "setBpGroupList")'>Add: Set Body Part Group</button>
                             <button onclick='removeTokenFromGroup("appearanceBpTokenGroup", "[SET_BP_GROUP:")'>Remove:
                                 Set Body Part Group</button>
                         </div> <!-- setBpGroup -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("appearanceBpTokenGroup", "[BP_APPEARANCE_MODIFIER:", 
                             8, 0, true, "bpAppearanceModifierList")'>Add: Body Part Appearance Modifier</button>
@@ -1971,6 +2055,9 @@
                                 onclick='removeTokenFromGroup("appearanceBpTokenGroup", "[BP_APPEARANCE_MODIFIER:")'>Remove:
                                 Body Part Appearance Modifier</button>
                         </div> <!-- bpAppearanceModifier -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("appearanceBpTokenGroup", "[APP_MOD_IMPORTANCE:", 
                             1, 0, true, "appModImportanceList")'>Add: Appearance Modifier Importance</button>
@@ -1978,12 +2065,18 @@
                                 onclick='removeTokenFromGroup("appearanceBpTokenGroup", "[APP_MOD_IMPORTANCE:")'>Remove:
                                 Appearance Modifier Importance</button>
                         </div> <!-- appModImportance -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("appearanceBpTokenGroup", "[APP_MOD_NOUN:", 
                             2, 0, true, "appModNounList")'>Add: Appearance Modifier Noun</button>
                             <button onclick='removeTokenFromGroup("appearanceBpTokenGroup", "[APP_MOD_NOUN:")'>Remove:
                                 Appearance Modifier Noun</button>
                         </div> <!-- appModNoun -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("appearanceBpTokenGroup", "[APP_MOD_DESC_RANGE:", 
                             6, 0, true, "appModDescRangeList")'>Add: Appearance Modifier Description Range</button>
@@ -2056,6 +2149,9 @@
             <table>
                 <tr class="multiGroup">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFlexibleToken("combatTokenGroup", "[ATTACK:", 4, 0, true, 
                                 "attackList", "attackListInput")'>Add:
@@ -2064,24 +2160,36 @@
                             <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK:")'>Remove:
                                 Attack</button>
                         </div> <!-- attack -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_SKILL:", 
                             1, 0, true)'>Add: Attack Skill</button>
                             <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_SKILL:")'>Remove:
                                 Attack Skill</button>
                         </div> <!-- attackSkill -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_VERB:", 
                             0, 2, false)'>Add: Attack Verb</button>
                             <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_VERB:")'>Remove: Attack
                                 Verb</button>
                         </div> <!-- attackVerb -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_CONTACT_PERC:", 
                             1, 0, true, "attackContactPercList")'>Add: Attack Contact Percent</button>
                             <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_CONTACT_PERC:")'>Remove:
                             </button>
                         </div> <!-- attackContactPerc -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_PREPARE_AND_RECOVER:", 
                             2, 0, true, "attackPrepareAndRecoverList")'>Add: Attack Prepare and Recover</button>
@@ -2089,18 +2197,27 @@
                                 onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_PREPARE_AND_RECOVER:")'>Remove:
                                 Attack Prepare and Recover</button>
                         </div> <!-- attackPrepareAndRecover -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedClosedToken("combatTokenGroup", "[ATTACK_FLAG_WITH]")'>Add:
                                 Attack Flag With</button>
                             <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_FLAG_WITH]")'>Remove:
                                 Attack Flag With</button>
                         </div> <!-- attackFlagWith -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_PRIORITY:", 
                             1, 0, true, "attackPriorityList")'>Add: Attack Priority</button>
                             <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_PRIORITY:")'>Remove:
                                 Attack Priority</button>
                         </div> <!-- attackPriority -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button
                                 onclick='addFixedClosedToken("combatTokenGroup", "[ATTACK_FLAG_BAD_MULTIATTACK]")'>Add:
@@ -2109,6 +2226,9 @@
                                 onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_FLAG_BAD_MULTIATTACK]")'>Remove:
                                 Attack Flag Bad Multiattack</button>
                         </div> <!-- attackFlagBadMultiattack -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_PENETRATION_PERC:", 
                             1, 0, true, "attackPenetrationPercList")'>Add: Attack Penetration Percent</button>
@@ -2116,12 +2236,18 @@
                                 onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_PENETRATION_PERC:")'>Remove:
                                 Attack Penetration Percent</button>
                         </div> <!-- attackPenetrationPerc -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedClosedToken("combatTokenGroup", "[ATTACK_FLAG_EDGE]")'>Add: Attack
                                 Flag Edge</button>
                             <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_FLAG_EDGE]")'>Remove:
                                 Attack Flag Edge</button>
                         </div> <!-- attackFlagEdge -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedClosedToken("combatTokenGroup", "[ATTACK_FLAG_CANLATCH]")'>Add:
                                 Attack Flag Canlatch</button>
@@ -2229,6 +2355,11 @@
         <div id="ageTokens" style="display:none">
             <table>
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="maxageCheckbox" class="cb"></td>
                     <td id="maxageToken">
                         <label for="maxage">[MAXAGE:</label>
@@ -2242,6 +2373,11 @@
                     </td>
                 </tr> <!-- maxage -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="babyCheckbox" class="cb"></td>
                     <td id="babyToken">
                         <label for="baby">[BABY:</label>
@@ -2254,6 +2390,11 @@
                     </td>
                 </tr> <!-- baby -->
                 <tr class="fixedText">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="generalBabyNameCheckbox" class="cb"></td>
                     <td id="generalBabyNameToken">
                         <label for="generalBabyName">[GENERAL_BABY_NAME:</label>
@@ -2265,6 +2406,11 @@
                     </td>
                 </tr> <!-- generalBabyName -->
                 <tr class="fixedText">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="babyNameCheckbox" class="cb"></td>
                     <td id="babyNameToken">
                         <label for="babyName">[BABYNAME:</label>
@@ -2276,6 +2422,11 @@
                     </td>
                 </tr> <!-- babyName -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="childCheckbox" class="cb"></td>
                     <td id="childToken">
                         <label for="child">[CHILD:</label>
@@ -2288,6 +2439,11 @@
                     </td>
                 </tr> <!-- child -->
                 <tr class="fixedText">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="generalChildNameCheckbox" class="cb"></td>
                     <td id="generalChildNameToken">
                         <label for="generalChildName">[GENERAL_CHILD_NAME:</label>
@@ -2299,6 +2455,11 @@
                     </td>
                 </tr> <!-- generalChildName -->
                 <tr class="fixedText">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="childNameCheckbox" class="cb"></td>
                     <td id="childNameToken">
                         <label for="childName">[CHILDNAME:</label>
@@ -2318,24 +2479,44 @@
         <div id="additionalAttributeTokens" style="display:none">
             <table>
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="equipsCheckbox" class="cb"></td>
                     <td id="equipsToken">
-                        <label>[EQUIPS]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[EQUIPS]</label>
                     </td>
                 </tr> <!-- equips -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="caveAdaptCheckbox" class="cb"></td>
                     <td id="caveAdaptToken">
-                        <label>[CAVE_ADAPT]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[CAVE_ADAPT]</label>
                     </td>
                 </tr> <!-- caveAdapt -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="diurnalCheckbox" class="cb"></td>
                     <td id="diurnalToken">
-                        <label>[DIURNAL]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[DIURNAL]</label>
                     </td>
                 </tr> <!-- diurnal -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="smellTriggerCheckbox" class="cb"></td>
                     <td id="smellTriggerToken">
                         <label for="smellTrigger">[SMELL_TRIGGER:</label>
@@ -2348,6 +2529,11 @@
                     </td>
                 </tr> <!-- smellTrigger -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="lowLightVisionCheckbox" class="cb"></td>
                     <td id="lowLightVisionToken">
                         <label for="lowLightVision ">[LOW_LIGHT_VISION:</label>
@@ -2360,6 +2546,11 @@
                     </td>
                 </tr> <!-- lowLightVision -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="homeothermCheckbox" class="cb"></td>
                     <td id="homeothermToken">
                         <label for="homeotherm">[HOMEOTHERM:</label>
@@ -2372,12 +2563,22 @@
                     </td>
                 </tr> <!-- homeotherm -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="alcoholDependentCheckbox" class="cb"></td>
                     <td id="alcoholDependentToken">
-                        <label>[ALCOHOL_DEPENDENT]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[ALCOHOL_DEPENDENT]</label>
                     </td>
                 </tr> <!-- alcoholDependent -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="speechCheckbox" class="cb"></td>
                     <td id="speechToken">
                         <label for="speech">[SPEECH:</label>
@@ -2391,9 +2592,14 @@
                     </td>
                 </tr> <!-- speech -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="swimsLearnedCheckbox" class="cb"></td>
                     <td id="swimsLearnedToken">
-                        <label>[SWIMS_LEARNED]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[SWIMS_LEARNED]</label>
                     </td>
                 </tr> <!-- swimsLearned -->
             </table>
@@ -2404,6 +2610,11 @@
         <div id="professionTokens" style="display:none">
             <table>
                 <tr class="flexibleList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("professionNameTokenGroup", "[PROFESSION_NAME:", 
@@ -2438,6 +2649,11 @@
             <table>
                 <tr class="flexibleList">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <button onclick='addFixedToken("personalityTokenGroup", "[PERSONALITY:", 
                             4, 0, true, "personalityList")'>Add: Personality</button>
@@ -2462,6 +2678,11 @@
                     </td>
                 </tr> <!-- personality -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismFingersCheckbox" class="cb"></td>
                     <td id="mannerismFingersToken">
                         <label for="mannerismFingers">[MANNERISM_FINGERS:</label>
@@ -2474,6 +2695,11 @@
                     </td>
                 </tr> <!-- mannerismFingers -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismNoseCheckbox" class="cb"></td>
                     <td id="mannerismNoseToken">
                         <label for="mannerismNose">[MANNERISM_NOSE:</label>
@@ -2486,6 +2712,11 @@
                     </td>
                 </tr> <!-- mannerismNose -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismEarCheckbox" class="cb"></td>
                     <td id="mannerismEarToken">
                         <label for="mannerismEar">[MANNERISM_EAR:</label>
@@ -2498,6 +2729,11 @@
                     </td>
                 </tr> <!-- mannerismEar -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismHeadCheckbox" class="cb"></td>
                     <td id="mannerismHeadToken">
                         <label for="mannerismHead">[MANNERISM_HEAD:</label>
@@ -2510,6 +2746,11 @@
                     </td>
                 </tr> <!-- mannerismHead -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismEyesCheckbox" class="cb"></td>
                     <td id="mannerismEyesToken">
                         <label for="mannerismEyes">[MANNERISM_EYES:</label>
@@ -2522,6 +2763,11 @@
                     </td>
                 </tr> <!-- mannerismEyes -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismMouthCheckbox" class="cb"></td>
                     <td id="mannerismMouthToken">
                         <label for="mannerismMouth">[MANNERISM_MOUTH:</label>
@@ -2534,6 +2780,11 @@
                     </td>
                 </tr> <!-- mannerismMouth -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismHairCheckbox" class="cb"></td>
                     <td id="mannerismHairToken">
                         <label for="mannerismHair">[MANNERISM_HAIR:</label>
@@ -2546,6 +2797,11 @@
                     </td>
                 </tr> <!-- mannerismHair -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismKnucklesCheckbox" class="cb"></td>
                     <td id="mannerismKnucklesToken">
                         <label for="mannerismKnuckles">[MANNERISM_KNUCKLES:</label>
@@ -2558,6 +2814,11 @@
                     </td>
                 </tr> <!-- mannerismKnuckles -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismLipsCheckbox" class="cb"></td>
                     <td id="mannerismLipsToken">
                         <label for="mannerismLips">[MANNERISM_LIPS:</label>
@@ -2570,6 +2831,11 @@
                     </td>
                 </tr> <!-- mannerismLips -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismCheekCheckbox" class="cb"></td>
                     <td id="mannerismCheekToken">
                         <label for="mannerismCheek">[MANNERISM_CHEEK:</label>
@@ -2582,6 +2848,11 @@
                     </td>
                 </tr> <!-- mannerismCheek -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismNailsCheckbox" class="cb"></td>
                     <td id="mannerismNailsToken">
                         <label for="mannerismNails">[MANNERISM_NAILS:</label>
@@ -2594,6 +2865,11 @@
                     </td>
                 </tr> <!-- mannerismNails -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismFeetCheckbox" class="cb"></td>
                     <td id="mannerismFeetToken">
                         <label for="mannerismFeet">[MANNERISM_FEET:</label>
@@ -2606,6 +2882,11 @@
                     </td>
                 </tr> <!-- mannerismFeet -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismArmsCheckbox" class="cb"></td>
                     <td id="mannerismArmsToken">
                         <label for="mannerismArms">[MANNERISM_ARMS:</label>
@@ -2618,6 +2899,11 @@
                     </td>
                 </tr> <!-- mannerismArms -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismHandsCheckbox" class="cb"></td>
                     <td id="mannerismHandsToken">
                         <label for="mannerismHands">[MANNERISM_HANDS:</label>
@@ -2630,6 +2916,11 @@
                     </td>
                 </tr> <!-- mannerismHands -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismTongueCheckbox" class="cb"></td>
                     <td id="mannerismTongueToken">
                         <label for="mannerismTongue">[MANNERISM_TONGUE:</label>
@@ -2642,6 +2933,11 @@
                     </td>
                 </tr> <!-- mannerismTongue -->
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismLegCheckbox" class="cb"></td>
                     <td id="mannerismLegToken">
                         <label for="mannerismLeg">[MANNERISM_LEG:</label>
@@ -2654,51 +2950,91 @@
                     </td>
                 </tr> <!-- mannerismLeg -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismLaughCheckbox" class="cb"></td>
                     <td id="mannerismLaughToken">
-                        <label>[MANNERISM_LAUGH]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[MANNERISM_LAUGH]</label>
                     </td>
                 </tr> <!-- mannerismLaugh -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismSmileCheckbox" class="cb"></td>
                     <td id="mannerismSmileToken">
-                        <label>[MANNERISM_SMILE]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[MANNERISM_SMILE]</label>
                     </td>
                 </tr> <!-- mannerismSmile -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismWalkCheckbox" class="cb"></td>
                     <td id="mannerismWalkToken">
-                        <label>[MANNERISM_WALK]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[MANNERISM_WALK]</label>
                     </td>
                 </tr> <!-- mannerismWalk -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismSitCheckbox" class="cb"></td>
                     <td id="mannerismSitToken">
-                        <label>[MANNERISM_SIT]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[MANNERISM_SIT]</label>
                     </td>
                 </tr> <!-- mannerismSit -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismBreathCheckbox" class="cb"></td>
                     <td id="mannerismBreathToken">
-                        <label>[MANNERISM_BREATH]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[MANNERISM_BREATH]</label>
                     </td>
                 </tr> <!-- mannerismBreath -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismPostureCheckbox" class="cb"></td>
                     <td id="mannerismPostureToken">
-                        <label>[MANNERISM_POSTURE]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[MANNERISM_POSTURE]</label>
                     </td>
                 </tr> <!-- mannerismPosture -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismStretchCheckbox" class="cb"></td>
                     <td id="mannerismStretchToken">
-                        <label>[MANNERISM_STRETCH]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[MANNERISM_STRETCH]</label>
                     </td>
                 </tr> <!-- mannerismStretch -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="mannerismEyelidsCheckbox" class="cb"></td>
                     <td id="mannerismEyelidsToken">
-                        <label>[MANNERISM_EYELIDS]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[MANNERISM_EYELIDS]</label>
                     </td>
                 </tr> <!-- mannerismEyelids -->
             </table>
@@ -2710,6 +3046,11 @@
         <div id="individualCasteFemaleTokens" style="display:none">
             <table>
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="caste1Checkbox" class="cb"></td>
                     <td id="caste1Token">
                         <label for="caste1">[CASTE:</label>
@@ -2722,18 +3063,33 @@
                     </td>
                 </tr> <!-- caste1 -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="femaleCheckbox" class="cb"></td>
                     <td id="femaleToken">
-                        <label>[FEMALE]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[FEMALE]</label>
                     </td>
                 </tr> <!-- female -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="multipleLitterRareCheckbox" class="cb"></td>
                     <td id="multipleLitterRareToken">
-                        <label>[MULTIPLE_LITTER_RARE]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[MULTIPLE_LITTER_RARE]</label>
                     </td>
                 </tr> <!-- multipleLitterRare -->
                 <tr class="flexibleList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("setBpGroup1TokenGroup", "[SET_BP_GROUP:", 
@@ -2758,6 +3114,11 @@
                 </tr> <!-- setBpGroup1 -->
                 <tr class="flexibleList">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <button onclick='addFixedToken("bpAddType1TokenGroup", "[BP_ADD_TYPE:", 
                             1, 0, true, "bpAddType1List")'>Add: Body Part Add Type</button>
@@ -2780,6 +3141,11 @@
                     </td>
                 </tr> <!-- bpAddType1 -->
                 <tr class="flexibleList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("bodyDetailPlan1TokenGroup", "[BODY_DETAIL_PLAN:", 
@@ -2812,6 +3178,11 @@
         <div id="individualCasteMaleTokens" style="display:none">
             <table>
                 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="caste2Checkbox" class="cb"></td>
                     <td id="caste2Token">
                         <label for="caste2">[CASTE:</label>
@@ -2825,12 +3196,22 @@
                     </td>
                 </tr> <!-- caste2 -->
                 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="maleCheckbox" class="cb"></td>
                     <td id="maleToken">
-                        <label>[MALE]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[MALE]</label>
                     </td>
                 </tr> <!-- male -->
                 <tr class="flexibleList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("setBpGroup2TokenGroup", "[SET_BP_GROUP:", 
@@ -2855,6 +3236,11 @@
                 </tr> <!-- setBpGroup2 -->
                 <tr class="flexibleList">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <button onclick='addFixedToken("bpAddType2TokenGroup", "[BP_ADD_TYPE:", 
                             1, 0, true, "bpAddType2List")'>Add: Body Part Add Type</button>
@@ -2877,6 +3263,11 @@
                     </td>
                 </tr> <!-- bpAddType2 -->
                 <tr class="flexibleList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("bodyDetailPlan2TokenGroup", "[BODY_DETAIL_PLAN:", 
@@ -2909,24 +3300,36 @@
             <table>
                 <tr class="multiGroup">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedToken("multipleCasteTokenGroup", "[CASTE:", 
                             1, 0, true, "caste3List")'>Add: Caste</button>
                             <button onclick='removeTokenFromGroup("multipleCasteTokenGroup", "[CASTE:")'>Remove:
                                 Caste</button>
                         </div> <!-- caste3 -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedClosedToken("multipleCasteTokenGroup", "[FEMALE]")'>Add:
                                 Female</button>
                             <button onclick='removeTokenFromGroup("multipleCasteTokenGroup", "[FEMALE]")'>Remove:
                                 Female</button>
                         </div><!-- female2  -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button onclick='addFixedClosedToken("multipleCasteTokenGroup", "[MALE]")'>Add:
                                 Male</button>
                             <button onclick='removeTokenFromGroup("multipleCasteTokenGroup", "[MALE]")'>Remove:
                                 Male</button>
                         </div> <!-- male2 -->
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
                         <div>
                             <button
                                 onclick='addFixedClosedToken("multipleCasteTokenGroup", "[MULTIPLE_LITTER_RARE]")'>Add:
@@ -2974,6 +3377,9 @@
                                 Selection</button>
                         </div>
                         <div id="casteSelectionButtons" style="display:none">
+                            <div class="tooltip">?
+                                <span class="tooltipText"></span>
+                            </div>
                             <div>
                                 <button onclick='addFixedToken("multipleCasteSelectionTokenGroup", "[SELECT_CASTE:", 
                                 1, 0, true, "selectCasteList")'>Add: Select Caste</button>

@@ -194,6 +194,10 @@ flexibleClosed button
                         </div>
                     </td>
 
+<div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+
 
 // Selector options
                             <option>BY_CATEGORY</option>

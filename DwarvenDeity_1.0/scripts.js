@@ -1,21 +1,37 @@
 function fixedAutoChecker(thisElement) {
-    if (thisElement.parentNode.parentNode.children[0].children[0].tagName === "INPUT") {
+    if (thisElement.parentNode.parentNode.children[1].children[0].tagName === "INPUT") {
         if (thisElement.value) {
-            thisElement.parentNode.parentNode.children[0].children[0].checked = true;
+            thisElement.parentNode.parentNode.children[1].children[0].checked = true;
         } else {
-            thisElement.parentNode.parentNode.children[0].children[0].checked = false;
+            thisElement.parentNode.parentNode.children[1].children[0].checked = false;
         }
     } else {
         if (thisElement.value) {
-            thisElement.parentNode.parentNode.children[0].children[0].children[0].checked = true;
+            thisElement.parentNode.parentNode.children[1].children[0].children[0].checked = true;
         } else {
-            thisElement.parentNode.parentNode.children[0].children[0].children[0].checked = false;
+            thisElement.parentNode.parentNode.children[1].children[0].children[0].checked = false;
         }
+    }
+}
+
+function fixedClosedAutoChecker(thisElement) {
+    if (!thisElement.parentNode.parentNode.children[1].children[0].checked) {
+        thisElement.parentNode.parentNode.children[1].children[0].checked = true;
+    } else {
+        thisElement.parentNode.parentNode.children[1].children[0].checked = false;
     }
 }
 
 function flexibleAutoChecker(thisElement) {
     if (thisElement.value) {
+        thisElement.parentNode.children[0].checked = true;
+    } else {
+        thisElement.parentNode.children[0].checked = false;
+    }
+}
+
+function flexibleClosedAutoChecker(thisElement) {
+    if (!thisElement.parentNode.children[0].checked) {
         thisElement.parentNode.children[0].checked = true;
     } else {
         thisElement.parentNode.children[0].checked = false;
@@ -180,6 +196,7 @@ function addFixedClosedToken(parentId, labelHTML) {
     cb.setAttribute("type", "checkbox");
     cb.setAttribute("class", "cb");
     label.innerHTML = labelHTML;
+    label.addEventListener("click", function () { flexibleClosedAutoChecker(this) })
     divi.appendChild(cb);
     divi.appendChild(label);
     parent.appendChild(divi);
