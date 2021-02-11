@@ -31,11 +31,15 @@
                         <tr class="fixedText">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">Hello! I would like to personally welcome you to the
+                                        creature creator! I define what other tokens can refer to your creature
+                                        as.
+                                        <hr>NAME<br>[CREATURE:DWARF]
+                                    </span>
                                 </div>
                             </td>
                             <td>
-                                <input type="checkbox" id="creatureCheckbox" class="cb">
+                                <input type="checkbox" id="creatureCheckbox" class="cb" checked>
                             </td>
                             <td id="creatureToken">
                                 <label for="creature">[CREATURE:</label>
@@ -48,7 +52,12 @@
                         <tr class="fixedText">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I define a short description that describes your
+                                        magnificent creature. (You may see this description when you view your
+                                        creature.)
+                                        <hr>descripion<br>[DESCRIPTION:A short, sturdy creature fond of drink and
+                                        industry.]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -65,7 +74,10 @@
                         <tr class="fixedText">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I define what name your creature has. I may be
+                                        replaced by CASTE_NAME.
+                                        <hr>singular:plural:adjective<br>[NAME:dwarf:dwarves:dwarven]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -84,7 +96,10 @@
                         <tr class="fixedText">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can also define what your creature is called. Please use
+                                        me in tandem with NAME.
+                                        <hr>singular:plural:adjective<br>[CASTE_NAME:dwarf:dwarves:dwarven]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -103,7 +118,9 @@
                         <tr class="fixedText">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define which tile your creature appears as.
+                                        <hr>0 ~ 255<br>[CREATURE_TILE:1]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -120,7 +137,10 @@
                         <tr class="fixedList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I define the wonderful colors of your creature's tile.
+                                        <hr>0 ~ 7(foreground color):0 ~ 7(background color):0 ~
+                                        1(brightness)<br>[COLOR:3:0:0]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -3605,6 +3625,11 @@
                 </div>
             </div>
             <div>
+                <label for="newFile">Would your like to add your creature to a new file? (Recommended for first time
+                    users)</label>
+                <input type="checkbox" id="newFile">
+            </div>
+            <div>
                 <button onclick='emptyFieldNumber = 0; creatureTokenCompile(); emptyFieldAlert();'>Create</button>
                 <button onclick='copyToClipboard("output")'>Copy to Clipboard</button>
             </div>
@@ -3612,124 +3637,130 @@
                 <textarea id="output"></textarea>
             </div>
         </article>
+        <script>
+            function creatureTokenCompile() {
+                var raw = [];
+                if (document.getElementById("newFile").checked) {
+                    raw.push("creature_modded");
+                    raw.push("");
+                    raw.push("[OBJECT:CREATURE]");
+                    raw.push("");
+                }
+                // Fundamentals
+                parseSpecificToken(raw, "creatureCheckbox", "creatureToken")
+                parseSpecificToken(raw, "descriptionCheckbox", "descriptionToken")
+                parseSpecificToken(raw, "nameCheckbox", "nameToken")
+                parseSpecificToken(raw, "casteNameCheckbox", "casteNameToken")
+                parseSpecificToken(raw, "creatureTileCheckbox", "creatureTileToken")
+                parseSpecificToken(raw, "colorCheckbox", "colorToken")
+                parseSpecificToken(raw, "creatureSoldierTileCheckbox", "creatureSoldierTileToken")
+                parseSpecificToken(raw, "intelligentCheckbox", "intelligentToken")
+                parseSpecificToken(raw, "strangeMoodsCheckbox", "strangeMoodsToken")
+                parseSpecificToken(raw, "trancesCheckbox", "trancesToken")
+                parseSpecificToken(raw, "benignCheckbox", "benignToken")
+                parseSpecificToken(raw, "canOpenDoorsCheckbox", "canOpenDoorsToken")
+                parseTokenGroup(raw, "prefstringTokenGroup")
+                // Anatomy
+                parseTokenGroup(raw, "bodyDetailPlanTokenGroup")
+                parseSpecificToken(raw, "bodyCheckbox", "bodyToken")
+                parseTokenGroup(raw, "useTissueTemplateTokenGroup")
+                parseTokenGroup(raw, "useMaterialTemplateTokenGroup")
+                parseTokenGroup(raw, "tissueLayerTokenGroup")
+                parseSpecificToken(raw, "tendonsCheckbox", "tendonsToken")
+                parseSpecificToken(raw, "ligamentsCheckbox", "ligamentsToken")
+                parseSpecificToken(raw, "bloodCheckbox", "bloodToken")
+                parseSpecificToken(raw, "pusCheckbox", "pusToken")
+                parseTokenGroup(raw, "secretionTokenGroup")
+                parseSpecificToken(raw, "selectTissueLayerCheckbox", "selectTissueLayerToken")
+                parseTokenGroup(raw, "plusTissueLayerTokenGroup")
+                parseSpecificToken(raw, "tlMajorArteriesCheckbox", "tlMajorArteriesToken")
+                parseTokenGroup(raw, "relsizeTokenGroup")
+                parseSpecificToken(raw, "hasNervesCheckbox", "hasNervesToken")
+                // Syndrom
+                parseTokenGroup(raw, "creatureClassTokenGroup")
+                parseSpecificToken(raw, "getsWoundInfectionsCheckbox", "getsWoundInfectionsToken")
+                parseSpecificToken(raw, "getsInfectionsFromRotCheckbox", "getsInfectionsFromRotToken")
+                parseTokenGroup(raw, "syndromeDilutionFactorTokenGroup")
+                parseSpecificToken(raw, "spouseConversionTargetCheckbox", "spouseConversionTargetToken")
+                // Interaction
+                parseTokenGroup(raw, "interactionTokenGroup")
+                // PhysicalMentalAttributes
+                parseTokenGroup(raw, "bodySizeTokenGroup")
+                parseTokenGroup(raw, "physAttRangeTokenGroup")
+                parseTokenGroup(raw, "mentAttRangeTokenGroup")
+                parseTokenGroup(raw, "applyCreatureVariationTokenGroup")
+                // Appearance
+                parseTokenGroup(raw, "bodyAppearanceTokenGroup")
+                parseTokenGroup(raw, "appearanceBpTokenGroup")
+                // Combat
+                parseTokenGroup(raw, "combatTokenGroup")
+                // Age
+                parseSpecificToken(raw, "maxageCheckbox", "maxageToken")
+                parseSpecificToken(raw, "babyCheckbox", "babyToken")
+                parseSpecificToken(raw, "generalBabyNameCheckbox", "generalBabyNameToken")
+                parseSpecificToken(raw, "babyNameCheckbox", "babyNameToken")
+                parseSpecificToken(raw, "childCheckbox", "childToken")
+                parseSpecificToken(raw, "generalChildNameCheckbox", "generalChildNameToken")
+                parseSpecificToken(raw, "childNameCheckbox", "childNameToken")
+                // AdditionalAttributes
+                parseSpecificToken(raw, "equipsCheckbox", "equipsToken")
+                parseSpecificToken(raw, "caveAdaptCheckbox", "caveAdaptToken")
+                parseSpecificToken(raw, "diurnalCheckbox", "diurnalToken")
+                parseSpecificToken(raw, "smellTriggerCheckbox", "smellTriggerToken")
+                parseSpecificToken(raw, "lowLightVisionCheckbox", "lowLightVisionToken")
+                parseSpecificToken(raw, "homeothermCheckbox", "homeothermToken")
+                parseSpecificToken(raw, "alcoholDependentCheckbox", "alcoholDependentToken")
+                parseSpecificToken(raw, "speechCheckbox", "speechToken")
+                parseSpecificToken(raw, "swimsLearnedCheckbox", "swimsLearnedToken")
+                // Professions
+                parseTokenGroup(raw, "professionNameTokenGroup")
+                // PersonalityMannerisms
+                parseTokenGroup(raw, "personalityTokenGroup")
+                parseSpecificToken(raw, "mannerismFingersCheckbox", "mannerismFingersToken")
+                parseSpecificToken(raw, "mannerismNoseCheckbox", "mannerismNoseToken")
+                parseSpecificToken(raw, "mannerismEarCheckbox", "mannerismEarToken")
+                parseSpecificToken(raw, "mannerismHeadCheckbox", "mannerismHeadToken")
+                parseSpecificToken(raw, "mannerismEyesCheckbox", "mannerismEyesToken")
+                parseSpecificToken(raw, "mannerismMouthCheckbox", "mannerismMouthToken")
+                parseSpecificToken(raw, "mannerismHairCheckbox", "mannerismHairToken")
+                parseSpecificToken(raw, "mannerismKnucklesCheckbox", "mannerismKnucklesToken")
+                parseSpecificToken(raw, "mannerismLipsCheckbox", "mannerismLipsToken")
+                parseSpecificToken(raw, "mannerismCheekCheckbox", "mannerismCheekToken")
+                parseSpecificToken(raw, "mannerismNailsCheckbox", "mannerismNailsToken")
+                parseSpecificToken(raw, "mannerismFeetCheckbox", "mannerismFeetToken")
+                parseSpecificToken(raw, "mannerismArmsCheckbox", "mannerismArmsToken")
+                parseSpecificToken(raw, "mannerismHandsCheckbox", "mannerismHandsToken")
+                parseSpecificToken(raw, "mannerismTongueCheckbox", "mannerismTongueToken")
+                parseSpecificToken(raw, "mannerismLegCheckbox", "mannerismLegToken")
+                parseSpecificToken(raw, "mannerismLaughCheckbox", "mannerismLaughToken")
+                parseSpecificToken(raw, "mannerismSmileCheckbox", "mannerismSmileToken")
+                parseSpecificToken(raw, "mannerismWalkCheckbox", "mannerismWalkToken")
+                parseSpecificToken(raw, "mannerismSitCheckbox", "mannerismSitToken")
+                parseSpecificToken(raw, "mannerismBreathCheckbox", "mannerismBreathToken")
+                parseSpecificToken(raw, "mannerismPostureCheckbox", "mannerismPostureToken")
+                parseSpecificToken(raw, "mannerismStretchCheckbox", "mannerismStretchToken")
+                parseSpecificToken(raw, "mannerismEyelidsCheckbox", "mannerismEyelidsToken")
+                // IndividualCaste1
+                parseSpecificToken(raw, "caste1Checkbox", "caste1Token")
+                parseSpecificToken(raw, "femaleCheckbox", "femaleToken")
+                parseSpecificToken(raw, "multipleLitterRareCheckbox", "multipleLitterRareToken")
+                parseTokenGroup(raw, "setBpGroup1TokenGroup")
+                parseTokenGroup(raw, "bpAddType1TokenGroup")
+                parseTokenGroup(raw, "bodyDetailPlan1TokenGroup")
+                // IndividualCaste2
+                parseSpecificToken(raw, "caste2Checkbox", "caste2Token")
+                parseSpecificToken(raw, "maleCheckbox", "maleToken")
+                parseTokenGroup(raw, "setBpGroup2TokenGroup")
+                parseTokenGroup(raw, "bpAddType2TokenGroup")
+                parseTokenGroup(raw, "bodyDetailPlan2TokenGroup")
+                // MultipleCaste
+                parseTokenGroup(raw, "multipleCasteTokenGroup")
+                // MultipleCasteSelect
+                parseTokenGroup(raw, "multipleCasteSelectionTokenGroup")
+                document.getElementById("output").value = raw.join("\n");
+            }
+        </script>
     </main>
-    <script>
-        function creatureTokenCompile() {
-            var raw = [];
-            // Fundamentals
-            parseSpecificToken(raw, "creatureCheckbox", "creatureToken")
-            parseSpecificToken(raw, "descriptionCheckbox", "descriptionToken")
-            parseSpecificToken(raw, "nameCheckbox", "nameToken")
-            parseSpecificToken(raw, "casteNameCheckbox", "casteNameToken")
-            parseSpecificToken(raw, "creatureTileCheckbox", "creatureTileToken")
-            parseSpecificToken(raw, "colorCheckbox", "colorToken")
-            parseSpecificToken(raw, "creatureSoldierTileCheckbox", "creatureSoldierTileToken")
-            parseSpecificToken(raw, "intelligentCheckbox", "intelligentToken")
-            parseSpecificToken(raw, "strangeMoodsCheckbox", "strangeMoodsToken")
-            parseSpecificToken(raw, "trancesCheckbox", "trancesToken")
-            parseSpecificToken(raw, "benignCheckbox", "benignToken")
-            parseSpecificToken(raw, "canOpenDoorsCheckbox", "canOpenDoorsToken")
-            parseTokenGroup(raw, "prefstringTokenGroup")
-            // Anatomy
-            parseTokenGroup(raw, "bodyDetailPlanTokenGroup")
-            parseSpecificToken(raw, "bodyCheckbox", "bodyToken")
-            parseTokenGroup(raw, "useTissueTemplateTokenGroup")
-            parseTokenGroup(raw, "useMaterialTemplateTokenGroup")
-            parseTokenGroup(raw, "tissueLayerTokenGroup")
-            parseSpecificToken(raw, "tendonsCheckbox", "tendonsToken")
-            parseSpecificToken(raw, "ligamentsCheckbox", "ligamentsToken")
-            parseSpecificToken(raw, "bloodCheckbox", "bloodToken")
-            parseSpecificToken(raw, "pusCheckbox", "pusToken")
-            parseTokenGroup(raw, "secretionTokenGroup")
-            parseSpecificToken(raw, "selectTissueLayerCheckbox", "selectTissueLayerToken")
-            parseTokenGroup(raw, "plusTissueLayerTokenGroup")
-            parseSpecificToken(raw, "tlMajorArteriesCheckbox", "tlMajorArteriesToken")
-            parseTokenGroup(raw, "relsizeTokenGroup")
-            parseSpecificToken(raw, "hasNervesCheckbox", "hasNervesToken")
-            // Syndrom
-            parseTokenGroup(raw, "creatureClassTokenGroup")
-            parseSpecificToken(raw, "getsWoundInfectionsCheckbox", "getsWoundInfectionsToken")
-            parseSpecificToken(raw, "getsInfectionsFromRotCheckbox", "getsInfectionsFromRotToken")
-            parseTokenGroup(raw, "syndromeDilutionFactorTokenGroup")
-            parseSpecificToken(raw, "spouseConversionTargetCheckbox", "spouseConversionTargetToken")
-            // Interaction
-            parseTokenGroup(raw, "interactionTokenGroup")
-            // PhysicalMentalAttributes
-            parseTokenGroup(raw, "bodySizeTokenGroup")
-            parseTokenGroup(raw, "physAttRangeTokenGroup")
-            parseTokenGroup(raw, "mentAttRangeTokenGroup")
-            parseTokenGroup(raw, "applyCreatureVariationTokenGroup")
-            // Appearance
-            parseTokenGroup(raw, "bodyAppearanceTokenGroup")
-            parseTokenGroup(raw, "appearanceBpTokenGroup")
-            // Combat
-            parseTokenGroup(raw, "combatTokenGroup")
-            // Age
-            parseSpecificToken(raw, "maxageCheckbox", "maxageToken")
-            parseSpecificToken(raw, "babyCheckbox", "babyToken")
-            parseSpecificToken(raw, "generalBabyNameCheckbox", "generalBabyNameToken")
-            parseSpecificToken(raw, "babyNameCheckbox", "babyNameToken")
-            parseSpecificToken(raw, "childCheckbox", "childToken")
-            parseSpecificToken(raw, "generalChildNameCheckbox", "generalChildNameToken")
-            parseSpecificToken(raw, "childNameCheckbox", "childNameToken")
-            // AdditionalAttributes
-            parseSpecificToken(raw, "equipsCheckbox", "equipsToken")
-            parseSpecificToken(raw, "caveAdaptCheckbox", "caveAdaptToken")
-            parseSpecificToken(raw, "diurnalCheckbox", "diurnalToken")
-            parseSpecificToken(raw, "smellTriggerCheckbox", "smellTriggerToken")
-            parseSpecificToken(raw, "lowLightVisionCheckbox", "lowLightVisionToken")
-            parseSpecificToken(raw, "homeothermCheckbox", "homeothermToken")
-            parseSpecificToken(raw, "alcoholDependentCheckbox", "alcoholDependentToken")
-            parseSpecificToken(raw, "speechCheckbox", "speechToken")
-            parseSpecificToken(raw, "swimsLearnedCheckbox", "swimsLearnedToken")
-            // Professions
-            parseTokenGroup(raw, "professionNameTokenGroup")
-            // PersonalityMannerisms
-            parseTokenGroup(raw, "personalityTokenGroup")
-            parseSpecificToken(raw, "mannerismFingersCheckbox", "mannerismFingersToken")
-            parseSpecificToken(raw, "mannerismNoseCheckbox", "mannerismNoseToken")
-            parseSpecificToken(raw, "mannerismEarCheckbox", "mannerismEarToken")
-            parseSpecificToken(raw, "mannerismHeadCheckbox", "mannerismHeadToken")
-            parseSpecificToken(raw, "mannerismEyesCheckbox", "mannerismEyesToken")
-            parseSpecificToken(raw, "mannerismMouthCheckbox", "mannerismMouthToken")
-            parseSpecificToken(raw, "mannerismHairCheckbox", "mannerismHairToken")
-            parseSpecificToken(raw, "mannerismKnucklesCheckbox", "mannerismKnucklesToken")
-            parseSpecificToken(raw, "mannerismLipsCheckbox", "mannerismLipsToken")
-            parseSpecificToken(raw, "mannerismCheekCheckbox", "mannerismCheekToken")
-            parseSpecificToken(raw, "mannerismNailsCheckbox", "mannerismNailsToken")
-            parseSpecificToken(raw, "mannerismFeetCheckbox", "mannerismFeetToken")
-            parseSpecificToken(raw, "mannerismArmsCheckbox", "mannerismArmsToken")
-            parseSpecificToken(raw, "mannerismHandsCheckbox", "mannerismHandsToken")
-            parseSpecificToken(raw, "mannerismTongueCheckbox", "mannerismTongueToken")
-            parseSpecificToken(raw, "mannerismLegCheckbox", "mannerismLegToken")
-            parseSpecificToken(raw, "mannerismLaughCheckbox", "mannerismLaughToken")
-            parseSpecificToken(raw, "mannerismSmileCheckbox", "mannerismSmileToken")
-            parseSpecificToken(raw, "mannerismWalkCheckbox", "mannerismWalkToken")
-            parseSpecificToken(raw, "mannerismSitCheckbox", "mannerismSitToken")
-            parseSpecificToken(raw, "mannerismBreathCheckbox", "mannerismBreathToken")
-            parseSpecificToken(raw, "mannerismPostureCheckbox", "mannerismPostureToken")
-            parseSpecificToken(raw, "mannerismStretchCheckbox", "mannerismStretchToken")
-            parseSpecificToken(raw, "mannerismEyelidsCheckbox", "mannerismEyelidsToken")
-            // IndividualCaste1
-            parseSpecificToken(raw, "caste1Checkbox", "caste1Token")
-            parseSpecificToken(raw, "femaleCheckbox", "femaleToken")
-            parseSpecificToken(raw, "multipleLitterRareCheckbox", "multipleLitterRareToken")
-            parseTokenGroup(raw, "setBpGroup1TokenGroup")
-            parseTokenGroup(raw, "bpAddType1TokenGroup")
-            parseTokenGroup(raw, "bodyDetailPlan1TokenGroup")
-            // IndividualCaste2
-            parseSpecificToken(raw, "caste2Checkbox", "caste2Token")
-            parseSpecificToken(raw, "maleCheckbox", "maleToken")
-            parseTokenGroup(raw, "setBpGroup2TokenGroup")
-            parseTokenGroup(raw, "bpAddType2TokenGroup")
-            parseTokenGroup(raw, "bodyDetailPlan2TokenGroup")
-            // MultipleCaste
-            parseTokenGroup(raw, "multipleCasteTokenGroup")
-            // MultipleCasteSelect
-            parseTokenGroup(raw, "multipleCasteSelectionTokenGroup")
-            document.getElementById("output").value = raw.join("\n");
-        }
-    </script>
 </body>
 
 </html>
