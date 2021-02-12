@@ -139,7 +139,7 @@ function addFixedToken(parentId, labelHTML, listNumber, textNumber, listFirst, d
     parent.appendChild(divi);
 }
 
-function addFlexibleToken(parentId, labelHTML, defaultListNumber, defaultTextNumber, listFirst, datalistId, listNumberId, textNumberId,) {
+function addFlexibleToken(parentId, labelHTML, defaultListNumber, defaultTextNumber, listFirst, datalistId, listNumberId, textNumberId) {
     let parent = document.getElementById(parentId);
     let divi = document.createElement("div");
     let cb = document.createElement("input");

@@ -97,7 +97,8 @@
                         <tr class="fixedText">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText">I can also define what your creature is called. Please use
+                                    <span class="tooltipText">I can <i>also</i> define what your creature is called.
+                                        Please use
                                         me in tandem with NAME.
                                         <hr>[CASTE_NAME:singular:plural:adjective]<br>[CASTE_NAME:dwarf:dwarves:dwarven]
                                     </span>
@@ -234,7 +235,7 @@
                             <td>
                                 <div class="tooltip">?
                                     <span class="tooltipText">I can cause your creature to become a docile bundle of
-                                        joy. Unless, of course, it becomes enraged. (May cause your creature to be
+                                        joy! Unless, of course, it becomes enraged. (May cause your creature to be
                                         ineffective for fortress defense)</span>
                                 </div>
                             </td>
@@ -300,7 +301,7 @@
                                         in a simple manner. I bring in various materials, body parts, and the locations
                                         and sizes of those bodyparts. I can also let you easily define what your
                                         creature's tissue layers will be layered.
-                                        <hr>* Inputs surrounded by parenthesis => <b>()</b> are
+                                        <hr>* Inputs surrounded by parenthesis => <b>( )</b> are
                                         optional.<br>[BODY_DETAIL_PLAN:PLAN_NAME:(TISSUE:TISSUE:TISSUE...)*]<br>[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
                                     </span>
                                 </div>
@@ -1895,10 +1896,28 @@
                                 </datalist>
                             </td>
                         </tr> <!-- secretion -->
+                        <tr class="fixedClosed">
+                            <td>
+                                <div class="tooltip">?
+                                    <span class="tooltipText">I cause the unfortunate, yet sometimes necessary,
+                                        circumstance, of your creature suffering nerve damage in combat.
+                                        <hr><br>
+                                    </span>
+                                </div>
+                            </td>
+                            <td><input type="checkbox" id="hasNervesCheckbox" class="cb"></td>
+                            <td id="hasNervesToken">
+                                <label onclick='fixedClosedAutoChecker(this);'>[HAS_NERVES]</label>
+                            </td>
+                        </tr> <!-- hasNerves -->
                         <tr class="fixedListInput">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can select a tissue for additional descriptions, and
+                                        cosmetic purposes.
+                                        <hr>
+                                        [SELECT_TISSUE_LAYER:TISSUE:BY_CATEGORY/BY_TYPE/BY_TOKEN:CATEGORY/TYPE/TOKEN(:LOCATION)]<br>[SELECT_TISSUE_LAYER:HEART:BY_CATEGORY:HEART]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -2126,26 +2145,29 @@
                                     <option>HEAD_ANTLER_2</option>
                                     <!--  Tissue locations -->
                                     <option>FRONT</option>
+                                    <option>BACK</option>
                                     <option>RIGHT</option>
                                     <option>LEFT</option>
                                     <option>TOP</option>
                                     <option>BOTTOM</option>
                                     <option>AROUND</option>
-                                    <option>CLEANS</option>
                                 </datalist>
                             </td>
                         </tr> <!-- selectTissueLayer -->
-                        <tr class="flexibleListInput">
+                        <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I, following my brother before me, allow you to select
+                                        tissues for description and cosmetic purposes.
+                                        <hr>
+                                        [PLUS_TISSUE_LAYER:TISSUE:BY_CATEGORY/BY_TYPE/BY_TOKEN:CATEGORY/TYPE/TOKEN]<br>[PLUS_TISSUE_LAYER:SKIN:BY_CATEGORY:THROAT]
+                                    </span>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <button onclick='addFlexibleToken("plusTissueLayerTokenGroup", "[PLUS_TISSUE_LAYER:", 3, 0, true, 
-                                    "plusTissueLayerList", "plusTissueLayerListInput")'>Add: Plus Tissue Layer</button>
-                                    <input list="plusTissueLayerInputList" id="plusTissueLayerListInput">
+                                    <button onclick='addFixedToken("plusTissueLayerTokenGroup", "[PLUS_TISSUE_LAYER:", 3, 0, true, 
+                                    "plusTissueLayerList")'>Add: Plus Tissue Layer</button>
                                     <button
                                         onclick='removeTokenFromGroup("plusTissueLayerTokenGroup", "[PLUS_TISSUE_LAYER:")'>Remove:
                                         Plus Tissue Layer</button>
@@ -2165,16 +2187,218 @@
                             </td>
                             <td>
                                 <p>]</p>
-                                <datalist id="plusTissueLayerInputList">
-                                </datalist>
                                 <datalist id="plusTissueLayerList">
+                                    <!-- Tissues -->
+                                    <option>SKIN</option>
+                                    <option>FAT</option>
+                                    <option>MUSCLE</option>
+                                    <option>BONE</option>
+                                    <option>SHELL</option>
+                                    <option>HORN</option>
+                                    <option>HOOF</option>
+                                    <option>CARTILAGE</option>
+                                    <option>HAIR</option>
+                                    <option>FEATHER</option>
+                                    <option>SCALE</option>
+                                    <option>NAIL</option>
+                                    <option>CLAW</option>
+                                    <option>TALON</option>
+                                    <option>TOOTH</option>
+                                    <option>IVORY</option>
+                                    <option>EYE</option>
+                                    <option>NERVE</option>
+                                    <option>BRAIN</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>LIVER</option>
+                                    <option>GUT</option>
+                                    <option>STOMACH</option>
+                                    <option>GIZZARD</option>
+                                    <option>PANCREAS</option>
+                                    <option>SPLEEN</option>
+                                    <option>KIDNEY</option>
+                                    <option>FLAME</option>
+                                    <option>CHITIN</option>
+                                    <option>SPINE</option>
+                                    <option>SPONGE</option>
+                                    <!-- Selector options -->
+                                    <option>BY_CATEGORY</option>
+                                    <option>BY_TYPE</option>
+                                    <option>BY_TOKEN</option>
+                                    <!-- Categories -->
+                                    <option>BODY</option>
+                                    <option>BODY_UPPER</option>
+                                    <option>BODY_LOWER</option>
+                                    <option>HEAD</option>
+                                    <option>ARM_UPPER</option>
+                                    <option>ARM_LOWER</option>
+                                    <option>HAND</option>
+                                    <option>PINCER</option>
+                                    <option>FOOT_FRONT</option>
+                                    <option>FOOT_REAR</option>
+                                    <option>LEG_FRONT</option>
+                                    <option>LEG_REAR</option>
+                                    <option>LEG_UPPER</option>
+                                    <option>LEG_LOWER</option>
+                                    <option>FOOT</option>
+                                    <option>FLIPPER</option>
+                                    <option>WING</option>
+                                    <option>TAIL</option>
+                                    <option>STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>NOSE</option>
+                                    <option>SHELL</option>
+                                    <option>ANTENNA</option>
+                                    <option>HORN</option>
+                                    <option>MANDIBLE</option>
+                                    <option>FINGER</option>
+                                    <option>TOE</option>
+                                    <option>EYE</option>
+                                    <option>NOSE</option>
+                                    <option>CHEEK</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>SPINE</option>
+                                    <option>NECK</option>
+                                    <option>SPINE</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>RIB_TRUE</option>
+                                    <option>RIB_FALSE</option>
+                                    <option>RIB_FLOATING</option>
+                                    <option>LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>BEAK</option>
+                                    <!--  Types -->
+                                    <option>UPPERBODY</option>
+                                    <option>LOWERBODY</option>
+                                    <option>HEAD</option>
+                                    <option>GRASP</option>
+                                    <option>STANCE</option>
+                                    <!--  Tokens -->
+                                    <option>UB</option>
+                                    <option>LB</option>
+                                    <option>HD</option>
+                                    <option>RUA</option>
+                                    <option>LUA</option>
+                                    <option>RLA</option>
+                                    <option>LLA</option>
+                                    <option>RH</option>
+                                    <option>LH</option>
+                                    <option>R_UB_PINCER</option>
+                                    <option>L_UB_PINCER</option>
+                                    <option>RA1</option>
+                                    <option>LA1</option>
+                                    <option>RF1</option>
+                                    <option>LF1</option>
+                                    <option>RA2</option>
+                                    <option>LA2</option>
+                                    <option>RF2</option>
+                                    <option>LF2</option>
+                                    <option>RA3</option>
+                                    <option>LA3</option>
+                                    <option>RF3</option>
+                                    <option>LF3</option>
+                                    <option>RA4</option>
+                                    <option>LA4</option>
+                                    <option>RF4</option>
+                                    <option>LF4</option>
+                                    <option>RA5</option>
+                                    <option>LA5</option>
+                                    <option>RF5</option>
+                                    <option>LF5</option>
+                                    <option>RA</option>
+                                    <option>LA</option>
+                                    <option>RL</option>
+                                    <option>LL</option>
+                                    <option>RF</option>
+                                    <option>LF</option>
+                                    <option>RUL</option>
+                                    <option>LUL</option>
+                                    <option>RLL</option>
+                                    <option>LLL</option>
+                                    <option>RFFLIP</option>
+                                    <option>LFFLIP</option>
+                                    <option>RRFLIP</option>
+                                    <option>LRFLIP</option>
+                                    <option>RWING</option>
+                                    <option>LWING</option>
+                                    <option>TAIL</option>
+                                    <option>TAIL_1</option>
+                                    <option>TAIL_2</option>
+                                    <option>TAIL_3</option>
+                                    <option>TAIL_STINGER</option>
+                                    <option>LOWER_BODY_STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>TRUNK</option>
+                                    <option>SHELL</option>
+                                    <option>R_ANT</option>
+                                    <option>L_ANT</option>
+                                    <option>HEAD_HORN</option>
+                                    <option>HEAD_HORN_1</option>
+                                    <option>HEAD_HORN_2</option>
+                                    <option>HEAD_HORN_3</option>
+                                    <option>HEAD_HORN_4</option>
+                                    <option>R_MAND</option>
+                                    <option>L_MAND</option>
+                                    <option>FINGER1</option>
+                                    <option>FINGER2</option>
+                                    <option>FINGER3</option>
+                                    <option>FINGER4</option>
+                                    <option>FINGER5</option>
+                                    <option>TOE1</option>
+                                    <option>TOE2</option>
+                                    <option>TOE3</option>
+                                    <option>TOE4</option>
+                                    <option>TOE5</option>
+                                    <option>EYE</option>
+                                    <option>REYE</option>
+                                    <option>LEYE</option>
+                                    <option>BEAK</option>
+                                    <option>NOSE</option>
+                                    <option>L_CHEEK</option>
+                                    <option>R_CHEEK</option>
+                                    <option>RLUNG</option>
+                                    <option>LLUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>UPPERSPINE</option>
+                                    <option>LOWERSPINE</option>
+                                    <option>NK</option>
+                                    <option>NECK</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>L_TRUE_RIB</option>
+                                    <option>R_TRUE_RIB</option>
+                                    <option>L_FALSE_RIB</option>
+                                    <option>R_FALSE_RIB</option>
+                                    <option>L_FLOATING_RIB</option>
+                                    <option>R_FLOATING_RIB</option>
+                                    <option>L_LIP</option>
+                                    <option>U_LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>L_EYELID</option>
+                                    <option>R_EYELID</option>
+                                    <option>BILL</option>
+                                    <option>HEAD_ANTLER_1</option>
+                                    <option>HEAD_ANTLER_2</option>
                                 </datalist>
                             </td>
                         </tr> <!-- plusTissueLayer -->
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can make your creature bleed heavily... When it is hit
+                                        in a specified area, of course.</span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="tlMajorArteriesCheckbox" class="cb"></td>
@@ -2185,7 +2409,11 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define how big a body part is in relation to the
+                                        rest of your creature's lovely body~
+                                        <hr>[RELSIZE:BY_CATEGORY:BY_CATEGORY/BY_TYPE/BY_TOKEN:CATEGORY/TYPE/TOKEN:0 ~
+                                        ?]<br>[RELSIZE:BY_CATEGORY:LIVER:300]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -2209,20 +2437,191 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="relsizeList">
+                                    <!-- Selector options -->
+                                    <option>BY_CATEGORY</option>
+                                    <option>BY_TYPE</option>
+                                    <option>BY_TOKEN</option>
+                                    <!-- Categories -->
+                                    <option>BODY</option>
+                                    <option>BODY_UPPER</option>
+                                    <option>BODY_LOWER</option>
+                                    <option>HEAD</option>
+                                    <option>ARM_UPPER</option>
+                                    <option>ARM_LOWER</option>
+                                    <option>HAND</option>
+                                    <option>PINCER</option>
+                                    <option>FOOT_FRONT</option>
+                                    <option>FOOT_REAR</option>
+                                    <option>LEG_FRONT</option>
+                                    <option>LEG_REAR</option>
+                                    <option>LEG_UPPER</option>
+                                    <option>LEG_LOWER</option>
+                                    <option>FOOT</option>
+                                    <option>FLIPPER</option>
+                                    <option>WING</option>
+                                    <option>TAIL</option>
+                                    <option>STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>NOSE</option>
+                                    <option>SHELL</option>
+                                    <option>ANTENNA</option>
+                                    <option>HORN</option>
+                                    <option>MANDIBLE</option>
+                                    <option>FINGER</option>
+                                    <option>TOE</option>
+                                    <option>EYE</option>
+                                    <option>NOSE</option>
+                                    <option>CHEEK</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>SPINE</option>
+                                    <option>NECK</option>
+                                    <option>SPINE</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>RIB_TRUE</option>
+                                    <option>RIB_FALSE</option>
+                                    <option>RIB_FLOATING</option>
+                                    <option>LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>BEAK</option>
+                                    <!-- Types -->
+                                    <option>UPPERBODY</option>
+                                    <option>LOWERBODY</option>
+                                    <option>HEAD</option>
+                                    <option>GRASP</option>
+                                    <option>STANCE</option>
+                                    <!-- Body part tokens -->
+                                    <option>UB</option>
+                                    <option>LB</option>
+                                    <option>HD</option>
+                                    <option>RUA</option>
+                                    <option>LUA</option>
+                                    <option>RLA</option>
+                                    <option>LLA</option>
+                                    <option>RH</option>
+                                    <option>LH</option>
+                                    <option>R_UB_PINCER</option>
+                                    <option>L_UB_PINCER</option>
+                                    <option>RA1</option>
+                                    <option>LA1</option>
+                                    <option>RF1</option>
+                                    <option>LF1</option>
+                                    <option>RA2</option>
+                                    <option>LA2</option>
+                                    <option>RF2</option>
+                                    <option>LF2</option>
+                                    <option>RA3</option>
+                                    <option>LA3</option>
+                                    <option>RF3</option>
+                                    <option>LF3</option>
+                                    <option>RA4</option>
+                                    <option>LA4</option>
+                                    <option>RF4</option>
+                                    <option>LF4</option>
+                                    <option>RA5</option>
+                                    <option>LA5</option>
+                                    <option>RF5</option>
+                                    <option>LF5</option>
+                                    <option>RA</option>
+                                    <option>LA</option>
+                                    <option>RL</option>
+                                    <option>LL</option>
+                                    <option>RF</option>
+                                    <option>LF</option>
+                                    <option>RUL</option>
+                                    <option>LUL</option>
+                                    <option>RLL</option>
+                                    <option>LLL</option>
+                                    <option>RFFLIP</option>
+                                    <option>LFFLIP</option>
+                                    <option>RRFLIP</option>
+                                    <option>LRFLIP</option>
+                                    <option>RWING</option>
+                                    <option>LWING</option>
+                                    <option>TAIL</option>
+                                    <option>TAIL_1</option>
+                                    <option>TAIL_2</option>
+                                    <option>TAIL_3</option>
+                                    <option>TAIL_STINGER</option>
+                                    <option>LOWER_BODY_STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>TRUNK</option>
+                                    <option>SHELL</option>
+                                    <option>R_ANT</option>
+                                    <option>L_ANT</option>
+                                    <option>HEAD_HORN</option>
+                                    <option>HEAD_HORN_1</option>
+                                    <option>HEAD_HORN_2</option>
+                                    <option>HEAD_HORN_3</option>
+                                    <option>HEAD_HORN_4</option>
+                                    <option>R_MAND</option>
+                                    <option>L_MAND</option>
+                                    <option>FINGER1</option>
+                                    <option>FINGER2</option>
+                                    <option>FINGER3</option>
+                                    <option>FINGER4</option>
+                                    <option>FINGER5</option>
+                                    <option>TOE1</option>
+                                    <option>TOE2</option>
+                                    <option>TOE3</option>
+                                    <option>TOE4</option>
+                                    <option>TOE5</option>
+                                    <option>EYE</option>
+                                    <option>REYE</option>
+                                    <option>LEYE</option>
+                                    <option>BEAK</option>
+                                    <option>NOSE</option>
+                                    <option>L_CHEEK</option>
+                                    <option>R_CHEEK</option>
+                                    <option>RLUNG</option>
+                                    <option>LLUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>UPPERSPINE</option>
+                                    <option>LOWERSPINE</option>
+                                    <option>NK</option>
+                                    <option>NECK</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>L_TRUE_RIB</option>
+                                    <option>R_TRUE_RIB</option>
+                                    <option>L_FALSE_RIB</option>
+                                    <option>R_FALSE_RIB</option>
+                                    <option>L_FLOATING_RIB</option>
+                                    <option>R_FLOATING_RIB</option>
+                                    <option>L_LIP</option>
+                                    <option>U_LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>L_EYELID</option>
+                                    <option>R_EYELID</option>
+                                    <option>BILL</option>
+                                    <option>HEAD_ANTLER_1</option>
+                                    <option>HEAD_ANTLER_2</option>
+                                    <!-- Relsizes -->
+                                    <option>0</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                    <option>150</option>
+                                    <option>200</option>
+                                    <option>250</option>
+                                    <option>300</option>
+                                    <option>350</option>
+                                    <option>400</option>
+                                    <option>450</option>
+                                    <option>500</option>
                                 </datalist>
                             </td>
                         </tr> <!-- relsize -->
-                        <tr class="fixedClosed">
-                            <td>
-                                <div class="tooltip">?
-                                    <span class="tooltipText"></span>
-                                </div>
-                            </td>
-                            <td><input type="checkbox" id="hasNervesCheckbox" class="cb"></td>
-                            <td id="hasNervesToken">
-                                <label onclick='fixedClosedAutoChecker(this);'>[HAS_NERVES]</label>
-                            </td>
-                        </tr> <!-- hasNerves -->
                     </table>
                 </div>
                 <div>
@@ -4360,11 +4759,11 @@
                 parseSpecificToken(raw, "bloodCheckbox", "bloodToken")
                 parseSpecificToken(raw, "pusCheckbox", "pusToken")
                 parseTokenGroup(raw, "secretionTokenGroup")
+                parseSpecificToken(raw, "hasNervesCheckbox", "hasNervesToken")
                 parseSpecificToken(raw, "selectTissueLayerCheckbox", "selectTissueLayerToken")
                 parseTokenGroup(raw, "plusTissueLayerTokenGroup")
                 parseSpecificToken(raw, "tlMajorArteriesCheckbox", "tlMajorArteriesToken")
                 parseTokenGroup(raw, "relsizeTokenGroup")
-                parseSpecificToken(raw, "hasNervesCheckbox", "hasNervesToken")
                 // Syndrom
                 parseTokenGroup(raw, "creatureClassTokenGroup")
                 parseSpecificToken(raw, "getsWoundInfectionsCheckbox", "getsWoundInfectionsToken")

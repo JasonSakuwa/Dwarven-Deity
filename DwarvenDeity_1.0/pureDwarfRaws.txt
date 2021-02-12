@@ -610,6 +610,20 @@ flexibleClosed button
     <option>EXERTION</option>
     <option>EXTREME_EMOTION</option>
 
+<!-- Relsizes -->
+    <option>0</option>
+    <option>50</option>
+    <option>100</option>
+    <option>150</option>
+    <option>200</option>
+    <option>250</option>
+    <option>300</option>
+    <option>350</option>
+    <option>400</option>
+    <option>450</option>
+    <option>500</option>
+
+
 
 * A lower number allows for better healing.<br>
 
@@ -694,6 +708,9 @@ flexibleClosed button
     secretion
     [SECRETION:LOCAL_CREATURE_MAT:SWEAT:LIQUID:BY_CATEGORY:ALL:SKIN:EXERTION]
     [SECRETION:LOCAL_CREATURE_MAT:TEARS:LIQUID:BY_CATEGORY:EYE:ALL:EXTREME_EMOTION]
+    // fixedClosedToken
+    hasNerves
+    [HAS_NERVES]
     // fixedListInput
     selectTissueLayer
     [SELECT_TISSUE_LAYER:HEART:BY_CATEGORY:HEART] 
@@ -706,9 +723,6 @@ flexibleClosed button
     // flexibleListinput
     relsize
     [RELSIZE:BY_CATEGORY:LIVER:300]
-    // fixedClosedToken
-    hasNerves
-    [HAS_NERVES]
 
 // sydome relation tokens
 
