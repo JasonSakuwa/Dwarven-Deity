@@ -34,7 +34,7 @@
                                     <span class="tooltipText">Hello! I would like to personally welcome you to the
                                         creature creator! I define what other tokens can refer to your creature
                                         as.
-                                        <hr>NAME<br>[CREATURE:DWARF]
+                                        <hr>[CREATURE:NAME]<br>[CREATURE:DWARF]
                                     </span>
                                 </div>
                             </td>
@@ -55,7 +55,8 @@
                                     <span class="tooltipText">I define a short description that describes your
                                         magnificent creature. (You may see this description when you view your
                                         creature.)
-                                        <hr>descripion<br>[DESCRIPTION:A short, sturdy creature fond of drink and
+                                        <hr>[DESCRIPTION:descripion]<br>[DESCRIPTION:A short, sturdy creature fond of
+                                        drink and
                                         industry.]
                                     </span>
                                 </div>
@@ -76,7 +77,7 @@
                                 <div class="tooltip">?
                                     <span class="tooltipText">I define what name your creature has. I may be
                                         replaced by CASTE_NAME.
-                                        <hr>singular:plural:adjective<br>[NAME:dwarf:dwarves:dwarven]
+                                        <hr>[NAME:singular:plural:adjective]<br>[NAME:dwarf:dwarves:dwarven]
                                     </span>
                                 </div>
                             </td>
@@ -98,7 +99,7 @@
                                 <div class="tooltip">?
                                     <span class="tooltipText">I can also define what your creature is called. Please use
                                         me in tandem with NAME.
-                                        <hr>singular:plural:adjective<br>[CASTE_NAME:dwarf:dwarves:dwarven]
+                                        <hr>[CASTE_NAME:singular:plural:adjective]<br>[CASTE_NAME:dwarf:dwarves:dwarven]
                                     </span>
                                 </div>
                             </td>
@@ -119,7 +120,7 @@
                             <td>
                                 <div class="tooltip">?
                                     <span class="tooltipText">I can define which tile your creature appears as.
-                                        <hr>0 ~ 255<br>[CREATURE_TILE:1]
+                                        <hr>[CREATURE_TILE:0 ~ 255]<br>[CREATURE_TILE:1]
                                     </span>
                                 </div>
                             </td>
@@ -138,8 +139,8 @@
                             <td>
                                 <div class="tooltip">?
                                     <span class="tooltipText">I define the wonderful colors of your creature's tile.
-                                        <hr>0 ~ 7(foreground color):0 ~ 7(background color):0 ~
-                                        1(brightness)<br>[COLOR:3:0:0]
+                                        <hr>[COLOR:0 ~ 7(foreground color):0 ~ 7(background color):0 ~
+                                        1(brightness)]<br>[COLOR:3:0:0]
                                     </span>
                                 </div>
                             </td>
@@ -170,7 +171,10 @@
                         <tr class="fixedText">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I shall define what tile your creature uses in its
+                                        civilization's military.
+                                        <hr>[CREATURE_SOLDIER_TILE:0 ~ 255]<br>[CREATURE_SOLDIER_TILE:2]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -187,7 +191,8 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can affirmate that your creature can learn, speak, and
+                                        will not be butcherable</span>
                                 </div>
                             </td>
                             <td>
@@ -200,7 +205,8 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can give your creature the ability to get strange moods
+                                        and create artifacts.</span>
                                 </div>
                             </td>
                             <td>
@@ -213,7 +219,8 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I offer your creature the ability to turn into a martial
+                                        master with a <b>martial trance</b>.</span>
                                 </div>
                             </td>
                             <td>
@@ -226,7 +233,9 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can cause your creature to become a docile bundle of
+                                        joy. Unless, of course, it becomes enraged. (May cause your creature to be
+                                        ineffective for fortress defense)</span>
                                 </div>
                             </td>
                             <td>
@@ -239,7 +248,8 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can help your creature open, and pass through,
+                                        doors.</span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="canOpenDoorsCheckbox" class="cb"></td>
@@ -250,7 +260,10 @@
                         <tr class="flexibleText">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define what other creatures will like about your
+                                        creature. (Without me, other creature may not prefer your creature.
+                                        <hr>[PREFSTRING:preference string]<br>[PREFSTRING:beards]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -283,7 +296,13 @@
                         <tr class="flexibleListinput">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I am essential for defining the anatomy of your creature
+                                        in a simple manner. I bring in various materials, body parts, and the locations
+                                        and sizes of those bodyparts. I can also let you easily define what your
+                                        creature's tissue layers will be layered.
+                                        <hr>* Inputs surrounded by parenthesis => <b>()</b> are
+                                        optional.<br>[BODY_DETAIL_PLAN:PLAN_NAME:(TISSUE:TISSUE:TISSUE...)*]<br>[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -337,7 +356,7 @@
                                     <option>HUMANOID_RELSIZES</option>
                                     <option>EGG_MATERIALS</option>
                                     <option>LEATHERY_EGG_MATERIALS</option>
-                                    // different list for tissues, in the future
+                                    // Tissues
                                     <option>SKIN</option>
                                     <option>FAT</option>
                                     <option>MUSCLE</option>
@@ -357,18 +376,27 @@
                                     <option>PANCREAS</option>
                                     <option>SPLEEN</option>
                                     <option>KIDNEY</option>
+                                    <option>FLAME</option>
+                                    <option>CHITIN</option>
+                                    <option>SPINE</option>
+                                    <option>SPONGE</option>
                                 </datalist>
                             </td>
                         </tr> <!-- bodyDetailPlan -->
                         <tr class="fixedListInput">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I shall dutifully supply your creature with a strapping
+                                        (or flapping) body, that it can use to do all matter of activities (or
+                                        atrocities).
+                                        <hr>
+                                        [BODY:BODY_PART(:BODY_PART:BODY_PART:BODY_PART...)]<br>[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE]
+                                    </span>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <input type="checkbox" id="bodyCheckbox" class="cb">
+                                    <input type="checkbox" id="bodyCheckbox" class="cb" checked>
                                     <button onclick='addList("bodyToken", "bodyList")'>+</button>
                                     <button onclick='removeField("bodyToken", 1)'>-</button>
                                 </div>
@@ -513,7 +541,11 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can allow you to define additional tissues, drawn from a
+                                        tissue template.
+                                        <hr>
+                                        [USE_TISSUE_TEMPLATE:NEW_TISSUE_NAME:TISSUE_TEMPLATE]<br>[USE_TISSUE_TEMPLATE:EYEBROW:EYEBROW_TEMPLATE]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -537,7 +569,7 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="useTissueTemplateList">
-                                    // Tissues
+                                    <!-- Tissues -->
                                     <option>SKIN</option>
                                     <option>FAT</option>
                                     <option>MUSCLE</option>
@@ -570,7 +602,7 @@
                                     <option>CHITIN</option>
                                     <option>SPINE</option>
                                     <option>SPONGE</option>
-                                    // Tissue templates
+                                    <!-- Tissue templates -->
                                     <option>SKIN_TEMPLATE</option>
                                     <option>FAT_TEMPLATE</option>
                                     <option>MUSCLE_TEMPLATE</option>
@@ -653,7 +685,11 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I allow you to add new materials to your creature with a
+                                        material template. (similarly to the token above me.)
+                                        <hr>
+                                        [USE_MATERIAL_TEMPLATE:NEW_MATERIAL_NAME:MATERIAL_TEMPLATE]<br>[USE_MATERIAL_TEMPLATE:NAIL:NAIL_TEMPLATE]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -677,7 +713,7 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="useMaterialTemplateList">
-                                    // Materials
+                                    <!-- Materials -->
                                     <option>STONE</option>
                                     <option>METAL</option>
                                     <option>WOOD</option>
@@ -748,7 +784,7 @@
                                     <option>TEARS</option>
                                     <option>SPIT</option>
                                     <option>SWEAT</option>
-                                    // Material templates
+                                    <!-- Material templates -->
                                     <option>STONE_TEMPLATE</option>
                                     <option>METAL_TEMPLATE</option>
                                     <option>WOOD_TEMPLATE</option>
@@ -825,7 +861,12 @@
                         <tr class="flexibleListinput">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I apply tissues to a specified part of your creature's
+                                        body.
+                                        <hr>
+                                        [TISSUE_LAYER:BY_TYPE/CATEGORY/TOKEN:TYPE/CATEGORY/TOKEN:TISSUE:LOCATION(:BODY_PART:0
+                                        ~ 100)]<br>[TISSUE_LAYER:BY_CATEGORY:HEAD:EYEBROW:ABOVE:BY_CATEGORY:EYE]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -856,11 +897,11 @@
                                     <option>6</option>
                                 </datalist>
                                 <datalist id="tissueLayerList">
-                                    // Selector options
+                                    <!-- Selector options -->
                                     <option>BY_CATEGORY</option>
                                     <option>BY_TYPE</option>
                                     <option>BY_TOKEN</option>
-                                    // Categories
+                                    <!-- Categories -->
                                     <option>BODY</option>
                                     <option>BODY_UPPER</option>
                                     <option>BODY_LOWER</option>
@@ -909,13 +950,13 @@
                                     <option>TONGUE</option>
                                     <option>EYELID</option>
                                     <option>BEAK</option>
-                                    // Types
+                                    <!-- Types -->
                                     <option>UPPERBODY</option>
                                     <option>LOWERBODY</option>
                                     <option>HEAD</option>
                                     <option>GRASP</option>
                                     <option>STANCE</option>
-                                    // Tokens
+                                    <!-- Tokens -->
                                     <option>UB</option>
                                     <option>LB</option>
                                     <option>HD</option>
@@ -1026,7 +1067,7 @@
                                     <option>BILL</option>
                                     <option>HEAD_ANTLER_1</option>
                                     <option>HEAD_ANTLER_2</option>
-                                    // Tissues
+                                    <!-- Tissues -->
                                     <option>SKIN</option>
                                     <option>FAT</option>
                                     <option>MUSCLE</option>
@@ -1059,7 +1100,7 @@
                                     <option>CHITIN</option>
                                     <option>SPINE</option>
                                     <option>SPONGE</option>
-                                    // Tissue locations
+                                    <!--  Tissue locations -->
                                     <option>FRONT</option>
                                     <option>RIGHT</option>
                                     <option>LEFT</option>
@@ -1067,13 +1108,23 @@
                                     <option>BOTTOM</option>
                                     <option>AROUND</option>
                                     <option>CLEANS</option>
+                                    <!-- Standard Percentages -->
+                                    <option>0</option>
+                                    <option>25</option>
+                                    <option>50</option>
+                                    <option>75</option>
+                                    <option>100</option>
                                 </datalist>
                             </td>
                         </tr> <!-- tissueLayer -->
                         <tr class="fixedListInput">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define what tissue we use for your creature's
+                                        tendons, as well as the tendon's healing rate.
+                                        <hr>* A lower number allows for better healing.<br>[TENDONS:MATERIAL:0 ~
+                                        ?]*<br>[TENDONS:LOCAL_CREATURE_MAT:SINEW:200]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -1092,13 +1143,110 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="tendonsList">
+                                    <option>LOCAL_CREATURE_MAT</option>
+                                    <!-- Materials -->
+                                    <option>SINEW</option>
+                                    <option>STONE</option>
+                                    <option>METAL</option>
+                                    <option>WOOD</option>
+                                    <option>SKIN</option>
+                                    <option>FAT</option>
+                                    <option>MUSCLE</option>
+                                    <option>BONE</option>
+                                    <option>CARTILAGE</option>
+                                    <option>HAIR</option>
+                                    <option>FEATHER</option>
+                                    <option>SCALE</option>
+                                    <option>NAIL</option>
+                                    <option>TOOTH</option>
+                                    <option>EYE</option>
+                                    <option>NERVE</option>
+                                    <option>BRAIN</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>LIVER</option>
+                                    <option>GUT</option>
+                                    <option>STOMACH</option>
+                                    <option>GIZZARD</option>
+                                    <option>PANCREAS</option>
+                                    <option>SPLEEN</option>
+                                    <option>KIDNEY</option>
+                                    <option>LEATHER</option>
+                                    <option>PARCHMENT</option>
+                                    <option>HORN</option>
+                                    <option>HOOF</option>
+                                    <option>PEARL</option>
+                                    <option>SILK</option>
+                                    <option>BLOOD</option>
+                                    <option>ICHOR</option>
+                                    <option>GOO</option>
+                                    <option>SLIME</option>
+                                    <option>PUS</option>
+                                    <option>SHELL</option>
+                                    <option>SOAP</option>
+                                    <option>TALLOW</option>
+                                    <option>CHITIN</option>
+                                    <option>MILK</option>
+                                    <option>CREATURE_CHEESE</option>
+                                    <option>STRUCTURAL_PLANT</option>
+                                    <option>SEED</option>
+                                    <option>LEAF</option>
+                                    <option>FRUIT</option>
+                                    <option>BUD</option>
+                                    <option>MUSHROOM</option>
+                                    <option>FLOWER</option>
+                                    <option>THREAD_PLANT</option>
+                                    <option>PLANT_ALCOHOL</option>
+                                    <option>PLANT_POWDER</option>
+                                    <option>PLANT_EXTRACT</option>
+                                    <option>CREATURE_EXTRACT</option>
+                                    <option>FLAME</option>
+                                    <option>SOIL</option>
+                                    <option>EGGSHELL</option>
+                                    <option>EGG_WHITE</option>
+                                    <option>EGG_YOLK</option>
+                                    <option>PLANT_OIL</option>
+                                    <option>PLANT_SOAP</option>
+                                    <option>WAX</option>
+                                    <option>CREATURE_ALCOHOL</option>
+                                    <option>LEATHERY_EGGSHELL</option>
+                                    <option>INK</option>
+                                    <option>SPONGE</option>
+                                    <option>TEARS</option>
+                                    <option>SPIT</option>
+                                    <option>SWEAT</option>
+                                    <!-- Healing rates -->
+                                    <option>0</option>
+                                    <option>25</option>
+                                    <option>50</option>
+                                    <option>75</option>
+                                    <option>100</option>
+                                    <option>125</option>
+                                    <option>150</option>
+                                    <option>175</option>
+                                    <option>200</option>
+                                    <option>225</option>
+                                    <option>250</option>
+                                    <option>275</option>
+                                    <option>300</option>
+                                    <option>325</option>
+                                    <option>350</option>
+                                    <option>375</option>
+                                    <option>400</option>
+                                    <option>425</option>
+                                    <option>450</option>
+                                    <option>475</option>
+                                    <option>500</option>
                                 </datalist>
                             </td>
                         </tr> <!-- tendons -->
                         <tr class="fixedListInput">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define where your creature's ligaments go...
+                                        <hr>* A lower number allows for better healing.<br>[LIGAMENTS:MATERIAL:0 ~
+                                        ?]*<br>[LIGAMENTS:LOCAL_CREATURE_MAT:SINEW:200]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -1117,13 +1265,109 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="ligamentsList">
+                                    <option>LOCAL_CREATURE_MAT</option>
+                                    <!-- Materials -->
+                                    <option>SINEW</option>
+                                    <option>STONE</option>
+                                    <option>METAL</option>
+                                    <option>WOOD</option>
+                                    <option>SKIN</option>
+                                    <option>FAT</option>
+                                    <option>MUSCLE</option>
+                                    <option>BONE</option>
+                                    <option>CARTILAGE</option>
+                                    <option>HAIR</option>
+                                    <option>FEATHER</option>
+                                    <option>SCALE</option>
+                                    <option>NAIL</option>
+                                    <option>TOOTH</option>
+                                    <option>EYE</option>
+                                    <option>NERVE</option>
+                                    <option>BRAIN</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>LIVER</option>
+                                    <option>GUT</option>
+                                    <option>STOMACH</option>
+                                    <option>GIZZARD</option>
+                                    <option>PANCREAS</option>
+                                    <option>SPLEEN</option>
+                                    <option>KIDNEY</option>
+                                    <option>LEATHER</option>
+                                    <option>PARCHMENT</option>
+                                    <option>HORN</option>
+                                    <option>HOOF</option>
+                                    <option>PEARL</option>
+                                    <option>SILK</option>
+                                    <option>BLOOD</option>
+                                    <option>ICHOR</option>
+                                    <option>GOO</option>
+                                    <option>SLIME</option>
+                                    <option>PUS</option>
+                                    <option>SHELL</option>
+                                    <option>SOAP</option>
+                                    <option>TALLOW</option>
+                                    <option>CHITIN</option>
+                                    <option>MILK</option>
+                                    <option>CREATURE_CHEESE</option>
+                                    <option>STRUCTURAL_PLANT</option>
+                                    <option>SEED</option>
+                                    <option>LEAF</option>
+                                    <option>FRUIT</option>
+                                    <option>BUD</option>
+                                    <option>MUSHROOM</option>
+                                    <option>FLOWER</option>
+                                    <option>THREAD_PLANT</option>
+                                    <option>PLANT_ALCOHOL</option>
+                                    <option>PLANT_POWDER</option>
+                                    <option>PLANT_EXTRACT</option>
+                                    <option>CREATURE_EXTRACT</option>
+                                    <option>FLAME</option>
+                                    <option>SOIL</option>
+                                    <option>EGGSHELL</option>
+                                    <option>EGG_WHITE</option>
+                                    <option>EGG_YOLK</option>
+                                    <option>PLANT_OIL</option>
+                                    <option>PLANT_SOAP</option>
+                                    <option>WAX</option>
+                                    <option>CREATURE_ALCOHOL</option>
+                                    <option>LEATHERY_EGGSHELL</option>
+                                    <option>INK</option>
+                                    <option>SPONGE</option>
+                                    <option>TEARS</option>
+                                    <option>SPIT</option>
+                                    <option>SWEAT</option>
+                                    <!-- Healing rates -->
+                                    <option>0</option>
+                                    <option>25</option>
+                                    <option>50</option>
+                                    <option>75</option>
+                                    <option>100</option>
+                                    <option>125</option>
+                                    <option>150</option>
+                                    <option>175</option>
+                                    <option>200</option>
+                                    <option>225</option>
+                                    <option>250</option>
+                                    <option>275</option>
+                                    <option>300</option>
+                                    <option>325</option>
+                                    <option>350</option>
+                                    <option>375</option>
+                                    <option>400</option>
+                                    <option>425</option>
+                                    <option>450</option>
+                                    <option>475</option>
+                                    <option>500</option>
                                 </datalist>
                             </td>
                         </tr> <!-- ligaments -->
                         <tr class="fixedListInput">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define what your creature's blood is made of~
+                                        <hr>[BLOOD:MATERIAL:STATE]<br>[BLOOD:LOCAL_CREATURE_MAT:BLOOD:LIQUID]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -1142,13 +1386,92 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="bloodList">
+                                    <option>LOCAL_CREATURE_MAT</option>
+                                    <!-- Materials -->
+                                    <option>BLOOD</option>
+                                    <option>ICHOR</option>
+                                    <option>GOO</option>
+                                    <option>SLIME</option>
+                                    <option>STONE</option>
+                                    <option>METAL</option>
+                                    <option>WOOD</option>
+                                    <option>SKIN</option>
+                                    <option>FAT</option>
+                                    <option>MUSCLE</option>
+                                    <option>SINEW</option>
+                                    <option>BONE</option>
+                                    <option>CARTILAGE</option>
+                                    <option>HAIR</option>
+                                    <option>FEATHER</option>
+                                    <option>SCALE</option>
+                                    <option>NAIL</option>
+                                    <option>TOOTH</option>
+                                    <option>EYE</option>
+                                    <option>NERVE</option>
+                                    <option>BRAIN</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>LIVER</option>
+                                    <option>GUT</option>
+                                    <option>STOMACH</option>
+                                    <option>GIZZARD</option>
+                                    <option>PANCREAS</option>
+                                    <option>SPLEEN</option>
+                                    <option>KIDNEY</option>
+                                    <option>LEATHER</option>
+                                    <option>PARCHMENT</option>
+                                    <option>HORN</option>
+                                    <option>HOOF</option>
+                                    <option>PEARL</option>
+                                    <option>SILK</option>
+                                    <option>PUS</option>
+                                    <option>SHELL</option>
+                                    <option>SOAP</option>
+                                    <option>TALLOW</option>
+                                    <option>CHITIN</option>
+                                    <option>MILK</option>
+                                    <option>CREATURE_CHEESE</option>
+                                    <option>STRUCTURAL_PLANT</option>
+                                    <option>SEED</option>
+                                    <option>LEAF</option>
+                                    <option>FRUIT</option>
+                                    <option>BUD</option>
+                                    <option>MUSHROOM</option>
+                                    <option>FLOWER</option>
+                                    <option>THREAD_PLANT</option>
+                                    <option>PLANT_ALCOHOL</option>
+                                    <option>PLANT_POWDER</option>
+                                    <option>PLANT_EXTRACT</option>
+                                    <option>CREATURE_EXTRACT</option>
+                                    <option>FLAME</option>
+                                    <option>SOIL</option>
+                                    <option>EGGSHELL</option>
+                                    <option>EGG_WHITE</option>
+                                    <option>EGG_YOLK</option>
+                                    <option>PLANT_OIL</option>
+                                    <option>PLANT_SOAP</option>
+                                    <option>WAX</option>
+                                    <option>CREATURE_ALCOHOL</option>
+                                    <option>LEATHERY_EGGSHELL</option>
+                                    <option>INK</option>
+                                    <option>SPONGE</option>
+                                    <option>TEARS</option>
+                                    <option>SPIT</option>
+                                    <option>SWEAT</option>
+                                    <!-- States -->
+                                    <option>SOLID</option>
+                                    <option>LIQUID</option>
+                                    <option>GAS</option>
                                 </datalist>
                             </td>
                         </tr> <!-- blood -->
                         <tr class="fixedListInput">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define what your poor creature might excrete if it's
+                                        infected.
+                                        <hr>[PUS:MATERIAL:STATE]<br>[PUS:LOCAL_CREATURE_MAT:PUS:LIQUID]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -1167,13 +1490,94 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="pusList">
+                                    <option>LOCAL_CREATURE_MAT</option>
+                                    <!-- Materials -->
+                                    <option>PUS</option>
+                                    <option>STONE</option>
+                                    <option>METAL</option>
+                                    <option>WOOD</option>
+                                    <option>SKIN</option>
+                                    <option>FAT</option>
+                                    <option>MUSCLE</option>
+                                    <option>SINEW</option>
+                                    <option>BONE</option>
+                                    <option>CARTILAGE</option>
+                                    <option>HAIR</option>
+                                    <option>FEATHER</option>
+                                    <option>SCALE</option>
+                                    <option>NAIL</option>
+                                    <option>TOOTH</option>
+                                    <option>EYE</option>
+                                    <option>NERVE</option>
+                                    <option>BRAIN</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>LIVER</option>
+                                    <option>GUT</option>
+                                    <option>STOMACH</option>
+                                    <option>GIZZARD</option>
+                                    <option>PANCREAS</option>
+                                    <option>SPLEEN</option>
+                                    <option>KIDNEY</option>
+                                    <option>LEATHER</option>
+                                    <option>PARCHMENT</option>
+                                    <option>HORN</option>
+                                    <option>HOOF</option>
+                                    <option>PEARL</option>
+                                    <option>SILK</option>
+                                    <option>BLOOD</option>
+                                    <option>ICHOR</option>
+                                    <option>GOO</option>
+                                    <option>SLIME</option>
+                                    <option>SHELL</option>
+                                    <option>SOAP</option>
+                                    <option>TALLOW</option>
+                                    <option>CHITIN</option>
+                                    <option>MILK</option>
+                                    <option>CREATURE_CHEESE</option>
+                                    <option>STRUCTURAL_PLANT</option>
+                                    <option>SEED</option>
+                                    <option>LEAF</option>
+                                    <option>FRUIT</option>
+                                    <option>BUD</option>
+                                    <option>MUSHROOM</option>
+                                    <option>FLOWER</option>
+                                    <option>THREAD_PLANT</option>
+                                    <option>PLANT_ALCOHOL</option>
+                                    <option>PLANT_POWDER</option>
+                                    <option>PLANT_EXTRACT</option>
+                                    <option>CREATURE_EXTRACT</option>
+                                    <option>FLAME</option>
+                                    <option>SOIL</option>
+                                    <option>EGGSHELL</option>
+                                    <option>EGG_WHITE</option>
+                                    <option>EGG_YOLK</option>
+                                    <option>PLANT_OIL</option>
+                                    <option>PLANT_SOAP</option>
+                                    <option>WAX</option>
+                                    <option>CREATURE_ALCOHOL</option>
+                                    <option>LEATHERY_EGGSHELL</option>
+                                    <option>INK</option>
+                                    <option>SPONGE</option>
+                                    <option>TEARS</option>
+                                    <option>SPIT</option>
+                                    <option>SWEAT</option>
+                                    <!-- States -->
+                                    <option>SOLID</option>
+                                    <option>LIQUID</option>
+                                    <option>GAS</option>
                                 </datalist>
                             </td>
                         </tr> <!-- pus -->
                         <tr class="flexibleListInput">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I will happily define what your creature wil excrete. You
+                                        could make it so that they are always as slimy as a slug, or let them cry after
+                                        having a bad day...
+                                        <hr>
+                                        [SECRETION:MATERIAL:STATE:BY_TOKEN/CATEGORY/TYPE:BODY_PART/CATEGORY/TYPE:TISSUE_LAYER:TRIGGER]<br>[SECRETION:LOCAL_CREATURE_MAT:TEARS:LIQUID:BY_CATEGORY:EYE:ALL:EXTREME_EMOTION]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -1201,8 +1605,293 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="secretionInputList">
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
                                 </datalist>
                                 <datalist id="secretionList">
+                                    <option>LOCAL_CREATURE_MAT</option>
+                                    <!-- Materials -->
+                                    <option>PUS</option>
+                                    <option>STONE</option>
+                                    <option>METAL</option>
+                                    <option>WOOD</option>
+                                    <option>SKIN</option>
+                                    <option>FAT</option>
+                                    <option>MUSCLE</option>
+                                    <option>SINEW</option>
+                                    <option>BONE</option>
+                                    <option>CARTILAGE</option>
+                                    <option>HAIR</option>
+                                    <option>FEATHER</option>
+                                    <option>SCALE</option>
+                                    <option>NAIL</option>
+                                    <option>TOOTH</option>
+                                    <option>EYE</option>
+                                    <option>NERVE</option>
+                                    <option>BRAIN</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>LIVER</option>
+                                    <option>GUT</option>
+                                    <option>STOMACH</option>
+                                    <option>GIZZARD</option>
+                                    <option>PANCREAS</option>
+                                    <option>SPLEEN</option>
+                                    <option>KIDNEY</option>
+                                    <option>LEATHER</option>
+                                    <option>PARCHMENT</option>
+                                    <option>HORN</option>
+                                    <option>HOOF</option>
+                                    <option>PEARL</option>
+                                    <option>SILK</option>
+                                    <option>BLOOD</option>
+                                    <option>ICHOR</option>
+                                    <option>GOO</option>
+                                    <option>SLIME</option>
+                                    <option>SHELL</option>
+                                    <option>SOAP</option>
+                                    <option>TALLOW</option>
+                                    <option>CHITIN</option>
+                                    <option>MILK</option>
+                                    <option>CREATURE_CHEESE</option>
+                                    <option>STRUCTURAL_PLANT</option>
+                                    <option>SEED</option>
+                                    <option>LEAF</option>
+                                    <option>FRUIT</option>
+                                    <option>BUD</option>
+                                    <option>MUSHROOM</option>
+                                    <option>FLOWER</option>
+                                    <option>THREAD_PLANT</option>
+                                    <option>PLANT_ALCOHOL</option>
+                                    <option>PLANT_POWDER</option>
+                                    <option>PLANT_EXTRACT</option>
+                                    <option>CREATURE_EXTRACT</option>
+                                    <option>FLAME</option>
+                                    <option>SOIL</option>
+                                    <option>EGGSHELL</option>
+                                    <option>EGG_WHITE</option>
+                                    <option>EGG_YOLK</option>
+                                    <option>PLANT_OIL</option>
+                                    <option>PLANT_SOAP</option>
+                                    <option>WAX</option>
+                                    <option>CREATURE_ALCOHOL</option>
+                                    <option>LEATHERY_EGGSHELL</option>
+                                    <option>INK</option>
+                                    <option>SPONGE</option>
+                                    <option>TEARS</option>
+                                    <option>SPIT</option>
+                                    <option>SWEAT</option>
+                                    <!-- States -->
+                                    <option>SOLID</option>
+                                    <option>LIQUID</option>
+                                    <option>GAS</option>
+                                    <!-- Body part tokens -->
+                                    <option>UB</option>
+                                    <option>LB</option>
+                                    <option>HD</option>
+                                    <option>RUA</option>
+                                    <option>LUA</option>
+                                    <option>RLA</option>
+                                    <option>LLA</option>
+                                    <option>RH</option>
+                                    <option>LH</option>
+                                    <option>R_UB_PINCER</option>
+                                    <option>L_UB_PINCER</option>
+                                    <option>RA1</option>
+                                    <option>LA1</option>
+                                    <option>RF1</option>
+                                    <option>LF1</option>
+                                    <option>RA2</option>
+                                    <option>LA2</option>
+                                    <option>RF2</option>
+                                    <option>LF2</option>
+                                    <option>RA3</option>
+                                    <option>LA3</option>
+                                    <option>RF3</option>
+                                    <option>LF3</option>
+                                    <option>RA4</option>
+                                    <option>LA4</option>
+                                    <option>RF4</option>
+                                    <option>LF4</option>
+                                    <option>RA5</option>
+                                    <option>LA5</option>
+                                    <option>RF5</option>
+                                    <option>LF5</option>
+                                    <option>RA</option>
+                                    <option>LA</option>
+                                    <option>RL</option>
+                                    <option>LL</option>
+                                    <option>RF</option>
+                                    <option>LF</option>
+                                    <option>RUL</option>
+                                    <option>LUL</option>
+                                    <option>RLL</option>
+                                    <option>LLL</option>
+                                    <option>RFFLIP</option>
+                                    <option>LFFLIP</option>
+                                    <option>RRFLIP</option>
+                                    <option>LRFLIP</option>
+                                    <option>RWING</option>
+                                    <option>LWING</option>
+                                    <option>TAIL</option>
+                                    <option>TAIL_1</option>
+                                    <option>TAIL_2</option>
+                                    <option>TAIL_3</option>
+                                    <option>TAIL_STINGER</option>
+                                    <option>LOWER_BODY_STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>TRUNK</option>
+                                    <option>SHELL</option>
+                                    <option>R_ANT</option>
+                                    <option>L_ANT</option>
+                                    <option>HEAD_HORN</option>
+                                    <option>HEAD_HORN_1</option>
+                                    <option>HEAD_HORN_2</option>
+                                    <option>HEAD_HORN_3</option>
+                                    <option>HEAD_HORN_4</option>
+                                    <option>R_MAND</option>
+                                    <option>L_MAND</option>
+                                    <option>FINGER1</option>
+                                    <option>FINGER2</option>
+                                    <option>FINGER3</option>
+                                    <option>FINGER4</option>
+                                    <option>FINGER5</option>
+                                    <option>TOE1</option>
+                                    <option>TOE2</option>
+                                    <option>TOE3</option>
+                                    <option>TOE4</option>
+                                    <option>TOE5</option>
+                                    <option>EYE</option>
+                                    <option>REYE</option>
+                                    <option>LEYE</option>
+                                    <option>BEAK</option>
+                                    <option>NOSE</option>
+                                    <option>L_CHEEK</option>
+                                    <option>R_CHEEK</option>
+                                    <option>RLUNG</option>
+                                    <option>LLUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>UPPERSPINE</option>
+                                    <option>LOWERSPINE</option>
+                                    <option>NK</option>
+                                    <option>NECK</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>L_TRUE_RIB</option>
+                                    <option>R_TRUE_RIB</option>
+                                    <option>L_FALSE_RIB</option>
+                                    <option>R_FALSE_RIB</option>
+                                    <option>L_FLOATING_RIB</option>
+                                    <option>R_FLOATING_RIB</option>
+                                    <option>L_LIP</option>
+                                    <option>U_LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>L_EYELID</option>
+                                    <option>R_EYELID</option>
+                                    <option>BILL</option>
+                                    <option>HEAD_ANTLER_1</option>
+                                    <option>HEAD_ANTLER_2</option>
+                                    <!-- Categories -->
+                                    <option>ALL</option>
+                                    <option>BODY</option>
+                                    <option>BODY_UPPER</option>
+                                    <option>BODY_LOWER</option>
+                                    <option>HEAD</option>
+                                    <option>ARM_UPPER</option>
+                                    <option>ARM_LOWER</option>
+                                    <option>HAND</option>
+                                    <option>PINCER</option>
+                                    <option>FOOT_FRONT</option>
+                                    <option>FOOT_REAR</option>
+                                    <option>LEG_FRONT</option>
+                                    <option>LEG_REAR</option>
+                                    <option>LEG_UPPER</option>
+                                    <option>LEG_LOWER</option>
+                                    <option>FOOT</option>
+                                    <option>FLIPPER</option>
+                                    <option>WING</option>
+                                    <option>TAIL</option>
+                                    <option>STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>NOSE</option>
+                                    <option>SHELL</option>
+                                    <option>ANTENNA</option>
+                                    <option>HORN</option>
+                                    <option>MANDIBLE</option>
+                                    <option>FINGER</option>
+                                    <option>TOE</option>
+                                    <option>EYE</option>
+                                    <option>NOSE</option>
+                                    <option>CHEEK</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>SPINE</option>
+                                    <option>NECK</option>
+                                    <option>SPINE</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>RIB_TRUE</option>
+                                    <option>RIB_FALSE</option>
+                                    <option>RIB_FLOATING</option>
+                                    <option>LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>BEAK</option>
+                                    <!-- Types -->
+                                    <option>UPPERBODY</option>
+                                    <option>LOWERBODY</option>
+                                    <option>HEAD</option>
+                                    <option>GRASP</option>
+                                    <option>STANCE</option>
+                                    <!-- Tissues -->
+                                    <option>ALL</option>
+                                    <option>SKIN</option>
+                                    <option>FAT</option>
+                                    <option>MUSCLE</option>
+                                    <option>BONE</option>
+                                    <option>SHELL</option>
+                                    <option>HORN</option>
+                                    <option>HOOF</option>
+                                    <option>CARTILAGE</option>
+                                    <option>HAIR</option>
+                                    <option>FEATHER</option>
+                                    <option>SCALE</option>
+                                    <option>NAIL</option>
+                                    <option>CLAW</option>
+                                    <option>TALON</option>
+                                    <option>TOOTH</option>
+                                    <option>IVORY</option>
+                                    <option>EYE</option>
+                                    <option>NERVE</option>
+                                    <option>BRAIN</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>LIVER</option>
+                                    <option>GUT</option>
+                                    <option>STOMACH</option>
+                                    <option>GIZZARD</option>
+                                    <option>PANCREAS</option>
+                                    <option>SPLEEN</option>
+                                    <option>KIDNEY</option>
+                                    <option>FLAME</option>
+                                    <option>CHITIN</option>
+                                    <option>SPINE</option>
+                                    <option>SPONGE</option>
+                                    <!-- Triggers -->
+                                    <option>CONTINUOUS</option>
+                                    <option>EXERTION</option>
+                                    <option>EXTREME_EMOTION</option>
                                 </datalist>
                             </td>
                         </tr> <!-- secretion -->
@@ -1232,7 +1921,7 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="selectTissueLayerList">
-                                    // Tissues
+                                    <!-- Tissues -->
                                     <option>SKIN</option>
                                     <option>FAT</option>
                                     <option>MUSCLE</option>
@@ -1265,11 +1954,11 @@
                                     <option>CHITIN</option>
                                     <option>SPINE</option>
                                     <option>SPONGE</option>
-                                    // Selector options
+                                    <!-- Selector options -->
                                     <option>BY_CATEGORY</option>
                                     <option>BY_TYPE</option>
                                     <option>BY_TOKEN</option>
-                                    // Categories
+                                    <!-- Categories -->
                                     <option>BODY</option>
                                     <option>BODY_UPPER</option>
                                     <option>BODY_LOWER</option>
@@ -1318,13 +2007,13 @@
                                     <option>TONGUE</option>
                                     <option>EYELID</option>
                                     <option>BEAK</option>
-                                    // Types
+                                    <!--  Types -->
                                     <option>UPPERBODY</option>
                                     <option>LOWERBODY</option>
                                     <option>HEAD</option>
                                     <option>GRASP</option>
                                     <option>STANCE</option>
-                                    // Tokens
+                                    <!--  Tokens -->
                                     <option>UB</option>
                                     <option>LB</option>
                                     <option>HD</option>
@@ -1435,7 +2124,7 @@
                                     <option>BILL</option>
                                     <option>HEAD_ANTLER_1</option>
                                     <option>HEAD_ANTLER_2</option>
-                                    // Tissue locations
+                                    <!--  Tissue locations -->
                                     <option>FRONT</option>
                                     <option>RIGHT</option>
                                     <option>LEFT</option>
@@ -3641,7 +4330,7 @@
             function creatureTokenCompile() {
                 var raw = [];
                 if (document.getElementById("newFile").checked) {
-                    raw.push("creature_modded");
+                    raw.push("creature_added");
                     raw.push("");
                     raw.push("[OBJECT:CREATURE]");
                     raw.push("");
