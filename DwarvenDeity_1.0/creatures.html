@@ -157,7 +157,7 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="colorList">
-                                    // Colors
+                                    <!-- Colors -->
                                     <option>0</option>
                                     <option>1</option>
                                     <option>2</option>
@@ -357,7 +357,7 @@
                                     <option>HUMANOID_RELSIZES</option>
                                     <option>EGG_MATERIALS</option>
                                     <option>LEATHERY_EGG_MATERIALS</option>
-                                    // Tissues
+                                    <!-- Tissues -->
                                     <option>SKIN</option>
                                     <option>FAT</option>
                                     <option>MUSCLE</option>
@@ -865,7 +865,7 @@
                                     <span class="tooltipText">I apply tissues to a specified part of your creature's
                                         body.
                                         <hr>
-                                        [TISSUE_LAYER:BY_TYPE/CATEGORY/TOKEN:TYPE/CATEGORY/TOKEN:TISSUE:LOCATION(:BODY_PART:0
+                                        [TISSUE_LAYER:BY_TYPE/BY_CATEGORY/BY_TOKEN:TYPE/CATEGORY/TOKEN:TISSUE:LOCATION(:BODY_PART:0
                                         ~ 100)]<br>[TISSUE_LAYER:BY_CATEGORY:HEAD:EYEBROW:ABOVE:BY_CATEGORY:EYE]
                                     </span>
                                 </div>
@@ -1577,7 +1577,7 @@
                                         could make it so that they are always as slimy as a slug, or let them cry after
                                         having a bad day...
                                         <hr>
-                                        [SECRETION:MATERIAL:STATE:BY_TOKEN/CATEGORY/TYPE:BODY_PART/CATEGORY/TYPE:TISSUE_LAYER:TRIGGER]<br>[SECRETION:LOCAL_CREATURE_MAT:TEARS:LIQUID:BY_CATEGORY:EYE:ALL:EXTREME_EMOTION]
+                                        [SECRETION:MATERIAL:STATE:BY_TOKEN/BY_CATEGORY/BY_TYPE:TOKEN/CATEGORY/TYPE:TISSUE_LAYER:TRIGGER]<br>[SECRETION:LOCAL_CREATURE_MAT:TEARS:LIQUID:BY_CATEGORY:EYE:ALL:EXTREME_EMOTION]
                                     </span>
                                 </div>
                             </td>
@@ -1910,6 +1910,222 @@
                                 <label onclick='fixedClosedAutoChecker(this);'>[HAS_NERVES]</label>
                             </td>
                         </tr> <!-- hasNerves -->
+                        <tr class="flexibleList">
+                            <td>
+                                <div class="tooltip">?
+                                    <span class="tooltipText">I can define how big a body part is in relation to the
+                                        rest of your creature's lovely body~
+                                        <hr>[RELSIZE:BY_CATEGORY:BY_CATEGORY/BY_TYPE/BY_TOKEN:CATEGORY/TYPE/TOKEN:0 ~
+                                        ?]<br>[RELSIZE:BY_CATEGORY:LIVER:300]
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <button onclick='addFixedToken("relsizeTokenGroup", "[RELSIZE:", 
+                                3, 0, true, "relsizeList")'>Add: Relsize</button>
+                                    <button onclick='removeTokenFromGroup("relsizeTokenGroup", "[RELSIZE:")'>Remove:
+                                        Relsize</button>
+                                </div>
+                            </td>
+                            <td id="relsizeTokenGroup">
+                                <div>
+                                    <input type="checkbox" class="cb">
+                                    <label for="relsize">[RELSIZE:</label>
+                                    <input list="relsizeList" id="relsize" onchange="flexibleAutoChecker(this)">
+                                    <input list="relsizeList" onchange="flexibleAutoChecker(this)">
+                                    <input list="relsizeList" onchange="flexibleAutoChecker(this)">
+                                    <input list="relsizeList" onchange="flexibleAutoChecker(this)">
+                                </div>
+                            </td>
+                            <td>
+                                <p>]</p>
+                                <datalist id="relsizeList">
+                                    <!-- Selector options -->
+                                    <option>BY_CATEGORY</option>
+                                    <option>BY_TYPE</option>
+                                    <option>BY_TOKEN</option>
+                                    <!-- Categories -->
+                                    <option>BODY</option>
+                                    <option>BODY_UPPER</option>
+                                    <option>BODY_LOWER</option>
+                                    <option>HEAD</option>
+                                    <option>ARM_UPPER</option>
+                                    <option>ARM_LOWER</option>
+                                    <option>HAND</option>
+                                    <option>PINCER</option>
+                                    <option>FOOT_FRONT</option>
+                                    <option>FOOT_REAR</option>
+                                    <option>LEG_FRONT</option>
+                                    <option>LEG_REAR</option>
+                                    <option>LEG_UPPER</option>
+                                    <option>LEG_LOWER</option>
+                                    <option>FOOT</option>
+                                    <option>FLIPPER</option>
+                                    <option>WING</option>
+                                    <option>TAIL</option>
+                                    <option>STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>NOSE</option>
+                                    <option>SHELL</option>
+                                    <option>ANTENNA</option>
+                                    <option>HORN</option>
+                                    <option>MANDIBLE</option>
+                                    <option>FINGER</option>
+                                    <option>TOE</option>
+                                    <option>EYE</option>
+                                    <option>NOSE</option>
+                                    <option>CHEEK</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>SPINE</option>
+                                    <option>NECK</option>
+                                    <option>SPINE</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>RIB_TRUE</option>
+                                    <option>RIB_FALSE</option>
+                                    <option>RIB_FLOATING</option>
+                                    <option>LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>BEAK</option>
+                                    <!-- Types -->
+                                    <option>UPPERBODY</option>
+                                    <option>LOWERBODY</option>
+                                    <option>HEAD</option>
+                                    <option>GRASP</option>
+                                    <option>STANCE</option>
+                                    <!-- Body part tokens -->
+                                    <option>UB</option>
+                                    <option>LB</option>
+                                    <option>HD</option>
+                                    <option>RUA</option>
+                                    <option>LUA</option>
+                                    <option>RLA</option>
+                                    <option>LLA</option>
+                                    <option>RH</option>
+                                    <option>LH</option>
+                                    <option>R_UB_PINCER</option>
+                                    <option>L_UB_PINCER</option>
+                                    <option>RA1</option>
+                                    <option>LA1</option>
+                                    <option>RF1</option>
+                                    <option>LF1</option>
+                                    <option>RA2</option>
+                                    <option>LA2</option>
+                                    <option>RF2</option>
+                                    <option>LF2</option>
+                                    <option>RA3</option>
+                                    <option>LA3</option>
+                                    <option>RF3</option>
+                                    <option>LF3</option>
+                                    <option>RA4</option>
+                                    <option>LA4</option>
+                                    <option>RF4</option>
+                                    <option>LF4</option>
+                                    <option>RA5</option>
+                                    <option>LA5</option>
+                                    <option>RF5</option>
+                                    <option>LF5</option>
+                                    <option>RA</option>
+                                    <option>LA</option>
+                                    <option>RL</option>
+                                    <option>LL</option>
+                                    <option>RF</option>
+                                    <option>LF</option>
+                                    <option>RUL</option>
+                                    <option>LUL</option>
+                                    <option>RLL</option>
+                                    <option>LLL</option>
+                                    <option>RFFLIP</option>
+                                    <option>LFFLIP</option>
+                                    <option>RRFLIP</option>
+                                    <option>LRFLIP</option>
+                                    <option>RWING</option>
+                                    <option>LWING</option>
+                                    <option>TAIL</option>
+                                    <option>TAIL_1</option>
+                                    <option>TAIL_2</option>
+                                    <option>TAIL_3</option>
+                                    <option>TAIL_STINGER</option>
+                                    <option>LOWER_BODY_STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>TRUNK</option>
+                                    <option>SHELL</option>
+                                    <option>R_ANT</option>
+                                    <option>L_ANT</option>
+                                    <option>HEAD_HORN</option>
+                                    <option>HEAD_HORN_1</option>
+                                    <option>HEAD_HORN_2</option>
+                                    <option>HEAD_HORN_3</option>
+                                    <option>HEAD_HORN_4</option>
+                                    <option>R_MAND</option>
+                                    <option>L_MAND</option>
+                                    <option>FINGER1</option>
+                                    <option>FINGER2</option>
+                                    <option>FINGER3</option>
+                                    <option>FINGER4</option>
+                                    <option>FINGER5</option>
+                                    <option>TOE1</option>
+                                    <option>TOE2</option>
+                                    <option>TOE3</option>
+                                    <option>TOE4</option>
+                                    <option>TOE5</option>
+                                    <option>EYE</option>
+                                    <option>REYE</option>
+                                    <option>LEYE</option>
+                                    <option>BEAK</option>
+                                    <option>NOSE</option>
+                                    <option>L_CHEEK</option>
+                                    <option>R_CHEEK</option>
+                                    <option>RLUNG</option>
+                                    <option>LLUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>UPPERSPINE</option>
+                                    <option>LOWERSPINE</option>
+                                    <option>NK</option>
+                                    <option>NECK</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>L_TRUE_RIB</option>
+                                    <option>R_TRUE_RIB</option>
+                                    <option>L_FALSE_RIB</option>
+                                    <option>R_FALSE_RIB</option>
+                                    <option>L_FLOATING_RIB</option>
+                                    <option>R_FLOATING_RIB</option>
+                                    <option>L_LIP</option>
+                                    <option>U_LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>L_EYELID</option>
+                                    <option>R_EYELID</option>
+                                    <option>BILL</option>
+                                    <option>HEAD_ANTLER_1</option>
+                                    <option>HEAD_ANTLER_2</option>
+                                    <!-- Relsizes -->
+                                    <option>0</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                    <option>150</option>
+                                    <option>200</option>
+                                    <option>250</option>
+                                    <option>300</option>
+                                    <option>350</option>
+                                    <option>400</option>
+                                    <option>450</option>
+                                    <option>500</option>
+                                </datalist>
+                            </td>
+                        </tr> <!-- relsize -->
                         <tr class="fixedListInput">
                             <td>
                                 <div class="tooltip">?
@@ -2406,222 +2622,6 @@
                                 <label onclick='fixedClosedAutoChecker(this);'>[TL_MAJOR_ARTERIES]</label>
                             </td>
                         </tr> <!-- tlMajorArteries -->
-                        <tr class="flexibleList">
-                            <td>
-                                <div class="tooltip">?
-                                    <span class="tooltipText">I can define how big a body part is in relation to the
-                                        rest of your creature's lovely body~
-                                        <hr>[RELSIZE:BY_CATEGORY:BY_CATEGORY/BY_TYPE/BY_TOKEN:CATEGORY/TYPE/TOKEN:0 ~
-                                        ?]<br>[RELSIZE:BY_CATEGORY:LIVER:300]
-                                    </span>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <button onclick='addFixedToken("relsizeTokenGroup", "[RELSIZE:", 
-                                3, 0, true, "relsizeList")'>Add: Relsize</button>
-                                    <button onclick='removeTokenFromGroup("relsizeTokenGroup", "[RELSIZE:")'>Remove:
-                                        Relsize</button>
-                                </div>
-                            </td>
-                            <td id="relsizeTokenGroup">
-                                <div>
-                                    <input type="checkbox" class="cb">
-                                    <label for="relsize">[RELSIZE:</label>
-                                    <input list="relsizeList" id="relsize" onchange="flexibleAutoChecker(this)">
-                                    <input list="relsizeList" onchange="flexibleAutoChecker(this)">
-                                    <input list="relsizeList" onchange="flexibleAutoChecker(this)">
-                                    <input list="relsizeList" onchange="flexibleAutoChecker(this)">
-                                </div>
-                            </td>
-                            <td>
-                                <p>]</p>
-                                <datalist id="relsizeList">
-                                    <!-- Selector options -->
-                                    <option>BY_CATEGORY</option>
-                                    <option>BY_TYPE</option>
-                                    <option>BY_TOKEN</option>
-                                    <!-- Categories -->
-                                    <option>BODY</option>
-                                    <option>BODY_UPPER</option>
-                                    <option>BODY_LOWER</option>
-                                    <option>HEAD</option>
-                                    <option>ARM_UPPER</option>
-                                    <option>ARM_LOWER</option>
-                                    <option>HAND</option>
-                                    <option>PINCER</option>
-                                    <option>FOOT_FRONT</option>
-                                    <option>FOOT_REAR</option>
-                                    <option>LEG_FRONT</option>
-                                    <option>LEG_REAR</option>
-                                    <option>LEG_UPPER</option>
-                                    <option>LEG_LOWER</option>
-                                    <option>FOOT</option>
-                                    <option>FLIPPER</option>
-                                    <option>WING</option>
-                                    <option>TAIL</option>
-                                    <option>STINGER</option>
-                                    <option>PROBOSCIS</option>
-                                    <option>NOSE</option>
-                                    <option>SHELL</option>
-                                    <option>ANTENNA</option>
-                                    <option>HORN</option>
-                                    <option>MANDIBLE</option>
-                                    <option>FINGER</option>
-                                    <option>TOE</option>
-                                    <option>EYE</option>
-                                    <option>NOSE</option>
-                                    <option>CHEEK</option>
-                                    <option>LUNG</option>
-                                    <option>HEART</option>
-                                    <option>GUTS</option>
-                                    <option>THROAT</option>
-                                    <option>SPINE</option>
-                                    <option>NECK</option>
-                                    <option>SPINE</option>
-                                    <option>BRAIN</option>
-                                    <option>SKULL</option>
-                                    <option>MOUTH</option>
-                                    <option>TOOTH</option>
-                                    <option>RIB_TRUE</option>
-                                    <option>RIB_FALSE</option>
-                                    <option>RIB_FLOATING</option>
-                                    <option>LIP</option>
-                                    <option>TONGUE</option>
-                                    <option>EYELID</option>
-                                    <option>BEAK</option>
-                                    <!-- Types -->
-                                    <option>UPPERBODY</option>
-                                    <option>LOWERBODY</option>
-                                    <option>HEAD</option>
-                                    <option>GRASP</option>
-                                    <option>STANCE</option>
-                                    <!-- Body part tokens -->
-                                    <option>UB</option>
-                                    <option>LB</option>
-                                    <option>HD</option>
-                                    <option>RUA</option>
-                                    <option>LUA</option>
-                                    <option>RLA</option>
-                                    <option>LLA</option>
-                                    <option>RH</option>
-                                    <option>LH</option>
-                                    <option>R_UB_PINCER</option>
-                                    <option>L_UB_PINCER</option>
-                                    <option>RA1</option>
-                                    <option>LA1</option>
-                                    <option>RF1</option>
-                                    <option>LF1</option>
-                                    <option>RA2</option>
-                                    <option>LA2</option>
-                                    <option>RF2</option>
-                                    <option>LF2</option>
-                                    <option>RA3</option>
-                                    <option>LA3</option>
-                                    <option>RF3</option>
-                                    <option>LF3</option>
-                                    <option>RA4</option>
-                                    <option>LA4</option>
-                                    <option>RF4</option>
-                                    <option>LF4</option>
-                                    <option>RA5</option>
-                                    <option>LA5</option>
-                                    <option>RF5</option>
-                                    <option>LF5</option>
-                                    <option>RA</option>
-                                    <option>LA</option>
-                                    <option>RL</option>
-                                    <option>LL</option>
-                                    <option>RF</option>
-                                    <option>LF</option>
-                                    <option>RUL</option>
-                                    <option>LUL</option>
-                                    <option>RLL</option>
-                                    <option>LLL</option>
-                                    <option>RFFLIP</option>
-                                    <option>LFFLIP</option>
-                                    <option>RRFLIP</option>
-                                    <option>LRFLIP</option>
-                                    <option>RWING</option>
-                                    <option>LWING</option>
-                                    <option>TAIL</option>
-                                    <option>TAIL_1</option>
-                                    <option>TAIL_2</option>
-                                    <option>TAIL_3</option>
-                                    <option>TAIL_STINGER</option>
-                                    <option>LOWER_BODY_STINGER</option>
-                                    <option>PROBOSCIS</option>
-                                    <option>TRUNK</option>
-                                    <option>SHELL</option>
-                                    <option>R_ANT</option>
-                                    <option>L_ANT</option>
-                                    <option>HEAD_HORN</option>
-                                    <option>HEAD_HORN_1</option>
-                                    <option>HEAD_HORN_2</option>
-                                    <option>HEAD_HORN_3</option>
-                                    <option>HEAD_HORN_4</option>
-                                    <option>R_MAND</option>
-                                    <option>L_MAND</option>
-                                    <option>FINGER1</option>
-                                    <option>FINGER2</option>
-                                    <option>FINGER3</option>
-                                    <option>FINGER4</option>
-                                    <option>FINGER5</option>
-                                    <option>TOE1</option>
-                                    <option>TOE2</option>
-                                    <option>TOE3</option>
-                                    <option>TOE4</option>
-                                    <option>TOE5</option>
-                                    <option>EYE</option>
-                                    <option>REYE</option>
-                                    <option>LEYE</option>
-                                    <option>BEAK</option>
-                                    <option>NOSE</option>
-                                    <option>L_CHEEK</option>
-                                    <option>R_CHEEK</option>
-                                    <option>RLUNG</option>
-                                    <option>LLUNG</option>
-                                    <option>HEART</option>
-                                    <option>GUTS</option>
-                                    <option>THROAT</option>
-                                    <option>UPPERSPINE</option>
-                                    <option>LOWERSPINE</option>
-                                    <option>NK</option>
-                                    <option>NECK</option>
-                                    <option>BRAIN</option>
-                                    <option>SKULL</option>
-                                    <option>MOUTH</option>
-                                    <option>TOOTH</option>
-                                    <option>L_TRUE_RIB</option>
-                                    <option>R_TRUE_RIB</option>
-                                    <option>L_FALSE_RIB</option>
-                                    <option>R_FALSE_RIB</option>
-                                    <option>L_FLOATING_RIB</option>
-                                    <option>R_FLOATING_RIB</option>
-                                    <option>L_LIP</option>
-                                    <option>U_LIP</option>
-                                    <option>TONGUE</option>
-                                    <option>EYELID</option>
-                                    <option>L_EYELID</option>
-                                    <option>R_EYELID</option>
-                                    <option>BILL</option>
-                                    <option>HEAD_ANTLER_1</option>
-                                    <option>HEAD_ANTLER_2</option>
-                                    <!-- Relsizes -->
-                                    <option>0</option>
-                                    <option>50</option>
-                                    <option>100</option>
-                                    <option>150</option>
-                                    <option>200</option>
-                                    <option>250</option>
-                                    <option>300</option>
-                                    <option>350</option>
-                                    <option>400</option>
-                                    <option>450</option>
-                                    <option>500</option>
-                                </datalist>
-                            </td>
-                        </tr> <!-- relsize -->
                     </table>
                 </div>
                 <div>
@@ -2633,7 +2633,10 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define how other creatures will interact with your
+                                        creature.
+                                        <hr>[CREATURE_CLASS:CLASS]<br>[CREATURE_CLASS:GENERAL_POISON]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -2665,7 +2668,8 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can make it so that your creature can become infected if
+                                        its wounds are left untreated for too long.</span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="getsWoundInfectionsCheckbox" class="cb"></td>
@@ -2676,7 +2680,8 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I make it so that your creature can get infections from
+                                        necrotic (rotting) tissue.</span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="getsInfectionsFromRotCheckbox" class="cb"></td>
@@ -2687,7 +2692,12 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can make it so that your creature is more resistant or
+                                        more resillient to a spedified syndrome.
+                                        <hr>* A number higher than 100 leads to better
+                                        resistance.<br>[SYNDROME_DILUTION_FACTOR:SYNDROME_NAME:0 ~
+                                        ?]*<br>[SYNDROME_DILUTION_FACTOR:INEBRIATION:150]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -2711,13 +2721,37 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="syndromeDilutionFactorList">
+                                    <option>INEBRIATION</option>
+                                    <!-- Healing rates -->
+                                    <option>0</option>
+                                    <option>25</option>
+                                    <option>50</option>
+                                    <option>75</option>
+                                    <option>100</option>
+                                    <option>125</option>
+                                    <option>150</option>
+                                    <option>175</option>
+                                    <option>200</option>
+                                    <option>225</option>
+                                    <option>250</option>
+                                    <option>275</option>
+                                    <option>300</option>
+                                    <option>325</option>
+                                    <option>350</option>
+                                    <option>375</option>
+                                    <option>400</option>
+                                    <option>425</option>
+                                    <option>450</option>
+                                    <option>475</option>
+                                    <option>500</option>
                                 </datalist>
                             </td>
                         </tr> <!-- syndromeDilutionFactor -->
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can make it so that night creatures will want to kidnap
+                                        your creture, marry them(?), and start a family... To put it bluntly.</span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="spouseConversionTargetCheckbox" class="cb"></td>
@@ -2728,7 +2762,7 @@
                     </table>
                 </div>
                 <div>
-                    <button onclick='toggleElementGroup("interactionTokens")'
+                    <button onclick='toggleElementGroup("interactionTokens");'
                         class="displayButton">Interactions</button>
                 </div>
                 <div id="interactionTokens" style="display:none">
@@ -4760,10 +4794,10 @@
                 parseSpecificToken(raw, "pusCheckbox", "pusToken")
                 parseTokenGroup(raw, "secretionTokenGroup")
                 parseSpecificToken(raw, "hasNervesCheckbox", "hasNervesToken")
+                parseTokenGroup(raw, "relsizeTokenGroup")
                 parseSpecificToken(raw, "selectTissueLayerCheckbox", "selectTissueLayerToken")
                 parseTokenGroup(raw, "plusTissueLayerTokenGroup")
                 parseSpecificToken(raw, "tlMajorArteriesCheckbox", "tlMajorArteriesToken")
-                parseTokenGroup(raw, "relsizeTokenGroup")
                 // Syndrom
                 parseTokenGroup(raw, "creatureClassTokenGroup")
                 parseSpecificToken(raw, "getsWoundInfectionsCheckbox", "getsWoundInfectionsToken")
