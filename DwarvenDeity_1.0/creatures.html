@@ -2693,7 +2693,7 @@
                             <td>
                                 <div class="tooltip">?
                                     <span class="tooltipText">I can make it so that your creature is more resistant or
-                                        more resillient to a spedified syndrome.
+                                        more resillient to a spedcified syndrome.
                                         <hr>* A number higher than 100 leads to better
                                         resistance.<br>[SYNDROME_DILUTION_FACTOR:SYNDROME_NAME:0 ~
                                         ?]*<br>[SYNDROME_DILUTION_FACTOR:INEBRIATION:150]
@@ -2751,7 +2751,7 @@
                             <td>
                                 <div class="tooltip">?
                                     <span class="tooltipText">I can make it so that night creatures will want to kidnap
-                                        your creture, marry them(?), and start a family... To put it bluntly.</span>
+                                        your creture, marry them(?), then start a family... To put it bluntly.</span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="spouseConversionTargetCheckbox" class="cb"></td>
@@ -2770,19 +2770,24 @@
                         <tr class="multiGroup">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can give your creature the ability to perform certain
+                                        interactions.
+                                        <hr>[CAN_DO_INTERACTION:INTERACTION]<br>[CAN_DO_INTERACTION:PET_ANIMAL]
+                                    </span>
                                 </div>
                                 <div>
-                                    <button onclick='addFlexibleToken("interactionTokenGroup", "[CAN_DO_INTERACTION:", 1, 0, true, 
-                                    "canDoInteractionList", "canDoInteractionListInput")'>Add: Can Do
+                                    <button onclick='addFixedToken("interactionTokenGroup", "[CAN_DO_INTERACTION:", 1, 0, true, 
+                                    "canDoInteractionList")'>Add: Can Do
                                         Interaction</button>
-                                    <input list="canDoInteractionInputList" id="canDoInteractionListInput">
                                     <button
                                         onclick='removeTokenFromGroup("interactionTokenGroup", "[CAN_DO_INTERACTION:")'>Remove:
                                         Can Do Interaction</button>
                                 </div> <!-- canDoInteraction -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define what your interaction is called in adventure
+                                        mode.<br>You can find me in the powers/abilities menu.
+                                        <hr>[CDI:ADV_NAME:Interaction name]<br>[CDI:ADV_NAME:Pet animal]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("interactionTokenGroup", "[CDI:ADV_NAME:", 
@@ -2792,7 +2797,10 @@
                                         Adventure Name</button>
                                 </div> <!-- cdi:advName -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define when CPU-controlled creatures use your
+                                        interaction.
+                                        <hr>[CDI:USAGE_HINT:HINT]<br>[CDI:USAGE_HINT:GREETING]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("interactionTokenGroup", "[CDI:USAGE_HINT:", 
@@ -2802,18 +2810,24 @@
                                         Usage Hint</button>
                                 </div> <!-- cdi:usageHint -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define which body parts are required to perform this
+                                        interaction.
+                                        <hr>
+                                        [CDI:BP_REQUIRED:BY_CATEGORY/BY_TYPE/BY_TOKEN:CATEGORY/TYPE/TOKEN]<br>[CDI:BP_REQUIRED:BY_TYPE:GRASP]
+                                    </span>
                                 </div>
                                 <div>
-                                    <button onclick='addFlexibleToken("interactionTokenGroup", "[CDI:BP_REQUIRED:", 2, 0, true, 
-                                    "cdi:bpRequiredList", "cdi:bpRequiredListInput")'>Add: Body Part Required</button>
-                                    <input list="cdi:bpRequiredInputList" id="cdi:bpRequiredListInput">
+                                    <button onclick='addFixedToken("interactionTokenGroup", "[CDI:BP_REQUIRED:", 2, 0, true, 
+                                    "cdi:bpRequiredList")'>Add: Body Part Required</button>
                                     <button
                                         onclick='removeTokenFromGroup("interactionTokenGroup", "[CDI:BP_REQUIRED:")'>Remove:
                                         Body Part Required</button>
                                 </div> <!-- cdi:bpRequired -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define the verbs your interaction will use.
+                                        <hr>* You may use NA if the verb is not
+                                        required.[CDI:VERB:gesture:gestures:NA]<br>[CDI:VERB:self:other:mutual]<br>[CDI:VERB:pet:pets:pets]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("interactionTokenGroup", "[CDI:VERB:", 
@@ -2823,7 +2837,11 @@
                                         Verb</button>
                                 </div> <!-- cdi:verb -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define how creatures using your interaction will
+                                        target other creatures and locations.
+                                        <hr>[CDI:TARGET:target
+                                        ID:TARGET_TYPE]<br>[CDI:TARGET:A:SELF_ONLY]<br>[CDI:TARGET:B:TOUCHABLE]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("interactionTokenGroup", "[CDI:TARGET:", 
@@ -2833,7 +2851,12 @@
                                         Target</button>
                                 </div> <!-- cdi:target -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define how far away your interaction can target, as
+                                        well as how far away your interaction's projectile can fly before losing
+                                        momentum.
+                                        <hr>[CDI:TARGET_RANGE:target ID:0 ~ ? (range in
+                                        tiles)]<br>[CDI:TARGET_RANGE:B:1]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("interactionTokenGroup", "[CDI:TARGET_RANGE:", 
@@ -2843,7 +2866,10 @@
                                         Target Range</button>
                                 </div> <!-- cdi:targetRange -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define the maximum number of targets your
+                                        interaction can target at once.
+                                        <hr>[CDI:MAX_TARGET_NUMBER:target ID:0 ~ ?]<br>[CDI:MAX_TARGET_NUMBER:B:1]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("interactionTokenGroup", "[CDI:MAX_TARGET_NUMBER:", 
@@ -2853,7 +2879,12 @@
                                         Max Target Number</button>
                                 </div> <!-- cdi:maxTargetNumber -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define the number of ticks that must pass before
+                                        this interaction is usable again.
+                                        <hr>* Fortress mode to adventure mode ratio = 10 : 1. (A wait period of 20 would
+                                        be 20 ticks in fortress mode, but only 2 ticks in adventure mode.) 0 removes
+                                        delay completely.<br>[CDI:WAIT_PERIOD:0 ~ ?]*<br>[CDI:WAIT_PERIOD:30]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("interactionTokenGroup", "[CDI:WAIT_PERIOD:", 
@@ -2921,23 +2952,260 @@
                             </td>
                             <td>
                                 <p>]</p>
-                                <datalist id="canDoInteractionInputList">
-                                </datalist>
                                 <datalist id="canDoInteractionList">
+                                    <option>PET_ANIMAL</option>
+                                    <option>MATERIAL_EMISSION</option>
+                                    <option>BOGEYMAN_POLYMORPH</option>
+                                    <option>ITEM_BLESSING</option>
+                                    <option>QUALITY_BLESSING</option>
+                                    <option>PET_BLESSING</option>
+                                    <option>ANIMAL_CURSE</option>
+                                    <option>VAMPIRE_CURSE</option>
+                                    <option>WEREBEAST_CURSE</option>
+                                    <option>WEREBEAST_BITE</option>
                                 </datalist> <!-- canDoInteraction -->
                                 <datalist id="cdi:usageHintList">
+                                    <option>GREETING</option>
+                                    <option>ATTACK</option>
+                                    <option>DEFEND</option>
+                                    <option>FLEEING</option>
+                                    <option>CLEAN_SELF</option>
+                                    <option>CLEAN_FRIEND</option>
+                                    <option>NEGATIVE_SOCIAL_RESPONSE</option>
+                                    <option>TORMENT</option>
+                                    <option>MINOR_BLESSING</option>
+                                    <option>MEDIUM_BLESSING</option>
+                                    <option>MINOR_CURSE</option>
+                                    <option>MEDIUM_CURSE</option>
+                                    <option>MAJOR_CURSE</option>
                                 </datalist> <!-- cdi:usageHint -->
-                                <datalist id="cdi:bpRequiredInputList">
-                                </datalist>
                                 <datalist id="cdi:bpRequiredList">
+                                    <!-- Selector options -->
+                                    <option>BY_CATEGORY</option>
+                                    <option>BY_TYPE</option>
+                                    <option>BY_TOKEN</option>
+                                    <!-- Categories -->
+                                    <option>BODY</option>
+                                    <option>BODY_UPPER</option>
+                                    <option>BODY_LOWER</option>
+                                    <option>HEAD</option>
+                                    <option>ARM_UPPER</option>
+                                    <option>ARM_LOWER</option>
+                                    <option>HAND</option>
+                                    <option>PINCER</option>
+                                    <option>FOOT_FRONT</option>
+                                    <option>FOOT_REAR</option>
+                                    <option>LEG_FRONT</option>
+                                    <option>LEG_REAR</option>
+                                    <option>LEG_UPPER</option>
+                                    <option>LEG_LOWER</option>
+                                    <option>FOOT</option>
+                                    <option>FLIPPER</option>
+                                    <option>WING</option>
+                                    <option>TAIL</option>
+                                    <option>STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>NOSE</option>
+                                    <option>SHELL</option>
+                                    <option>ANTENNA</option>
+                                    <option>HORN</option>
+                                    <option>MANDIBLE</option>
+                                    <option>FINGER</option>
+                                    <option>TOE</option>
+                                    <option>EYE</option>
+                                    <option>NOSE</option>
+                                    <option>CHEEK</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>SPINE</option>
+                                    <option>NECK</option>
+                                    <option>SPINE</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>RIB_TRUE</option>
+                                    <option>RIB_FALSE</option>
+                                    <option>RIB_FLOATING</option>
+                                    <option>LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>BEAK</option>
+                                    <!-- Types -->
+                                    <option>UPPERBODY</option>
+                                    <option>LOWERBODY</option>
+                                    <option>HEAD</option>
+                                    <option>GRASP</option>
+                                    <option>STANCE</option>
+                                    <!-- Body part tokens -->
+                                    <option>UB</option>
+                                    <option>LB</option>
+                                    <option>HD</option>
+                                    <option>RUA</option>
+                                    <option>LUA</option>
+                                    <option>RLA</option>
+                                    <option>LLA</option>
+                                    <option>RH</option>
+                                    <option>LH</option>
+                                    <option>R_UB_PINCER</option>
+                                    <option>L_UB_PINCER</option>
+                                    <option>RA1</option>
+                                    <option>LA1</option>
+                                    <option>RF1</option>
+                                    <option>LF1</option>
+                                    <option>RA2</option>
+                                    <option>LA2</option>
+                                    <option>RF2</option>
+                                    <option>LF2</option>
+                                    <option>RA3</option>
+                                    <option>LA3</option>
+                                    <option>RF3</option>
+                                    <option>LF3</option>
+                                    <option>RA4</option>
+                                    <option>LA4</option>
+                                    <option>RF4</option>
+                                    <option>LF4</option>
+                                    <option>RA5</option>
+                                    <option>LA5</option>
+                                    <option>RF5</option>
+                                    <option>LF5</option>
+                                    <option>RA</option>
+                                    <option>LA</option>
+                                    <option>RL</option>
+                                    <option>LL</option>
+                                    <option>RF</option>
+                                    <option>LF</option>
+                                    <option>RUL</option>
+                                    <option>LUL</option>
+                                    <option>RLL</option>
+                                    <option>LLL</option>
+                                    <option>RFFLIP</option>
+                                    <option>LFFLIP</option>
+                                    <option>RRFLIP</option>
+                                    <option>LRFLIP</option>
+                                    <option>RWING</option>
+                                    <option>LWING</option>
+                                    <option>TAIL</option>
+                                    <option>TAIL_1</option>
+                                    <option>TAIL_2</option>
+                                    <option>TAIL_3</option>
+                                    <option>TAIL_STINGER</option>
+                                    <option>LOWER_BODY_STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>TRUNK</option>
+                                    <option>SHELL</option>
+                                    <option>R_ANT</option>
+                                    <option>L_ANT</option>
+                                    <option>HEAD_HORN</option>
+                                    <option>HEAD_HORN_1</option>
+                                    <option>HEAD_HORN_2</option>
+                                    <option>HEAD_HORN_3</option>
+                                    <option>HEAD_HORN_4</option>
+                                    <option>R_MAND</option>
+                                    <option>L_MAND</option>
+                                    <option>FINGER1</option>
+                                    <option>FINGER2</option>
+                                    <option>FINGER3</option>
+                                    <option>FINGER4</option>
+                                    <option>FINGER5</option>
+                                    <option>TOE1</option>
+                                    <option>TOE2</option>
+                                    <option>TOE3</option>
+                                    <option>TOE4</option>
+                                    <option>TOE5</option>
+                                    <option>EYE</option>
+                                    <option>REYE</option>
+                                    <option>LEYE</option>
+                                    <option>BEAK</option>
+                                    <option>NOSE</option>
+                                    <option>L_CHEEK</option>
+                                    <option>R_CHEEK</option>
+                                    <option>RLUNG</option>
+                                    <option>LLUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>UPPERSPINE</option>
+                                    <option>LOWERSPINE</option>
+                                    <option>NK</option>
+                                    <option>NECK</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>L_TRUE_RIB</option>
+                                    <option>R_TRUE_RIB</option>
+                                    <option>L_FALSE_RIB</option>
+                                    <option>R_FALSE_RIB</option>
+                                    <option>L_FLOATING_RIB</option>
+                                    <option>R_FLOATING_RIB</option>
+                                    <option>L_LIP</option>
+                                    <option>U_LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>L_EYELID</option>
+                                    <option>R_EYELID</option>
+                                    <option>BILL</option>
+                                    <option>HEAD_ANTLER_1</option>
+                                    <option>HEAD_ANTLER_2</option>
                                 </datalist> <!-- cdi:bpRequired -->
                                 <datalist id="cdi:targetList">
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                    <option>E</option>
+                                    <option>LINE_OF_SIGHT</option>
+                                    <option>TOUCHABLE</option>
+                                    <option>DISTURBER_ONLY</option>
+                                    <option>SELF_ALLOWED</option>
+                                    <option>SELF_ONLY</option>
                                 </datalist> <!-- cdi:target -->
                                 <datalist id="cdi:targetRangeList">
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                    <option>E</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>10</option>
+                                    <option>15</option>
+                                    <option>20</option>
+                                    <option>25</option>
                                 </datalist> <!-- cdi:targetRange -->
                                 <datalist id="cdi:maxTargetNumberList">
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                    <option>E</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>10</option>
+                                    <option>15</option>
+                                    <option>20</option>
+                                    <option>25</option>
                                 </datalist> <!-- cdi:maxTargetNumber -->
                                 <datalist id="cdi:waitPeriodList">
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>30</option>
+                                    <option>40</option>
+                                    <option>50</option>
+                                    <option>60</option>
+                                    <option>70</option>
+                                    <option>80</option>
+                                    <option>90</option>
+                                    <option>100</option>
                                 </datalist> <!-- cdi:waitPeriod -->
                             </td>
                         </tr>
