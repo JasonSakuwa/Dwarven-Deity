@@ -623,8 +623,557 @@ flexibleClosed button
     <option>450</option>
     <option>500</option>
 
+<!-- Ages -->
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>10</option>
+    <option>12</option>
+    <option>15</option>
+    <option>20</option>
+    <option>25</option>
+    <option>50</option>
+    <option>75</option>
+    <option>100</option>
+
+<!-- Days -->
+    <option>84</option>
+    <option>168</option>
+    <option>252</option>
+
+<!-- Body sizes-->
+    <option>1000</option>
+    <option>2000</option>
+    <option>3000</option>
+    <option>4000</option>
+    <option>5000</option>
+    <option>10000</option>
+    <option>15000</option>
+    <option>20000</option>
+    <option>25000</option>
+    <option>30000</option>
+    <option>35000</option>
+    <option>40000</option>
+    <option>45000</option>
+    <option>50000</option>
+    <option>55000</option>
+    <option>60000</option>
+    <option>65000</option>
+    <option>70000</option>
+    <option>100000</option>
+    <option>150000</option>
+    <option>200000</option>
+    <option>250000</option>
+    <option>500000</option>
+    <option>750000</option>
+    <option>1000000</option>
+
+<!-- Physical attributes-->
+    <option>STRENGTH</option>
+    <option>AGILITY</option>
+    <option>TOUGHNESS</option>
+    <option>ENDURANCE</option>
+    <option>RECUPERATION</option>
+    <option>DISEASE_RESISTANCE</option>
+
+<!-- Mental attributes-->
+    <option>ANALYTICAL_ABILITY</option>
+    <option>FOCUS</option>
+    <option>WILLPOWER</option>
+    <option>CREATIVITY</option>
+    <option>INTUITION</option>
+    <option>PATIENCE</option>
+    <option>MEMORY</option>
+    <option>LINGUISTIC_ABILITY</option>
+    <option>SPATIAL_SENSE</option>
+    <option>MUSICALITY</option>
+    <option>KINESTHETIC_SENSE</option>
+    <option>EMPATHY</option>
+    <option>SOCIAL_AWARENESS</option>
+
+<!-- Attribute ranges-->
+    <option>0</option>
+    <option>50</option>
+    <option>100</option>
+    <option>150</option>
+    <option>200</option>
+    <option>250</option>
+    <option>300</option>
+    <option>350</option>
+    <option>400</option>
+    <option>450</option>
+    <option>500</option>
+    <option>550</option>
+    <option>600</option>
+    <option>650</option>
+    <option>700</option>
+    <option>750</option>
+    <option>800</option>
+    <option>850</option>
+    <option>900</option>
+    <option>950</option>
+    <option>1000</option>
+    <option>1050</option>
+    <option>1100</option>
+    <option>1150</option>
+    <option>1200</option>
+    <option>1250</option>
+    <option>1300</option>
+    <option>1350</option>
+    <option>1400</option>
+    <option>1450</option>
+    <option>1500</option>
+    <option>1550</option>
+    <option>1600</option>
+    <option>1650</option>
+    <option>1700</option>
+    <option>1750</option>
+    <option>1800</option>
+    <option>1850</option>
+    <option>1900</option>
+    <option>1950</option>
+    <option>2000</option>
+    <option>2050</option>
+    <option>2100</option>
+    <option>2150</option>
+    <option>2200</option>
+    <option>2250</option>
+    <option>2300</option>
+    <option>2350</option>
+    <option>2400</option>
+    <option>2450</option>
+    <option>2500</option>
+    <option>2550</option>
+    <option>2600</option>
+    <option>2650</option>
+    <option>2700</option>
+    <option>2750</option>
+    <option>2800</option>
+    <option>2850</option>
+    <option>2900</option>
+    <option>2950</option>
+    <option>3000</option>
+    <option>3050</option>
+    <option>3100</option>
+    <option>3150</option>
+    <option>3200</option>
+    <option>3250</option>
+    <option>3300</option>
+    <option>3350</option>
+    <option>3400</option>
+    <option>3450</option>
+    <option>3500</option>
+    <option>3550</option>
+    <option>3600</option>
+    <option>3650</option>
+    <option>3700</option>
+    <option>3750</option>
+    <option>3800</option>
+    <option>3850</option>
+    <option>3900</option>
+    <option>3950</option>
+    <option>4000</option>
+    <option>4050</option>
+    <option>4100</option>
+    <option>4150</option>
+    <option>4200</option>
+    <option>4250</option>
+    <option>4300</option>
+    <option>4350</option>
+    <option>4400</option>
+    <option>4450</option>
+    <option>4500</option>
+    <option>4550</option>
+    <option>4600</option>
+    <option>4650</option>
+    <option>4700</option>
+    <option>4750</option>
+    <option>4800</option>
+    <option>4850</option>
+    <option>4900</option>
+    <option>4950</option>
+    <option>5000</option>
+
+<!-- Gait options-->
+    <option>STANDARD_BIPED_GAITS</option>
+    <option>STANDARD_QUADRUPED_GAITS</option>
+    <option>STANDARD_WALKING_GAITS</option>
+    <option>STANDARD_CLIMBING_GAITS</option>
+    <option>STANDARD_CRAWLING_GAITS</option>
+    <option>STANDARD_WALK_CRAWL_GAITS</option>
+    <option>STANDARD_SWIMMING_GAITS</option>
+    <option>STANDARD_FLYING_GAITS</option>
+
+<!-- Gaits -->
+    <option>0</option>
+    <option>50</option>
+    <option>100</option>
+    <option>150</option>
+    <option>200</option>
+    <option>250</option>
+    <option>300</option>
+    <option>350</option>
+    <option>400</option>
+    <option>450</option>
+    <option>500</option>
+    <option>550</option>
+    <option>600</option>
+    <option>650</option>
+    <option>700</option>
+    <option>750</option>
+    <option>800</option>
+    <option>850</option>
+    <option>900</option>
+    <option>950</option>
+    <option>1000</option>
+    <option>1050</option>
+    <option>1100</option>
+    <option>1150</option>
+    <option>1200</option>
+    <option>1250</option>
+    <option>1300</option>
+    <option>1350</option>
+    <option>1400</option>
+    <option>1450</option>
+    <option>1500</option>
+    <option>1550</option>
+    <option>1600</option>
+    <option>1650</option>
+    <option>1700</option>
+    <option>1750</option>
+    <option>1800</option>
+    <option>1850</option>
+    <option>1900</option>
+    <option>1950</option>
+    <option>2000</option>
+    <option>2050</option>
+    <option>2100</option>
+    <option>2150</option>
+    <option>2200</option>
+    <option>2250</option>
+    <option>2300</option>
+    <option>2350</option>
+    <option>2400</option>
+    <option>2450</option>
+    <option>2500</option>
+    <option>2550</option>
+    <option>2600</option>
+    <option>2650</option>
+    <option>2700</option>
+    <option>2750</option>
+    <option>2800</option>
+    <option>2850</option>
+    <option>2900</option>
+    <option>2950</option>
+    <option>3000</option>
+    <option>3050</option>
+    <option>3100</option>
+    <option>3150</option>
+    <option>3200</option>
+    <option>3250</option>
+    <option>3300</option>
+    <option>3350</option>
+    <option>3400</option>
+    <option>3450</option>
+    <option>3500</option>
+    <option>3550</option>
+    <option>3600</option>
+    <option>3650</option>
+    <option>3700</option>
+    <option>3750</option>
+    <option>3800</option>
+    <option>3850</option>
+    <option>3900</option>
+    <option>3950</option>
+    <option>4000</option>
+    <option>4050</option>
+    <option>4100</option>
+    <option>4150</option>
+    <option>4200</option>
+    <option>4250</option>
+    <option>4300</option>
+    <option>4350</option>
+    <option>4400</option>
+    <option>4450</option>
+    <option>4500</option>
+    <option>4550</option>
+    <option>4600</option>
+    <option>4650</option>
+    <option>4700</option>
+    <option>4750</option>
+    <option>4800</option>
+    <option>4850</option>
+    <option>4900</option>
+    <option>4950</option>
+    <option>5000</option>
+    <option>5050</option>
+    <option>5100</option>
+    <option>5150</option>
+    <option>5200</option>
+    <option>5250</option>
+    <option>5300</option>
+    <option>5350</option>
+    <option>5400</option>
+    <option>5450</option>
+    <option>5500</option>
+    <option>5550</option>
+    <option>5600</option>
+    <option>5650</option>
+    <option>5700</option>
+    <option>5750</option>
+    <option>5800</option>
+    <option>5850</option>
+    <option>5900</option>
+    <option>5950</option>
+    <option>6000</option>
+    <option>6050</option>
+    <option>6100</option>
+    <option>6150</option>
+    <option>6200</option>
+    <option>6250</option>
+    <option>6300</option>
+    <option>6350</option>
+    <option>6400</option>
+    <option>6450</option>
+    <option>6500</option>
+    <option>6550</option>
+    <option>6600</option>
+    <option>6650</option>
+    <option>6700</option>
+    <option>6750</option>
+    <option>6800</option>
+    <option>6850</option>
+    <option>6900</option>
+    <option>6950</option>
+    <option>7000</option>
+    <option>7050</option>
+    <option>7100</option>
+    <option>7150</option>
+    <option>7200</option>
+    <option>7250</option>
+    <option>7300</option>
+    <option>7350</option>
+    <option>7400</option>
+    <option>7450</option>
+    <option>7500</option>
+    <option>7550</option>
+    <option>7600</option>
+    <option>7650</option>
+    <option>7700</option>
+    <option>7750</option>
+    <option>7800</option>
+    <option>7850</option>
+    <option>7900</option>
+    <option>7950</option>
+    <option>8000</option>
+    <option>8050</option>
+    <option>8100</option>
+    <option>8150</option>
+    <option>8200</option>
+    <option>8250</option>
+    <option>8300</option>
+    <option>8350</option>
+    <option>8400</option>
+    <option>8450</option>
+    <option>8500</option>
+    <option>8550</option>
+    <option>8600</option>
+    <option>8650</option>
+    <option>8700</option>
+    <option>8750</option>
+    <option>8800</option>
+    <option>8850</option>
+    <option>8900</option>
+    <option>8950</option>
+    <option>9000</option>
+    <option>9050</option>
+    <option>9100</option>
+    <option>9150</option>
+    <option>9200</option>
+    <option>9250</option>
+    <option>9300</option>
+    <option>9350</option>
+    <option>9400</option>
+    <option>9450</option>
+    <option>9500</option>
+    <option>9550</option>
+    <option>9600</option>
+    <option>9650</option>
+    <option>9700</option>
+    <option>9750</option>
+    <option>9800</option>
+    <option>9850</option>
+    <option>9900</option>
+    <option>9950</option>
+    <option>10000</option>
+
+<!-- App mod importances-->
+    <option>0</option>
+    <option>50</option>
+    <option>100</option>
+    <option>150</option>
+    <option>200</option>
+    <option>250</option>
+    <option>300</option>
+    <option>350</option>
+    <option>400</option>
+    <option>450</option>
+    <option>500</option>
+    <option>550</option>
+    <option>600</option>
+    <option>650</option>
+    <option>700</option>
+    <option>750</option>
+    <option>800</option>
+    <option>850</option>
+    <option>900</option>
+    <option>950</option>
+    <option>1000</option>
+
+<!-- Appearnce modifier qualities -->
+    <option>CLOSE_SET</option>
+    <option>DEEP_SET</option>
+    <option>ROUND_VS_NARROW</option>
+    <option>LARGE_IRIS</option>
+    <option>THICKNESS</option>
+    <option>BROADNESS</option>
+    <option>LENGTH</option>
+    <option>UPTURNED</option>
+    <option>CONVEX</option>
+    <option>SPLAYED_OUT</option>
+    <option>HANGING_LOBES</option>
+    <option>HEIGHT</option>
+    <option>GAPS</option>
+    <option>HIGH_CHEEKBONES</option>
+    <option>BROAD_CHIN</option>
+    <option>JUTTING_CHIN</option>
+    <option>SQUARE_CHIN</option>
+    <option>DEEP_VOICE</option>
+    <option>RASPY_VOICE</option>
+
+<!-- Appearance modifiers-->
+    <option>0</option>
+    <option>25</option>
+    <option>50</option>
+    <option>75</option>
+    <option>100</option>
+    <option>125</option>
+    <option>150</option>
+    <option>175</option>
+    <option>200</option>
+
+<!-- Attacks -->
+    <option>PUNCH</option>
+    <option>KICK</option>
+    <option>SCRATCH</option>
+    <option>BITE</option>
+    <option>CLAW</option>
+    <option>GORE</option>
+    <option>SLAP</option>
+
+<!-- Combat skills -->
+    <option>GRASP_STRIKE</option>
+    <option>STANCE_STRIKE</option>
+    <option>BITE</option>
+    <option>WRESTLING</option>
+    <option>DODGING</option>
+    <option>THROW</option>
+    <option>MELEE_COMBAT</option>
+    <option>RANGED_COMBAT</option>
+    <option>AXE</option>
+    <option>SWORD</option>
+    <option>DAGGER</option>
+    <option>MACE</option>
+    <option>HAMMER</option>
+    <option>SPEAR</option>
+    <option>CROSSBOW</option>
+    <option>PIKE</option>
+    <option>WHIP</option>
+    <option>BOW</option>
+    <option>BLOWGUN</option>
+    <option>MISC_WEAPON</option>
+    <option>SHIELD</option>
+    <option>ARMOR</option>
+    <option>SIEGEOPERATE</option>
+    <option>DISCIPLINE</option>
+    <option>SITUATIONAL_AWARENESS</option>
+
+<!-- Attack percentages -->
+    <option>100</option>
+    <option>95</option>
+    <option>90</option>
+    <option>85</option>
+    <option>80</option>
+    <option>75</option>
+    <option>70</option>
+    <option>65</option>
+    <option>60</option>
+    <option>55</option>
+    <option>50</option>
+    <option>45</option>
+    <option>40</option>
+    <option>35</option>
+    <option>30</option>
+    <option>25</option>
+    <option>20</option>
+    <option>15</option>
+    <option>10</option>
+    <option>5</option>
+    <option>0</option>
+    <option>105</option>
+    <option>110</option>
+    <option>115</option>
+    <option>120</option>
+    <option>125</option>
+    <option>130</option>
+    <option>135</option>
+    <option>140</option>
+    <option>145</option>
+    <option>150</option>
+    <option>155</option>
+    <option>160</option>
+    <option>165</option>
+    <option>170</option>
+    <option>175</option>
+    <option>180</option>
+    <option>185</option>
+    <option>190</option>
+    <option>195</option>
+    <option>200</option>
+
+<!-- Attack cooldown list-->
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+    <option>40</option>
+    <option>50</option>
+    <option>100</option>
 
 
+
+
+
+
+
+
+
+
+
+0 ~ ?
 * A lower number allows for better healing.<br>
 
 // fundamental tokens
@@ -933,12 +1482,12 @@ flexibleClosed button
         [ATTACK_VERB:scratch:scratches]
         [ATTACK_CONTACT_PERC:100]
 
-    // flexibleList
-    attackPenetrationPerc
-    [ATTACK_PENETRATION_PERC:100]
     // flexibleClosedToken
     attackFlagEdge
     [ATTACK_FLAG_EDGE]
+    // flexibleList
+    attackPenetrationPerc
+    [ATTACK_PENETRATION_PERC:100]
 
         [ATTACK_PREPARE_AND_RECOVER:3:3]
         [ATTACK_PRIORITY:SECOND]

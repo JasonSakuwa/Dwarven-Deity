@@ -3221,7 +3221,11 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define how large your creature is at a given age.
+                                        <hr>* Size is roughly equivalent to cubic centimeters (cm3).<br>[BODY_SIZE:0 ~ ?
+                                        (year):0 ~ ? (days):0 ~ ?
+                                        (size)]*<br>[BODY_SIZE:0:0:3000]<br>[BODY_SIZE:1:168:15000]<br>[BODY_SIZE:12:0:60000]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -3259,13 +3263,65 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="bodySizeList">
+                                    <!-- Ages -->
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>10</option>
+                                    <option>12</option>
+                                    <option>15</option>
+                                    <option>20</option>
+                                    <option>25</option>
+                                    <option>50</option>
+                                    <option>75</option>
+                                    <option>100</option>
+                                    <!-- Days -->
+                                    <option>84</option>
+                                    <option>168</option>
+                                    <option>252</option>
+                                    <!-- Body sizes-->
+                                    <option>1000</option>
+                                    <option>2000</option>
+                                    <option>3000</option>
+                                    <option>4000</option>
+                                    <option>5000</option>
+                                    <option>10000</option>
+                                    <option>15000</option>
+                                    <option>20000</option>
+                                    <option>25000</option>
+                                    <option>30000</option>
+                                    <option>35000</option>
+                                    <option>40000</option>
+                                    <option>45000</option>
+                                    <option>50000</option>
+                                    <option>55000</option>
+                                    <option>60000</option>
+                                    <option>65000</option>
+                                    <option>70000</option>
+                                    <option>100000</option>
+                                    <option>150000</option>
+                                    <option>200000</option>
+                                    <option>250000</option>
+                                    <option>500000</option>
+                                    <option>750000</option>
+                                    <option>1000000</option>
                                 </datalist>
                             </td>
                         </tr> <!-- bodySize -->
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define the range of your creature's physical
+                                        attributes.
+                                        <hr>* Values are ordered from lowest to
+                                        highest.<br>[PHYS_ATT_RANGE:ATTRIBUTE:0 ~ 5000:0 ~ 5000:0 ~ 5000:0 ~ 5000:0 ~
+                                        5000:0 ~ 5000:0 ~
+                                        5000]*<br>[PHYS_ATT_RANGE:STRENGTH:450:950:1150:1250:1350:1550:2250]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -3295,13 +3351,128 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="physAttRangeList">
+                                    <!-- Physical attributes-->
+                                    <option>STRENGTH</option>
+                                    <option>AGILITY</option>
+                                    <option>TOUGHNESS</option>
+                                    <option>ENDURANCE</option>
+                                    <option>RECUPERATION</option>
+                                    <option>DISEASE_RESISTANCE</option>
+                                    <!-- Attribute ranges-->
+                                    <option>0</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                    <option>150</option>
+                                    <option>200</option>
+                                    <option>250</option>
+                                    <option>300</option>
+                                    <option>350</option>
+                                    <option>400</option>
+                                    <option>450</option>
+                                    <option>500</option>
+                                    <option>550</option>
+                                    <option>600</option>
+                                    <option>650</option>
+                                    <option>700</option>
+                                    <option>750</option>
+                                    <option>800</option>
+                                    <option>850</option>
+                                    <option>900</option>
+                                    <option>950</option>
+                                    <option>1000</option>
+                                    <option>1050</option>
+                                    <option>1100</option>
+                                    <option>1150</option>
+                                    <option>1200</option>
+                                    <option>1250</option>
+                                    <option>1300</option>
+                                    <option>1350</option>
+                                    <option>1400</option>
+                                    <option>1450</option>
+                                    <option>1500</option>
+                                    <option>1550</option>
+                                    <option>1600</option>
+                                    <option>1650</option>
+                                    <option>1700</option>
+                                    <option>1750</option>
+                                    <option>1800</option>
+                                    <option>1850</option>
+                                    <option>1900</option>
+                                    <option>1950</option>
+                                    <option>2000</option>
+                                    <option>2050</option>
+                                    <option>2100</option>
+                                    <option>2150</option>
+                                    <option>2200</option>
+                                    <option>2250</option>
+                                    <option>2300</option>
+                                    <option>2350</option>
+                                    <option>2400</option>
+                                    <option>2450</option>
+                                    <option>2500</option>
+                                    <option>2550</option>
+                                    <option>2600</option>
+                                    <option>2650</option>
+                                    <option>2700</option>
+                                    <option>2750</option>
+                                    <option>2800</option>
+                                    <option>2850</option>
+                                    <option>2900</option>
+                                    <option>2950</option>
+                                    <option>3000</option>
+                                    <option>3050</option>
+                                    <option>3100</option>
+                                    <option>3150</option>
+                                    <option>3200</option>
+                                    <option>3250</option>
+                                    <option>3300</option>
+                                    <option>3350</option>
+                                    <option>3400</option>
+                                    <option>3450</option>
+                                    <option>3500</option>
+                                    <option>3550</option>
+                                    <option>3600</option>
+                                    <option>3650</option>
+                                    <option>3700</option>
+                                    <option>3750</option>
+                                    <option>3800</option>
+                                    <option>3850</option>
+                                    <option>3900</option>
+                                    <option>3950</option>
+                                    <option>4000</option>
+                                    <option>4050</option>
+                                    <option>4100</option>
+                                    <option>4150</option>
+                                    <option>4200</option>
+                                    <option>4250</option>
+                                    <option>4300</option>
+                                    <option>4350</option>
+                                    <option>4400</option>
+                                    <option>4450</option>
+                                    <option>4500</option>
+                                    <option>4550</option>
+                                    <option>4600</option>
+                                    <option>4650</option>
+                                    <option>4700</option>
+                                    <option>4750</option>
+                                    <option>4800</option>
+                                    <option>4850</option>
+                                    <option>4900</option>
+                                    <option>4950</option>
+                                    <option>5000</option>
                                 </datalist>
                             </td>
                         </tr> <!-- physAttRange -->
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define the range of your creature's mental
+                                        attributes.
+                                        <hr>* Values are ordered from lowest to
+                                        highest.<br>[MENT_ATT_RANGE:ATTRIBUTE:0 ~ 5000:0 ~ 5000:0 ~ 5000:0 ~ 5000:0 ~
+                                        5000:0 ~ 5000:0 ~
+                                        5000]*<br>[MENT_ATT_RANGE:ANALYTICAL_ABILITY:450:950:1150:1250:1350:1550:2250]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -3331,13 +3502,136 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mentAttRangeList">
+                                    <!-- Mental attributes-->
+                                    <option>ANALYTICAL_ABILITY</option>
+                                    <option>FOCUS</option>
+                                    <option>WILLPOWER</option>
+                                    <option>CREATIVITY</option>
+                                    <option>INTUITION</option>
+                                    <option>PATIENCE</option>
+                                    <option>MEMORY</option>
+                                    <option>LINGUISTIC_ABILITY</option>
+                                    <option>SPATIAL_SENSE</option>
+                                    <option>MUSICALITY</option>
+                                    <option>KINESTHETIC_SENSE</option>
+                                    <option>EMPATHY</option>
+                                    <option>SOCIAL_AWARENESS</option>
+                                    <!-- Attribute ranges-->
+                                    <option>0</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                    <option>150</option>
+                                    <option>200</option>
+                                    <option>250</option>
+                                    <option>300</option>
+                                    <option>350</option>
+                                    <option>400</option>
+                                    <option>450</option>
+                                    <option>500</option>
+                                    <option>550</option>
+                                    <option>600</option>
+                                    <option>650</option>
+                                    <option>700</option>
+                                    <option>750</option>
+                                    <option>800</option>
+                                    <option>850</option>
+                                    <option>900</option>
+                                    <option>950</option>
+                                    <option>1000</option>
+                                    <option>1050</option>
+                                    <option>1100</option>
+                                    <option>1150</option>
+                                    <option>1200</option>
+                                    <option>1250</option>
+                                    <option>1300</option>
+                                    <option>1350</option>
+                                    <option>1400</option>
+                                    <option>1450</option>
+                                    <option>1500</option>
+                                    <option>1550</option>
+                                    <option>1600</option>
+                                    <option>1650</option>
+                                    <option>1700</option>
+                                    <option>1750</option>
+                                    <option>1800</option>
+                                    <option>1850</option>
+                                    <option>1900</option>
+                                    <option>1950</option>
+                                    <option>2000</option>
+                                    <option>2050</option>
+                                    <option>2100</option>
+                                    <option>2150</option>
+                                    <option>2200</option>
+                                    <option>2250</option>
+                                    <option>2300</option>
+                                    <option>2350</option>
+                                    <option>2400</option>
+                                    <option>2450</option>
+                                    <option>2500</option>
+                                    <option>2550</option>
+                                    <option>2600</option>
+                                    <option>2650</option>
+                                    <option>2700</option>
+                                    <option>2750</option>
+                                    <option>2800</option>
+                                    <option>2850</option>
+                                    <option>2900</option>
+                                    <option>2950</option>
+                                    <option>3000</option>
+                                    <option>3050</option>
+                                    <option>3100</option>
+                                    <option>3150</option>
+                                    <option>3200</option>
+                                    <option>3250</option>
+                                    <option>3300</option>
+                                    <option>3350</option>
+                                    <option>3400</option>
+                                    <option>3450</option>
+                                    <option>3500</option>
+                                    <option>3550</option>
+                                    <option>3600</option>
+                                    <option>3650</option>
+                                    <option>3700</option>
+                                    <option>3750</option>
+                                    <option>3800</option>
+                                    <option>3850</option>
+                                    <option>3900</option>
+                                    <option>3950</option>
+                                    <option>4000</option>
+                                    <option>4050</option>
+                                    <option>4100</option>
+                                    <option>4150</option>
+                                    <option>4200</option>
+                                    <option>4250</option>
+                                    <option>4300</option>
+                                    <option>4350</option>
+                                    <option>4400</option>
+                                    <option>4450</option>
+                                    <option>4500</option>
+                                    <option>4550</option>
+                                    <option>4600</option>
+                                    <option>4650</option>
+                                    <option>4700</option>
+                                    <option>4750</option>
+                                    <option>4800</option>
+                                    <option>4850</option>
+                                    <option>4900</option>
+                                    <option>4950</option>
+                                    <option>5000</option>
+
                                 </datalist>
                             </td>
                         </tr> <!-- mentAttRange -->
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can do many things, but here I will only define the
+                                        speed of your creature's movement.
+                                        <hr>* Lower numbers are faster. Values are ordered as follows;
+                                        walking:jogging:sprinting:running:strolling:creeping<br>[APPLY_CREATURE_VARIATION:GAIT_TYPE:0
+                                        ~ ?:0 ~ ?:0 ~ ?:0 ~ ?:0 ~ ?:0 ~
+                                        ?]*<br>[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -3403,6 +3697,217 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="applyCreatureVariationList">
+                                    <!-- Gait options-->
+                                    <option>STANDARD_BIPED_GAITS</option>
+                                    <option>STANDARD_QUADRUPED_GAITS</option>
+                                    <option>STANDARD_WALKING_GAITS</option>
+                                    <option>STANDARD_CLIMBING_GAITS</option>
+                                    <option>STANDARD_CRAWLING_GAITS</option>
+                                    <option>STANDARD_WALK_CRAWL_GAITS</option>
+                                    <option>STANDARD_SWIMMING_GAITS</option>
+                                    <option>STANDARD_FLYING_GAITS</option>
+                                    <!-- Gaits -->
+                                    <option>0</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                    <option>150</option>
+                                    <option>200</option>
+                                    <option>250</option>
+                                    <option>300</option>
+                                    <option>350</option>
+                                    <option>400</option>
+                                    <option>450</option>
+                                    <option>500</option>
+                                    <option>550</option>
+                                    <option>600</option>
+                                    <option>650</option>
+                                    <option>700</option>
+                                    <option>750</option>
+                                    <option>800</option>
+                                    <option>850</option>
+                                    <option>900</option>
+                                    <option>950</option>
+                                    <option>1000</option>
+                                    <option>1050</option>
+                                    <option>1100</option>
+                                    <option>1150</option>
+                                    <option>1200</option>
+                                    <option>1250</option>
+                                    <option>1300</option>
+                                    <option>1350</option>
+                                    <option>1400</option>
+                                    <option>1450</option>
+                                    <option>1500</option>
+                                    <option>1550</option>
+                                    <option>1600</option>
+                                    <option>1650</option>
+                                    <option>1700</option>
+                                    <option>1750</option>
+                                    <option>1800</option>
+                                    <option>1850</option>
+                                    <option>1900</option>
+                                    <option>1950</option>
+                                    <option>2000</option>
+                                    <option>2050</option>
+                                    <option>2100</option>
+                                    <option>2150</option>
+                                    <option>2200</option>
+                                    <option>2250</option>
+                                    <option>2300</option>
+                                    <option>2350</option>
+                                    <option>2400</option>
+                                    <option>2450</option>
+                                    <option>2500</option>
+                                    <option>2550</option>
+                                    <option>2600</option>
+                                    <option>2650</option>
+                                    <option>2700</option>
+                                    <option>2750</option>
+                                    <option>2800</option>
+                                    <option>2850</option>
+                                    <option>2900</option>
+                                    <option>2950</option>
+                                    <option>3000</option>
+                                    <option>3050</option>
+                                    <option>3100</option>
+                                    <option>3150</option>
+                                    <option>3200</option>
+                                    <option>3250</option>
+                                    <option>3300</option>
+                                    <option>3350</option>
+                                    <option>3400</option>
+                                    <option>3450</option>
+                                    <option>3500</option>
+                                    <option>3550</option>
+                                    <option>3600</option>
+                                    <option>3650</option>
+                                    <option>3700</option>
+                                    <option>3750</option>
+                                    <option>3800</option>
+                                    <option>3850</option>
+                                    <option>3900</option>
+                                    <option>3950</option>
+                                    <option>4000</option>
+                                    <option>4050</option>
+                                    <option>4100</option>
+                                    <option>4150</option>
+                                    <option>4200</option>
+                                    <option>4250</option>
+                                    <option>4300</option>
+                                    <option>4350</option>
+                                    <option>4400</option>
+                                    <option>4450</option>
+                                    <option>4500</option>
+                                    <option>4550</option>
+                                    <option>4600</option>
+                                    <option>4650</option>
+                                    <option>4700</option>
+                                    <option>4750</option>
+                                    <option>4800</option>
+                                    <option>4850</option>
+                                    <option>4900</option>
+                                    <option>4950</option>
+                                    <option>5000</option>
+                                    <option>5050</option>
+                                    <option>5100</option>
+                                    <option>5150</option>
+                                    <option>5200</option>
+                                    <option>5250</option>
+                                    <option>5300</option>
+                                    <option>5350</option>
+                                    <option>5400</option>
+                                    <option>5450</option>
+                                    <option>5500</option>
+                                    <option>5550</option>
+                                    <option>5600</option>
+                                    <option>5650</option>
+                                    <option>5700</option>
+                                    <option>5750</option>
+                                    <option>5800</option>
+                                    <option>5850</option>
+                                    <option>5900</option>
+                                    <option>5950</option>
+                                    <option>6000</option>
+                                    <option>6050</option>
+                                    <option>6100</option>
+                                    <option>6150</option>
+                                    <option>6200</option>
+                                    <option>6250</option>
+                                    <option>6300</option>
+                                    <option>6350</option>
+                                    <option>6400</option>
+                                    <option>6450</option>
+                                    <option>6500</option>
+                                    <option>6550</option>
+                                    <option>6600</option>
+                                    <option>6650</option>
+                                    <option>6700</option>
+                                    <option>6750</option>
+                                    <option>6800</option>
+                                    <option>6850</option>
+                                    <option>6900</option>
+                                    <option>6950</option>
+                                    <option>7000</option>
+                                    <option>7050</option>
+                                    <option>7100</option>
+                                    <option>7150</option>
+                                    <option>7200</option>
+                                    <option>7250</option>
+                                    <option>7300</option>
+                                    <option>7350</option>
+                                    <option>7400</option>
+                                    <option>7450</option>
+                                    <option>7500</option>
+                                    <option>7550</option>
+                                    <option>7600</option>
+                                    <option>7650</option>
+                                    <option>7700</option>
+                                    <option>7750</option>
+                                    <option>7800</option>
+                                    <option>7850</option>
+                                    <option>7900</option>
+                                    <option>7950</option>
+                                    <option>8000</option>
+                                    <option>8050</option>
+                                    <option>8100</option>
+                                    <option>8150</option>
+                                    <option>8200</option>
+                                    <option>8250</option>
+                                    <option>8300</option>
+                                    <option>8350</option>
+                                    <option>8400</option>
+                                    <option>8450</option>
+                                    <option>8500</option>
+                                    <option>8550</option>
+                                    <option>8600</option>
+                                    <option>8650</option>
+                                    <option>8700</option>
+                                    <option>8750</option>
+                                    <option>8800</option>
+                                    <option>8850</option>
+                                    <option>8900</option>
+                                    <option>8950</option>
+                                    <option>9000</option>
+                                    <option>9050</option>
+                                    <option>9100</option>
+                                    <option>9150</option>
+                                    <option>9200</option>
+                                    <option>9250</option>
+                                    <option>9300</option>
+                                    <option>9350</option>
+                                    <option>9400</option>
+                                    <option>9450</option>
+                                    <option>9500</option>
+                                    <option>9550</option>
+                                    <option>9600</option>
+                                    <option>9650</option>
+                                    <option>9700</option>
+                                    <option>9750</option>
+                                    <option>9800</option>
+                                    <option>9850</option>
+                                    <option>9900</option>
+                                    <option>9950</option>
+                                    <option>10000</option>
                                 </datalist>
                             </td>
                         </tr> <!-- applyCreatureVariation -->
@@ -3416,7 +3921,12 @@
                         <tr class="multiGroup">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define characteristics for your creature's entire
+                                        body.
+                                        <hr>* Numbers are ordered from lowest to highest and calculated as
+                                        percentages.<br>[BODY_APPEARANCE_MODIFIER:ATTRIBUTE:0 ~ ?:0 ~ ?:0 ~ ?:0 ~ ?:0 ~
+                                        ?:0 ~ ?:0 ~ ?]*<br>[BODY_APPEARANCE_MODIFIER:HEIGHT:75:95:98:100:102:105:125]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("bodyAppearanceTokenGroup", "[BODY_APPEARANCE_MODIFIER:", 
@@ -3426,7 +3936,10 @@
                                         Body Appearance Modifier</button>
                                 </div> <!-- bodyAppearanceModifier -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I determine how prevalent an appearance modifier is in the
+                                        creature's description.
+                                        <hr>[APP_MOD_IMPORTANCE:0 ~ ?]<br>[APP_MOD_IMPORTANCE:500]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("bodyAppearanceTokenGroup", "[APP_MOD_IMPORTANCE:", 
@@ -3463,6 +3976,7 @@
                                     <option>HEIGHT</option>
                                     <option>BROADNESS</option>
                                     <option>LENGTH</option>
+                                    <!-- Appearance modifiers-->
                                     <option>0</option>
                                     <option>25</option>
                                     <option>50</option>
@@ -3474,13 +3988,38 @@
                                     <option>200</option>
                                 </datalist> <!-- bodyAppearanceModifier -->
                                 <datalist id="appModImportanceList">
+                                    <!-- App mod importances-->
+                                    <option>0</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                    <option>150</option>
+                                    <option>200</option>
+                                    <option>250</option>
+                                    <option>300</option>
+                                    <option>350</option>
+                                    <option>400</option>
+                                    <option>450</option>
+                                    <option>500</option>
+                                    <option>550</option>
+                                    <option>600</option>
+                                    <option>650</option>
+                                    <option>700</option>
+                                    <option>750</option>
+                                    <option>800</option>
+                                    <option>850</option>
+                                    <option>900</option>
+                                    <option>950</option>
+                                    <option>1000</option>
                                 </datalist> <!-- appModImportance -->
                             </td>
                         </tr>
                         <tr class="multiGroup">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can begin a selection of body parts.
+                                        <hr>
+                                        [SET_BP_GROUP:BY_CATEGORY/BY_TYPE/BY_TOKEN:CATEGORY/TYPE/TOKEN]<br>[SET_BP_GROUP:BY_CATEGORY:EYE]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("appearanceBpTokenGroup", "[SET_BP_GROUP:", 
@@ -3490,7 +4029,12 @@
                                         Set Body Part Group</button>
                                 </div> <!-- setBpGroup -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can determine what types of appearance qualities your
+                                        selected body part group will have,
+                                        <hr>* Values are ordered from lowest to
+                                        highest.<br>[BP_APPEARANCE_MODIFIER:QUALITY:0 ~ ?:0 ~ ?:0 ~ ?:0 ~ ?:0 ~ ?:0 ~
+                                        ?:0 ~ ?]*<br>[BP_APPEARANCE_MODIFIER:CLOSE_SET:0:70:90:100:110:130:200]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("appearanceBpTokenGroup", "[BP_APPEARANCE_MODIFIER:", 
@@ -3500,7 +4044,10 @@
                                         Body Part Appearance Modifier</button>
                                 </div> <!-- bpAppearanceModifier -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I determine how prevalent an appearance modifier is in the
+                                        creature's description.
+                                        <hr>[APP_MOD_IMPORTANCE:0 ~ ?]<br>[APP_MOD_IMPORTANCE:700]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("appearanceBpTokenGroup", "[APP_MOD_IMPORTANCE:", 
@@ -3510,17 +4057,26 @@
                                         Appearance Modifier Importance</button>
                                 </div> <!-- appModImportance -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define a noun for your creature's appearance
+                                        modifier.
+                                        <hr>[APP_MOD_NOUN:noun:SINGULAR/PLURAL]<br>[APP_MOD_NOUN:eyes:PLURAL]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("appearanceBpTokenGroup", "[APP_MOD_NOUN:", 
-                                2, 0, true, "appModNounList")'>Add: Appearance Modifier Noun</button>
+                                1, 1, false, "appModNounList")'>Add: Appearance Modifier Noun</button>
                                     <button
                                         onclick='removeTokenFromGroup("appearanceBpTokenGroup", "[APP_MOD_NOUN:")'>Remove:
                                         Appearance Modifier Noun</button>
                                 </div> <!-- appModNoun -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define the range of values that your appearance
+                                        modifier description may
+                                        use.
+                                        <hr>* Each number can be thought of as the edge of a bucket that a random number
+                                        will fall in to. (0 ~ 40, 40 ~ 60, 60 ~ 90, etc.)<br>[APP_MOD_DESC_RANGE:0 ~ ?:0
+                                        ~ ?:0 ~ ?:0 ~ ?:0 ~ ?:0 ~ ?]*<br>[APP_MOD_DESC_RANGE:30:60:90:110:150:190]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("appearanceBpTokenGroup", "[APP_MOD_DESC_RANGE:", 
@@ -3577,10 +4133,212 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="setBpGroupList">
+                                    <!-- Selector options -->
+                                    <option>BY_CATEGORY</option>
+                                    <option>BY_TYPE</option>
+                                    <option>BY_TOKEN</option>
+                                    <!-- Categories -->
+                                    <option>BODY</option>
+                                    <option>BODY_UPPER</option>
+                                    <option>BODY_LOWER</option>
+                                    <option>HEAD</option>
+                                    <option>ARM_UPPER</option>
+                                    <option>ARM_LOWER</option>
+                                    <option>HAND</option>
+                                    <option>PINCER</option>
+                                    <option>FOOT_FRONT</option>
+                                    <option>FOOT_REAR</option>
+                                    <option>LEG_FRONT</option>
+                                    <option>LEG_REAR</option>
+                                    <option>LEG_UPPER</option>
+                                    <option>LEG_LOWER</option>
+                                    <option>FOOT</option>
+                                    <option>FLIPPER</option>
+                                    <option>WING</option>
+                                    <option>TAIL</option>
+                                    <option>STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>NOSE</option>
+                                    <option>SHELL</option>
+                                    <option>ANTENNA</option>
+                                    <option>HORN</option>
+                                    <option>MANDIBLE</option>
+                                    <option>FINGER</option>
+                                    <option>TOE</option>
+                                    <option>EYE</option>
+                                    <option>NOSE</option>
+                                    <option>CHEEK</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>SPINE</option>
+                                    <option>NECK</option>
+                                    <option>SPINE</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>RIB_TRUE</option>
+                                    <option>RIB_FALSE</option>
+                                    <option>RIB_FLOATING</option>
+                                    <option>LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>BEAK</option>
+                                    <!-- Types -->
+                                    <option>UPPERBODY</option>
+                                    <option>LOWERBODY</option>
+                                    <option>HEAD</option>
+                                    <option>GRASP</option>
+                                    <option>STANCE</option>
+                                    <!-- Body part tokens -->
+                                    <option>UB</option>
+                                    <option>LB</option>
+                                    <option>HD</option>
+                                    <option>RUA</option>
+                                    <option>LUA</option>
+                                    <option>RLA</option>
+                                    <option>LLA</option>
+                                    <option>RH</option>
+                                    <option>LH</option>
+                                    <option>R_UB_PINCER</option>
+                                    <option>L_UB_PINCER</option>
+                                    <option>RA1</option>
+                                    <option>LA1</option>
+                                    <option>RF1</option>
+                                    <option>LF1</option>
+                                    <option>RA2</option>
+                                    <option>LA2</option>
+                                    <option>RF2</option>
+                                    <option>LF2</option>
+                                    <option>RA3</option>
+                                    <option>LA3</option>
+                                    <option>RF3</option>
+                                    <option>LF3</option>
+                                    <option>RA4</option>
+                                    <option>LA4</option>
+                                    <option>RF4</option>
+                                    <option>LF4</option>
+                                    <option>RA5</option>
+                                    <option>LA5</option>
+                                    <option>RF5</option>
+                                    <option>LF5</option>
+                                    <option>RA</option>
+                                    <option>LA</option>
+                                    <option>RL</option>
+                                    <option>LL</option>
+                                    <option>RF</option>
+                                    <option>LF</option>
+                                    <option>RUL</option>
+                                    <option>LUL</option>
+                                    <option>RLL</option>
+                                    <option>LLL</option>
+                                    <option>RFFLIP</option>
+                                    <option>LFFLIP</option>
+                                    <option>RRFLIP</option>
+                                    <option>LRFLIP</option>
+                                    <option>RWING</option>
+                                    <option>LWING</option>
+                                    <option>TAIL</option>
+                                    <option>TAIL_1</option>
+                                    <option>TAIL_2</option>
+                                    <option>TAIL_3</option>
+                                    <option>TAIL_STINGER</option>
+                                    <option>LOWER_BODY_STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>TRUNK</option>
+                                    <option>SHELL</option>
+                                    <option>R_ANT</option>
+                                    <option>L_ANT</option>
+                                    <option>HEAD_HORN</option>
+                                    <option>HEAD_HORN_1</option>
+                                    <option>HEAD_HORN_2</option>
+                                    <option>HEAD_HORN_3</option>
+                                    <option>HEAD_HORN_4</option>
+                                    <option>R_MAND</option>
+                                    <option>L_MAND</option>
+                                    <option>FINGER1</option>
+                                    <option>FINGER2</option>
+                                    <option>FINGER3</option>
+                                    <option>FINGER4</option>
+                                    <option>FINGER5</option>
+                                    <option>TOE1</option>
+                                    <option>TOE2</option>
+                                    <option>TOE3</option>
+                                    <option>TOE4</option>
+                                    <option>TOE5</option>
+                                    <option>EYE</option>
+                                    <option>REYE</option>
+                                    <option>LEYE</option>
+                                    <option>BEAK</option>
+                                    <option>NOSE</option>
+                                    <option>L_CHEEK</option>
+                                    <option>R_CHEEK</option>
+                                    <option>RLUNG</option>
+                                    <option>LLUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>UPPERSPINE</option>
+                                    <option>LOWERSPINE</option>
+                                    <option>NK</option>
+                                    <option>NECK</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>L_TRUE_RIB</option>
+                                    <option>R_TRUE_RIB</option>
+                                    <option>L_FALSE_RIB</option>
+                                    <option>R_FALSE_RIB</option>
+                                    <option>L_FLOATING_RIB</option>
+                                    <option>R_FLOATING_RIB</option>
+                                    <option>L_LIP</option>
+                                    <option>U_LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>L_EYELID</option>
+                                    <option>R_EYELID</option>
+                                    <option>BILL</option>
+                                    <option>HEAD_ANTLER_1</option>
+                                    <option>HEAD_ANTLER_2</option>
                                 </datalist> <!-- setBpGroup -->
                                 <datalist id="bpAppearanceModifierList">
+                                    <!-- Appearnce modifier qualities -->
+                                    <option>CLOSE_SET</option>
+                                    <option>DEEP_SET</option>
+                                    <option>ROUND_VS_NARROW</option>
+                                    <option>LARGE_IRIS</option>
+                                    <option>THICKNESS</option>
+                                    <option>BROADNESS</option>
+                                    <option>LENGTH</option>
+                                    <option>UPTURNED</option>
+                                    <option>CONVEX</option>
+                                    <option>SPLAYED_OUT</option>
+                                    <option>HANGING_LOBES</option>
+                                    <option>HEIGHT</option>
+                                    <option>GAPS</option>
+                                    <option>HIGH_CHEEKBONES</option>
+                                    <option>BROAD_CHIN</option>
+                                    <option>JUTTING_CHIN</option>
+                                    <option>SQUARE_CHIN</option>
+                                    <option>DEEP_VOICE</option>
+                                    <option>RASPY_VOICE</option>
+                                    <!-- Appearance modifiers-->
+                                    <option>0</option>
+                                    <option>25</option>
+                                    <option>50</option>
+                                    <option>75</option>
+                                    <option>100</option>
+                                    <option>125</option>
+                                    <option>150</option>
+                                    <option>175</option>
+                                    <option>200</option>
                                 </datalist> <!-- bpAppearanceModifier -->
                                 <datalist id="appModNounList">
+                                    <option>SINGULAR</option>
+                                    <option>PLURAL</option>
                                 </datalist> <!-- appModNoun -->
                                 <datalist id="appModDescRangeList">
                                 </datalist> <!-- appModDescRange -->
@@ -3596,18 +4354,23 @@
                         <tr class="multiGroup">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I can define an attack, as well as the body part used in
+                                        the attack.
+                                        <hr>
+                                        [ATTACK:ATTACK_NAME:BODYPART:BY_CATEGORY/BY_TYPE/BY_TOKEN:CATEGORY/TYPE/TOKEN]<br>[ATTACK:PUNCH:BODYPART:BY_TYPE:GRASP]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFlexibleToken("combatTokenGroup", "[ATTACK:", 4, 0, true, 
-                                    "attackList", "attackListInput")'>Add:
+                                    "attackList")'>Add:
                                         Attack</button>
-                                    <input type="text" id="attackListInput">
                                     <button onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK:")'>Remove:
                                         Attack</button>
                                 </div> <!-- attack -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I define the skill used in your attack.
+                                        <hr>[ATTACK_SKILL:SKILL]<br>[ATTACK_SKILL:GRASP_STRIKE]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_SKILL:", 
@@ -3616,7 +4379,9 @@
                                         Attack Skill</button>
                                 </div> <!-- attackSkill -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I define your attack's execution verbs.
+                                        <hr>[ATTACK_VERB:2nd person:3rd person]<br>[ATTACK_VERB:punch:punches]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_VERB:", 
@@ -3626,7 +4391,10 @@
                                         Verb</button>
                                 </div> <!-- attackVerb -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I define your attack's contact area.
+                                        <hr>* Value is calculated as a percentage.<br>[ATTACK_CONTACT_PERC:0 ~
+                                        ?]*<br>[ATTACK_CONTACT_PERC:100]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_CONTACT_PERC:", 
@@ -3636,7 +4404,11 @@
                                     </button>
                                 </div> <!-- attackContactPerc -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I define your attack's warmup and cooldown time.
+                                        <hr>* Values are calculated as advenure mode ticks. (fortress mode : adventure
+                                        mode = 10 : 1) <br>[ATTACK_PREPARE_AND_RECOVER:0 ~ ? (warmup):0 ~
+                                        ? (cooldown)]*<br>[ATTACK_PREPARE_AND_RECOVER:3:3]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_PREPARE_AND_RECOVER:", 
@@ -3646,7 +4418,9 @@
                                         Attack Prepare and Recover</button>
                                 </div> <!-- attackPrepareAndRecover -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I determine whether the body part used in your attack
+                                        appears in the attack's announcement.
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedClosedToken("combatTokenGroup", "[ATTACK_FLAG_WITH]")'>Add:
@@ -3656,7 +4430,10 @@
                                         Attack Flag With</button>
                                 </div> <!-- attackFlagWith -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I determine how often your creature uses this attack when
+                                        compared to its other attacks.
+                                        <hr>[ATTACK_PRIORITY:MAIN/SECOND]<br>[ATTACK_PRIORITY:MAIN]
+                                    </span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_PRIORITY:", 
@@ -3666,7 +4443,8 @@
                                         Attack Priority</button>
                                 </div> <!-- attackPriority -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I cause this attack to have a penalty to multi-attacks.
+                                    </span>
                                 </div>
                                 <div>
                                     <button
@@ -3677,17 +4455,8 @@
                                         Attack Flag Bad Multiattack</button>
                                 </div> <!-- attackFlagBadMultiattack -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
-                                </div>
-                                <div>
-                                    <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_PENETRATION_PERC:", 
-                                1, 0, true, "attackPenetrationPercList")'>Add: Attack Penetration Percent</button>
-                                    <button
-                                        onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_PENETRATION_PERC:")'>Remove:
-                                        Attack Penetration Percent</button>
-                                </div> <!-- attackPenetrationPerc -->
-                                <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I cause your attack to be an edge attack. (It may be wise
+                                        to use this with ATTACK_PENETRATION_PERC.)</span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedClosedToken("combatTokenGroup", "[ATTACK_FLAG_EDGE]")'>Add:
@@ -3698,7 +4467,21 @@
                                         Attack Flag Edge</button>
                                 </div> <!-- attackFlagEdge -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I define the penetration value of your attack.
+                                        <hr>[ATTACK_PENETRATION_PERC:0 ~ 15000]<br>[ATTACK_PENETRATION_PERC:100]
+                                    </span>
+                                </div>
+                                <div>
+                                    <button onclick='addFixedToken("combatTokenGroup", "[ATTACK_PENETRATION_PERC:", 
+                                1, 0, true, "attackPenetrationPercList")'>Add: Attack Penetration Percent</button>
+                                    <button
+                                        onclick='removeTokenFromGroup("combatTokenGroup", "[ATTACK_PENETRATION_PERC:")'>Remove:
+                                        Attack Penetration Percent</button>
+                                </div> <!-- attackPenetrationPerc -->
+                                <div class="tooltip">?
+                                    <span class="tooltipText">I give your attack the ability to latch on with a
+                                        wrestling hold.
+                                        (This can lead to further damage via the shake around wrestling move.)</span>
                                 </div>
                                 <div>
                                     <button
@@ -3775,30 +4558,331 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="attackList">
+                                    <!-- Attacks -->
+                                    <option>PUNCH</option>
+                                    <option>KICK</option>
+                                    <option>SCRATCH</option>
+                                    <option>BITE</option>
+                                    <option>CLAW</option>
+                                    <option>GORE</option>
+                                    <option>SLAP</option>
                                     <option>BODYPART</option>
-                                    <option>CHILD_TISSUE_LAYER_GROUP</option>
-                                    <option>CHILD_BODYPART_GROUP</option>
+                                    <!-- Selector options -->
+                                    <option>BY_CATEGORY</option>
                                     <option>BY_TYPE</option>
+                                    <option>BY_TOKEN</option>
+                                    <!-- Categories -->
+                                    <option>BODY</option>
+                                    <option>BODY_UPPER</option>
+                                    <option>BODY_LOWER</option>
+                                    <option>HEAD</option>
+                                    <option>ARM_UPPER</option>
+                                    <option>ARM_LOWER</option>
+                                    <option>HAND</option>
+                                    <option>PINCER</option>
+                                    <option>FOOT_FRONT</option>
+                                    <option>FOOT_REAR</option>
+                                    <option>LEG_FRONT</option>
+                                    <option>LEG_REAR</option>
+                                    <option>LEG_UPPER</option>
+                                    <option>LEG_LOWER</option>
+                                    <option>FOOT</option>
+                                    <option>FLIPPER</option>
+                                    <option>WING</option>
+                                    <option>TAIL</option>
+                                    <option>STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>NOSE</option>
+                                    <option>SHELL</option>
+                                    <option>ANTENNA</option>
+                                    <option>HORN</option>
+                                    <option>MANDIBLE</option>
+                                    <option>FINGER</option>
+                                    <option>TOE</option>
+                                    <option>EYE</option>
+                                    <option>NOSE</option>
+                                    <option>CHEEK</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>SPINE</option>
+                                    <option>NECK</option>
+                                    <option>SPINE</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>RIB_TRUE</option>
+                                    <option>RIB_FALSE</option>
+                                    <option>RIB_FLOATING</option>
+                                    <option>LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>BEAK</option>
+                                    <!-- Types -->
+                                    <option>UPPERBODY</option>
+                                    <option>LOWERBODY</option>
+                                    <option>HEAD</option>
                                     <option>GRASP</option>
                                     <option>STANCE</option>
-                                    <option>BY_CATEGORY</option>
-                                    <option>FINGER</option>
-                                    <option>NAIL</option>
-                                    <option>HEAD</option>
+                                    <!-- Body part tokens -->
+                                    <option>UB</option>
+                                    <option>LB</option>
+                                    <option>HD</option>
+                                    <option>RUA</option>
+                                    <option>LUA</option>
+                                    <option>RLA</option>
+                                    <option>LLA</option>
+                                    <option>RH</option>
+                                    <option>LH</option>
+                                    <option>R_UB_PINCER</option>
+                                    <option>L_UB_PINCER</option>
+                                    <option>RA1</option>
+                                    <option>LA1</option>
+                                    <option>RF1</option>
+                                    <option>LF1</option>
+                                    <option>RA2</option>
+                                    <option>LA2</option>
+                                    <option>RF2</option>
+                                    <option>LF2</option>
+                                    <option>RA3</option>
+                                    <option>LA3</option>
+                                    <option>RF3</option>
+                                    <option>LF3</option>
+                                    <option>RA4</option>
+                                    <option>LA4</option>
+                                    <option>RF4</option>
+                                    <option>LF4</option>
+                                    <option>RA5</option>
+                                    <option>LA5</option>
+                                    <option>RF5</option>
+                                    <option>LF5</option>
+                                    <option>RA</option>
+                                    <option>LA</option>
+                                    <option>RL</option>
+                                    <option>LL</option>
+                                    <option>RF</option>
+                                    <option>LF</option>
+                                    <option>RUL</option>
+                                    <option>LUL</option>
+                                    <option>RLL</option>
+                                    <option>LLL</option>
+                                    <option>RFFLIP</option>
+                                    <option>LFFLIP</option>
+                                    <option>RRFLIP</option>
+                                    <option>LRFLIP</option>
+                                    <option>RWING</option>
+                                    <option>LWING</option>
+                                    <option>TAIL</option>
+                                    <option>TAIL_1</option>
+                                    <option>TAIL_2</option>
+                                    <option>TAIL_3</option>
+                                    <option>TAIL_STINGER</option>
+                                    <option>LOWER_BODY_STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>TRUNK</option>
+                                    <option>SHELL</option>
+                                    <option>R_ANT</option>
+                                    <option>L_ANT</option>
+                                    <option>HEAD_HORN</option>
+                                    <option>HEAD_HORN_1</option>
+                                    <option>HEAD_HORN_2</option>
+                                    <option>HEAD_HORN_3</option>
+                                    <option>HEAD_HORN_4</option>
+                                    <option>R_MAND</option>
+                                    <option>L_MAND</option>
+                                    <option>FINGER1</option>
+                                    <option>FINGER2</option>
+                                    <option>FINGER3</option>
+                                    <option>FINGER4</option>
+                                    <option>FINGER5</option>
+                                    <option>TOE1</option>
+                                    <option>TOE2</option>
+                                    <option>TOE3</option>
+                                    <option>TOE4</option>
+                                    <option>TOE5</option>
+                                    <option>EYE</option>
+                                    <option>REYE</option>
+                                    <option>LEYE</option>
+                                    <option>BEAK</option>
+                                    <option>NOSE</option>
+                                    <option>L_CHEEK</option>
+                                    <option>R_CHEEK</option>
+                                    <option>RLUNG</option>
+                                    <option>LLUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>UPPERSPINE</option>
+                                    <option>LOWERSPINE</option>
+                                    <option>NK</option>
+                                    <option>NECK</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
                                     <option>TOOTH</option>
+                                    <option>L_TRUE_RIB</option>
+                                    <option>R_TRUE_RIB</option>
+                                    <option>L_FALSE_RIB</option>
+                                    <option>R_FALSE_RIB</option>
+                                    <option>L_FLOATING_RIB</option>
+                                    <option>R_FLOATING_RIB</option>
+                                    <option>L_LIP</option>
+                                    <option>U_LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>L_EYELID</option>
+                                    <option>R_EYELID</option>
+                                    <option>BILL</option>
+                                    <option>HEAD_ANTLER_1</option>
+                                    <option>HEAD_ANTLER_2</option>
                                 </datalist> <!-- attack -->
                                 <datalist id="attackSkillList">
+                                    <!-- Combat skills -->
                                     <option>GRASP_STRIKE</option>
                                     <option>STANCE_STRIKE</option>
                                     <option>BITE</option>
+                                    <option>WRESTLING</option>
+                                    <option>DODGING</option>
+                                    <option>THROW</option>
+                                    <option>MELEE_COMBAT</option>
+                                    <option>RANGED_COMBAT</option>
+                                    <option>AXE</option>
+                                    <option>SWORD</option>
+                                    <option>DAGGER</option>
+                                    <option>MACE</option>
+                                    <option>HAMMER</option>
+                                    <option>SPEAR</option>
+                                    <option>CROSSBOW</option>
+                                    <option>PIKE</option>
+                                    <option>WHIP</option>
+                                    <option>BOW</option>
+                                    <option>BLOWGUN</option>
+                                    <option>MISC_WEAPON</option>
+                                    <option>SHIELD</option>
+                                    <option>ARMOR</option>
+                                    <option>SIEGEOPERATE</option>
+                                    <option>DISCIPLINE</option>
+                                    <option>SITUATIONAL_AWARENESS</option>
                                 </datalist> <!-- attackSkill -->
                                 <datalist id="attackContactPercList">
+                                    <!-- Attack percentages -->
+                                    <option>100</option>
+                                    <option>95</option>
+                                    <option>90</option>
+                                    <option>85</option>
+                                    <option>80</option>
+                                    <option>75</option>
+                                    <option>70</option>
+                                    <option>65</option>
+                                    <option>60</option>
+                                    <option>55</option>
+                                    <option>50</option>
+                                    <option>45</option>
+                                    <option>40</option>
+                                    <option>35</option>
+                                    <option>30</option>
+                                    <option>25</option>
+                                    <option>20</option>
+                                    <option>15</option>
+                                    <option>10</option>
+                                    <option>5</option>
+                                    <option>0</option>
+                                    <option>105</option>
+                                    <option>110</option>
+                                    <option>115</option>
+                                    <option>120</option>
+                                    <option>125</option>
+                                    <option>130</option>
+                                    <option>135</option>
+                                    <option>140</option>
+                                    <option>145</option>
+                                    <option>150</option>
+                                    <option>155</option>
+                                    <option>160</option>
+                                    <option>165</option>
+                                    <option>170</option>
+                                    <option>175</option>
+                                    <option>180</option>
+                                    <option>185</option>
+                                    <option>190</option>
+                                    <option>195</option>
+                                    <option>200</option>
                                 </datalist> <!-- attackContactPerc -->
                                 <datalist id="attackPrepareAndRecoverList">
+                                    <!-- Attack cooldown list-->
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>30</option>
+                                    <option>40</option>
+                                    <option>50</option>
+                                    <option>100</option>
                                 </datalist> <!-- attackPrepareAndRecover -->
                                 <datalist id="attackPriorityList">
+                                    <option>MAIN</option>
+                                    <option>SECOND</option>
                                 </datalist> <!-- attackPriority -->
                                 <datalist id="attackPenetrationPercList">
+                                    <!-- Attack percentages -->
+                                    <option>100</option>
+                                    <option>95</option>
+                                    <option>90</option>
+                                    <option>85</option>
+                                    <option>80</option>
+                                    <option>75</option>
+                                    <option>70</option>
+                                    <option>65</option>
+                                    <option>60</option>
+                                    <option>55</option>
+                                    <option>50</option>
+                                    <option>45</option>
+                                    <option>40</option>
+                                    <option>35</option>
+                                    <option>30</option>
+                                    <option>25</option>
+                                    <option>20</option>
+                                    <option>15</option>
+                                    <option>10</option>
+                                    <option>5</option>
+                                    <option>0</option>
+                                    <option>105</option>
+                                    <option>110</option>
+                                    <option>115</option>
+                                    <option>120</option>
+                                    <option>125</option>
+                                    <option>130</option>
+                                    <option>135</option>
+                                    <option>140</option>
+                                    <option>145</option>
+                                    <option>150</option>
+                                    <option>155</option>
+                                    <option>160</option>
+                                    <option>165</option>
+                                    <option>170</option>
+                                    <option>175</option>
+                                    <option>180</option>
+                                    <option>185</option>
+                                    <option>190</option>
+                                    <option>195</option>
+                                    <option>200</option>
+                                    <option>300</option>
+                                    <option>400</option>
+                                    <option>500</option>
+                                    <option>1000</option>
+                                    <option>5000</option>
+                                    <option>10000</option>
+                                    <option>15000</option>
                                 </datalist> <!-- attackPenetrationPerc -->
                             </td>
                         </tr>
