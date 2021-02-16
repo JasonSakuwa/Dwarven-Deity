@@ -1174,6 +1174,7 @@ flexibleClosed button
 
 
 0 ~ ?
+
 * A lower number allows for better healing.<br>
 
 // fundamental tokens
@@ -1611,6 +1612,7 @@ flexibleClosed button
     // fixedList
     mannerismLips
     [MANNERISM_LIPS:lips]
+    I define what your creature uses for  mannerisms.<hr>[MANNERISM_:singular/plural]<br>[MANNERISM_:]
     // fixedList
     mannerismCheek
     [MANNERISM_CHEEK:cheek]
