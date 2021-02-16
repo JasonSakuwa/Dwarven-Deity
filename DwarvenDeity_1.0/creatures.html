@@ -865,7 +865,7 @@
                                     <span class="tooltipText">I apply tissues to a specified part of your creature's
                                         body.
                                         <hr>
-                                        [TISSUE_LAYER:BY_TYPE/BY_CATEGORY/BY_TOKEN:TYPE/CATEGORY/TOKEN:TISSUE:LOCATION(:BODY_PART:0
+                                        [TISSUE_LAYER:BY_CATEGORY/BY_TYPE/BY_TOKEN:CATEGORY/TYPE/TOKEN:TISSUE:LOCATION(:BODY_PART:0
                                         ~ 100)]<br>[TISSUE_LAYER:BY_CATEGORY:HEAD:EYEBROW:ABOVE:BY_CATEGORY:EYE]
                                     </span>
                                 </div>
@@ -1577,7 +1577,7 @@
                                         could make it so that they are always as slimy as a slug, or let them cry after
                                         having a bad day...
                                         <hr>
-                                        [SECRETION:MATERIAL:STATE:BY_TOKEN/BY_CATEGORY/BY_TYPE:TOKEN/CATEGORY/TYPE:TISSUE_LAYER:TRIGGER]<br>[SECRETION:LOCAL_CREATURE_MAT:TEARS:LIQUID:BY_CATEGORY:EYE:ALL:EXTREME_EMOTION]
+                                        [SECRETION:MATERIAL:STATE:BY_CATEGORY/BY_TYPE/BY_TOKEN:CATEGORY/TYPE/TOKEN:TISSUE_LAYER:TRIGGER]<br>[SECRETION:LOCAL_CREATURE_MAT:TEARS:LIQUID:BY_CATEGORY:EYE:ALL:EXTREME_EMOTION]
                                     </span>
                                 </div>
                             </td>
@@ -5682,7 +5682,9 @@
                         <tr class="fixedList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I define a new caste!
+                                        <hr>[CASTE:CASTE_NAME]<br>[CASTE:FEMALE]
+                                    </span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="caste1Checkbox" class="cb"></td>
@@ -5699,7 +5701,7 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I give this caste the ability to produce offspring.</span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="femaleCheckbox" class="cb"></td>
@@ -5710,7 +5712,8 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I cause this caste to have one child at a time and only
+                                        occasionally have twins and triplets.</span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="multipleLitterRareCheckbox" class="cb"></td>
@@ -5721,7 +5724,10 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I begin a selection of body parts.
+                                        <hr>
+                                        [SET_BP_GROUP:BY_TYPE/BY_CATEGORY/BY_TOKEN:CATEGORY/TYPE/TOKEN]<br>[SET_BP_GROUP:BY_TYPE:LOWERBODY]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -5750,7 +5756,9 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I add a type of body part to a specified location.
+                                        <hr>[BP_ADD_TYPE:TYPE]<br>[BP_ADD_TYPE:GELDABLE]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -5780,7 +5788,11 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I am less essential here, but I can still allow you to
+                                        define your creature's anatomy for this caste in a simple manner.
+                                        <hr>
+                                        [BODY_DETAIL_PLAN:PLAN_NAME:(TISSUE:TISSUE:TISSUE...)]<br>[BODY_DETAIL_PLAN:FACIAL_HAIR_TISSUE_LAYERS]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -5819,7 +5831,9 @@
                         <tr class="fixedList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I define a new caste.
+                                        <hr>[CASTE:CASTE_NAME]<br>[CASTE:FEMALE]
+                                    </span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="caste2Checkbox" class="cb"></td>
@@ -5837,7 +5851,7 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I cause this caste to become biologically male.</span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="maleCheckbox" class="cb"></td>
@@ -5848,7 +5862,10 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I begin a selection of body parts.
+                                        <hr>
+                                        [SET_BP_GROUP:BY_TYPE/BY_CATEGORY/BY_TOKEN:CATEGORY/TYPE/TOKEN]<br>[SET_BP_GROUP:BY_TYPE:LOWERBODY]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -5877,7 +5894,9 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I add a type of body part to a specified location.
+                                        <hr>[BP_ADD_TYPE:TYPE]<br>[BP_ADD_TYPE:GELDABLE]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -5907,7 +5926,11 @@
                         <tr class="flexibleList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I am less essential here, but I can still allow you to
+                                        define your creature's anatomy for this caste in a simple manner.
+                                        <hr>
+                                        [BODY_DETAIL_PLAN:PLAN_NAME:(TISSUE:TISSUE:TISSUE...)]<br>[BODY_DETAIL_PLAN:FACIAL_HAIR_TISSUE_LAYERS]
+                                    </span>
                                 </div>
                             </td>
                             <td>
@@ -5945,7 +5968,7 @@
                         <tr class="multiGroup">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I define a new caste...</span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedToken("multipleCasteTokenGroup", "[CASTE:", 
@@ -5954,7 +5977,7 @@
                                         Caste</button>
                                 </div> <!-- caste3 -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I give this caste the ability to produce offspring.</span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedClosedToken("multipleCasteTokenGroup", "[FEMALE]")'>Add:
@@ -5964,7 +5987,7 @@
                                         Female</button>
                                 </div><!-- female2  -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I cause this caste to become biologically male.</span>
                                 </div>
                                 <div>
                                     <button onclick='addFixedClosedToken("multipleCasteTokenGroup", "[MALE]")'>Add:
@@ -5973,7 +5996,8 @@
                                         Male</button>
                                 </div> <!-- male2 -->
                                 <div class="tooltip">?
-                                    <span class="tooltipText"></span>
+                                    <span class="tooltipText">I cause this caste to have one child at a time and only
+                                        occasionally have twins and triplets.</span>
                                 </div>
                                 <div>
                                     <button
@@ -6024,7 +6048,10 @@
                                 </div>
                                 <div id="casteSelectionButtons" style="display:none">
                                     <div class="tooltip">?
-                                        <span class="tooltipText"></span>
+                                        <span class="tooltipText">I allow you to select previously defined castes for
+                                            modification.
+                                            <hr>[SELECT_CASTE:CASTE/ALL]<br>[SELECT_CASTE:ALL]
+                                        </span>
                                     </div>
                                     <div>
                                         <button onclick='addFixedToken("multipleCasteSelectionTokenGroup", "[SELECT_CASTE:", 
