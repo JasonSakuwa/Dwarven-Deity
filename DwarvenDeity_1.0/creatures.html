@@ -336,6 +336,7 @@
                                     <option>2</option>
                                 </datalist>
                                 <datalist id="bodyDetailPlanList">
+                                    <!-- Body detail plans-->
                                     <option>STANDARD_MATERIALS</option>
                                     <option>CHITIN_MATERIALS</option>
                                     <option>STANDARD_TISSUES</option>
@@ -4527,7 +4528,7 @@
                                 </div> <!-- attackPrepareAndRecover -->
                                 <div>
                                     <input type="checkbox" class="cb">
-                                    <label>[ATTACK_FLAG_WITH]</label>
+                                    <label onclick="flexibleClosedAutoChecker(this);">[ATTACK_FLAG_WITH]</label>
                                 </div> <!-- attackFlagWith -->
                                 <div>
                                     <input type="checkbox" class="cb">
@@ -4548,11 +4549,11 @@
                                 </div> <!-- attackPenetrationPerc -->
                                 <div>
                                     <input type="checkbox" class="cb">
-                                    <label>[ATTACK_FLAG_EDGE]</label>
+                                    <label onclick="flexibleClosedAutoChecker(this);">[ATTACK_FLAG_EDGE]</label>
                                 </div> <!-- attackFlagEdge -->
                                 <div>
                                     <input type="checkbox" class="cb">
-                                    <label>[ATTACK_FLAG_CANLATCH]</label>
+                                    <label onclick="flexibleClosedAutoChecker(this);">[ATTACK_FLAG_CANLATCH]</label>
                                 </div> <!-- attackFlagCanlatch -->
                             </td>
                             <td>
@@ -4911,6 +4912,43 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="maxageList">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>10</option>
+                                    <option>15</option>
+                                    <option>20</option>
+                                    <option>25</option>
+                                    <option>30</option>
+                                    <option>40</option>
+                                    <option>50</option>
+                                    <option>60</option>
+                                    <option>70</option>
+                                    <option>80</option>
+                                    <option>90</option>
+                                    <option>100</option>
+                                    <option>150</option>
+                                    <option>200</option>
+                                    <option>250</option>
+                                    <option>300</option>
+                                    <option>350</option>
+                                    <option>400</option>
+                                    <option>450</option>
+                                    <option>500</option>
+                                    <option>550</option>
+                                    <option>600</option>
+                                    <option>650</option>
+                                    <option>700</option>
+                                    <option>750</option>
+                                    <option>800</option>
+                                    <option>850</option>
+                                    <option>900</option>
+                                    <option>950</option>
+                                    <option>1000</option>
+                                    <optino>10000</optino>
                                 </datalist>
                             </td>
                         </tr> <!-- maxage -->
@@ -4931,6 +4969,41 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="babyList">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>15</option>
+                                    <option>16</option>
+                                    <option>17</option>
+                                    <option>18</option>
+                                    <option>19</option>
+                                    <option>20</option>
+                                    <option>21</option>
+                                    <option>22</option>
+                                    <option>23</option>
+                                    <option>24</option>
+                                    <option>25</option>
+                                    <option>30</option>
+                                    <option>40</option>
+                                    <option>50</option>
+                                    <option>60</option>
+                                    <option>70</option>
+                                    <option>80</option>
+                                    <option>90</option>
+                                    <option>100</option>
+                                    <option>1000</option>
                                 </datalist>
                             </td>
                         </tr> <!-- baby -->
@@ -4990,6 +5063,41 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="childList">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>15</option>
+                                    <option>16</option>
+                                    <option>17</option>
+                                    <option>18</option>
+                                    <option>19</option>
+                                    <option>20</option>
+                                    <option>21</option>
+                                    <option>22</option>
+                                    <option>23</option>
+                                    <option>24</option>
+                                    <option>25</option>
+                                    <option>30</option>
+                                    <option>40</option>
+                                    <option>50</option>
+                                    <option>60</option>
+                                    <option>70</option>
+                                    <option>80</option>
+                                    <option>90</option>
+                                    <option>100</option>
+                                    <option>1000</option>
                                 </datalist>
                             </td>
                         </tr> <!-- child -->
@@ -5092,6 +5200,47 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="smellTriggerList">
+                                    <option>0</option>
+                                    <option>5</option>
+                                    <option>10</option>
+                                    <option>15</option>
+                                    <option>20</option>
+                                    <option>25</option>
+                                    <option>30</option>
+                                    <option>35</option>
+                                    <option>40</option>
+                                    <option>45</option>
+                                    <option>50</option>
+                                    <option>55</option>
+                                    <option>60</option>
+                                    <option>65</option>
+                                    <option>70</option>
+                                    <option>75</option>
+                                    <option>80</option>
+                                    <option>85</option>
+                                    <option>90</option>
+                                    <option>95</option>
+                                    <option>100</option>
+                                    <option>500</option>
+                                    <option>1000</option>
+                                    <option>1500</option>
+                                    <option>2000</option>
+                                    <option>2500</option>
+                                    <option>3000</option>
+                                    <option>3500</option>
+                                    <option>4000</option>
+                                    <option>4500</option>
+                                    <option>5000</option>
+                                    <option>5500</option>
+                                    <option>6000</option>
+                                    <option>6500</option>
+                                    <option>7000</option>
+                                    <option>7500</option>
+                                    <option>8000</option>
+                                    <option>8500</option>
+                                    <option>9000</option>
+                                    <option>9500</option>
+                                    <option>10000</option>
                                 </datalist>
                             </td>
                         </tr> <!-- smellTrigger -->
@@ -5113,6 +5262,27 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="lowLightVision List">
+                                    <option>10000</option>
+                                    <option>9500</option>
+                                    <option>9000</option>
+                                    <option>8500</option>
+                                    <option>8000</option>
+                                    <option>7500</option>
+                                    <option>7000</option>
+                                    <option>6500</option>
+                                    <option>6000</option>
+                                    <option>5500</option>
+                                    <option>5000</option>
+                                    <option>4500</option>
+                                    <option>4000</option>
+                                    <option>3500</option>
+                                    <option>3000</option>
+                                    <option>2500</option>
+                                    <option>2000</option>
+                                    <option>1500</option>
+                                    <option>1000</option>
+                                    <option>500</option>
+                                    <option>0</option>
                                 </datalist>
                             </td>
                         </tr> <!-- lowLightVision -->
@@ -5133,6 +5303,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="homeothermList">
+                                    <option>10067</option>
+                                    <option>10000</option>
                                 </datalist>
                             </td>
                         </tr> <!-- homeotherm -->
@@ -5151,8 +5323,9 @@
                         <tr class="fixedList">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText">I determine the speech file your creature uses for
-                                        boasting. (Not related to general conversation.) </span>
+                                    <span class="tooltipText">I determine the speech file other creatures will use to
+                                        boast about killing your creature. (Unrelated to your creature's speech.)
+                                    </span>
                                 </div>
                             </td>
                             <td><input type="checkbox" id="speechCheckbox" class="cb"></td>
@@ -5164,6 +5337,8 @@
                                 <p>]</p>
                                 <datalist id="speechList">
                                     <option>dwarf.txt</option>
+                                    <option>elf.txt</option>
+                                    <option>general.txt</option>
                                 </datalist>
                             </td>
                         </tr> <!-- speech -->
@@ -5190,7 +5365,8 @@
                             <td>
                                 <div class="tooltip">?
                                     <span class="tooltipText">I define your creature's profession name when it has a
-                                        specified profession.
+                                        specified profession. (Rest assured, this is optional. There are default
+                                        profession names: craftsman, craftsmen)
                                         <hr>
                                         [PROFESSION_NAME:PROFESSION:singular:plural]<br>[PROFESSION_NAME:CRAFTSMAN:craftsdwarf:craftsdwarves]
                                     </span>
@@ -5199,7 +5375,7 @@
                             <td>
                                 <div>
                                     <button onclick='addFixedToken("professionNameTokenGroup", "[PROFESSION_NAME:", 
-                                3, 0, true, "professionNameList")'>Add: Profession Name</button>
+                                1, 2, true, "professionNameList")'>Add: Profession Name</button>
                                     <button
                                         onclick='removeTokenFromGroup("professionNameTokenGroup", "[PROFESSION_NAME:")'>Remove:
                                         Profession Name</button>
@@ -5211,13 +5387,148 @@
                                     <label for="professionName">[PROFESSION_NAME:</label>
                                     <input list="professionNameList" id="professionName"
                                         onchange="flexibleAutoChecker(this)">
-                                    <input list="professionNameList" onchange="flexibleAutoChecker(this)">
-                                    <input list="professionNameList" onchange="flexibleAutoChecker(this)">
+                                    <input type="text" onchange="flexibleAutoChecker(this)">
+                                    <input type="text" onchange="flexibleAutoChecker(this)">
                                 </div>
                             </td>
                             <td>
                                 <p>]</p>
                                 <datalist id="professionNameList">
+                                    <option>ADMINISTRATOR</option>
+                                    <option>ALCHEMIST</option>
+                                    <option>ANIMAL_CARETAKER</option>
+                                    <option>ANIMAL_DISSECTOR</option>
+                                    <option>ANIMAL_TRAINER</option>
+                                    <option>ARCHITECT</option>
+                                    <option>ARMORER</option>
+                                    <option>ASTRONOMER</option>
+                                    <option>AXEMAN</option>
+                                    <option>BABY</option>
+                                    <option>BARD</option>
+                                    <option>BEAST_HUNTER</option>
+                                    <option>BEEKEEPER</option>
+                                    <option>BLACKSMITH</option>
+                                    <option>BLOWGUNMAN</option>
+                                    <option>BONE_CARVER</option>
+                                    <option>BONE_SETTER</option>
+                                    <option>BOOKBINDER</option>
+                                    <option>BOWMAN</option>
+                                    <option>BOWYER</option>
+                                    <option>BREWER</option>
+                                    <option>BUTCHER</option>
+                                    <option>CARPENTER</option>
+                                    <option>CHEESE_MAKER</option>
+                                    <option>CHEMIST</option>
+                                    <option>CHILD</option>
+                                    <option>CLERK</option>
+                                    <option>CLOTHIER</option>
+                                    <option>COOK</option>
+                                    <option>CRAFTSMAN</option>
+                                    <option>CRIMINAL</option>
+                                    <option>CROSSBOWMAN</option>
+                                    <option>DANCER</option>
+                                    <option>DIAGNOSER</option>
+                                    <option>DOCTOR</option>
+                                    <option>DRUNK</option>
+                                    <option>DYER</option>
+                                    <option>ENGINEER</option>
+                                    <option>ENGRAVER</option>
+                                    <option>FARMER</option>
+                                    <option>FISH_CLEANER</option>
+                                    <option>FISH_DISSECTOR</option>
+                                    <option>FISHERMAN</option>
+                                    <option>FISHERY_WORKER</option>
+                                    <option>FURNACE_OPERATOR</option>
+                                    <option>GELDER</option>
+                                    <option>GEM_CUTTER</option>
+                                    <option>GEM_SETTER</option>
+                                    <option>GEOGRAPHER</option>
+                                    <option>GLASSMAKER</option>
+                                    <option>GLAZER</option>
+                                    <option>HAMMERMAN</option>
+                                    <option>HERBALIST</option>
+                                    <option>HISTORIAN</option>
+                                    <option>HUNTER</option>
+                                    <option>JEWELER</option>
+                                    <option>LASHER</option>
+                                    <option>LEATHERWORKER</option>
+                                    <option>LYE_MAKER</option>
+                                    <option>MACEMAN</option>
+                                    <option>MASON</option>
+                                    <option>MASTER_AXEMAN</option>
+                                    <option>MASTER_BLOWGUNMAN</option>
+                                    <option>MASTER_BOWMAN</option>
+                                    <option>MASTER_CROSSBOWMAN</option>
+                                    <option>MASTER_HAMMERMAN</option>
+                                    <option>MASTER_LASHER</option>
+                                    <option>MASTER_MACEMAN</option>
+                                    <option>MASTER_PIKEMAN</option>
+                                    <option>MASTER_SPEARMAN</option>
+                                    <option>MASTER_SWORDSMAN </option>
+                                    <option>MASTER_THIEF</option>
+                                    <option>MASTER_WRESTLER</option>
+                                    <option>MATHEMATICIAN</option>
+                                    <option>MECHANIC</option>
+                                    <option>MERCENARY</option>
+                                    <option>MERCHANT</option>
+                                    <option>MESSENGER</option>
+                                    <option>METALCRAFTER</option>
+                                    <option>METALSMITH</option>
+                                    <option>MILKER</option>
+                                    <option>MILLER</option>
+                                    <option>MINER</option>
+                                    <option>MONK</option>
+                                    <option>MONSTER_SLAYER</option>
+                                    <option>NATURALIST</option>
+                                    <option>PAPERMAKER</option>
+                                    <option>PEDDLER</option>
+                                    <option>PERFORMER</option>
+                                    <option>PHILOSOPHER</option>
+                                    <option>PIKEMAN</option>
+                                    <option>PILGRIM</option>
+                                    <option>PLANTER</option>
+                                    <option>POET</option>
+                                    <option>POTASH_MAKER</option>
+                                    <option>POTTER</option>
+                                    <option>PRESSER</option>
+                                    <option>PROPHET</option>
+                                    <option>PUMP_OPERATOR</option>
+                                    <option>RANGER</option>
+                                    <option>RECRUIT</option>
+                                    <option>SAGE</option>
+                                    <option>SCHOLAR</option>
+                                    <option>SCOUT</option>
+                                    <option>SCRIBE</option>
+                                    <option>SHEARER</option>
+                                    <option>SIEGE_ENGINEER</option>
+                                    <option>SIEGE_OPERATOR</option>
+                                    <option>SNATCHER</option>
+                                    <option>SOAP_MAKER</option>
+                                    <option>SPEARMAN</option>
+                                    <option>SPINNER</option>
+                                    <option>STANDARD</option>
+                                    <option>STONECRAFTER</option>
+                                    <option>STONEWORKER</option>
+                                    <option>STRAND_EXTRACTOR</option>
+                                    <option>SURGEON</option>
+                                    <option>SUTURER</option>
+                                    <option>SWORDSMAN</option>
+                                    <option>TANNER</option>
+                                    <option>TAVERN_KEEPER</option>
+                                    <option>THIEF</option>
+                                    <option>THRESHER</option>
+                                    <option>TRADER</option>
+                                    <option>TRAINED_HUNTER</option>
+                                    <option>TRAINED_WAR</option>
+                                    <option>TRAPPER</option>
+                                    <option>WAX_WORKER</option>
+                                    <option>WEAPONSMITH</option>
+                                    <option>WEAVER</option>
+                                    <option>WOOD_BURNER</option>
+                                    <option>WOODCRAFTER</option>
+                                    <option>WOODCUTTER</option>
+                                    <option>WOODWORKER</option>
+                                    <option>WRESTLER</option>
                                 </datalist>
                             </td>
                         </tr> <!-- professionName -->
@@ -5234,8 +5545,9 @@
                             <td>
                                 <div class="tooltip">?
                                     <span class="tooltipText">I define the personality of your creature.
-                                        <hr>[PERSONALITY:ATTRIBUTE:0 ~ 100(lowest):0 ~ 100(median):0 ~
-                                        100(highest)]<br>[PERSONALITY:IMMODERATION:0:55:100]
+                                        <hr>* Default - 0:50:100.<br>[PERSONALITY:ATTRIBUTE:0 ~ 100(lowest):0 ~
+                                        100(median):0 ~
+                                        100(highest)]*<br>[PERSONALITY:IMMODERATION:0:55:100]
                                     </span>
                                 </div>
                             </td>
@@ -5261,6 +5573,77 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="personalityList">
+                                    <option>LOVE_PROPENSITY</option>
+                                    <option>HATE_PROPENSITY</option>
+                                    <option>ENVY_PROPENSITY</option>
+                                    <option>CHEER_PROPENSITY</option>
+                                    <option>DEPRESSION_PROPENSITY</option>
+                                    <option>ANGER_PROPENSITY</option>
+                                    <option>ANXIETY_PROPENSITY</option>
+                                    <option>LUST_PROPENSITY</option>
+                                    <option>STRESS_VULNERABILITY</option>
+                                    <option>GREED</option>
+                                    <option>IMMODERATION</option>
+                                    <option>VIOLENT</option>
+                                    <option>PERSEVERANCE</option>
+                                    <option>WASTEFULNESS</option>
+                                    <option>DISCORD</option>
+                                    <option>FRIENDLINESS</option>
+                                    <option>POLITENESS</option>
+                                    <option>DISDAIN_ADVICE</option>
+                                    <option>BRAVERY</option>
+                                    <option>CONFIDENCE</option>
+                                    <option>VANITY</option>
+                                    <option>AMBITION</option>
+                                    <option>GRATITUDE</option>
+                                    <option>IMMODESTY</option>
+                                    <option>HUMOR</option>
+                                    <option>VENGEFUL</option>
+                                    <option>PRIDE</option>
+                                    <option>CRUELTY</option>
+                                    <option>SINGLEMINDED</option>
+                                    <option>HOPEFUL</option>
+                                    <option>CURIOUS</option>
+                                    <option>BASHFUL</option>
+                                    <option>PRIVACY</option>
+                                    <option>PERFECTIONIST</option>
+                                    <option>CLOSEMINDED</option>
+                                    <option>TOLERANT</option>
+                                    <option>EMOTIONALLY_OBSESSIVE</option>
+                                    <option>SWAYED_BY_EMOTIONS</option>
+                                    <option>ALTRUISM</option>
+                                    <option>DUTIFULNESS</option>
+                                    <option>THOUGHTLESSNESS</option>
+                                    <option>ORDERLINESS</option>
+                                    <option>TRUST</option>
+                                    <option>GREGARIOUSNESS</option>
+                                    <option>ASSERTIVENESS</option>
+                                    <option>ACTIVITY_LEVEL</option>
+                                    <option>EXCITEMENT_SEEKING</option>
+                                    <option>IMAGINATION</option>
+                                    <option>ABSTRACT_INCLINED</option>
+                                    <option>ART_INCLINED</option>
+                                    <option>0</option>
+                                    <option>5</option>
+                                    <option>10</option>
+                                    <option>15</option>
+                                    <option>20</option>
+                                    <option>25</option>
+                                    <option>30</option>
+                                    <option>35</option>
+                                    <option>40</option>
+                                    <option>45</option>
+                                    <option>50</option>
+                                    <option>55</option>
+                                    <option>60</option>
+                                    <option>65</option>
+                                    <option>70</option>
+                                    <option>75</option>
+                                    <option>80</option>
+                                    <option>85</option>
+                                    <option>90</option>
+                                    <option>95</option>
+                                    <option>100</option>
                                 </datalist>
                             </td>
                         </tr> <!-- personality -->
@@ -5280,10 +5663,14 @@
                                 <label for="mannerismFingers">[MANNERISM_FINGERS:</label>
                                 <input list="mannerismFingersList" id="mannerismFingers"
                                     onchange="fixedAutoChecker(this)">
+                                <input list="mannerismFingersList" id="mannerismFingers"
+                                    onchange="fixedAutoChecker(this)">
                             </td>
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismFingersList">
+                                    <option>finger</option>
+                                    <option>fingers</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismFingers -->
@@ -5303,6 +5690,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismNoseList">
+                                    <option>nose</option>
+                                    <option>noses</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismNose -->
@@ -5322,6 +5711,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismEarList">
+                                    <option>ear</option>
+                                    <option>ears</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismEar -->
@@ -5341,6 +5732,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismHeadList">
+                                    <option>head</option>
+                                    <option>heads</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismHead -->
@@ -5360,6 +5753,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismEyesList">
+                                    <option>eye</option>
+                                    <option>eyes</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismEyes -->
@@ -5379,6 +5774,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismMouthList">
+                                    <option>mouth</option>
+                                    <option>mouths</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismMouth -->
@@ -5398,6 +5795,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismHairList">
+                                    <option>hair</option>
+                                    <option>hairs</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismHair -->
@@ -5418,6 +5817,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismKnucklesList">
+                                    <option>knuckle</option>
+                                    <option>knuckles</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismKnuckles -->
@@ -5437,6 +5838,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismLipsList">
+                                    <option>lip</option>
+                                    <option>lips</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismLips -->
@@ -5456,6 +5859,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismCheekList">
+                                    <option>cheek</option>
+                                    <option>cheeks</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismCheek -->
@@ -5475,6 +5880,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismNailsList">
+                                    <option>nail</option>
+                                    <option>nails</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismNails -->
@@ -5494,6 +5901,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismFeetList">
+                                    <option>foot</option>
+                                    <option>feet</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismFeet -->
@@ -5513,6 +5922,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismArmsList">
+                                    <option>arm</option>
+                                    <option>arms</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismArms -->
@@ -5532,6 +5943,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismHandsList">
+                                    <option>hand</option>
+                                    <option>hands</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismHands -->
@@ -5552,6 +5965,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismTongueList">
+                                    <option>tongue</option>
+                                    <option>tongues</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismTongue -->
@@ -5571,6 +5986,8 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="mannerismLegList">
+                                    <option>leg</option>
+                                    <option>legs</option>
                                 </datalist>
                             </td>
                         </tr> <!-- mannerismLeg -->
@@ -5695,6 +6112,7 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="caste1List">
+                                    <option>FEMALE</option>
                                 </datalist>
                             </td>
                         </tr> <!-- caste1 -->
@@ -5750,6 +6168,176 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="setBpGroup1List">
+                                    <!-- Selector options -->
+                                    <option>BY_TYPE</option>
+                                    <option>BY_CATEGORY</option>
+                                    <option>BY_TOKEN</option>
+                                    <!-- Types -->
+                                    <option>UPPERBODY</option>
+                                    <option>LOWERBODY</option>
+                                    <option>HEAD</option>
+                                    <option>GRASP</option>
+                                    <option>STANCE</option>
+                                    <!-- Categories -->
+                                    <option>BODY</option>
+                                    <option>BODY_UPPER</option>
+                                    <option>BODY_LOWER</option>
+                                    <option>HEAD</option>
+                                    <option>ARM_UPPER</option>
+                                    <option>ARM_LOWER</option>
+                                    <option>HAND</option>
+                                    <option>PINCER</option>
+                                    <option>FOOT_FRONT</option>
+                                    <option>FOOT_REAR</option>
+                                    <option>LEG_FRONT</option>
+                                    <option>LEG_REAR</option>
+                                    <option>LEG_UPPER</option>
+                                    <option>LEG_LOWER</option>
+                                    <option>FOOT</option>
+                                    <option>FLIPPER</option>
+                                    <option>WING</option>
+                                    <option>TAIL</option>
+                                    <option>STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>NOSE</option>
+                                    <option>SHELL</option>
+                                    <option>ANTENNA</option>
+                                    <option>HORN</option>
+                                    <option>MANDIBLE</option>
+                                    <option>FINGER</option>
+                                    <option>TOE</option>
+                                    <option>EYE</option>
+                                    <option>NOSE</option>
+                                    <option>CHEEK</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>SPINE</option>
+                                    <option>NECK</option>
+                                    <option>SPINE</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>RIB_TRUE</option>
+                                    <option>RIB_FALSE</option>
+                                    <option>RIB_FLOATING</option>
+                                    <option>LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>BEAK</option>
+                                    <!-- Body part tokens -->
+                                    <option>UB</option>
+                                    <option>LB</option>
+                                    <option>HD</option>
+                                    <option>RUA</option>
+                                    <option>LUA</option>
+                                    <option>RLA</option>
+                                    <option>LLA</option>
+                                    <option>RH</option>
+                                    <option>LH</option>
+                                    <option>R_UB_PINCER</option>
+                                    <option>L_UB_PINCER</option>
+                                    <option>RA1</option>
+                                    <option>LA1</option>
+                                    <option>RF1</option>
+                                    <option>LF1</option>
+                                    <option>RA2</option>
+                                    <option>LA2</option>
+                                    <option>RF2</option>
+                                    <option>LF2</option>
+                                    <option>RA3</option>
+                                    <option>LA3</option>
+                                    <option>RF3</option>
+                                    <option>LF3</option>
+                                    <option>RA4</option>
+                                    <option>LA4</option>
+                                    <option>RF4</option>
+                                    <option>LF4</option>
+                                    <option>RA5</option>
+                                    <option>LA5</option>
+                                    <option>RF5</option>
+                                    <option>LF5</option>
+                                    <option>RA</option>
+                                    <option>LA</option>
+                                    <option>RL</option>
+                                    <option>LL</option>
+                                    <option>RF</option>
+                                    <option>LF</option>
+                                    <option>RUL</option>
+                                    <option>LUL</option>
+                                    <option>RLL</option>
+                                    <option>LLL</option>
+                                    <option>RFFLIP</option>
+                                    <option>LFFLIP</option>
+                                    <option>RRFLIP</option>
+                                    <option>LRFLIP</option>
+                                    <option>RWING</option>
+                                    <option>LWING</option>
+                                    <option>TAIL</option>
+                                    <option>TAIL_1</option>
+                                    <option>TAIL_2</option>
+                                    <option>TAIL_3</option>
+                                    <option>TAIL_STINGER</option>
+                                    <option>LOWER_BODY_STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>TRUNK</option>
+                                    <option>SHELL</option>
+                                    <option>R_ANT</option>
+                                    <option>L_ANT</option>
+                                    <option>HEAD_HORN</option>
+                                    <option>HEAD_HORN_1</option>
+                                    <option>HEAD_HORN_2</option>
+                                    <option>HEAD_HORN_3</option>
+                                    <option>HEAD_HORN_4</option>
+                                    <option>R_MAND</option>
+                                    <option>L_MAND</option>
+                                    <option>FINGER1</option>
+                                    <option>FINGER2</option>
+                                    <option>FINGER3</option>
+                                    <option>FINGER4</option>
+                                    <option>FINGER5</option>
+                                    <option>TOE1</option>
+                                    <option>TOE2</option>
+                                    <option>TOE3</option>
+                                    <option>TOE4</option>
+                                    <option>TOE5</option>
+                                    <option>EYE</option>
+                                    <option>REYE</option>
+                                    <option>LEYE</option>
+                                    <option>BEAK</option>
+                                    <option>NOSE</option>
+                                    <option>L_CHEEK</option>
+                                    <option>R_CHEEK</option>
+                                    <option>RLUNG</option>
+                                    <option>LLUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>UPPERSPINE</option>
+                                    <option>LOWERSPINE</option>
+                                    <option>NK</option>
+                                    <option>NECK</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>L_TRUE_RIB</option>
+                                    <option>R_TRUE_RIB</option>
+                                    <option>L_FALSE_RIB</option>
+                                    <option>R_FALSE_RIB</option>
+                                    <option>L_FLOATING_RIB</option>
+                                    <option>R_FLOATING_RIB</option>
+                                    <option>L_LIP</option>
+                                    <option>U_LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>L_EYELID</option>
+                                    <option>R_EYELID</option>
+                                    <option>BILL</option>
+                                    <option>HEAD_ANTLER_1</option>
+                                    <option>HEAD_ANTLER_2</option>
                                 </datalist>
                             </td>
                         </tr> <!-- setBpGroup1 -->
@@ -5781,6 +6369,12 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="bpAddType1List">
+                                    <!-- Types -->
+                                    <option>UPPERBODY</option>
+                                    <option>LOWERBODY</option>
+                                    <option>HEAD</option>
+                                    <option>GRASP</option>
+                                    <option>STANCE</option>
                                     <option>GELDABLE</option>
                                 </datalist>
                             </td>
@@ -5798,7 +6392,7 @@
                             <td>
                                 <div>
                                     <button onclick='addFixedToken("bodyDetailPlan1TokenGroup", "[BODY_DETAIL_PLAN:", 
-                                2, 0, true, "bodyDetailPlan1List")'>Add: Body Detail Plan</button>
+                                1, 0, true, "bodyDetailPlan1List")'>Add: Body Detail Plan</button>
                                     <button
                                         onclick='removeTokenFromGroup("bodyDetailPlan1TokenGroup", "[BODY_DETAIL_PLAN:")'>Remove:
                                         Body Detail Plan</button>
@@ -5816,6 +6410,28 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="bodyDetailPlan1List">
+                                    <!-- Body detail plans-->
+                                    <option>STANDARD_MATERIALS</option>
+                                    <option>CHITIN_MATERIALS</option>
+                                    <option>STANDARD_TISSUES</option>
+                                    <option>CHITIN_TISSUES</option>
+                                    <option>FACIAL_HAIR_TISSUES</option>
+                                    <option>HEAD_HAIR_TISSUE_LAYERS</option>
+                                    <option>FACIAL_HAIR_TISSUE_LAYERS</option>
+                                    <option>BODY_HAIR_TISSUE_LAYERS</option>
+                                    <option>BODY_SPINE_TISSUE_LAYERS</option>
+                                    <option>BODY_FEATHER_TISSUE_LAYERS</option>
+                                    <option>BODY_FEATHER_TISSUE_LAYERS_NO_HEAD</option>
+                                    <option>VERTEBRATE_TISSUE_LAYERS</option>
+                                    <option>EXOSKELETON_TISSUE_LAYERS</option>
+                                    <option>MOLLUSC_TISSUE_LAYERS</option>
+                                    <option>STANDARD_HEAD_POSITIONS</option>
+                                    <option>HUMANOID_HEAD_POSITIONS</option>
+                                    <option>HUMANOID_RIBCAGE_POSITIONS</option>
+                                    <option>SHELL_POSITIONS</option>
+                                    <option>HUMANOID_RELSIZES</option>
+                                    <option>EGG_MATERIALS</option>
+                                    <option>LEATHERY_EGG_MATERIALS</option>
                                 </datalist>
                             </td>
                         </tr> <!-- bodyDetailPlan1 -->
@@ -5888,6 +6504,176 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="setBpGroup2List">
+                                    <!-- Selector options -->
+                                    <option>BY_TYPE</option>
+                                    <option>BY_CATEGORY</option>
+                                    <option>BY_TOKEN</option>
+                                    <!-- Types -->
+                                    <option>UPPERBODY</option>
+                                    <option>LOWERBODY</option>
+                                    <option>HEAD</option>
+                                    <option>GRASP</option>
+                                    <option>STANCE</option>
+                                    <!-- Categories -->
+                                    <option>BODY</option>
+                                    <option>BODY_UPPER</option>
+                                    <option>BODY_LOWER</option>
+                                    <option>HEAD</option>
+                                    <option>ARM_UPPER</option>
+                                    <option>ARM_LOWER</option>
+                                    <option>HAND</option>
+                                    <option>PINCER</option>
+                                    <option>FOOT_FRONT</option>
+                                    <option>FOOT_REAR</option>
+                                    <option>LEG_FRONT</option>
+                                    <option>LEG_REAR</option>
+                                    <option>LEG_UPPER</option>
+                                    <option>LEG_LOWER</option>
+                                    <option>FOOT</option>
+                                    <option>FLIPPER</option>
+                                    <option>WING</option>
+                                    <option>TAIL</option>
+                                    <option>STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>NOSE</option>
+                                    <option>SHELL</option>
+                                    <option>ANTENNA</option>
+                                    <option>HORN</option>
+                                    <option>MANDIBLE</option>
+                                    <option>FINGER</option>
+                                    <option>TOE</option>
+                                    <option>EYE</option>
+                                    <option>NOSE</option>
+                                    <option>CHEEK</option>
+                                    <option>LUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>SPINE</option>
+                                    <option>NECK</option>
+                                    <option>SPINE</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>RIB_TRUE</option>
+                                    <option>RIB_FALSE</option>
+                                    <option>RIB_FLOATING</option>
+                                    <option>LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>BEAK</option>
+                                    <!-- Body part tokens -->
+                                    <option>UB</option>
+                                    <option>LB</option>
+                                    <option>HD</option>
+                                    <option>RUA</option>
+                                    <option>LUA</option>
+                                    <option>RLA</option>
+                                    <option>LLA</option>
+                                    <option>RH</option>
+                                    <option>LH</option>
+                                    <option>R_UB_PINCER</option>
+                                    <option>L_UB_PINCER</option>
+                                    <option>RA1</option>
+                                    <option>LA1</option>
+                                    <option>RF1</option>
+                                    <option>LF1</option>
+                                    <option>RA2</option>
+                                    <option>LA2</option>
+                                    <option>RF2</option>
+                                    <option>LF2</option>
+                                    <option>RA3</option>
+                                    <option>LA3</option>
+                                    <option>RF3</option>
+                                    <option>LF3</option>
+                                    <option>RA4</option>
+                                    <option>LA4</option>
+                                    <option>RF4</option>
+                                    <option>LF4</option>
+                                    <option>RA5</option>
+                                    <option>LA5</option>
+                                    <option>RF5</option>
+                                    <option>LF5</option>
+                                    <option>RA</option>
+                                    <option>LA</option>
+                                    <option>RL</option>
+                                    <option>LL</option>
+                                    <option>RF</option>
+                                    <option>LF</option>
+                                    <option>RUL</option>
+                                    <option>LUL</option>
+                                    <option>RLL</option>
+                                    <option>LLL</option>
+                                    <option>RFFLIP</option>
+                                    <option>LFFLIP</option>
+                                    <option>RRFLIP</option>
+                                    <option>LRFLIP</option>
+                                    <option>RWING</option>
+                                    <option>LWING</option>
+                                    <option>TAIL</option>
+                                    <option>TAIL_1</option>
+                                    <option>TAIL_2</option>
+                                    <option>TAIL_3</option>
+                                    <option>TAIL_STINGER</option>
+                                    <option>LOWER_BODY_STINGER</option>
+                                    <option>PROBOSCIS</option>
+                                    <option>TRUNK</option>
+                                    <option>SHELL</option>
+                                    <option>R_ANT</option>
+                                    <option>L_ANT</option>
+                                    <option>HEAD_HORN</option>
+                                    <option>HEAD_HORN_1</option>
+                                    <option>HEAD_HORN_2</option>
+                                    <option>HEAD_HORN_3</option>
+                                    <option>HEAD_HORN_4</option>
+                                    <option>R_MAND</option>
+                                    <option>L_MAND</option>
+                                    <option>FINGER1</option>
+                                    <option>FINGER2</option>
+                                    <option>FINGER3</option>
+                                    <option>FINGER4</option>
+                                    <option>FINGER5</option>
+                                    <option>TOE1</option>
+                                    <option>TOE2</option>
+                                    <option>TOE3</option>
+                                    <option>TOE4</option>
+                                    <option>TOE5</option>
+                                    <option>EYE</option>
+                                    <option>REYE</option>
+                                    <option>LEYE</option>
+                                    <option>BEAK</option>
+                                    <option>NOSE</option>
+                                    <option>L_CHEEK</option>
+                                    <option>R_CHEEK</option>
+                                    <option>RLUNG</option>
+                                    <option>LLUNG</option>
+                                    <option>HEART</option>
+                                    <option>GUTS</option>
+                                    <option>THROAT</option>
+                                    <option>UPPERSPINE</option>
+                                    <option>LOWERSPINE</option>
+                                    <option>NK</option>
+                                    <option>NECK</option>
+                                    <option>BRAIN</option>
+                                    <option>SKULL</option>
+                                    <option>MOUTH</option>
+                                    <option>TOOTH</option>
+                                    <option>L_TRUE_RIB</option>
+                                    <option>R_TRUE_RIB</option>
+                                    <option>L_FALSE_RIB</option>
+                                    <option>R_FALSE_RIB</option>
+                                    <option>L_FLOATING_RIB</option>
+                                    <option>R_FLOATING_RIB</option>
+                                    <option>L_LIP</option>
+                                    <option>U_LIP</option>
+                                    <option>TONGUE</option>
+                                    <option>EYELID</option>
+                                    <option>L_EYELID</option>
+                                    <option>R_EYELID</option>
+                                    <option>BILL</option>
+                                    <option>HEAD_ANTLER_1</option>
+                                    <option>HEAD_ANTLER_2</option>
                                 </datalist>
                             </td>
                         </tr> <!-- setBpGroup2 -->
@@ -5920,6 +6706,11 @@
                                 <p>]</p>
                                 <datalist id="bpAddType2List">
                                     <option>GELDABLE</option>
+                                    <option>UPPERBODY</option>
+                                    <option>LOWERBODY</option>
+                                    <option>HEAD</option>
+                                    <option>GRASP</option>
+                                    <option>STANCE</option>
                                 </datalist>
                             </td>
                         </tr> <!-- bpAddType2 -->
@@ -5936,7 +6727,7 @@
                             <td>
                                 <div>
                                     <button onclick='addFixedToken("bodyDetailPlan2TokenGroup", "[BODY_DETAIL_PLAN:", 
-                                2, 0, true, "bodyDetailPlan2List")'>Add: Body Detail Plan</button>
+                                1, 0, true, "bodyDetailPlan2List")'>Add: Body Detail Plan</button>
                                     <button
                                         onclick='removeTokenFromGroup("bodyDetailPlan2TokenGroup", "[BODY_DETAIL_PLAN:")'>Remove:
                                         Body Detail Plan</button>
@@ -5954,6 +6745,28 @@
                             <td>
                                 <p>]</p>
                                 <datalist id="bodyDetailPlan2List">
+                                    <!-- Body detail plans-->
+                                    <option>STANDARD_MATERIALS</option>
+                                    <option>CHITIN_MATERIALS</option>
+                                    <option>STANDARD_TISSUES</option>
+                                    <option>CHITIN_TISSUES</option>
+                                    <option>FACIAL_HAIR_TISSUES</option>
+                                    <option>HEAD_HAIR_TISSUE_LAYERS</option>
+                                    <option>FACIAL_HAIR_TISSUE_LAYERS</option>
+                                    <option>BODY_HAIR_TISSUE_LAYERS</option>
+                                    <option>BODY_SPINE_TISSUE_LAYERS</option>
+                                    <option>BODY_FEATHER_TISSUE_LAYERS</option>
+                                    <option>BODY_FEATHER_TISSUE_LAYERS_NO_HEAD</option>
+                                    <option>VERTEBRATE_TISSUE_LAYERS</option>
+                                    <option>EXOSKELETON_TISSUE_LAYERS</option>
+                                    <option>MOLLUSC_TISSUE_LAYERS</option>
+                                    <option>STANDARD_HEAD_POSITIONS</option>
+                                    <option>HUMANOID_HEAD_POSITIONS</option>
+                                    <option>HUMANOID_RIBCAGE_POSITIONS</option>
+                                    <option>SHELL_POSITIONS</option>
+                                    <option>HUMANOID_RELSIZES</option>
+                                    <option>EGG_MATERIALS</option>
+                                    <option>LEATHERY_EGG_MATERIALS</option>
                                 </datalist>
                             </td>
                         </tr> <!-- bodyDetailPlan2 -->

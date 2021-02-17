@@ -200,9 +200,16 @@ flexibleClosed button
 
 
 <!-- Selector options -->
-    <option>BY_CATEGORY</option>
     <option>BY_TYPE</option>
+    <option>BY_CATEGORY</option>
     <option>BY_TOKEN</option>
+
+<!-- Types -->
+    <option>UPPERBODY</option>
+    <option>LOWERBODY</option>
+    <option>HEAD</option>
+    <option>GRASP</option>
+    <option>STANCE</option>
 
 <!-- Categories -->
     <option>BODY</option>
@@ -253,13 +260,6 @@ flexibleClosed button
     <option>TONGUE</option>
     <option>EYELID</option>
     <option>BEAK</option>
-
-<!-- Types -->
-    <option>UPPERBODY</option>
-    <option>LOWERBODY</option>
-    <option>HEAD</option>
-    <option>GRASP</option>
-    <option>STANCE</option>
 
 <!-- Body part tokens -->
     <option>UB</option>
@@ -372,6 +372,29 @@ flexibleClosed button
     <option>BILL</option>
     <option>HEAD_ANTLER_1</option>
     <option>HEAD_ANTLER_2</option>
+
+<!-- Body detail plans-->
+    <option>STANDARD_MATERIALS</option>
+    <option>CHITIN_MATERIALS</option>
+    <option>STANDARD_TISSUES</option>
+    <option>CHITIN_TISSUES</option>
+    <option>FACIAL_HAIR_TISSUES</option>
+    <option>HEAD_HAIR_TISSUE_LAYERS</option>
+    <option>FACIAL_HAIR_TISSUE_LAYERS</option>
+    <option>BODY_HAIR_TISSUE_LAYERS</option>
+    <option>BODY_SPINE_TISSUE_LAYERS</option>
+    <option>BODY_FEATHER_TISSUE_LAYERS</option>
+    <option>BODY_FEATHER_TISSUE_LAYERS_NO_HEAD</option>
+    <option>VERTEBRATE_TISSUE_LAYERS</option>
+    <option>EXOSKELETON_TISSUE_LAYERS</option>
+    <option>MOLLUSC_TISSUE_LAYERS</option>
+    <option>STANDARD_HEAD_POSITIONS</option>
+    <option>HUMANOID_HEAD_POSITIONS</option>
+    <option>HUMANOID_RIBCAGE_POSITIONS</option>
+    <option>SHELL_POSITIONS</option>
+    <option>HUMANOID_RELSIZES</option>
+    <option>EGG_MATERIALS</option>
+    <option>LEATHERY_EGG_MATERIALS</option>
 
 <!-- Tissues -->
     <option>SKIN</option>
@@ -1162,15 +1185,6 @@ flexibleClosed button
     <option>40</option>
     <option>50</option>
     <option>100</option>
-
-
-
-
-
-
-
-
-
 
 
 0 ~ ?
