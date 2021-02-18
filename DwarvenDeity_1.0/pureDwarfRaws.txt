@@ -2,6 +2,11 @@ http://www.bay12forums.com/smf/index.php?topic=106466.0
 
 <tr class="flexibleListInput">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"><hr><br></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <button onclick='addFlexibleToken("TokenGroup", "[:", 1, 0, true, 
                                 "List", "ListInput")'>Add: </button>
@@ -26,6 +31,11 @@ http://www.bay12forums.com/smf/index.php?topic=106466.0
                 </tr>  <!--  -->
 
 <tr class="flexibleList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"><hr><br></span>
+                        </div>
+                    </td>
                     <td>
                         <div>
                             <button onclick='addFixedToken("TokenGroup", "[:", 
@@ -52,6 +62,11 @@ http://www.bay12forums.com/smf/index.php?topic=106466.0
 
 <tr class="flexibleText">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"><hr><br></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <button onclick='addFixedToken("TokenGroup", "[:", 
                             0, 1, false)'>Add: </button>
@@ -72,6 +87,11 @@ http://www.bay12forums.com/smf/index.php?topic=106466.0
 
 <tr class="fixedListInput">
                     <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"><hr><br></span>
+                        </div>
+                    </td>
+                    <td>
                         <div>
                             <input type="checkbox" id="Checkbox" class="cb">
                             <button onclick='addList("Token", "List")'>+</button>
@@ -91,6 +111,11 @@ http://www.bay12forums.com/smf/index.php?topic=106466.0
                 </tr>  <!--  -->
 
 <tr class="fixedList">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"><hr><br></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="Checkbox" class="cb"></td>
                     <td id="Token">
                         <label for="">[:</label>
@@ -104,6 +129,11 @@ http://www.bay12forums.com/smf/index.php?topic=106466.0
                 </tr>  <!--  -->
 
 <tr class="fixedText">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"><hr><br></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="Checkbox" class="cb"></td>
                     <td id="Token">
                         <label for="">[:</label>
@@ -115,14 +145,22 @@ http://www.bay12forums.com/smf/index.php?topic=106466.0
                 </tr>  <!--  -->
 
 <tr class="fixedClosed">
+                    <td>
+                        <div class="tooltip">?
+                            <span class="tooltipText"></span>
+                        </div>
+                    </td>
                     <td><input type="checkbox" id="Checkbox" class="cb"></td>
                     <td id="Token">
-                        <label>[]</label>
+                        <label onclick='fixedClosedAutoChecker(this);'>[]</label>
                     </td>
                 </tr>  <!--  -->
 
 
 flexibleListInput button
+<div class="tooltip">?
+        <span class="tooltipText"><hr><br></span>
+    </div>
 <div>
                             <button onclick='addFlexibleToken("TokenGroup", "[:", 1, 0, true, 
                                 "List", "ListInput")'>Add: </button>
@@ -143,6 +181,10 @@ flexibleListInput button
 
 
 flexiblelist button
+
+<div class="tooltip">?
+    <span class="tooltipText"><hr><br></span>
+    </div>
 <div>
                             <button onclick='addFixedToken("TokenGroup", "[:", 
                             2, 0, true, "List")'>Add: </button>
@@ -163,6 +205,9 @@ flexiblelist button
 
 
 flexibleText button
+<div class="tooltip">?
+    <span class="tooltipText"><hr><br></span>
+    </div>
 <div>
                             <button onclick='addFixedToken("TokenGroup", "[:", 
                             0, 1, false)'>Add: </button>

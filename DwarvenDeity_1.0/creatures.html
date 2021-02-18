@@ -7,14 +7,14 @@
     <title>Dwarven Deity:RAW Editor</title>
     <meta name="keywords" content="Dwarf Fortress, DF, RAW Editor,
      Editor, raw file, modding, online, mods, RAW generator">
-    <meta name="description"
-        content="An editor for Dwarf Fortress raw files. Generating raw files is our current specialty">
+    <meta name="description" content="An editor for Dwarf Fortress raw files. Aiding in raw creation is our specialty.">
     <meta name="author" content="Phanny">
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <nav></nav>
     <main>
         <article>
             <div>
@@ -5163,27 +5163,14 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
-                                    <span class="tooltipText">I give your creature a bonus in caves, as well as the
-                                        ability to grow cave adapted.</span>
+                                    <span class="tooltipText">I bestow upon your creature the power of FLIGHT!</span>
                                 </div>
                             </td>
-                            <td><input type="checkbox" id="caveAdaptCheckbox" class="cb"></td>
-                            <td id="caveAdaptToken">
-                                <label onclick='fixedClosedAutoChecker(this);'>[CAVE_ADAPT]</label>
+                            <td><input type="checkbox" id="flierCheckbox" class="cb"></td>
+                            <td id="flierToken">
+                                <label onclick='fixedClosedAutoChecker(this);' [FLIER]</label>
                             </td>
-                        </tr> <!-- caveAdapt -->
-                        <tr class="fixedClosed">
-                            <td>
-                                <div class="tooltip">?
-                                    <span class="tooltipText">I cause your creature to become active during the
-                                        daytime.</span>
-                                </div>
-                            </td>
-                            <td><input type="checkbox" id="diurnalCheckbox" class="cb"></td>
-                            <td id="diurnalToken">
-                                <label onclick='fixedClosedAutoChecker(this);'>[DIURNAL]</label>
-                            </td>
-                        </tr> <!-- diurnal -->
+                        </tr> <!-- flier -->
                         <tr class="fixedList">
                             <td>
                                 <div class="tooltip">?
@@ -5286,6 +5273,18 @@
                                 </datalist>
                             </td>
                         </tr> <!-- lowLightVision -->
+                        <tr class="fixedClosed">
+                            <td>
+                                <div class="tooltip">?
+                                    <span class="tooltipText">I cause your creature to become active during the
+                                        daytime.</span>
+                                </div>
+                            </td>
+                            <td><input type="checkbox" id="diurnalCheckbox" class="cb"></td>
+                            <td id="diurnalToken">
+                                <label onclick='fixedClosedAutoChecker(this);'>[DIURNAL]</label>
+                            </td>
+                        </tr> <!-- diurnal -->
                         <tr class="fixedList">
                             <td>
                                 <div class="tooltip">?
@@ -5308,6 +5307,30 @@
                                 </datalist>
                             </td>
                         </tr> <!-- homeotherm -->
+                        <tr class="fixedClosed">
+                            <td>
+                                <div class="tooltip">?
+                                    <span class="tooltipText">I give your creature a bonus in caves, as well as the
+                                        ability to grow cave adapted.</span>
+                                </div>
+                            </td>
+                            <td><input type="checkbox" id="caveAdaptCheckbox" class="cb"></td>
+                            <td id="caveAdaptToken">
+                                <label onclick='fixedClosedAutoChecker(this);'>[CAVE_ADAPT]</label>
+                            </td>
+                        </tr> <!-- caveAdapt -->
+                        <tr class="fixedClosed">
+                            <td>
+                                <div class="tooltip">?
+                                    <span class="tooltipText">I cause your creature to use its swimming skill for
+                                        swimming. </span>
+                                </div>
+                            </td>
+                            <td><input type="checkbox" id="swimsLearnedCheckbox" class="cb"></td>
+                            <td id="swimsLearnedToken">
+                                <label onclick='fixedClosedAutoChecker(this);'>[SWIMS_LEARNED]</label>
+                            </td>
+                        </tr> <!-- swimsLearned -->
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
@@ -5342,18 +5365,6 @@
                                 </datalist>
                             </td>
                         </tr> <!-- speech -->
-                        <tr class="fixedClosed">
-                            <td>
-                                <div class="tooltip">?
-                                    <span class="tooltipText">I cause your creature to use its swimming skill for
-                                        swimming. </span>
-                                </div>
-                            </td>
-                            <td><input type="checkbox" id="swimsLearnedCheckbox" class="cb"></td>
-                            <td id="swimsLearnedToken">
-                                <label onclick='fixedClosedAutoChecker(this);'>[SWIMS_LEARNED]</label>
-                            </td>
-                        </tr> <!-- swimsLearned -->
                     </table>
                 </div>
                 <div>
@@ -7105,14 +7116,15 @@
                 parseSpecificToken(raw, "childNameCheckbox", "childNameToken")
                 // AdditionalAttributes
                 parseSpecificToken(raw, "equipsCheckbox", "equipsToken")
-                parseSpecificToken(raw, "caveAdaptCheckbox", "caveAdaptToken")
-                parseSpecificToken(raw, "diurnalCheckbox", "diurnalToken")
+                parseSpecificToken(raw, "flierCheckbox", "flierToken")
                 parseSpecificToken(raw, "smellTriggerCheckbox", "smellTriggerToken")
                 parseSpecificToken(raw, "lowLightVisionCheckbox", "lowLightVisionToken")
+                parseSpecificToken(raw, "diurnalCheckbox", "diurnalToken")
                 parseSpecificToken(raw, "homeothermCheckbox", "homeothermToken")
+                parseSpecificToken(raw, "caveAdaptCheckbox", "caveAdaptToken")
+                parseSpecificToken(raw, "swimsLearnedCheckbox", "swimsLearnedToken")
                 parseSpecificToken(raw, "alcoholDependentCheckbox", "alcoholDependentToken")
                 parseSpecificToken(raw, "speechCheckbox", "speechToken")
-                parseSpecificToken(raw, "swimsLearnedCheckbox", "swimsLearnedToken")
                 // Professions
                 parseTokenGroup(raw, "professionNameTokenGroup")
                 // PersonalityMannerisms
@@ -7162,6 +7174,7 @@
             }
         </script>
     </main>
+    <footer></footer>
 </body>
 
 </html>
