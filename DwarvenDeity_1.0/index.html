@@ -16,7 +16,7 @@
 <body>
     <nav>
         <a href="index.html">
-            <img src="images\Have a soarin' day.png" style="width: 20px;">
+            <img src="images\Have a soarin' day.png" alt="logo" style="width: 20px;">
         </a>
     </nav>
     <main>
@@ -25,7 +25,6 @@
             <hr>
         </div>
         <div>
-            <button onclick="randomTip();">Advice!</button>
             <b><span id="loadTip"></span></b>
         </div>
         <div class="card">
@@ -40,8 +39,7 @@
     </main>
     <footer></footer>
     <script>
-        randomTip = () => {
-            debugger;
+        window.onload = randomTip = () => {
             const tips = [
                 "You can click on the token's text to check the checkbox!",
                 "If you fill in an input it automatically checks the checkbox!",

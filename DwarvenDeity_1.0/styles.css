@@ -4,7 +4,7 @@ body {
 }
 
 button.displayButton {
-    width: 80%;
+    width: 100%;
     padding: 15px;
     background-color: skyblue;
     border: 5px outset lightblue;
@@ -29,14 +29,14 @@ button.displayButton {
   }
 
 .tooltip {
-    position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
+    position: relative;
+    padding: 5px;
+    background-color: darkgrey;
 }
 
 .tooltip .tooltipText {
     visibility: hidden;
-    width: 120px;
     background-color: black;
     color: #fff;
     text-align: center;
@@ -56,4 +56,9 @@ button.displayButton {
 .tooltip:hover .tooltipText {
     visibility: visible;
     opacity: 1;
+}
+
+#creatureTokenDatabase {
+    width: 80%;
+    margin: auto;
 }

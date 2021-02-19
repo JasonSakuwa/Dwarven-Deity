@@ -1,12 +1,16 @@
-// fixedClosedToken
-flier
-[FLIER]
-// fixedClosedToken
-fanciful
-[FANCIFUL]
-// fixedClosedToken
-largePredator
-[LARGE_PREDATOR]
-// fixedClosedToken
-semimegabeast
-[SEMIMEGABEAST]
+// fundamental tokens
+    // fixedClosedToken
+    fanciful
+    [FANCIFUL]
+    // fixedClosedToken
+    largePredator
+    [LARGE_PREDATOR]
+    // fixedClosedToken
+    semimegabeast
+    [SEMIMEGABEAST]
+
+// additional attribute tokens
+
+    // fixedClosedToken
+    flier
+    [FLIER]
