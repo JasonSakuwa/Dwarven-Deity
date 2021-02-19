@@ -24,6 +24,10 @@
             <h1 class="centerAllign">Welcome, Now let's get creating!</h1>
             <hr>
         </div>
+        <div>
+            <button onclick="randomTip();">Advice!</button>
+            <b><span id="loadTip"></span></b>
+        </div>
         <div class="card">
             <a href="creatures.html">
                 <img src="images\WeirdAvatar.png" alt="Creature" style="width:100%">
@@ -35,6 +39,18 @@
         </div>
     </main>
     <footer></footer>
+    <script>
+        randomTip = () => {
+            debugger;
+            const tips = [
+                "You can click on the token's text to check the checkbox!",
+                "If you fill in an input it automatically checks the checkbox!",
+                "If you would like to request a feature, please look down below!"
+            ];
+            const number = getRandomInteger(1, tips.length - 1);
+            document.getElementById("loadTip").innerHTML = tips[number];
+        }
+    </script>
 </body>
 
 </html>

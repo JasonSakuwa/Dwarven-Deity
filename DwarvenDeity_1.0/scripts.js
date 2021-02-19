@@ -1,3 +1,7 @@
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function fixedAutoChecker(thisElement) {
     if (thisElement.parentNode.parentNode.children[1].children[0].tagName === "INPUT") {
         if (thisElement.value) {
@@ -293,103 +297,3 @@ function parseToken(rawArray, divi) {
         rawArray.push(tokenString + "]");
     }
 }
-
-
-// function parseTokenGroup(rawArray, checkboxId, tokenGroupId) {
-//     if (isChecked(checkboxId)) {
-//         const tokens = document.getElementById(tokenGroupId).children;
-//         const len = tokens.length;
-//         let tokenString = "";
-//         for (let i = 0; i < len; i++) {
-//             if (tokens[i].tagName == "DIV") {
-//                 parseToken(rawArray, tokens[i])
-//             }
-//             if (tokens[i].tagName == "LABEL") {
-//                 tokenString = tokens[i].innerHTML;
-//                 tokenString = tokenString.slice(0, -1);
-//                 for (let j = i + 1; j < len && tokens[j].tagName == "INPUT"; j++) {
-//                     if (!tokens[j].value) {
-//                         emptyFieldNumber++
-//                     }
-//                     tokenString += ":" + tokens[j].value;
-//                     i = j;
-//                 }
-//                 rawArray.push(tokenString + "]");
-//             }
-//             if (tokens[i].tagName == "P") {
-//                 rawArray.push(tokens[i].innerHTML)
-//             }
-//         }
-//     }
-// }
-
-// function parseOuterTokenGroup(rawArray, tokenGroupId) {
-//     let parent = document.getElementById(tokenGroupId);
-//     let children = parent.children;
-//     var child;
-//     for (child of children) {
-//         pareInnerTokenGroup(rawArray, child);
-//     }
-// }
-
-// function parseInnerTokenGroup(rawArray, element) {
-//     let children = element.children
-//     var child;
-//     for (child of children) {
-//         parseToken(rawArray, child)
-//     }
-// }
-
-// function addFlexi(parentId, labelHTML, type, fieldNumberId, datalistId) {
-//     let parent = document.getElementById(parentId);
-//     let children = parent.children;
-//     let len = children.length;
-//     var identifier = parentId + len;
-//     let divi = document.createElement("div");
-//     divi.setAttribute("id", identifier);
-//     let cb = document.createElement("input");
-//     let removeButton = document.createElement("button");
-//     let label = document.createElement("label");
-//     cb.setAttribute("type", "checkbox");
-//     removeButton.onclick = removeTokenFromGroupCopy(identifier)
-//     label.innerHTML = labelHTML;
-//     divi.appendChild(cb);
-//     divi.appendChild(removeButton);
-//     divi.appendChild(label);
-//     while (len-- && !insertPositionElement) {
-//         let subChildren = children[len].children;
-//         var subChild;
-//         for (subChild of subChildren) {
-//             if (subChild.innerHTML == labelHTML) {
-//                 var insertPositionElement = subChild.parentNode;
-//                 break;
-//             }
-//         }
-//     }
-//     if (type == "list") {
-//         while (fieldNumber--) {
-//             let field = document.createElement("input");
-//             field.setAttribute("list", datalistId);
-//             divi.appendChild(field);
-//         }
-//     }
-//     if (type == "text") {
-//         while (fieldNumber--) {
-//             let field = document.createElement("input");
-//             field.setAttribute("type", "text");
-//             divi.appendChild(field);
-//         }
-//     }
-//     insertPositionElement.parentNode.insertBefore(divi, insertPositionElement.nextSibling);
-// }
-
-// while (len--) {
-//     let subChildren = children[len].children;
-//     var subChild;
-//     for (subChild of subChildren) {
-//         if (subChild.innerHTML == labelHTML) {
-//             var insertPositionElement = subChild.parentNode;
-//             break;
-//         }
-//     }
-// }
