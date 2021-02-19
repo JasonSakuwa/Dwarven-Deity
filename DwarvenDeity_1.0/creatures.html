@@ -26,11 +26,11 @@
                 <button onclick='uncheckVisibleCheckboxes()'>Uncheck All</button>
             </div>
             <div id="creatureTokenDatabase">
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("fundamentalTokens")'
                         class="displayButton">Fundamentals</button>
                 </div>
-                <div id="fundamentalTokens" style="display:none">
+                <div id="fundamentalTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="fixedText">
                             <td>
@@ -196,6 +196,43 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
+                                    <span class="tooltipText">I cause your legendary creature to become known to all
+                                        civilization for artistic depiction. (Invalidates COMMON_DOMESTIC.)</span>
+                                </div>
+                            </td>
+                            <td><input type="checkbox" id="fancifulCheckbox" class="cb"></td>
+                            <td id="fancifulToken">
+                                <label onclick='fixedClosedAutoChecker(this);'>[FANCIFUL]</label>
+                            </td>
+                        </tr> <!-- fanciful -->
+                        <tr class="fixedClosed">
+                            <td>
+                                <div class="tooltip">?
+                                    <span class="tooltipText">I cause your creature to attack any creature smaller than
+                                        itself, making it great for fortress defense. Your creature may also go on
+                                        rampages. (Counterpart to BENIGN.)</span>
+                                </div>
+                            </td>
+                            <td><input type="checkbox" id="largePredatorCheckbox" class="cb"></td>
+                            <td id="largePredatorToken">
+                                <label onclick='fixedClosedAutoChecker(this);'>[LARGE_PREDATOR]</label>
+                            </td>
+                        </tr> <!-- largePredator -->
+                        <tr class="fixedClosed">
+                            <td>
+                                <div class="tooltip">?
+                                    <span class="tooltipText">I am similar to MEGABEAST, but I cause more of your
+                                        creature to be created in your world.</span>
+                                </div>
+                            </td>
+                            <td><input type="checkbox" id="semimegabeastCheckbox" class="cb"></td>
+                            <td id="semimegabeastToken">
+                                <label onclick='fixedClosedAutoChecker(this);'>[SEMIMEGABEAST]</label>
+                            </td>
+                        </tr> <!-- semimegabeast -->
+                        <tr class="fixedClosed">
+                            <td>
+                                <div class="tooltip">?
                                     <span class="tooltipText">I can affirmate that your creature can learn, speak, and
                                         will not be butcherable</span>
                                 </div>
@@ -293,10 +330,10 @@
                         </tr> <!-- prefstring -->
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("anatomyTokens")' class="displayButton">Anatomy</button>
                 </div>
-                <div id="anatomyTokens" style="display:none">
+                <div id="anatomyTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="flexibleListinput">
                             <td>
@@ -2629,11 +2666,11 @@
                         </tr> <!-- tlMajorArteries -->
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("syndromeTokens");' class="displayButton">Syndrome
                         Relation</button>
                 </div>
-                <div id="syndromeTokens" style="display:none">
+                <div id="syndromeTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="flexibleList">
                             <td>
@@ -2766,11 +2803,11 @@
                         </tr> <!-- spouseConversionTarget -->
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("interactionTokens");'
                         class="displayButton">Interactions</button>
                 </div>
-                <div id="interactionTokens" style="display:none">
+                <div id="interactionTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="multiGroup">
                             <td>
@@ -3216,12 +3253,12 @@
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("physicalMentalAttributeTokens")' class="displayButton">Physical
                         +
                         Mental Attribute</button>
                 </div>
-                <div id="physicalMentalAttributeTokens" style="display:none">
+                <div id="physicalMentalAttributeTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="flexibleList">
                             <td>
@@ -3918,10 +3955,10 @@
                         </tr> <!-- applyCreatureVariation -->
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("appearanceTokens")' class="displayButton">Appearance</button>
                 </div>
-                <div id="appearanceTokens" style="display:none">
+                <div id="appearanceTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="multiGroup">
                             <td>
@@ -4351,10 +4388,10 @@
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("combatTokens")' class="displayButton">Combat</button>
                 </div>
-                <div id="combatTokens" style="display:none">
+                <div id="combatTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="multiGroup">
                             <td>
@@ -4893,10 +4930,10 @@
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("ageTokens")' class="displayButton">Age</button>
                 </div>
-                <div id="ageTokens" style="display:none">
+                <div id="ageTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="fixedList">
                             <td>
@@ -5146,11 +5183,11 @@
                         </tr> <!-- childName -->
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("additionalAttributeTokens")' class="displayButton">Additional
                         Attributes</button>
                 </div>
-                <div id="additionalAttributeTokens" style="display:none">
+                <div id="additionalAttributeTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="fixedClosed">
                             <td>
@@ -5371,10 +5408,10 @@
                         </tr> <!-- speech -->
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("professionTokens")' class="displayButton">Professions</button>
                 </div>
-                <div id="professionTokens" style="display:none">
+                <div id="professionTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="flexibleList">
                             <td>
@@ -5549,12 +5586,12 @@
                         </tr> <!-- professionName -->
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("personalityMannerismTokens")' class="displayButton">Personality
                         +
                         Mannerisms</button>
                 </div>
-                <div id="personalityMannerismTokens" style="display:none">
+                <div id="personalityMannerismTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="flexibleList">
                             <td>
@@ -6104,12 +6141,12 @@
                         </tr> <!-- mannerismEyelids -->
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("individualCasteFemaleTokens")' class="displayButton">Individual
                         Caste
                         1</button>
                 </div>
-                <div id="individualCasteFemaleTokens" style="display:none">
+                <div id="individualCasteFemaleTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="fixedList">
                             <td>
@@ -6452,12 +6489,12 @@
                         </tr> <!-- bodyDetailPlan1 -->
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("individualCasteMaleTokens")' class="displayButton">Individual
                         Caste
                         2</button>
                 </div>
-                <div id="individualCasteMaleTokens" style="display:none">
+                <div id="individualCasteMaleTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="fixedList">
                             <td>
@@ -6787,11 +6824,11 @@
                         </tr> <!-- bodyDetailPlan2 -->
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("multipleCasteTokens")' class="displayButton">Multiple
                         Castes</button>
                 </div>
-                <div id="multipleCasteTokens" style="display:none">
+                <div id="multipleCasteTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="multiGroup">
                             <td>
@@ -6861,11 +6898,11 @@
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div class="centerMargin">
                     <button onclick='toggleElementGroup("multipleCasteSelectTokens")' class="displayButton">Multiple
                         Caste Select</button>
                 </div>
-                <div id="multipleCasteSelectTokens" style="display:none">
+                <div id="multipleCasteSelectTokens" class="centerMargin" style="display:none">
                     <table>
                         <tr class="multiGroup">
                             <td>
@@ -7053,132 +7090,135 @@
                 <textarea id="output"></textarea>
             </div>
         </article>
-        <script>
-            function creatureTokenCompile() {
-                var raw = [];
-                if (document.getElementById("newFile").checked) {
-                    raw.push("creature_added");
-                    raw.push("");
-                    raw.push("[OBJECT:CREATURE]");
-                    raw.push("");
-                }
-                // Fundamentals
-                parseSpecificToken(raw, "creatureCheckbox", "creatureToken")
-                parseSpecificToken(raw, "descriptionCheckbox", "descriptionToken")
-                parseSpecificToken(raw, "nameCheckbox", "nameToken")
-                parseSpecificToken(raw, "casteNameCheckbox", "casteNameToken")
-                parseSpecificToken(raw, "creatureTileCheckbox", "creatureTileToken")
-                parseSpecificToken(raw, "colorCheckbox", "colorToken")
-                parseSpecificToken(raw, "creatureSoldierTileCheckbox", "creatureSoldierTileToken")
-                parseSpecificToken(raw, "intelligentCheckbox", "intelligentToken")
-                parseSpecificToken(raw, "strangeMoodsCheckbox", "strangeMoodsToken")
-                parseSpecificToken(raw, "trancesCheckbox", "trancesToken")
-                parseSpecificToken(raw, "benignCheckbox", "benignToken")
-                parseSpecificToken(raw, "canOpenDoorsCheckbox", "canOpenDoorsToken")
-                parseTokenGroup(raw, "prefstringTokenGroup")
-                // Anatomy
-                parseTokenGroup(raw, "bodyDetailPlanTokenGroup")
-                parseSpecificToken(raw, "bodyCheckbox", "bodyToken")
-                parseTokenGroup(raw, "useTissueTemplateTokenGroup")
-                parseTokenGroup(raw, "useMaterialTemplateTokenGroup")
-                parseTokenGroup(raw, "tissueLayerTokenGroup")
-                parseSpecificToken(raw, "tendonsCheckbox", "tendonsToken")
-                parseSpecificToken(raw, "ligamentsCheckbox", "ligamentsToken")
-                parseSpecificToken(raw, "bloodCheckbox", "bloodToken")
-                parseSpecificToken(raw, "pusCheckbox", "pusToken")
-                parseTokenGroup(raw, "secretionTokenGroup")
-                parseSpecificToken(raw, "hasNervesCheckbox", "hasNervesToken")
-                parseTokenGroup(raw, "relsizeTokenGroup")
-                parseSpecificToken(raw, "selectTissueLayerCheckbox", "selectTissueLayerToken")
-                parseTokenGroup(raw, "plusTissueLayerTokenGroup")
-                parseSpecificToken(raw, "tlMajorArteriesCheckbox", "tlMajorArteriesToken")
-                // Syndrom
-                parseTokenGroup(raw, "creatureClassTokenGroup")
-                parseSpecificToken(raw, "getsWoundInfectionsCheckbox", "getsWoundInfectionsToken")
-                parseSpecificToken(raw, "getsInfectionsFromRotCheckbox", "getsInfectionsFromRotToken")
-                parseTokenGroup(raw, "syndromeDilutionFactorTokenGroup")
-                parseSpecificToken(raw, "spouseConversionTargetCheckbox", "spouseConversionTargetToken")
-                // Interaction
-                parseTokenGroup(raw, "interactionTokenGroup")
-                // PhysicalMentalAttributes
-                parseTokenGroup(raw, "bodySizeTokenGroup")
-                parseTokenGroup(raw, "physAttRangeTokenGroup")
-                parseTokenGroup(raw, "mentAttRangeTokenGroup")
-                parseTokenGroup(raw, "applyCreatureVariationTokenGroup")
-                // Appearance
-                parseTokenGroup(raw, "bodyAppearanceTokenGroup")
-                parseTokenGroup(raw, "appearanceBpTokenGroup")
-                // Combat
-                parseTokenGroup(raw, "combatTokenGroup")
-                // Age
-                parseSpecificToken(raw, "maxageCheckbox", "maxageToken")
-                parseSpecificToken(raw, "babyCheckbox", "babyToken")
-                parseSpecificToken(raw, "generalBabyNameCheckbox", "generalBabyNameToken")
-                parseSpecificToken(raw, "babyNameCheckbox", "babyNameToken")
-                parseSpecificToken(raw, "childCheckbox", "childToken")
-                parseSpecificToken(raw, "generalChildNameCheckbox", "generalChildNameToken")
-                parseSpecificToken(raw, "childNameCheckbox", "childNameToken")
-                // AdditionalAttributes
-                parseSpecificToken(raw, "equipsCheckbox", "equipsToken")
-                parseSpecificToken(raw, "flierCheckbox", "flierToken")
-                parseSpecificToken(raw, "smellTriggerCheckbox", "smellTriggerToken")
-                parseSpecificToken(raw, "lowLightVisionCheckbox", "lowLightVisionToken")
-                parseSpecificToken(raw, "diurnalCheckbox", "diurnalToken")
-                parseSpecificToken(raw, "homeothermCheckbox", "homeothermToken")
-                parseSpecificToken(raw, "caveAdaptCheckbox", "caveAdaptToken")
-                parseSpecificToken(raw, "swimsLearnedCheckbox", "swimsLearnedToken")
-                parseSpecificToken(raw, "alcoholDependentCheckbox", "alcoholDependentToken")
-                parseSpecificToken(raw, "speechCheckbox", "speechToken")
-                // Professions
-                parseTokenGroup(raw, "professionNameTokenGroup")
-                // PersonalityMannerisms
-                parseTokenGroup(raw, "personalityTokenGroup")
-                parseSpecificToken(raw, "mannerismFingersCheckbox", "mannerismFingersToken")
-                parseSpecificToken(raw, "mannerismNoseCheckbox", "mannerismNoseToken")
-                parseSpecificToken(raw, "mannerismEarCheckbox", "mannerismEarToken")
-                parseSpecificToken(raw, "mannerismHeadCheckbox", "mannerismHeadToken")
-                parseSpecificToken(raw, "mannerismEyesCheckbox", "mannerismEyesToken")
-                parseSpecificToken(raw, "mannerismMouthCheckbox", "mannerismMouthToken")
-                parseSpecificToken(raw, "mannerismHairCheckbox", "mannerismHairToken")
-                parseSpecificToken(raw, "mannerismKnucklesCheckbox", "mannerismKnucklesToken")
-                parseSpecificToken(raw, "mannerismLipsCheckbox", "mannerismLipsToken")
-                parseSpecificToken(raw, "mannerismCheekCheckbox", "mannerismCheekToken")
-                parseSpecificToken(raw, "mannerismNailsCheckbox", "mannerismNailsToken")
-                parseSpecificToken(raw, "mannerismFeetCheckbox", "mannerismFeetToken")
-                parseSpecificToken(raw, "mannerismArmsCheckbox", "mannerismArmsToken")
-                parseSpecificToken(raw, "mannerismHandsCheckbox", "mannerismHandsToken")
-                parseSpecificToken(raw, "mannerismTongueCheckbox", "mannerismTongueToken")
-                parseSpecificToken(raw, "mannerismLegCheckbox", "mannerismLegToken")
-                parseSpecificToken(raw, "mannerismLaughCheckbox", "mannerismLaughToken")
-                parseSpecificToken(raw, "mannerismSmileCheckbox", "mannerismSmileToken")
-                parseSpecificToken(raw, "mannerismWalkCheckbox", "mannerismWalkToken")
-                parseSpecificToken(raw, "mannerismSitCheckbox", "mannerismSitToken")
-                parseSpecificToken(raw, "mannerismBreathCheckbox", "mannerismBreathToken")
-                parseSpecificToken(raw, "mannerismPostureCheckbox", "mannerismPostureToken")
-                parseSpecificToken(raw, "mannerismStretchCheckbox", "mannerismStretchToken")
-                parseSpecificToken(raw, "mannerismEyelidsCheckbox", "mannerismEyelidsToken")
-                // IndividualCaste1
-                parseSpecificToken(raw, "caste1Checkbox", "caste1Token")
-                parseSpecificToken(raw, "femaleCheckbox", "femaleToken")
-                parseSpecificToken(raw, "multipleLitterRareCheckbox", "multipleLitterRareToken")
-                parseTokenGroup(raw, "setBpGroup1TokenGroup")
-                parseTokenGroup(raw, "bpAddType1TokenGroup")
-                parseTokenGroup(raw, "bodyDetailPlan1TokenGroup")
-                // IndividualCaste2
-                parseSpecificToken(raw, "caste2Checkbox", "caste2Token")
-                parseSpecificToken(raw, "maleCheckbox", "maleToken")
-                parseTokenGroup(raw, "setBpGroup2TokenGroup")
-                parseTokenGroup(raw, "bpAddType2TokenGroup")
-                parseTokenGroup(raw, "bodyDetailPlan2TokenGroup")
-                // MultipleCaste
-                parseTokenGroup(raw, "multipleCasteTokenGroup")
-                // MultipleCasteSelect
-                parseTokenGroup(raw, "multipleCasteSelectionTokenGroup")
-                document.getElementById("output").value = raw.join("\n");
-            }
-        </script>
     </main>
     <footer></footer>
+    <script>
+        function creatureTokenCompile() {
+            var raw = [];
+            if (document.getElementById("newFile").checked) {
+                raw.push("creature_added");
+                raw.push("");
+                raw.push("[OBJECT:CREATURE]");
+                raw.push("");
+            }
+            // Fundamentals
+            parseSpecificToken(raw, "creatureCheckbox", "creatureToken")
+            parseSpecificToken(raw, "descriptionCheckbox", "descriptionToken")
+            parseSpecificToken(raw, "nameCheckbox", "nameToken")
+            parseSpecificToken(raw, "casteNameCheckbox", "casteNameToken")
+            parseSpecificToken(raw, "creatureTileCheckbox", "creatureTileToken")
+            parseSpecificToken(raw, "colorCheckbox", "colorToken")
+            parseSpecificToken(raw, "creatureSoldierTileCheckbox", "creatureSoldierTileToken")
+            parseSpecificToken(raw, "fancifulCheckbox", "fancifulToken")
+            parseSpecificToken(raw, "largePredatorCheckbox", "largePredatorToken")
+            parseSpecificToken(raw, "semimegabeastCheckbox", "semimegabeastToken")
+            parseSpecificToken(raw, "intelligentCheckbox", "intelligentToken")
+            parseSpecificToken(raw, "strangeMoodsCheckbox", "strangeMoodsToken")
+            parseSpecificToken(raw, "trancesCheckbox", "trancesToken")
+            parseSpecificToken(raw, "benignCheckbox", "benignToken")
+            parseSpecificToken(raw, "canOpenDoorsCheckbox", "canOpenDoorsToken")
+            parseTokenGroup(raw, "prefstringTokenGroup")
+            // Anatomy
+            parseTokenGroup(raw, "bodyDetailPlanTokenGroup")
+            parseSpecificToken(raw, "bodyCheckbox", "bodyToken")
+            parseTokenGroup(raw, "useTissueTemplateTokenGroup")
+            parseTokenGroup(raw, "useMaterialTemplateTokenGroup")
+            parseTokenGroup(raw, "tissueLayerTokenGroup")
+            parseSpecificToken(raw, "tendonsCheckbox", "tendonsToken")
+            parseSpecificToken(raw, "ligamentsCheckbox", "ligamentsToken")
+            parseSpecificToken(raw, "bloodCheckbox", "bloodToken")
+            parseSpecificToken(raw, "pusCheckbox", "pusToken")
+            parseTokenGroup(raw, "secretionTokenGroup")
+            parseSpecificToken(raw, "hasNervesCheckbox", "hasNervesToken")
+            parseTokenGroup(raw, "relsizeTokenGroup")
+            parseSpecificToken(raw, "selectTissueLayerCheckbox", "selectTissueLayerToken")
+            parseTokenGroup(raw, "plusTissueLayerTokenGroup")
+            parseSpecificToken(raw, "tlMajorArteriesCheckbox", "tlMajorArteriesToken")
+            // Syndrom
+            parseTokenGroup(raw, "creatureClassTokenGroup")
+            parseSpecificToken(raw, "getsWoundInfectionsCheckbox", "getsWoundInfectionsToken")
+            parseSpecificToken(raw, "getsInfectionsFromRotCheckbox", "getsInfectionsFromRotToken")
+            parseTokenGroup(raw, "syndromeDilutionFactorTokenGroup")
+            parseSpecificToken(raw, "spouseConversionTargetCheckbox", "spouseConversionTargetToken")
+            // Interaction
+            parseTokenGroup(raw, "interactionTokenGroup")
+            // PhysicalMentalAttributes
+            parseTokenGroup(raw, "bodySizeTokenGroup")
+            parseTokenGroup(raw, "physAttRangeTokenGroup")
+            parseTokenGroup(raw, "mentAttRangeTokenGroup")
+            parseTokenGroup(raw, "applyCreatureVariationTokenGroup")
+            // Appearance
+            parseTokenGroup(raw, "bodyAppearanceTokenGroup")
+            parseTokenGroup(raw, "appearanceBpTokenGroup")
+            // Combat
+            parseTokenGroup(raw, "combatTokenGroup")
+            // Age
+            parseSpecificToken(raw, "maxageCheckbox", "maxageToken")
+            parseSpecificToken(raw, "babyCheckbox", "babyToken")
+            parseSpecificToken(raw, "generalBabyNameCheckbox", "generalBabyNameToken")
+            parseSpecificToken(raw, "babyNameCheckbox", "babyNameToken")
+            parseSpecificToken(raw, "childCheckbox", "childToken")
+            parseSpecificToken(raw, "generalChildNameCheckbox", "generalChildNameToken")
+            parseSpecificToken(raw, "childNameCheckbox", "childNameToken")
+            // AdditionalAttributes
+            parseSpecificToken(raw, "equipsCheckbox", "equipsToken")
+            parseSpecificToken(raw, "flierCheckbox", "flierToken")
+            parseSpecificToken(raw, "smellTriggerCheckbox", "smellTriggerToken")
+            parseSpecificToken(raw, "lowLightVisionCheckbox", "lowLightVisionToken")
+            parseSpecificToken(raw, "diurnalCheckbox", "diurnalToken")
+            parseSpecificToken(raw, "homeothermCheckbox", "homeothermToken")
+            parseSpecificToken(raw, "caveAdaptCheckbox", "caveAdaptToken")
+            parseSpecificToken(raw, "swimsLearnedCheckbox", "swimsLearnedToken")
+            parseSpecificToken(raw, "alcoholDependentCheckbox", "alcoholDependentToken")
+            parseSpecificToken(raw, "speechCheckbox", "speechToken")
+            // Professions
+            parseTokenGroup(raw, "professionNameTokenGroup")
+            // PersonalityMannerisms
+            parseTokenGroup(raw, "personalityTokenGroup")
+            parseSpecificToken(raw, "mannerismFingersCheckbox", "mannerismFingersToken")
+            parseSpecificToken(raw, "mannerismNoseCheckbox", "mannerismNoseToken")
+            parseSpecificToken(raw, "mannerismEarCheckbox", "mannerismEarToken")
+            parseSpecificToken(raw, "mannerismHeadCheckbox", "mannerismHeadToken")
+            parseSpecificToken(raw, "mannerismEyesCheckbox", "mannerismEyesToken")
+            parseSpecificToken(raw, "mannerismMouthCheckbox", "mannerismMouthToken")
+            parseSpecificToken(raw, "mannerismHairCheckbox", "mannerismHairToken")
+            parseSpecificToken(raw, "mannerismKnucklesCheckbox", "mannerismKnucklesToken")
+            parseSpecificToken(raw, "mannerismLipsCheckbox", "mannerismLipsToken")
+            parseSpecificToken(raw, "mannerismCheekCheckbox", "mannerismCheekToken")
+            parseSpecificToken(raw, "mannerismNailsCheckbox", "mannerismNailsToken")
+            parseSpecificToken(raw, "mannerismFeetCheckbox", "mannerismFeetToken")
+            parseSpecificToken(raw, "mannerismArmsCheckbox", "mannerismArmsToken")
+            parseSpecificToken(raw, "mannerismHandsCheckbox", "mannerismHandsToken")
+            parseSpecificToken(raw, "mannerismTongueCheckbox", "mannerismTongueToken")
+            parseSpecificToken(raw, "mannerismLegCheckbox", "mannerismLegToken")
+            parseSpecificToken(raw, "mannerismLaughCheckbox", "mannerismLaughToken")
+            parseSpecificToken(raw, "mannerismSmileCheckbox", "mannerismSmileToken")
+            parseSpecificToken(raw, "mannerismWalkCheckbox", "mannerismWalkToken")
+            parseSpecificToken(raw, "mannerismSitCheckbox", "mannerismSitToken")
+            parseSpecificToken(raw, "mannerismBreathCheckbox", "mannerismBreathToken")
+            parseSpecificToken(raw, "mannerismPostureCheckbox", "mannerismPostureToken")
+            parseSpecificToken(raw, "mannerismStretchCheckbox", "mannerismStretchToken")
+            parseSpecificToken(raw, "mannerismEyelidsCheckbox", "mannerismEyelidsToken")
+            // IndividualCaste1
+            parseSpecificToken(raw, "caste1Checkbox", "caste1Token")
+            parseSpecificToken(raw, "femaleCheckbox", "femaleToken")
+            parseSpecificToken(raw, "multipleLitterRareCheckbox", "multipleLitterRareToken")
+            parseTokenGroup(raw, "setBpGroup1TokenGroup")
+            parseTokenGroup(raw, "bpAddType1TokenGroup")
+            parseTokenGroup(raw, "bodyDetailPlan1TokenGroup")
+            // IndividualCaste2
+            parseSpecificToken(raw, "caste2Checkbox", "caste2Token")
+            parseSpecificToken(raw, "maleCheckbox", "maleToken")
+            parseTokenGroup(raw, "setBpGroup2TokenGroup")
+            parseTokenGroup(raw, "bpAddType2TokenGroup")
+            parseTokenGroup(raw, "bodyDetailPlan2TokenGroup")
+            // MultipleCaste
+            parseTokenGroup(raw, "multipleCasteTokenGroup")
+            // MultipleCasteSelect
+            parseTokenGroup(raw, "multipleCasteSelectionTokenGroup")
+            document.getElementById("output").value = raw.join("\n");
+        }
+    </script>
 </body>
 
 </html>

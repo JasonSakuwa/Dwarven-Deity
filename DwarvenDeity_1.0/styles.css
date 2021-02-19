@@ -1,12 +1,18 @@
 body {
-    background-color: rgb(184, 203, 245);
+    background-color: rgb(28, 31, 39);
+    color: rgb(255, 255, 255);
 }
 
 button.displayButton {
-    width: 90%;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 1%;
+    width: 80%;
+    padding: 15px;
+    background-color: skyblue;
+    border: 5px outset lightblue;
+    border-radius: 10px;
+}
+
+.centerMargin {
+    margin: auto;
 }
 
 .centerAllign {

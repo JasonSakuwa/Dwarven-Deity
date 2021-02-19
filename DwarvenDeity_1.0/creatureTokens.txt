@@ -1,3 +1,12 @@
 // fixedClosedToken
 flier
 [FLIER]
+// fixedClosedToken
+fanciful
+[FANCIFUL]
+// fixedClosedToken
+largePredator
+[LARGE_PREDATOR]
+// fixedClosedToken
+semimegabeast
+[SEMIMEGABEAST]
