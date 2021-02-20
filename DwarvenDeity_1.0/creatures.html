@@ -208,6 +208,30 @@
                         <tr class="fixedClosed">
                             <td>
                                 <div class="tooltip">?
+                                    <span class="tooltipText">I cause your creature to spawn as a wild animal in the
+                                        specified biomes.</span>
+                                </div>
+                            </td>
+                            <td><input type="checkbox" id="largeRoamingCheckbox" class="cb"></td>
+                            <td id="largeRoamingToken">
+                                <label onclick='fixedClosedAutoChecker(this);'>[LARGE_ROAMING]</label>
+                            </td>
+                        </tr> <!-- largeRoaming -->
+                        <tr class="fixedClosed">
+                            <td>
+                                <div class="tooltip">?
+                                    <span class="tooltipText">I cause your creature to appear in savage biomes. (Cannot
+                                        be used with GOOD or EVIL.)</span>
+                                </div>
+                            </td>
+                            <td><input type="checkbox" id="savageCheckbox" class="cb"></td>
+                            <td id="savageToken">
+                                <label onclick='fixedClosedAutoChecker(this);'>[SAVAGE]</label>
+                            </td>
+                        </tr> <!-- savage -->
+                        <tr class="fixedClosed">
+                            <td>
+                                <div class="tooltip">?
                                     <span class="tooltipText">I cause your creature to attack any creature smaller than
                                         itself, making it great for fortress defense. Your creature may also go on
                                         rampages. (Counterpart to BENIGN.)</span>
@@ -7110,7 +7134,9 @@
             parseSpecificToken(raw, "colorCheckbox", "colorToken")
             parseSpecificToken(raw, "creatureSoldierTileCheckbox", "creatureSoldierTileToken")
             parseSpecificToken(raw, "fancifulCheckbox", "fancifulToken")
-            parseSpecificToken(raw, "largePredatorCheckbox", "largePredatorToken")
+            parseSpecificToken(raw, "largeRoamingCheckbox", "largeRoamingToken")
+            parseSpecificToken(raw, "fancifulCheckbox", "fancifulToken")
+            parseSpecificToken(raw, "savageCheckbox", "savageToken")
             parseSpecificToken(raw, "semimegabeastCheckbox", "semimegabeastToken")
             parseSpecificToken(raw, "intelligentCheckbox", "intelligentToken")
             parseSpecificToken(raw, "strangeMoodsCheckbox", "strangeMoodsToken")

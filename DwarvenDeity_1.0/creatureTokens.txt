@@ -8,6 +8,12 @@
     // fixedClosedToken
     semimegabeast
     [SEMIMEGABEAST]
+    // fixedClosedToken
+    largeRoaming
+    [LARGE_ROAMING]
+    // fixedClosedToken
+    savage
+    [SAVAGE]
 
 // additional attribute tokens
 
