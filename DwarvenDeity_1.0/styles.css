@@ -80,8 +80,12 @@ main {
 }
 
 .outputTextarea {
-    max-width: 90%;
-    padding: 10px;
+    width: 100%;
+    margin: auto;
+}
+
+textarea {
+    padding: 5% 25%;
     border-color:rgb(116, 233, 93);
     margin: auto;
 }
