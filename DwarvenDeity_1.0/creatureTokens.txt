@@ -16,7 +16,9 @@
     [SAVAGE]
 
 // additional attribute tokens
-
+    // flexibleList
+    biome
+    [BIOME:ANY_LAND]
     // fixedClosedToken
     flier
     [FLIER]

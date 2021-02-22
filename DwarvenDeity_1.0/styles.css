@@ -1,16 +1,27 @@
 body {
-    background-color: rgb(28, 31, 39);
-    color: rgb(255, 255, 255);
+    background-color: rgb(214, 243, 222);
 }
 
-button.displayButton {
-    width: 100%;
+button {
+    padding: 15px 10px;
+    border: 2px solid rgb(95, 216, 180);
+    border-radius: 10px;
+    background-color: rgb(141, 238, 165);
+}
+
+main {
+    max-width: 95%;
+    padding: 0;
+    margin: auto;
+}
+
+.displayButton {
+    width: 80%;
     padding: 15px;
     background-color: skyblue;
     border: 5px outset lightblue;
     border-radius: 10px;
 }
-
 .centerMargin {
     margin: auto;
 }
@@ -58,7 +69,19 @@ button.displayButton {
     opacity: 1;
 }
 
-#creatureTokenDatabase {
-    width: 80%;
+.centerButtons {
+    max-width: 35%;
+    margin: auto;
+}
+
+.tokenDatabase {
+    max-width: 80%;
+    margin: auto;
+}
+
+.outputTextarea {
+    max-width: 90%;
+    padding: 10px;
+    border-color:rgb(116, 233, 93);
     margin: auto;
 }

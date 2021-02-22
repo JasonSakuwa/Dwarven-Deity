@@ -1231,6 +1231,90 @@ flexibleClosed button
     <option>50</option>
     <option>100</option>
 
+<!-- Biomes -->
+    <option>ALL_MAIN</option>
+    <option>ANY_LAND</option>
+    <option>ANY_OCEAN</option>
+    <option>ANY_LAKE</option>
+    <option>ANY_TEMPERATE_LAKE</option>
+    <option>ANY_TROPICAL_LAKE</option>
+    <option>ANY_RIVER</option>
+    <option>ANY_TEMPERATE_RIVER</option>
+    <option>ANY_TROPICAL_RIVER</option>
+    <option>ANY_POOL</option>
+    <option>NOT_FREEZING</option>
+    <option>ANY_TEMPERATE</option>
+    <option>ANY_TROPICAL</option>
+    <option>ANY_FOREST</option>
+    <option>ANY_SHRUBLAND</option>
+    <option>ANY_GRASSLAND</option>
+    <option>ANY_SAVANNA</option>
+    <option>ANY_TEMPERATE_FOREST</option>
+    <option>ANY_TROPICAL_FOREST</option>
+    <option>ANY_TEMPERATE_BROADLEAF</option>
+    <option>ANY_TROPICAL_BROADLEAF</option>
+    <option>ANY_WETLAND</option>
+    <option>ANY_TEMPERATE_WETLAND</option>
+    <option>ANY_TROPICAL_WETLAND</option>
+    <option>ANY_TROPICAL_MARSH</option>
+    <option>ANY_TEMPERATE_MARSH</option>
+    <option>ANY_TROPICAL_SWAMP</option>
+    <option>ANY_TEMPERATE_SWAMP</option>
+    <option>ANY_DESERT</option>
+    <option>MOUNTAIN</option>
+    <option>MOUNTAINS</option>
+    <option>GLACIER</option>
+    <option>TUNDRA</option>
+    <option>SWAMP_TEMPERATE_FRESHWATER</option>
+    <option>SWAMP_TEMPERATE_SALTWATER</option>
+    <option>MARSH_TEMPERATE_FRESHWATER</option>
+    <option>MARSH_TEMPERATE_SALTWATER</option>
+    <option>SWAMP_TROPICAL_FRESHWATER</option>
+    <option>SWAMP_TROPICAL_SALTWATER</option>
+    <option>SWAMP_MANGROVE</option>
+    <option>MARSH_TROPICAL_FRESHWATER</option>
+    <option>MARSH_TROPICAL_SALTWATER</option>
+    <option>FOREST_TAIGA</option>
+    <option>TAIGA</option>
+    <option>FOREST_TEMPERATE_CONIFER</option>
+    <option>FOREST_TEMPERATE_BROADLEAF</option>
+    <option>FOREST_TROPICAL_CONIFER</option>
+    <option>FOREST_TROPICAL_DRY_BROADLEAF</option>
+    <option>FOREST_TROPICAL_MOIST_BROADLEAF</option>
+    <option>GRASSLAND_TEMPERATE</option>
+    <option>SAVANNA_TEMPERATE</option>
+    <option>SHRUBLAND_TEMPERATE</option>
+    <option>GRASSLAND_TROPICAL</option>
+    <option>SAVANNA_TROPICAL</option>
+    <option>SHRUBLAND_TROPICAL</option>
+    <option>DESERT_BADLAND</option>
+    <option>DESERT_ROCK</option>
+    <option>DESERT_SAND</option>
+    <option>OCEAN_TROPICAL</option>
+    <option>OCEAN_TEMPERATE</option>
+    <option>OCEAN_ARCTIC</option>
+    <option>POOL_TEMPERATE_FRESHWATER</option>
+    <option>POOL_TEMPERATE_BRACKISHWATER</option>
+    <option>POOL_TEMPERATE_SALTWATER</option>
+    <option>POOL_TROPICAL_FRESHWATER</option>
+    <option>POOL_TROPICAL_BRACKISHWATER</option>
+    <option>POOL_TROPICAL_SALTWATER</option>
+    <option>LAKE_TEMPERATE_FRESHWATER</option>
+    <option>LAKE_TEMPERATE_BRACKISHWATER</option>
+    <option>LAKE_TEMPERATE_SALTWATER</option>
+    <option>LAKE_TROPICAL_FRESHWATER</option>
+    <option>LAKE_TROPICAL_BRACKISHWATER</option>
+    <option>LAKE_TROPICAL_SALTWATER</option>
+    <option>RIVER_TEMPERATE_FRESHWATER</option>
+    <option>RIVER_TEMPERATE_BRACKISHWATER</option>
+    <option>RIVER_TEMPERATE_SALTWATER</option>
+    <option>RIVER_TROPICAL_FRESHWATER</option>
+    <option>RIVER_TROPICAL_BRACKISHWATER</option>
+    <option>RIVER_TROPICAL_SALTWATER</option>
+    <option>SUBTERRANEAN_WATER</option>
+    <option>SUBTERRANEAN_CHASM</option>
+    <option>SUBTERRANEAN_LAVA</option>
+
 
 0 ~ ?
 
