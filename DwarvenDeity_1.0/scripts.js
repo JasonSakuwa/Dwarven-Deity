@@ -191,6 +191,62 @@ function addFlexibleToken(parentId, labelHTML, defaultListNumber, defaultTextNum
     parent.appendChild(divi);
 }
 
+function addFlexibleTokenInput(parentId, labelHTML, defaultListNumber, defaultTextNumber, listFirst, datalistId) {
+    let parent = document.getElementById(parentId);
+    let divi = document.createElement("div");
+    let cb = document.createElement("input");
+    let addButton = document.createElement("button");
+    let removeButton = document.createElement("button");
+    let label = document.createElement("label");
+    cb.setAttribute("type", "checkbox");
+    cb.setAttribute("class", "cb");
+    addButton.innerHTML = "+";
+    removeButton.innerHTML = "-";
+    label.innerHTML = labelHTML;
+    divi.appendChild(cb);
+    divi.appendChild(addButton);
+    divi.appendChild(removeButton);
+    divi.appendChild(label);
+    let listNumber = defaultListNumber;
+    let textNumber = defaultTextNumber;
+    const tokens = parent.children;
+    const len = tokens.length - 1;
+    do {
+        let children = tokens[len].children;
+        if (tokens[len].children[1].innerHTML === labelHTML) {
+            listnumber = tokens[len].children.length - 4;
+        }
+    }
+    while ()
+    if (listFirst) {
+        while (listNumber--) {
+            let field = document.createElement("input");
+            field.setAttribute("list", datalistId);
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
+            divi.appendChild(field);
+        }
+        while (textNumber--) {
+            let field = document.createElement("input");
+            field.setAttribute("type", "text");
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
+            divi.appendChild(field);
+        }
+    } else {
+        while (textNumber--) {
+            let field = document.createElement("input");
+            field.setAttribute("type", "text");
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
+            divi.appendChild(field);
+        }
+        while (listNumber--) {
+            let field = document.createElement("input");
+            field.setAttribute("list", datalistId);
+            field.addEventListener("change", function () { flexibleAutoChecker(this) })
+            divi.appendChild(field);
+        }
+    }
+    parent.appendChild(divi);
+}
 function addFixedClosedToken(parentId, labelHTML) {
     debugger;
     let parent = document.getElementById(parentId);
