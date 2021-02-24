@@ -22,3 +22,6 @@
     // fixedClosedToken
     flier
     [FLIER]
+    // fixedClosedToken
+    commonDomestic
+    [COMMON_DOMESTIC]
