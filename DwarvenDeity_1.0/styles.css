@@ -22,6 +22,11 @@ main {
     border: 5px outset lightblue;
     border-radius: 10px;
 }
+
+#loadTip {
+    text-align: center;
+}
+
 .centerMargin {
     margin: auto;
 }
@@ -34,6 +39,17 @@ main {
     width: 40%;
     border-radius: 5px;
   }  
+
+.cardLink {
+    text-decoration: none;
+}
+
+.cardLetter {
+    padding: 50px 100px;
+    font-size: 1000%;
+    color: white;
+    text-align: center;
+}
 
 .container {
     padding: 0 16px;
@@ -85,7 +101,7 @@ main {
 }
 
 textarea {
-    padding: 5% 25%;
-    border-color:rgb(116, 233, 93);
+    width: 80%;
+    border-color: rgb(116, 233, 93);
     margin: auto;
 }

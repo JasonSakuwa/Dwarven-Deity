@@ -203,6 +203,8 @@ function addFlexibleTokenInput(parentId, labelHTML, defaultListNumber, defaultTe
     addButton.innerHTML = "+";
     removeButton.innerHTML = "-";
     label.innerHTML = labelHTML;
+    addButton.addEventListener("click", function () { addListTest(this.parentElement, datalistId) })
+    removeButton.addEventListener("click", function () { removeFieldTest(this.parentElement, 1) })
     divi.appendChild(cb);
     divi.appendChild(addButton);
     divi.appendChild(removeButton);
@@ -210,14 +212,15 @@ function addFlexibleTokenInput(parentId, labelHTML, defaultListNumber, defaultTe
     let listNumber = defaultListNumber;
     let textNumber = defaultTextNumber;
     const tokens = parent.children;
-    const len = tokens.length - 1;
-    do {
-        let children = tokens[len].children;
-        if (tokens[len].children[1].innerHTML === labelHTML) {
-            listnumber = tokens[len].children.length - 4;
+    for (token of tokens) {
+        let tokenChildren = token.children;
+        for (tokenChild of tokenChildren) {
+            if (tokenChild.tagName === "LABEL" && tokenChild.innerHTML === labelHTML) {
+                listNumber = tokenChildren.length - 4;
+                break;
+            }
         }
     }
-    while ()
     if (listFirst) {
         while (listNumber--) {
             let field = document.createElement("input");
@@ -247,6 +250,7 @@ function addFlexibleTokenInput(parentId, labelHTML, defaultListNumber, defaultTe
     }
     parent.appendChild(divi);
 }
+
 function addFixedClosedToken(parentId, labelHTML) {
     debugger;
     let parent = document.getElementById(parentId);
@@ -296,10 +300,33 @@ function addTextField(parentId) {
     document.getElementById(parentId).appendChild(textField);
 }
 
+function addListTest(parent, datalistId) {
+    let list = document.createElement("input");
+    list.setAttribute("list", datalistId);
+    list.addEventListener("change", function () { flexibleAutoChecker(this) });
+    parent.appendChild(list);
+}
+
+function addTextField(parent) {
+    let textField = document.createElement("input");
+    textField.setAttribute("type", text);
+    textField.addEventListener("change", function () { flexibleAutoChecker(this) });
+    parent.appendChild(textField);
+}
+
+
 function removeField(parentId, minFieldNumber) {
     let parent = document.getElementById(parentId);
     let children = parent.children;
     if (children.length > minFieldNumber + 1) {
+        let removeValue = children[children.length - 1]
+        removeValue.parentNode.removeChild(removeValue);
+    };
+}
+
+function removeFieldTest(parent, minFieldNumber) {
+    let children = parent.children;
+    if (children.length > minFieldNumber + 4) {
         let removeValue = children[children.length - 1]
         removeValue.parentNode.removeChild(removeValue);
     };

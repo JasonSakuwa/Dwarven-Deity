@@ -354,6 +354,355 @@
                 </table>
             </div>
             <div>
+                <button onclick='toggleElementGroup("additionalAttributeTokens")' class="displayButton">Additional
+                    Attributes</button>
+            </div>
+            <div id="additionalAttributeTokens" style="display:none">
+                <table>
+                    <tr class="flexibleList">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I define which biomes your creature may appear in.
+                                    <hr>[BIOME:BIOME_NAME]<br>[BIOME:ANY_LAND]
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <button onclick='addFixedToken("biomeTokenGroup", "[BIOME:", 
+                                    1, 0, true, "biomeList")'>Add: Biome</button>
+                                <button onclick='removeTokenFromGroup("biomeTokenGroup", "[BIOME:")'>Remove:
+                                    Biome</button>
+                            </div>
+                        </td>
+                        <td id="biomeTokenGroup">
+                            <div>
+                                <input type="checkbox" class="cb">
+                                <label for="biome">[BIOME:</label>
+                                <input list="biomeList" id="biome" onchange="flexibleAutoChecker(this)">
+                            </div>
+                        </td>
+                        <td>
+                            <p>]</p>
+                            <datalist id="biomeList">
+                                <!-- Biomes -->
+                                <option>ALL_MAIN</option>
+                                <option>ANY_LAND</option>
+                                <option>ANY_OCEAN</option>
+                                <option>ANY_LAKE</option>
+                                <option>ANY_TEMPERATE_LAKE</option>
+                                <option>ANY_TROPICAL_LAKE</option>
+                                <option>ANY_RIVER</option>
+                                <option>ANY_TEMPERATE_RIVER</option>
+                                <option>ANY_TROPICAL_RIVER</option>
+                                <option>ANY_POOL</option>
+                                <option>NOT_FREEZING</option>
+                                <option>ANY_TEMPERATE</option>
+                                <option>ANY_TROPICAL</option>
+                                <option>ANY_FOREST</option>
+                                <option>ANY_SHRUBLAND</option>
+                                <option>ANY_GRASSLAND</option>
+                                <option>ANY_SAVANNA</option>
+                                <option>ANY_TEMPERATE_FOREST</option>
+                                <option>ANY_TROPICAL_FOREST</option>
+                                <option>ANY_TEMPERATE_BROADLEAF</option>
+                                <option>ANY_TROPICAL_BROADLEAF</option>
+                                <option>ANY_WETLAND</option>
+                                <option>ANY_TEMPERATE_WETLAND</option>
+                                <option>ANY_TROPICAL_WETLAND</option>
+                                <option>ANY_TROPICAL_MARSH</option>
+                                <option>ANY_TEMPERATE_MARSH</option>
+                                <option>ANY_TROPICAL_SWAMP</option>
+                                <option>ANY_TEMPERATE_SWAMP</option>
+                                <option>ANY_DESERT</option>
+                                <option>MOUNTAIN</option>
+                                <option>MOUNTAINS</option>
+                                <option>GLACIER</option>
+                                <option>TUNDRA</option>
+                                <option>SWAMP_TEMPERATE_FRESHWATER</option>
+                                <option>SWAMP_TEMPERATE_SALTWATER</option>
+                                <option>MARSH_TEMPERATE_FRESHWATER</option>
+                                <option>MARSH_TEMPERATE_SALTWATER</option>
+                                <option>SWAMP_TROPICAL_FRESHWATER</option>
+                                <option>SWAMP_TROPICAL_SALTWATER</option>
+                                <option>SWAMP_MANGROVE</option>
+                                <option>MARSH_TROPICAL_FRESHWATER</option>
+                                <option>MARSH_TROPICAL_SALTWATER</option>
+                                <option>FOREST_TAIGA</option>
+                                <option>TAIGA</option>
+                                <option>FOREST_TEMPERATE_CONIFER</option>
+                                <option>FOREST_TEMPERATE_BROADLEAF</option>
+                                <option>FOREST_TROPICAL_CONIFER</option>
+                                <option>FOREST_TROPICAL_DRY_BROADLEAF</option>
+                                <option>FOREST_TROPICAL_MOIST_BROADLEAF</option>
+                                <option>GRASSLAND_TEMPERATE</option>
+                                <option>SAVANNA_TEMPERATE</option>
+                                <option>SHRUBLAND_TEMPERATE</option>
+                                <option>GRASSLAND_TROPICAL</option>
+                                <option>SAVANNA_TROPICAL</option>
+                                <option>SHRUBLAND_TROPICAL</option>
+                                <option>DESERT_BADLAND</option>
+                                <option>DESERT_ROCK</option>
+                                <option>DESERT_SAND</option>
+                                <option>OCEAN_TROPICAL</option>
+                                <option>OCEAN_TEMPERATE</option>
+                                <option>OCEAN_ARCTIC</option>
+                                <option>POOL_TEMPERATE_FRESHWATER</option>
+                                <option>POOL_TEMPERATE_BRACKISHWATER</option>
+                                <option>POOL_TEMPERATE_SALTWATER</option>
+                                <option>POOL_TROPICAL_FRESHWATER</option>
+                                <option>POOL_TROPICAL_BRACKISHWATER</option>
+                                <option>POOL_TROPICAL_SALTWATER</option>
+                                <option>LAKE_TEMPERATE_FRESHWATER</option>
+                                <option>LAKE_TEMPERATE_BRACKISHWATER</option>
+                                <option>LAKE_TEMPERATE_SALTWATER</option>
+                                <option>LAKE_TROPICAL_FRESHWATER</option>
+                                <option>LAKE_TROPICAL_BRACKISHWATER</option>
+                                <option>LAKE_TROPICAL_SALTWATER</option>
+                                <option>RIVER_TEMPERATE_FRESHWATER</option>
+                                <option>RIVER_TEMPERATE_BRACKISHWATER</option>
+                                <option>RIVER_TEMPERATE_SALTWATER</option>
+                                <option>RIVER_TROPICAL_FRESHWATER</option>
+                                <option>RIVER_TROPICAL_BRACKISHWATER</option>
+                                <option>RIVER_TROPICAL_SALTWATER</option>
+                                <option>SUBTERRANEAN_WATER</option>
+                                <option>SUBTERRANEAN_CHASM</option>
+                                <option>SUBTERRANEAN_LAVA</option>
+                            </datalist>
+                        </td>
+                    </tr> <!-- biome -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I give your creature the ability to wear and wield items.
+                                    Wow!</span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="equipsCheckbox" class="cb"></td>
+                        <td id="equipsToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[EQUIPS]</label>
+                        </td>
+                    </tr> <!-- equips -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I bestow upon your creature the power of FLIGHT!</span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="flierCheckbox" class="cb"></td>
+                        <td id="flierToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[FLIER]</label>
+                        </td>
+                    </tr> <!-- flier -->
+                    <tr class="fixedList">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I determine how strong your creature's sense of smell is.
+                                    <hr>* Lower is stronger.<br>[SMELL_TRIGGER:0 ~ 10000]*<br>[SMELL_TRIGGER:90]
+                                </span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="smellTriggerCheckbox" class="cb"></td>
+                        <td id="smellTriggerToken">
+                            <label for="smellTrigger">[SMELL_TRIGGER:</label>
+                            <input list="smellTriggerList" id="smellTrigger" onchange="fixedAutoChecker(this)">
+                        </td>
+                        <td>
+                            <p>]</p>
+                            <datalist id="smellTriggerList">
+                                <option>0</option>
+                                <option>5</option>
+                                <option>10</option>
+                                <option>15</option>
+                                <option>20</option>
+                                <option>25</option>
+                                <option>30</option>
+                                <option>35</option>
+                                <option>40</option>
+                                <option>45</option>
+                                <option>50</option>
+                                <option>55</option>
+                                <option>60</option>
+                                <option>65</option>
+                                <option>70</option>
+                                <option>75</option>
+                                <option>80</option>
+                                <option>85</option>
+                                <option>90</option>
+                                <option>95</option>
+                                <option>100</option>
+                                <option>500</option>
+                                <option>1000</option>
+                                <option>1500</option>
+                                <option>2000</option>
+                                <option>2500</option>
+                                <option>3000</option>
+                                <option>3500</option>
+                                <option>4000</option>
+                                <option>4500</option>
+                                <option>5000</option>
+                                <option>5500</option>
+                                <option>6000</option>
+                                <option>6500</option>
+                                <option>7000</option>
+                                <option>7500</option>
+                                <option>8000</option>
+                                <option>8500</option>
+                                <option>9000</option>
+                                <option>9500</option>
+                                <option>10000</option>
+                            </datalist>
+                        </td>
+                    </tr> <!-- smellTrigger -->
+                    <tr class="fixedList">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I determine how well your creature can see in darkness.
+                                    <hr>* Higher is more sensitive.<br>[LOW_LIGHT_VISION:0 ~
+                                    10000]*<br>[LOW_LIGHT_VISION:10000]
+                                </span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="lowLightVisionCheckbox" class="cb"></td>
+                        <td id="lowLightVisionToken">
+                            <label for="lowLightVision ">[LOW_LIGHT_VISION:</label>
+                            <input list="lowLightVision List" id="lowLightVision " onchange="fixedAutoChecker(this)">
+                        </td>
+                        <td>
+                            <p>]</p>
+                            <datalist id="lowLightVision List">
+                                <option>10000</option>
+                                <option>9500</option>
+                                <option>9000</option>
+                                <option>8500</option>
+                                <option>8000</option>
+                                <option>7500</option>
+                                <option>7000</option>
+                                <option>6500</option>
+                                <option>6000</option>
+                                <option>5500</option>
+                                <option>5000</option>
+                                <option>4500</option>
+                                <option>4000</option>
+                                <option>3500</option>
+                                <option>3000</option>
+                                <option>2500</option>
+                                <option>2000</option>
+                                <option>1500</option>
+                                <option>1000</option>
+                                <option>500</option>
+                                <option>0</option>
+                            </datalist>
+                        </td>
+                    </tr> <!-- lowLightVision -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I cause your creature to become active during the
+                                    daytime.</span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="diurnalCheckbox" class="cb"></td>
+                        <td id="diurnalToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[DIURNAL]</label>
+                        </td>
+                    </tr> <!-- diurnal -->
+                    <tr class="fixedList">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I determine your creature's standard body temperature.
+                                    <hr>* Value = farenheit + 9968, celsius * 9/5 + 10000<br>[HOMEOTHERM:0 ~
+                                    ?/NONE]*<br>[HOMEOTHERM:10067]
+                                </span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="homeothermCheckbox" class="cb"></td>
+                        <td id="homeothermToken">
+                            <label for="homeotherm">[HOMEOTHERM:</label>
+                            <input list="homeothermList" id="homeotherm" onchange="fixedAutoChecker(this)">
+                        </td>
+                        <td>
+                            <p>]</p>
+                            <datalist id="homeothermList">
+                                <option>10067</option>
+                                <option>10000</option>
+                            </datalist>
+                        </td>
+                    </tr> <!-- homeotherm -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I cause your creature to become available to all
+                                    civilizations, as long as your creature also has [PET], [PACK_ANIMAL],
+                                    [WAGON_PULLER] and/or [MOUNT].</span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="commonDomesticCheckbox" class="cb"></td>
+                        <td id="commonDomesticToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[COMMON_DOMESTIC]</label>
+                        </td>
+                    </tr> <!-- commonDomestic -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I give your creature a bonus in caves, as well as the
+                                    ability to grow cave adapted.</span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="caveAdaptCheckbox" class="cb"></td>
+                        <td id="caveAdaptToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[CAVE_ADAPT]</label>
+                        </td>
+                    </tr> <!-- caveAdapt -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I cause your creature to use its swimming skill for
+                                    swimming. </span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="swimsLearnedCheckbox" class="cb"></td>
+                        <td id="swimsLearnedToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[SWIMS_LEARNED]</label>
+                        </td>
+                    </tr> <!-- swimsLearned -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I cause your creature to want alcohol. So much so, that if
+                                    they don't drink any, they become sluggish.</span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="alcoholDependentCheckbox" class="cb"></td>
+                        <td id="alcoholDependentToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[ALCOHOL_DEPENDENT]</label>
+                        </td>
+                    </tr> <!-- alcoholDependent -->
+                    <tr class="fixedList">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I determine the speech file other creatures will use to
+                                    boast about killing your creature. (Unrelated to your creature's speech.)
+                                </span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="speechCheckbox" class="cb"></td>
+                        <td id="speechToken">
+                            <label for="speech">[SPEECH:</label>
+                            <input list="speechList" id="speech" onchange="fixedAutoChecker(this)">
+                        </td>
+                        <td>
+                            <p>]</p>
+                            <datalist id="speechList">
+                                <option>dwarf.txt</option>
+                                <option>elf.txt</option>
+                                <option>general.txt</option>
+                            </datalist>
+                        </td>
+                    </tr> <!-- speech -->
+                </table>
+            </div>
+            <div>
                 <button onclick='toggleElementGroup("anatomyTokens")' class="displayButton">Anatomy</button>
             </div>
             <div id="anatomyTokens" style="display:none">
@@ -5195,342 +5544,6 @@
                 </table>
             </div>
             <div>
-                <button onclick='toggleElementGroup("additionalAttributeTokens")' class="displayButton">Additional
-                    Attributes</button>
-            </div>
-            <div id="additionalAttributeTokens" style="display:none">
-                <table>
-                    <tr class="flexibleList">
-                        <td>
-                            <div class="tooltip">?
-                                <span class="tooltipText">I define which biomes your creature may appear in.
-                                    <hr>[BIOME:BIOME_NAME]<br>[BIOME:ANY_LAND]
-                                </span>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <button onclick='addFixedToken("biomeTokenGroup", "[BIOME:", 
-                                    1, 0, true, "biomeList")'>Add: Biome</button>
-                                <button onclick='removeTokenFromGroup("biomeTokenGroup", "[BIOME:")'>Remove:
-                                    Biome</button>
-                            </div>
-                        </td>
-                        <td id="biomeTokenGroup">
-                            <div>
-                                <input type="checkbox" class="cb">
-                                <label for="biome">[BIOME:</label>
-                                <input list="biomeList" id="biome" onchange="flexibleAutoChecker(this)">
-                            </div>
-                        </td>
-                        <td>
-                            <p>]</p>
-                            <datalist id="biomeList">
-                                <!-- Biomes -->
-                                <option>ALL_MAIN</option>
-                                <option>ANY_LAND</option>
-                                <option>ANY_OCEAN</option>
-                                <option>ANY_LAKE</option>
-                                <option>ANY_TEMPERATE_LAKE</option>
-                                <option>ANY_TROPICAL_LAKE</option>
-                                <option>ANY_RIVER</option>
-                                <option>ANY_TEMPERATE_RIVER</option>
-                                <option>ANY_TROPICAL_RIVER</option>
-                                <option>ANY_POOL</option>
-                                <option>NOT_FREEZING</option>
-                                <option>ANY_TEMPERATE</option>
-                                <option>ANY_TROPICAL</option>
-                                <option>ANY_FOREST</option>
-                                <option>ANY_SHRUBLAND</option>
-                                <option>ANY_GRASSLAND</option>
-                                <option>ANY_SAVANNA</option>
-                                <option>ANY_TEMPERATE_FOREST</option>
-                                <option>ANY_TROPICAL_FOREST</option>
-                                <option>ANY_TEMPERATE_BROADLEAF</option>
-                                <option>ANY_TROPICAL_BROADLEAF</option>
-                                <option>ANY_WETLAND</option>
-                                <option>ANY_TEMPERATE_WETLAND</option>
-                                <option>ANY_TROPICAL_WETLAND</option>
-                                <option>ANY_TROPICAL_MARSH</option>
-                                <option>ANY_TEMPERATE_MARSH</option>
-                                <option>ANY_TROPICAL_SWAMP</option>
-                                <option>ANY_TEMPERATE_SWAMP</option>
-                                <option>ANY_DESERT</option>
-                                <option>MOUNTAIN</option>
-                                <option>MOUNTAINS</option>
-                                <option>GLACIER</option>
-                                <option>TUNDRA</option>
-                                <option>SWAMP_TEMPERATE_FRESHWATER</option>
-                                <option>SWAMP_TEMPERATE_SALTWATER</option>
-                                <option>MARSH_TEMPERATE_FRESHWATER</option>
-                                <option>MARSH_TEMPERATE_SALTWATER</option>
-                                <option>SWAMP_TROPICAL_FRESHWATER</option>
-                                <option>SWAMP_TROPICAL_SALTWATER</option>
-                                <option>SWAMP_MANGROVE</option>
-                                <option>MARSH_TROPICAL_FRESHWATER</option>
-                                <option>MARSH_TROPICAL_SALTWATER</option>
-                                <option>FOREST_TAIGA</option>
-                                <option>TAIGA</option>
-                                <option>FOREST_TEMPERATE_CONIFER</option>
-                                <option>FOREST_TEMPERATE_BROADLEAF</option>
-                                <option>FOREST_TROPICAL_CONIFER</option>
-                                <option>FOREST_TROPICAL_DRY_BROADLEAF</option>
-                                <option>FOREST_TROPICAL_MOIST_BROADLEAF</option>
-                                <option>GRASSLAND_TEMPERATE</option>
-                                <option>SAVANNA_TEMPERATE</option>
-                                <option>SHRUBLAND_TEMPERATE</option>
-                                <option>GRASSLAND_TROPICAL</option>
-                                <option>SAVANNA_TROPICAL</option>
-                                <option>SHRUBLAND_TROPICAL</option>
-                                <option>DESERT_BADLAND</option>
-                                <option>DESERT_ROCK</option>
-                                <option>DESERT_SAND</option>
-                                <option>OCEAN_TROPICAL</option>
-                                <option>OCEAN_TEMPERATE</option>
-                                <option>OCEAN_ARCTIC</option>
-                                <option>POOL_TEMPERATE_FRESHWATER</option>
-                                <option>POOL_TEMPERATE_BRACKISHWATER</option>
-                                <option>POOL_TEMPERATE_SALTWATER</option>
-                                <option>POOL_TROPICAL_FRESHWATER</option>
-                                <option>POOL_TROPICAL_BRACKISHWATER</option>
-                                <option>POOL_TROPICAL_SALTWATER</option>
-                                <option>LAKE_TEMPERATE_FRESHWATER</option>
-                                <option>LAKE_TEMPERATE_BRACKISHWATER</option>
-                                <option>LAKE_TEMPERATE_SALTWATER</option>
-                                <option>LAKE_TROPICAL_FRESHWATER</option>
-                                <option>LAKE_TROPICAL_BRACKISHWATER</option>
-                                <option>LAKE_TROPICAL_SALTWATER</option>
-                                <option>RIVER_TEMPERATE_FRESHWATER</option>
-                                <option>RIVER_TEMPERATE_BRACKISHWATER</option>
-                                <option>RIVER_TEMPERATE_SALTWATER</option>
-                                <option>RIVER_TROPICAL_FRESHWATER</option>
-                                <option>RIVER_TROPICAL_BRACKISHWATER</option>
-                                <option>RIVER_TROPICAL_SALTWATER</option>
-                                <option>SUBTERRANEAN_WATER</option>
-                                <option>SUBTERRANEAN_CHASM</option>
-                                <option>SUBTERRANEAN_LAVA</option>
-                            </datalist>
-                        </td>
-                    </tr> <!-- biome -->
-                    <tr class="fixedClosed">
-                        <td>
-                            <div class="tooltip">?
-                                <span class="tooltipText">I give your creature the ability to wear and wield items.
-                                    Wow!</span>
-                            </div>
-                        </td>
-                        <td><input type="checkbox" id="equipsCheckbox" class="cb"></td>
-                        <td id="equipsToken">
-                            <label onclick='fixedClosedAutoChecker(this);'>[EQUIPS]</label>
-                        </td>
-                    </tr> <!-- equips -->
-                    <tr class="fixedClosed">
-                        <td>
-                            <div class="tooltip">?
-                                <span class="tooltipText">I bestow upon your creature the power of FLIGHT!</span>
-                            </div>
-                        </td>
-                        <td><input type="checkbox" id="flierCheckbox" class="cb"></td>
-                        <td id="flierToken">
-                            <label onclick='fixedClosedAutoChecker(this);'>[FLIER]</label>
-                        </td>
-                    </tr> <!-- flier -->
-                    <tr class="fixedList">
-                        <td>
-                            <div class="tooltip">?
-                                <span class="tooltipText">I determine how strong your creature's sense of smell is.
-                                    <hr>* Lower is stronger.<br>[SMELL_TRIGGER:0 ~ 10000]*<br>[SMELL_TRIGGER:90]
-                                </span>
-                            </div>
-                        </td>
-                        <td><input type="checkbox" id="smellTriggerCheckbox" class="cb"></td>
-                        <td id="smellTriggerToken">
-                            <label for="smellTrigger">[SMELL_TRIGGER:</label>
-                            <input list="smellTriggerList" id="smellTrigger" onchange="fixedAutoChecker(this)">
-                        </td>
-                        <td>
-                            <p>]</p>
-                            <datalist id="smellTriggerList">
-                                <option>0</option>
-                                <option>5</option>
-                                <option>10</option>
-                                <option>15</option>
-                                <option>20</option>
-                                <option>25</option>
-                                <option>30</option>
-                                <option>35</option>
-                                <option>40</option>
-                                <option>45</option>
-                                <option>50</option>
-                                <option>55</option>
-                                <option>60</option>
-                                <option>65</option>
-                                <option>70</option>
-                                <option>75</option>
-                                <option>80</option>
-                                <option>85</option>
-                                <option>90</option>
-                                <option>95</option>
-                                <option>100</option>
-                                <option>500</option>
-                                <option>1000</option>
-                                <option>1500</option>
-                                <option>2000</option>
-                                <option>2500</option>
-                                <option>3000</option>
-                                <option>3500</option>
-                                <option>4000</option>
-                                <option>4500</option>
-                                <option>5000</option>
-                                <option>5500</option>
-                                <option>6000</option>
-                                <option>6500</option>
-                                <option>7000</option>
-                                <option>7500</option>
-                                <option>8000</option>
-                                <option>8500</option>
-                                <option>9000</option>
-                                <option>9500</option>
-                                <option>10000</option>
-                            </datalist>
-                        </td>
-                    </tr> <!-- smellTrigger -->
-                    <tr class="fixedList">
-                        <td>
-                            <div class="tooltip">?
-                                <span class="tooltipText">I determine how well your creature can see in darkness.
-                                    <hr>* Higher is more sensitive.<br>[LOW_LIGHT_VISION:0 ~
-                                    10000]*<br>[LOW_LIGHT_VISION:10000]
-                                </span>
-                            </div>
-                        </td>
-                        <td><input type="checkbox" id="lowLightVisionCheckbox" class="cb"></td>
-                        <td id="lowLightVisionToken">
-                            <label for="lowLightVision ">[LOW_LIGHT_VISION:</label>
-                            <input list="lowLightVision List" id="lowLightVision " onchange="fixedAutoChecker(this)">
-                        </td>
-                        <td>
-                            <p>]</p>
-                            <datalist id="lowLightVision List">
-                                <option>10000</option>
-                                <option>9500</option>
-                                <option>9000</option>
-                                <option>8500</option>
-                                <option>8000</option>
-                                <option>7500</option>
-                                <option>7000</option>
-                                <option>6500</option>
-                                <option>6000</option>
-                                <option>5500</option>
-                                <option>5000</option>
-                                <option>4500</option>
-                                <option>4000</option>
-                                <option>3500</option>
-                                <option>3000</option>
-                                <option>2500</option>
-                                <option>2000</option>
-                                <option>1500</option>
-                                <option>1000</option>
-                                <option>500</option>
-                                <option>0</option>
-                            </datalist>
-                        </td>
-                    </tr> <!-- lowLightVision -->
-                    <tr class="fixedClosed">
-                        <td>
-                            <div class="tooltip">?
-                                <span class="tooltipText">I cause your creature to become active during the
-                                    daytime.</span>
-                            </div>
-                        </td>
-                        <td><input type="checkbox" id="diurnalCheckbox" class="cb"></td>
-                        <td id="diurnalToken">
-                            <label onclick='fixedClosedAutoChecker(this);'>[DIURNAL]</label>
-                        </td>
-                    </tr> <!-- diurnal -->
-                    <tr class="fixedList">
-                        <td>
-                            <div class="tooltip">?
-                                <span class="tooltipText">I determine your creature's standard body temperature.
-                                    <hr>* Value = farenheit + 9968, celsius * 9/5 + 10000<br>[HOMEOTHERM:0 ~
-                                    ?/NONE]*<br>[HOMEOTHERM:10067]
-                                </span>
-                            </div>
-                        </td>
-                        <td><input type="checkbox" id="homeothermCheckbox" class="cb"></td>
-                        <td id="homeothermToken">
-                            <label for="homeotherm">[HOMEOTHERM:</label>
-                            <input list="homeothermList" id="homeotherm" onchange="fixedAutoChecker(this)">
-                        </td>
-                        <td>
-                            <p>]</p>
-                            <datalist id="homeothermList">
-                                <option>10067</option>
-                                <option>10000</option>
-                            </datalist>
-                        </td>
-                    </tr> <!-- homeotherm -->
-                    <tr class="fixedClosed">
-                        <td>
-                            <div class="tooltip">?
-                                <span class="tooltipText">I give your creature a bonus in caves, as well as the
-                                    ability to grow cave adapted.</span>
-                            </div>
-                        </td>
-                        <td><input type="checkbox" id="caveAdaptCheckbox" class="cb"></td>
-                        <td id="caveAdaptToken">
-                            <label onclick='fixedClosedAutoChecker(this);'>[CAVE_ADAPT]</label>
-                        </td>
-                    </tr> <!-- caveAdapt -->
-                    <tr class="fixedClosed">
-                        <td>
-                            <div class="tooltip">?
-                                <span class="tooltipText">I cause your creature to use its swimming skill for
-                                    swimming. </span>
-                            </div>
-                        </td>
-                        <td><input type="checkbox" id="swimsLearnedCheckbox" class="cb"></td>
-                        <td id="swimsLearnedToken">
-                            <label onclick='fixedClosedAutoChecker(this);'>[SWIMS_LEARNED]</label>
-                        </td>
-                    </tr> <!-- swimsLearned -->
-                    <tr class="fixedClosed">
-                        <td>
-                            <div class="tooltip">?
-                                <span class="tooltipText">I cause your creature to want alcohol. So much so, that if
-                                    they don't drink any, they become sluggish.</span>
-                            </div>
-                        </td>
-                        <td><input type="checkbox" id="alcoholDependentCheckbox" class="cb"></td>
-                        <td id="alcoholDependentToken">
-                            <label onclick='fixedClosedAutoChecker(this);'>[ALCOHOL_DEPENDENT]</label>
-                        </td>
-                    </tr> <!-- alcoholDependent -->
-                    <tr class="fixedList">
-                        <td>
-                            <div class="tooltip">?
-                                <span class="tooltipText">I determine the speech file other creatures will use to
-                                    boast about killing your creature. (Unrelated to your creature's speech.)
-                                </span>
-                            </div>
-                        </td>
-                        <td><input type="checkbox" id="speechCheckbox" class="cb"></td>
-                        <td id="speechToken">
-                            <label for="speech">[SPEECH:</label>
-                            <input list="speechList" id="speech" onchange="fixedAutoChecker(this)">
-                        </td>
-                        <td>
-                            <p>]</p>
-                            <datalist id="speechList">
-                                <option>dwarf.txt</option>
-                                <option>elf.txt</option>
-                                <option>general.txt</option>
-                            </datalist>
-                        </td>
-                    </tr> <!-- speech -->
-                </table>
-            </div>
-            <div>
                 <button onclick='toggleElementGroup("professionTokens")' class="displayButton">Professions</button>
             </div>
             <div id="professionTokens" style="display:none">
@@ -7242,6 +7255,7 @@
             parseSpecificToken(raw, "lowLightVisionCheckbox", "lowLightVisionToken")
             parseSpecificToken(raw, "diurnalCheckbox", "diurnalToken")
             parseSpecificToken(raw, "homeothermCheckbox", "homeothermToken")
+            parseSpecificToken(raw, "commonDomesticCheckbox", "commonDomesticToken")
             parseSpecificToken(raw, "caveAdaptCheckbox", "caveAdaptToken")
             parseSpecificToken(raw, "swimsLearnedCheckbox", "swimsLearnedToken")
             parseSpecificToken(raw, "alcoholDependentCheckbox", "alcoholDependentToken")
