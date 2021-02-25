@@ -20,7 +20,6 @@
             <img src="images\Have a soarin' day.png" style="width: 20px;">
         </a>
     </nav>
-    <div></div>
     <main>
         <div class="centerButtons">
             <button onclick='checkVisibleCheckboxes()'>Check Visible</button>
@@ -629,6 +628,166 @@
                             </datalist>
                         </td>
                     </tr> <!-- homeotherm -->
+                    <tr class="flexibleList">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I cause your creature to be associated with a specified
+                                    religious sphere, allowing those with the POWER token to worship your creature.
+                                    <hr>[SPHERE:SPHERE_NAME]<br>[SPHERE:FIRE]
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <button onclick='addFixedToken("sphereTokenGroup", "[SPHERE:", 
+                                1, 0, true, "sphereList")'>Add: Sphere</button>
+                                <button onclick='removeTokenFromGroup("sphereTokenGroup", "[SPHERE:")'>Remove:
+                                    Sphere</button>
+                            </div>
+                        </td>
+                        <td id="sphereTokenGroup">
+                            <div>
+                                <input type="checkbox" class="cb">
+                                <label for="sphere">[SPHERE:</label>
+                                <input list="sphereList" id="sphere" onchange="flexibleAutoChecker(this)">
+                            </div>
+                        </td>
+                        <td>
+                            <p>]</p>
+                            <datalist id="sphereList">
+                                <option>AGRICULTURE</option>
+                                <option>ANIMALS</option>
+                                <option>ART</option>
+                                <option>BALANCE</option>
+                                <option>BEAUTY</option>
+                                <option>BIRTH</option>
+                                <option>BLIGHT</option>
+                                <option>BOUNDARIES</option>
+                                <option>CAVERNS</option>
+                                <option>CHAOS</option>
+                                <option>CHARITY</option>
+                                <option>CHILDREN</option>
+                                <option>COASTS</option>
+                                <option>CONSOLATION</option>
+                                <option>COURAGE</option>
+                                <option>CRAFTS</option>
+                                <option>CREATION</option>
+                                <option>DANCE</option>
+                                <option>DARKNESS</option>
+                                <option>DAWN</option>
+                                <option>DAY</option>
+                                <option>DEATH</option>
+                                <option>DEFORMITY</option>
+                                <option>DEPRAVITY</option>
+                                <option>DISCIPLINE</option>
+                                <option>DISEASE</option>
+                                <option>DREAMS</option>
+                                <option>DUSK</option>
+                                <option>DUTY</option>
+                                <option>EARTH</option>
+                                <option>FAMILY</option>
+                                <option>FAME</option>
+                                <option>FATE</option>
+                                <option>FERTILITY</option>
+                                <option>FESTIVALS</option>
+                                <option>FIRE</option>
+                                <option>FISH</option>
+                                <option>FISHING</option>
+                                <option>FOOD</option>
+                                <option>FORGIVENESS</option>
+                                <option>FORTRESSES</option>
+                                <option>FREEDOM</option>
+                                <option>GAMBLING</option>
+                                <option>GAMES</option>
+                                <option>GENEROSITY</option>
+                                <option>HAPPINESS</option>
+                                <option>HEALING</option>
+                                <option>HOSPITALITY</option>
+                                <option>HUNTING</option>
+                                <option>INSPIRATION</option>
+                                <option>JEALOUSY</option>
+                                <option>JEWELS</option>
+                                <option>JUSTICE</option>
+                                <option>LABOR</option>
+                                <option>LAKES</option>
+                                <option>LAWS</option>
+                                <option>LIES</option>
+                                <option>LIGHT</option>
+                                <option>LIGHTNING</option>
+                                <option>LONGEVITY</option>
+                                <option>LOVE</option>
+                                <option>LOYALTY</option>
+                                <option>LUCK</option>
+                                <option>LUST</option>
+                                <option>MARRIAGE</option>
+                                <option>MERCY</option>
+                                <option>METALS</option>
+                                <option>MINERALS</option>
+                                <option>MISERY</option>
+                                <option>MIST</option>
+                                <option>MOON</option>
+                                <option>MOUNTAINS</option>
+                                <option>MUCK</option>
+                                <option>MURDER</option>
+                                <option>MUSIC</option>
+                                <option>NATURE</option>
+                                <option>NIGHT</option>
+                                <option>NIGHTMARES</option>
+                                <option>OATHS</option>
+                                <option>OCEANS</option>
+                                <option>ORDER</option>
+                                <option>PAINTING</option>
+                                <option>PEACE</option>
+                                <option>PERSUASION</option>
+                                <option>PLANTS</option>
+                                <option>POETRY</option>
+                                <option>PREGNANCY</option>
+                                <option>RAIN</option>
+                                <option>RAINBOWS</option>
+                                <option>REBIRTH</option>
+                                <option>REVELRY</option>
+                                <option>REVENGE</option>
+                                <option>RIVERS</option>
+                                <option>RULERSHIP</option>
+                                <option>RUMORS</option>
+                                <option>SACRIFICE</option>
+                                <option>SALT</option>
+                                <option>SCHOLARSHIP</option>
+                                <option>SEASONS</option>
+                                <option>SILENCE</option>
+                                <option>SKY</option>
+                                <option>SONG</option>
+                                <option>SPEECH</option>
+                                <option>STARS</option>
+                                <option>STORMS</option>
+                                <option>STRENGTH</option>
+                                <option>SUICIDE</option>
+                                <option>SUN</option>
+                                <option>THEFT</option>
+                                <option>THRALLDOM</option>
+                                <option>THUNDER</option>
+                                <option>TORTURE</option>
+                                <option>TRADE</option>
+                                <option>TRAVELERS</option>
+                                <option>TREACHERY</option>
+                                <option>TREES</option>
+                                <option>TRICKERY</option>
+                                <option>TRUTH</option>
+                                <option>TWILIGHT</option>
+                                <option>VALOR</option>
+                                <option>VICTORY</option>
+                                <option>VOLCANOS</option>
+                                <option>WAR</option>
+                                <option>WATER</option>
+                                <option>WEALTH</option>
+                                <option>WEATHER</option>
+                                <option>WIND</option>
+                                <option>WISDOM</option>
+                                <option>WRITING</option>
+                                <option>YOUTH</option>
+                            </datalist>
+                        </td>
+                    </tr> <!-- sphere -->
                     <tr class="fixedClosed">
                         <td>
                             <div class="tooltip">?
@@ -7217,7 +7376,9 @@
             <textarea id="output"></textarea>
         </div>
     </main>
-    <div></div>
+    <div>
+        <img>
+    </div>
     <footer></footer>
     <script>
         function creatureTokenCompile() {

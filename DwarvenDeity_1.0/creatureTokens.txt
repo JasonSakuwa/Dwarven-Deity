@@ -19,6 +19,9 @@
     // flexibleList
     biome
     [BIOME:ANY_LAND]
+    // flexibleList
+    sphere
+    [SPHERE:FIRE]
     // fixedClosedToken
     flier
     [FLIER]
