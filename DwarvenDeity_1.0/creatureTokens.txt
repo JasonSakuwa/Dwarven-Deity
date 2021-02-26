@@ -28,3 +28,6 @@
     // fixedClosedToken
     commonDomestic
     [COMMON_DOMESTIC]
+    fisedList
+    difficulty
+    [DIFFICULTY:5]

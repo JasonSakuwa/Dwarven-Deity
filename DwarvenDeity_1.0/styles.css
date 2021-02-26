@@ -4,9 +4,9 @@ body {
 }
 
 button {
-    padding: 15px 10px;
-    border: 2px solid rgb(95, 216, 180);
     border-radius: 10px;
+    border: 2px solid rgb(95, 216, 180);
+    padding: 15px 10px;
     background-color: rgb(141, 238, 165);
 }
 

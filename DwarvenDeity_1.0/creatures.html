@@ -14,7 +14,6 @@
 </head>
 
 <body>
-    <header></header>
     <nav>
         <a href="index.html">
             <img src="images\Have a soarin' day.png" style="width: 20px;">
@@ -788,6 +787,40 @@
                             </datalist>
                         </td>
                     </tr> <!-- sphere -->
+                    <tr class="fixedList">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I increase experience gain for adventure mode.
+                                    <hr>* Numbers higher than 10 cause this creature not to appear as
+                                    quests.<br>[DIFFICULTY:0 ~ ?]*<br>[DIFFICULTY:5]
+                                </span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="difficultyCheckbox" class="cb"></td>
+                        <td id="difficultyToken">
+                            <label for="difficulty">[DIFFICULTY:</label>
+                            <input list="difficultyList" id="difficulty" onchange="fixedAutoChecker(this)">
+                        </td>
+                        <td>
+                            <p>]</p>
+                            <datalist id="difficultyList">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>15</option>
+                                <option>20</option>
+                                <option>100</option>
+                            </datalist>
+                        </td>
+                    </tr> <!-- difficulty -->
                     <tr class="fixedClosed">
                         <td>
                             <div class="tooltip">?
