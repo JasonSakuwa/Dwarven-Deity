@@ -191,7 +191,8 @@ function addFlexibleToken(parentId, labelHTML, defaultListNumber, defaultTextNum
     parent.appendChild(divi);
 }
 
-function addFlexibleTokenInput(parentId, labelHTML, defaultListNumber, defaultTextNumber, listFirst, datalistId) {
+// For simple tokens.
+function addFlexibleButtonsToken(parentId, labelHTML, defaultListNumber, defaultTextNumber, listFirst, datalistId) {
     let parent = document.getElementById(parentId);
     let divi = document.createElement("div");
     let cb = document.createElement("input");
@@ -379,4 +380,11 @@ function parseToken(rawArray, divi) {
         }
         rawArray.push(tokenString + "]");
     }
+}
+
+rawRead = (textareaId) => {
+    let rawString = document.getElementById(textareaId).value;
+
+    let closedTokens = rawStringArray.filter()
+    let openTokens = rawStringArray.filter()
 }

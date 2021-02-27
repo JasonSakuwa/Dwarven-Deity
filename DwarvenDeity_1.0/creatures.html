@@ -870,6 +870,18 @@
                             <label onclick='fixedClosedAutoChecker(this);'>[ALCOHOL_DEPENDENT]</label>
                         </td>
                     </tr> <!-- alcoholDependent -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I may cause your creature to no longer leave trackable
+                                    tracks.</span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="noVegetationPerturbCheckbox" class="cb"></td>
+                        <td id="noVegetationPerturbToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[NO_VEGETATION_PERTURB]</label>
+                        </td>
+                    </tr> <!-- noVegetationPerturb -->
                     <tr class="fixedList">
                         <td>
                             <div class="tooltip">?
@@ -7449,10 +7461,13 @@
             parseSpecificToken(raw, "lowLightVisionCheckbox", "lowLightVisionToken")
             parseSpecificToken(raw, "diurnalCheckbox", "diurnalToken")
             parseSpecificToken(raw, "homeothermCheckbox", "homeothermToken")
+            parseTokenGroup(raw, "sphereTokenGroup")
+            parseSpecificToken(raw, "difficultyCheckbox", "difficultyToken")
             parseSpecificToken(raw, "commonDomesticCheckbox", "commonDomesticToken")
             parseSpecificToken(raw, "caveAdaptCheckbox", "caveAdaptToken")
             parseSpecificToken(raw, "swimsLearnedCheckbox", "swimsLearnedToken")
             parseSpecificToken(raw, "alcoholDependentCheckbox", "alcoholDependentToken")
+            parseSpecificToken(raw, "noVegetationPerturbCheckbox", "noVegetationPerturbToken")
             parseSpecificToken(raw, "speechCheckbox", "speechToken")
             // Anatomy
             parseTokenGroup(raw, "bodyDetailPlanTokenGroup")

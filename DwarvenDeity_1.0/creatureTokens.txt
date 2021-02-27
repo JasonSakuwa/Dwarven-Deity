@@ -31,3 +31,6 @@
     fisedList
     difficulty
     [DIFFICULTY:5]
+    // fixedClosedToken
+    noVegetationPerturb
+    [NO_VEGETATION_PERTURB]

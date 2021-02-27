@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dwarven Deity:RAW Editor</title>
+    <meta name="keywords" content="Dwarf Fortress, DF, RAW Editor,
+     Editor, raw file, modding, online, mods, RAW generator">
+    <meta name="description"
+        content="An editor for Dwarf Fortress raw files. Generating raw files is our current specialty">
+    <meta name="author" content="Phanny">
+    <script src="testingGround.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <button onclick="checkVisibleCheckboxes()">Check Visible Checkboxes</button>
+    <button onclick="uncheckVisibleCheckboxes()">Uncheck Visible Checkboxes</button>
+    <button onclick="toggleElementGroup('hideTest')">Show and hide</button>
+    <div style="display:none" id="hideTest">
+        <button onclick="addFixedToken('Test', 'Test_token', 'text', 5)">Try me...</button>
+        <button onclick="addFlexibleToken('Test', 'Another_Test_Token', 'text', 
+        'textTestField', 3)">Also, try me please...</button>
+        <button onclick="removeTokenFromGroup('Test', 'Another_Test_Token')">Remove: Another Test Token</button>
+        <button onclick="removeTokenFromGroup('Test', 'Test_token')">Remove: Test Token</button>
+        <input type="text" id="textTestField">
+        <div id="Test"></div>
+    </div>
+</body>
+
+</html>
