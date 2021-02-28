@@ -34,3 +34,6 @@
     // fixedClosedToken
     noVegetationPerturb
     [NO_VEGETATION_PERTURB]
+    // fixedList
+    buildingdestroyer
+    [BUILDINGDESTROYER:2]

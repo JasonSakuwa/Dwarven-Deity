@@ -821,6 +821,31 @@
                             </datalist>
                         </td>
                     </tr> <!-- difficulty -->
+                    <tr class="fixedList">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I give your creature the frightening ability to destroy
+                                    buildings.
+                                    <hr>* 1: Mostly targets doors, hatches, and furniture. 2: Anything that isn't a
+                                    wall, floor, stair, etc. can be
+                                    targeted.<br>[BUILDINGDESTROYER:1/2]*<br>[BUILDINGDESTROYER:2]
+                                </span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="buildingdestroyerCheckbox" class="cb"></td>
+                        <td id="buildingdestroyerToken">
+                            <label for="buildingdestroyer">[BUILDINGDESTROYER:</label>
+                            <input list="buildingdestroyerList" id="buildingdestroyer"
+                                onchange="fixedAutoChecker(this)">
+                        </td>
+                        <td>
+                            <p>]</p>
+                            <datalist id="buildingdestroyerList">
+                                <option>1</option>
+                                <option>2</option>
+                            </datalist>
+                        </td>
+                    </tr> <!-- buildingdestroyer -->
                     <tr class="fixedClosed">
                         <td>
                             <div class="tooltip">?
@@ -7463,6 +7488,7 @@
             parseSpecificToken(raw, "homeothermCheckbox", "homeothermToken");
             parseTokenGroup(raw, "sphereTokenGroup");
             parseSpecificToken(raw, "difficultyCheckbox", "difficultyToken");
+            parseSpecificToken(raw, "buildingdestroyerCheckbox", "buildingdestroyerToken");
             parseSpecificToken(raw, "commonDomesticCheckbox", "commonDomesticToken");
             parseSpecificToken(raw, "caveAdaptCheckbox", "caveAdaptToken");
             parseSpecificToken(raw, "swimsLearnedCheckbox", "swimsLearnedToken");
