@@ -37,3 +37,6 @@
     // fixedList
     buildingdestroyer
     [BUILDINGDESTROYER:2]
+    // fixedList
+    petvalue
+    [PETVALUE:10]
