@@ -605,6 +605,18 @@
                             <label onclick='fixedClosedAutoChecker(this);'>[DIURNAL]</label>
                         </td>
                     </tr> <!-- diurnal -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I can cause your creature to be active, regardless of the time
+                                    of day. I am akin to using DIURNAL, NOCTURNAL, and CREPUSCULAR at once.</span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="allActiveCheckbox" class="cb"></td>
+                        <td id="allActiveToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[ALL_ACTIVE]]</label>
+                        </td>
+                    </tr> <!-- allActive -->
                     <tr class="fixedList">
                         <td>
                             <div class="tooltip">?
@@ -7532,6 +7544,7 @@
             parseSpecificToken(raw, "smellTriggerCheckbox", "smellTriggerToken");
             parseSpecificToken(raw, "lowLightVisionCheckbox", "lowLightVisionToken");
             parseSpecificToken(raw, "diurnalCheckbox", "diurnalToken");
+
             parseSpecificToken(raw, "homeothermCheckbox", "homeothermToken");
             parseTokenGroup(raw, "sphereTokenGroup");
             parseSpecificToken(raw, "difficultyCheckbox", "difficultyToken");

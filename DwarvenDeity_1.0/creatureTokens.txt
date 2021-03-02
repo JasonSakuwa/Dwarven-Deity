@@ -40,3 +40,6 @@
     // fixedList
     petvalue
     [PETVALUE:10]
+    // fixedClosedToken
+    allActive
+    [ALL_ACTIVE]
