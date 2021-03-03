@@ -833,6 +833,17 @@
                             </datalist>
                         </td>
                     </tr> <!-- difficulty -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I cause your creature not to feel pain.</span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="nopainCheckbox" class="cb"></td>
+                        <td id="nopainToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[NOPAIN]</label>
+                        </td>
+                    </tr> <!-- nopain -->
                     <tr class="fixedList">
                         <td>
                             <div class="tooltip">?
@@ -7544,11 +7555,12 @@
             parseSpecificToken(raw, "smellTriggerCheckbox", "smellTriggerToken");
             parseSpecificToken(raw, "lowLightVisionCheckbox", "lowLightVisionToken");
             parseSpecificToken(raw, "diurnalCheckbox", "diurnalToken");
-
+            parseSpecificToken(raw, "allActiveCheckbox", "allActiveToken");
             parseSpecificToken(raw, "homeothermCheckbox", "homeothermToken");
             parseTokenGroup(raw, "sphereTokenGroup");
             parseSpecificToken(raw, "difficultyCheckbox", "difficultyToken");
             parseSpecificToken(raw, "buildingdestroyerCheckbox", "buildingdestroyerToken");
+            parseSpecificToken(raw, "nopainCheckbox", "nopainToken");
             parseSpecificToken(raw, "commonDomesticCheckbox", "commonDomesticToken");
             parseSpecificToken(raw, "petvalueCheckbox", "petvalueToken");
             parseSpecificToken(raw, "caveAdaptCheckbox", "caveAdaptToken");

@@ -43,3 +43,6 @@
     // fixedClosedToken
     allActive
     [ALL_ACTIVE]
+    // fixedClosedToken
+    nopain
+    [NOPAIN]
