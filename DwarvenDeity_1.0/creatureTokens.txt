@@ -46,3 +46,6 @@
     // fixedClosedToken
     nopain
     [NOPAIN]
+    // fixedClosedToken
+    pet
+    [PET]
