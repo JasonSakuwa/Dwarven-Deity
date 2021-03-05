@@ -885,6 +885,19 @@
                     <tr class="fixedClosed">
                         <td>
                             <div class="tooltip">?
+                                <span class="tooltipText">I give your creature the ability to act as a mount. This
+                                    doesn't affect fortress mode, save for enemy sieges. Also allows for mounting in
+                                    adventure mode.</span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="mountCheckbox" class="cb"></td>
+                        <td id="mountToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[MOUNT]</label>
+                        </td>
+                    </tr> <!-- mount -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
                                 <span class="tooltipText">I cause your creature to become available to all
                                     civilizations, as long as your creature also has [PET], [PACK_ANIMAL],
                                     [WAGON_PULLER] and/or [MOUNT].</span>
@@ -7575,6 +7588,7 @@
             parseSpecificToken(raw, "buildingdestroyerCheckbox", "buildingdestroyerToken");
             parseSpecificToken(raw, "nopainCheckbox", "nopainToken");
             parseSpecificToken(raw, "petCheckbox", "petToken");
+            parseSpecificToken(raw, "mountCheckbox", "mountToken");
             parseSpecificToken(raw, "commonDomesticCheckbox", "commonDomesticToken");
             parseSpecificToken(raw, "petvalueCheckbox", "petvalueToken");
             parseSpecificToken(raw, "caveAdaptCheckbox", "caveAdaptToken");

@@ -49,3 +49,6 @@
     // fixedClosedToken
     pet
     [PET]
+    // fixedClosedToken
+    mount
+    [MOUNT]
