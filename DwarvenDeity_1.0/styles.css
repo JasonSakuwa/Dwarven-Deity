@@ -1,108 +1,25 @@
+/* For easier editing, common rules will be defined first. */
 body {
     font-size: 100%;
     background-color: rgb(214, 243, 222);
+    font-family: sans-serif;
 }
 
-button {
-    border-radius: 10px;
-    border: 2px solid rgb(95, 216, 180);
-    padding: 15px 10px;
-    background-color: rgb(141, 238, 165);
-}
+/* Index */
 
-main {
-    max-width: 95%;
-    padding: 0;
-    margin: auto;
-}
+/* creatures */
 
 .displayButton {
-    width: 80%;
-    padding: 15px;
-    background-color: skyblue;
-    border: 5px outset lightblue;
-    border-radius: 10px;
-}
-
-#loadTip {
-    text-align: center;
-}
-
-.centerMargin {
-    margin: auto;
-}
-
-.centerAllign {
-    text-align: center;
-}
-
-.card {
-    width: 40%;
+    font-family: serif;
+    padding: 10px 25%;
+    border: 2px solid green;
     border-radius: 5px;
-  }  
-
-.cardLink {
-    text-decoration: none;
-}
-
-.cardLetter {
-    padding: 50px 100px;
-    font-size: 1000%;
-    color: white;
-    text-align: center;
-}
-
-.container {
-    padding: 0 16px;
-  }
-
-.tooltip {
-    display: inline-block;
-    position: relative;
-    padding: 5px;
-    background-color: darkgrey;
-}
-
-.tooltip .tooltipText {
-    visibility: hidden;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-
-/* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.tooltip:hover .tooltipText {
-    visibility: visible;
-    opacity: 1;
-}
-
-.centerButtons {
-    max-width: 35%;
-    margin: auto;
-}
-
-.tokenDatabase {
-    max-width: 80%;
-    margin: auto;
-}
-
-.outputTextarea {
+    border-collapse: collapse;
     width: 100%;
-    margin: auto;
+    background-color: lightgreen;
+    color: white;
 }
 
-textarea {
-    width: 80%;
-    border-color: rgb(116, 233, 93);
-    margin: auto;
+.displayButton:hover {
+    background-color: darkgreen;
 }
