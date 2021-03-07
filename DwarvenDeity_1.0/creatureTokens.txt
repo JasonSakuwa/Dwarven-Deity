@@ -52,3 +52,6 @@
     // fixedClosedToken
     mount
     [MOUNT]
+    // fixedList
+    frequency
+    [FREQUENCY:25]

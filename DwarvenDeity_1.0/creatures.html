@@ -469,6 +469,54 @@
                             </datalist>
                         </td>
                     </tr> <!-- biome -->
+                    <tr class="fixedList">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText">I determine the chance your creature will appear, relative to
+                                    other creatures in the area. I also affect how often caravans will bring your
+                                    creature in for trading.
+                                    <hr>* Higher is more likely to appear.<br>[FREQUENCY:0 ~ ?]*<br>[FREQUENCY:25]
+                                </span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="frequencyCheckbox" class="cb"></td>
+                        <td id="frequencyToken">
+                            <label for="frequency">[FREQUENCY:</label>
+                            <input list="frequencyList" id="frequency" onchange="fixedAutoChecker(this)">
+                        </td>
+                        <td>
+                            <p>]</p>
+                            <datalist id="frequencyList">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>15</option>
+                                <option>20</option>
+                                <option>25</option>
+                                <option>30</option>
+                                <option>35</option>
+                                <option>40</option>
+                                <option>45</option>
+                                <option>50</option>
+                                <option>60</option>
+                                <option>70</option>
+                                <option>80</option>
+                                <option>90</option>
+                                <option>100</option>
+                                <option>500</option>
+                                <option>1000</option>
+                            </datalist>
+                        </td>
+                    </tr> <!-- frequency -->
                     <tr class="fixedClosed">
                         <td>
                             <div class="tooltip">?
@@ -7576,6 +7624,7 @@
             parseTokenGroup(raw, "prefstringTokenGroup");
             // AdditionalAttributes
             parseTokenGroup(raw, "biomeTokenGroup");
+            parseSpecificToken(raw, "frequencyCheckbox", "frequencyToken");
             parseSpecificToken(raw, "equipsCheckbox", "equipsToken");
             parseSpecificToken(raw, "flierCheckbox", "flierToken");
             parseSpecificToken(raw, "smellTriggerCheckbox", "smellTriggerToken");
