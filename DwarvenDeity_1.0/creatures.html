@@ -892,6 +892,17 @@
                             <label onclick='fixedClosedAutoChecker(this);'>[NOPAIN]</label>
                         </td>
                     </tr> <!-- nopain -->
+                    <tr class="fixedClosed">
+                        <td>
+                            <div class="tooltip">?
+                                <span class="tooltipText"></span>
+                            </div>
+                        </td>
+                        <td><input type="checkbox" id="noEatCheckbox" class="cb"></td>
+                        <td id="noEatToken">
+                            <label onclick='fixedClosedAutoChecker(this);'>[NO_EAT]</label>
+                        </td>
+                    </tr> <!-- noEat -->
                     <tr class="fixedList">
                         <td>
                             <div class="tooltip">?
@@ -7636,6 +7647,7 @@
             parseSpecificToken(raw, "difficultyCheckbox", "difficultyToken");
             parseSpecificToken(raw, "buildingdestroyerCheckbox", "buildingdestroyerToken");
             parseSpecificToken(raw, "nopainCheckbox", "nopainToken");
+            parseSpecificToken(raw, "noEatCheckbox", "noEatToken");
             parseSpecificToken(raw, "petCheckbox", "petToken");
             parseSpecificToken(raw, "mountCheckbox", "mountToken");
             parseSpecificToken(raw, "commonDomesticCheckbox", "commonDomesticToken");

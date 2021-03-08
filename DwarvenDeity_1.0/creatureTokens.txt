@@ -55,3 +55,6 @@
     // fixedList
     frequency
     [FREQUENCY:25]
+    // fixedClosedToken
+    noEat
+    [NO_EAT]
