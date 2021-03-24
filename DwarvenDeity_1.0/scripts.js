@@ -388,3 +388,25 @@ rawRead = (textareaId) => {
     let closedTokens = rawStringArray.filter()
     let openTokens = rawStringArray.filter()
 }
+
+class Token {
+    constructor(name, type, category, tooltip) {
+        this.name = name;
+        this.idName = name.toLowerCase();
+        this.type = type;
+        this.category = category;
+        this.tooltip = tooltip;
+    }
+    display() {
+        let divi = document.createElement("div");
+        let tooltipDivi = document.createElement("div");
+        let span = document.createElement("span");
+        tooltipDivi.class = "tooltip";
+        span.class = "tooltipText"
+        tooltipDivi.innerHTML = "?";
+        span.innerHTML = this.tooltip;
+        tooltipDivi.appendChild(span);
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+    }
+}
